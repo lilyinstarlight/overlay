@@ -3,12 +3,11 @@
 
 EAPI="4"
 
-inherit eutils savedconfig toolchain-funcs
+inherit eutils savedconfig toolchain-funcs git-2
 
 DESCRIPTION="a dynamic window manager for X11"
 HOMEPAGE="http://github.com/fkmclane/dwm"
 EGIT_REPO_URI="https://github.com/fkmclane/dwm.git"
-EGIT_COMMIT="a3ff4ee7fcb995fd113e1d9207a825c9250ddbe0"
 
 LICENSE="MIT"
 SLOT="0"
@@ -58,7 +57,7 @@ src_install() {
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}"/dwm.desktop
 
-	dodoc README
+	dodoc README.md
 
 	save_config config.h
 }
