@@ -4,11 +4,11 @@ This is my portage overlay where I put my modified Gentoo packages or my own pac
 
 IcedTea
 -------
-This version of icedtea has been patched for non-reparenting wm's.  The patch applied is taken straight from (the Debian bug report that proposed a fix)[http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=508650].
+This version of icedtea has been patched for non-reparenting wm's.  The patch applied is taken straight from [the Debian bug report that proposed a fix](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=508650).
 
 dwm
 ---
-This package is based on the official Gentoo package, but it downloads the latest git snapshot from my (dwm)[https://github.com/fkmclane/dwm] repository.
+This package is based on the official Gentoo package, but it downloads the latest git snapshot from my [dwm](https://github.com/fkmclane/dwm) repository.
 
 Armagetron Advanced
 -------------------
