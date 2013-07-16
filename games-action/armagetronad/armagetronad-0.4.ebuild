@@ -20,9 +20,9 @@ RDEPEND="
 	!dedicated? (
 		media-libs/ftgl
 		media-libs/glew
-		media-libs/libsdl:1.2
-		media-libs/sdl-image:1.2
-		media-libs/sdl-mixer:1.2
+		=media-libs/libsdl-1.2*
+		=media-libs/sdl-image-1.2*
+		=media-libs/sdl-mixer-1.2*
 	)
 	dedicated? (
 		dev-libs/zthread
@@ -37,7 +37,7 @@ DEPEND="
 "
 
 src_prepare() {
-	"${WORKDIR}/bootstrap.sh"
+	"${WORKDIR}/${P}/bootstrap.sh"
 }
 
 src_configure() {
