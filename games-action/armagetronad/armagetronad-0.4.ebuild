@@ -24,9 +24,6 @@ RDEPEND="
 		=media-libs/sdl-image-1.2*
 		=media-libs/sdl-mixer-1.2*
 	)
-	dedicated? (
-		dev-libs/zthread
-	)
 "
 DEPEND="
 	sys-devel/autoconf
