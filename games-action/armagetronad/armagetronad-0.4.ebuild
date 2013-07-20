@@ -39,8 +39,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable dedicated) \
-		$(use_enable dedicated armathentication)
+		$(use_enable dedicated)
 }
 
 src_install() {
