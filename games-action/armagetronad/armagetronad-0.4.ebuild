@@ -16,10 +16,14 @@ KEYWORDS="x86 amd64"
 IUSE="dedicated"
 
 RDEPEND="
+	dev-libs/boost
 	dev-libs/libxml2
+	dev-libs/protobuf
 	!dedicated? (
 		media-libs/ftgl
 		media-libs/glew
+		media-libs/libpng
+		media-libs/mesa
 		=media-libs/libsdl-1.2*
 		=media-libs/sdl-image-1.2*
 		=media-libs/sdl-mixer-1.2*
@@ -28,8 +32,6 @@ RDEPEND="
 DEPEND="
 	sys-devel/autoconf
 	sys-devel/bison
-	dev-libs/protobuf
-	dev-libs/boost
 	${RDEPEND}
 "
 
