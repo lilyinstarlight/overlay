@@ -4,24 +4,23 @@
 
 EAPI=4
 
-inherit games bzr
+inherit games
 
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
 HOMEPAGE="http://armagetronad.org/"
-EBZR_REPO_URI="lp:armagetronad/0.4"
+SRC_URI="https://launchpad.net/armagetronad/0.2.8/0.2.8.3.2/+download/armagetronad-0.2.8.3.2.1.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="dedicated"
 
 RDEPEND="
-	dev-libs/boost[threads]
 	dev-libs/libxml2
-	dev-libs/protobuf
+	dedicated? (
+		dev-libs/zthread
+	)
 	!dedicated? (
-		media-libs/ftgl
-		media-libs/glew
 		media-libs/libpng
 		media-libs/mesa
 		=media-libs/libsdl-1.2*
@@ -36,12 +35,14 @@ DEPEND="
 "
 
 src_prepare() {
+	sed -i "s/png_check_sig/png_sig_cmp" "${WORKDIR}/${P}/configure.ac"
 	"${WORKDIR}/${P}/bootstrap.sh"
 }
 
 src_configure() {
 	econf \
 		$(use_enable dedicated)
+		$(use_enable dedicated armathentication)
 }
 
 src_install() {
