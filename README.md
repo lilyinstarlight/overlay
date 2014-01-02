@@ -16,4 +16,4 @@ The Wine package in this overlay can optionally include the [Compholio](http://w
 
 Pipelight
 ---------
-[Pipelight](https://launchpad.net/pipelight) is a browser plugin that allows running windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
+[Pipelight](https://launchpad.net/pipelight) is a browser plugin that allows running Windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
