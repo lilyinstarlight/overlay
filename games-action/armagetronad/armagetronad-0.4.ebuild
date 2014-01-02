@@ -8,7 +8,7 @@ inherit games bzr
 
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
 HOMEPAGE="http://armagetronad.org/"
-EBZR_REPO_URI="lp:armagetronad/0.4"
+EBZR_REPO_URI="lp:armagetronad/${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
