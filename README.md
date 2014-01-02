@@ -1,6 +1,6 @@
 Overlay
 =======
-This is my portage overlay where I put my modified Gentoo packages or my own packages. Currently this repository contains the following packages:
+This is my Portage overlay where I dump all of the packages I create or modify. Currently this repository contains the following packages:
 
 dwm
 ---
