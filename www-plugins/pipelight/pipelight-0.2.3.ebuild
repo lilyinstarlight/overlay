@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Browser plugin allowing usage of Windows NPAPI plugins through Wine."
 HOMEPAGE="http://fds-team.de/cms/"
