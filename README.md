@@ -4,16 +4,16 @@ This is my portage overlay where I put my modified Gentoo packages or my own pac
 
 dwm
 ---
-This package is based on the official Gentoo package, but it downloads the latest git snapshot from my [dwm](https://github.com/fkmclane/dwm) repository. This overlay also includes a package for my own dwmstatus in the dwm repository.
+Dwm is a dynamic (tiling and floating) window manager for X. This package uses my version from my [dwm](https://github.com/fkmclane/dwm) repository. This overlay also includes a package for my dwmstatus also located in the repository.
 
 Armagetron Advanced
 -------------------
-This repository provides ebuilds for [Armagetron Advanced](http://armagetronad.org) versions 0.2.8.3.2 and 0.4. The 0.4 ebuild downloads the latest bzr trunk every time it is run.
+[Armagetron Advanced](http://armagetronad.org) is a fast-paced 3D implementation of lightcycles from the movie Tron. It features both single-player and multiplayer modes with online servers that have extensive configurability. This package includes the current stable release, 0.2.8, and the current bzr snapshot, 0.4.
 
 Wine (Compholio Patches)
 ------------------------
-This repository also provides an ebuild that builds a version of wine with the compholio patches. This mostly adds support for Silverlight.
+The Wine package in this overlay can optionally include the [Compholio](http://www.compholio.com/wine-compholio/) patches. These patches mostly add support for Silverlight.
 
 Pipelight
 ---------
-Pipelight allows browser plugins in wine to be run in native browsers. This is often used in conjunction with the compholio wine to allow Silverlight natively.
+[Pipelight](https://launchpad.net/pipelight) is a browser plugin that allows running windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
