@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>fkmclane</name>
+		<description>Various extra or patched ebuilds by fkmclane.</description>
+		<homepage>https://github.com/fkmclane/overlay</homepage>
+		<owner>
+			<email>fkmclane@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/fkmclane/overlay</source>
+	</repo>
+</repositories>
