@@ -8,7 +8,9 @@ inherit games
 
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
 HOMEPAGE="http://armagetronad.org/"
-SRC_URI="https://launchpad.net/armagetronad/0.2.8/0.2.8.3.2/+download/${P}.src.tar.bz2"
+BRANCH="0.2.8"
+VERSION="0.2.8.3.2"
+SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
