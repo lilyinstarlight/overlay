@@ -8,4 +8,12 @@ This package is based on the official Gentoo package, but it downloads the lates
 
 Armagetron Advanced
 -------------------
-This repository provides ebuilds for Armagetron Advanced versions 0.2.8.3.2 and 0.4. The 0.4 ebuild downloads the latest bzr trunk every time it is run.
+This repository provides ebuilds for [Armagetron Advanced](http://armagetronad.org) versions 0.2.8.3.2 and 0.4. The 0.4 ebuild downloads the latest bzr trunk every time it is run.
+
+Wine (Compholio Patches)
+------------------------
+This repository also provides an ebuild that builds a version of wine with the compholio patches. This mostly adds support for Silverlight.
+
+Pipelight
+---------
+Pipelight allows browser plugins in wine to be run in native browsers. This is often used in conjunction with the compholio wine to allow Silverlight natively.
