@@ -16,11 +16,11 @@ S="${WORKDIR}/mmueller2012-pipelight-${VERSION}"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE=""
+IUSE="+silverlight"
 
 RDEPEND="
 	x11-libs/libX11
-	app-emulation/wine[compholio]
+	silverlight? ( app-emulation/wine[compholio] ) !silverlight? ( app-emulation/wine )
 "
 DEPEND="
 	${RDEPEND}
@@ -43,8 +43,9 @@ src_install() {
 pkg_postinst() {
 	pipelight-plugin --create-mozilla-plugins
 
-	einfo "To install Silverlight, run the following command:"
-	einfo "  $ pipelight-plugin --enable silverlight"
+	use silverlight && \
+		einfo "To install Silverlight, run the following command:" && \
+		einfo "  $ pipelight-plugin --enable silverlight"
 	einfo "To install Adobe Flash, run the following command:"
 	einfo "  $ pipelight-plugin --enable flash"
 	einfo ""
