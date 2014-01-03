@@ -20,7 +20,7 @@ IUSE="+silverlight"
 
 RDEPEND="
 	x11-libs/libX11
-	silverlight? ( app-emulation/wine[compholio] ) !silverlight? ( app-emulation/wine )
+	silverlight? ( >=app-emulation/wine-1.7.5[compholio] ) !silverlight? ( >=app-emulation/wine-1.7.5 )
 "
 DEPEND="
 	${RDEPEND}
