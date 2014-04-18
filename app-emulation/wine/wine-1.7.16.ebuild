@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -24,7 +24,7 @@ fi
 
 GV="2.24"
 MV="4.5.2"
-PULSE_PATCHES="winepulse-patches-1.7.10"
+PULSE_PATCHES="winepulse-patches-1.7.12"
 COMPHOLIO_PATCHES="wine-patches"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
@@ -170,7 +170,10 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-soundlibs[development]
 				>=media-sound/mpg123-1.5.0[abi_x86_32]
 			) )
-			nls? ( app-emulation/emul-linux-x86-baselibs[development] )
+			nls? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				sys-devel/gettext[abi_x86_32]
+			) )
 			odbc? ( app-emulation/emul-linux-x86-db[development] )
 			osmesa? ( || (
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
@@ -180,7 +183,13 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-soundlibs[development]
 				>=media-sound/pulseaudio-4.0-r1[abi_x86_32]
 			) )
-			xml? ( >=app-emulation/emul-linux-x86-baselibs-20131008[development] )
+			xml? ( || (
+				>=app-emulation/emul-linux-x86-baselibs-20131008[development]
+				(
+					dev-libs/libxml2[abi_x86_32]
+					dev-libs/libxslt[abi_x86_32]
+				)
+			) )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
 			png? ( || (
@@ -271,7 +280,7 @@ src_prepare() {
 	local PATCHES=(
 		"${FILESDIR}"/${PN}-1.5.26-winegcc.patch #260726
 		"${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
-		"${FILESDIR}"/${PN}-1.7.2-osmesa-check.patch #429386
+		"${FILESDIR}"/${PN}-1.7.12-osmesa-check.patch #429386
 		"${FILESDIR}"/${PN}-1.6-memset-O3.patch #480508
 	)
 	use pulseaudio && PATCHES+=(

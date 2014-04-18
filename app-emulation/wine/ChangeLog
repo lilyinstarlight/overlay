@@ -1,11 +1,65 @@
 # ChangeLog for app-emulation/wine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.490 2013/12/24 22:50:44 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.503 2014/04/05 19:16:41 tetromino Exp $
 
-*wine-1.7.7 (01 Jan 2014)
+*wine-1.7.16 (05 Apr 2014)
 
-  01 Jan 2014; Foster McLane <fkmclane@gmail.com> +wine-1.7.7.ebulid:
-  Added compholio flag that downloads and applies the compholio patches.
+  05 Apr 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.16.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.16 for the announcement.
+
+*wine-1.7.15 (23 Mar 2014)
+
+  23 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.15.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.15 for the announcement.
+
+  09 Mar 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> wine-1.6.2.ebuild:
+  x86 stable wrt bug #501442
+
+*wine-1.7.14 (08 Mar 2014)
+
+  08 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.14.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.14 for the announcement
+
+  04 Mar 2014; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.6.ebuild,
+  wine-1.6.1.ebuild, wine-1.6.2.ebuild, wine-1.7.0.ebuild, wine-1.7.3.ebuild,
+  wine-1.7.4.ebuild, wine-1.7.8.ebuild, wine-1.7.9.ebuild, wine-1.7.10.ebuild,
+  wine-1.7.11.ebuild, wine-1.7.12.ebuild, wine-1.7.13.ebuild, wine-9999.ebuild:
+  Update deps to allow native multilib gettext and libxslt.
+
+*wine-1.7.13 (21 Feb 2014)
+
+  21 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.13.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.13 for the announcement.
+
+*wine-1.7.12 (08 Feb 2014)
+
+  08 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.12.ebuild,
+  wine-9999.ebuild, +files/wine-1.7.12-osmesa-check.patch:
+  Version bump, see http://www.winehq.org/announce/1.7.12 for the announcement.
+  Update osmesa patch (bug #500352).
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> wine-1.6.1.ebuild:
+  Stable for x86, wrt bug #497962
+
+*wine-1.7.11 (22 Jan 2014)
+
+  22 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.11.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.11 for the announcement.
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> wine-1.6.1.ebuild:
+  amd64 stable, bug #497962
+
+*wine-1.6.2 (13 Jan 2014)
+
+  13 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.6.2.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.6.2 for the announcement
+  (bug #497820).
+
+*wine-1.7.10 (04 Jan 2014)
+
+  04 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.10.ebuild,
+  wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.10 for the announcement.
 
 *wine-1.7.9 (24 Dec 2013)
 
