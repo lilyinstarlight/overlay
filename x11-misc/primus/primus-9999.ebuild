@@ -13,7 +13,7 @@ EGIT_REPO_URI="git://github.com/amonakov/primus.git https://github.com/amonakov/
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-misc/bumblebee[video_cards_nvidia]
