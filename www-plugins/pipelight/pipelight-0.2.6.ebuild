@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_configure() {
-	econf --prefix="/usr" --wine-path="/usr/bin/wine" --moz-plugin-path="/usr/lib/nsbrowser/plugins/" --win32-prebuilt
+	econf --wine-path="/usr/bin/wine" --moz-plugin-path="/usr/lib/nsbrowser/plugins/" --win32-prebuilt
 }
 
 src_install() {
