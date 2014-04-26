@@ -36,7 +36,7 @@ SRC_URI="${SRC_URI}
 	)
 	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
 	pulseaudio? ( http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2 )
-	compholio? ( https://github.com/compholio/${COMPHOLIO_PATCHES}/archive/v${PV}.tar.gz -> ${COMPHOLIO_PATCHES}-v${CV}.tar.gz )
+	compholio? ( https://github.com/compholio/${COMPHOLIO_PATCHES}/archive/v${PV}.tar.gz -> ${COMPHOLIO_PATCHES}-v${PV}.tar.gz )
 	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 LICENSE="LGPL-2.1"
