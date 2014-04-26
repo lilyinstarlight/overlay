@@ -8,8 +8,8 @@ DESCRIPTION="Browser plugin allowing usage of Windows NPAPI plugins through Wine
 HOMEPAGE="http://fds-team.de/cms/"
 COMMIT="487f8db5a03d"
 SRC_URI="
-	https://bitbucket.org/mmueller2012/pipelight/get/v${PV}.tar.gz
-	http://repos.fds-team.de/pluginloader/v${PV}/pluginloader.tar.gz
+	https://bitbucket.org/mmueller2012/pipelight/get/v${PV}.tar.gz -> pipelight-${PV}.tar.gz
+	http://repos.fds-team.de/pluginloader/v${PV}/pluginloader.tar.gz -> pipelight-${PV}-pluginloader.tar.gz
 "
 S="${WORKDIR}/mmueller2012-pipelight-${COMMIT}"
 
