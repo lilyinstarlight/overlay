@@ -26,7 +26,6 @@ GV="2.24"
 MV="4.5.2"
 PULSE_PATCHES="winepulse-patches-1.7.12"
 COMPHOLIO_PATCHES="wine-compholio-daily"
-CV="1.7.16-1"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
@@ -37,7 +36,7 @@ SRC_URI="${SRC_URI}
 	)
 	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
 	pulseaudio? ( http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2 )
-	compholio? ( https://github.com/compholio/${COMPHOLIO_PATCHES}/archive/v${CV}.tar.gz -> ${COMPHOLIO_PATCHES}-${CV}.tar.gz )
+	compholio? ( https://github.com/compholio/${COMPHOLIO_PATCHES}/archive/v${PV}.tar.gz -> ${COMPHOLIO_PATCHES}-v${CV}.tar.gz )
 	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 LICENSE="LGPL-2.1"
@@ -270,7 +269,7 @@ src_unpack() {
 	fi
 
 	use pulseaudio && unpack "${PULSE_PATCHES}.tar.bz2"
-	use compholio && unpack "${COMPHOLIO_PATCHES}-${CV}.tar.gz"
+	use compholio && unpack "${COMPHOLIO_PATCHES}-v${PV}.tar.gz"
 	unpack "${WINE_GENTOO}.tar.bz2"
 
 	l10n_find_plocales_changes "${S}/po" "" ".po"
@@ -289,7 +288,7 @@ src_prepare() {
 	)
 
 	# use upstream Makefile to apply patches
-	use compholio && make -C "${WORKDIR}/${COMPHOLIO_PATCHES}-${CV}/patches/" DESTDIR="${WORKDIR}/${MY_P}" install
+	use compholio && make -C "${WORKDIR}/${COMPHOLIO_PATCHES}-v${PV}/patches/" DESTDIR="${WORKDIR}/${MY_P}" install
 
 	autotools-utils_src_prepare
 
