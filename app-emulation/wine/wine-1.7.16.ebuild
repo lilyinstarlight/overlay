@@ -304,6 +304,9 @@ src_prepare() {
 	# hi-res default icon, #472990, http://bugs.winehq.org/show_bug.cgi?id=24652
 	cp "${WORKDIR}"/${WINE_GENTOO}/icons/oic_winlogo.ico dlls/user32/resources/ || die
 
+	# epatch does not support the binary diffs in compholio and so the only file like this is manually added
+	use compholio && cp "${FILESDIR}"/compholio-arial.ttf "${WORKDIR}"/${MY_P}/fonts/arial.ttf
+
 	l10n_get_locales > po/LINGUAS # otherwise wine doesn't respect LINGUAS
 }
 
