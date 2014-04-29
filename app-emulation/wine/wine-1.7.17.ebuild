@@ -35,7 +35,7 @@ SRC_URI="${SRC_URI}
 		abi_x86_64? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}-x86_64.msi )
 	)
 	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
-	pulseaudio? ( http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2 )
+	pulseaudio? ( !compholio? ( http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2 ) )
 	compholio? ( https://github.com/compholio/${COMPHOLIO_PATCHES}/archive/v${PV}.tar.gz -> ${COMPHOLIO_PATCHES}-${PV}.tar.gz )
 	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
@@ -268,7 +268,7 @@ src_unpack() {
 		unpack ${MY_P}.tar.bz2
 	fi
 
-	use pulseaudio && unpack "${PULSE_PATCHES}.tar.bz2"
+	use pulseaudio && use compholio || unpack "${PULSE_PATCHES}.tar.bz2"
 	use compholio && unpack "${COMPHOLIO_PATCHES}-${PV}.tar.gz"
 	unpack "${WINE_GENTOO}.tar.bz2"
 
@@ -283,7 +283,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.7.12-osmesa-check.patch #429386
 		"${FILESDIR}"/${PN}-1.6-memset-O3.patch #480508
 	)
-	use pulseaudio && PATCHES+=(
+	use pulseaudio && use compholio || PATCHES+=(
 		"../${PULSE_PATCHES}"/*.patch #421365
 	)
 
