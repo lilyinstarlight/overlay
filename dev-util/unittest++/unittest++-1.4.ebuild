@@ -7,6 +7,7 @@ EAPI=5
 DESCRIPTION="A lightweight unit testing framework for C++"
 HOMEPAGE="http://unittest-cpp.sourceforge.net/"
 SRC_URI="http://downloads.sourceforge.net/project/unittest-cpp/UnitTest++/${PV}/unittest-cpp-${PV}.zip"
+S="UnitTest++"
 
 LICENSE="MIT"
 SLOT="0"
