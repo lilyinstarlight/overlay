@@ -24,6 +24,7 @@ RDEPEND="
 	dev-qt/qtgui:5
 	dev-qt/qtmultimedia:5
 	dev-lang/swig
+	dev-util/unittest++
 "
 DEPEND="
 	${RDEPEND}
