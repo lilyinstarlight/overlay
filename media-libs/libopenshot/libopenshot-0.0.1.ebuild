@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils bzr
 
-DESCRIPTION="An open-source, cross-platform C++ library dedicated to delivering high quality video editing, animation, and playback solutions to the world."
+DESCRIPTION="An open-source, cross-platform C++ library for video editing, animation, and playback"
 HOMEPAGE="http://openshot.org/"
 EBZR_REPO_URI="lp:libopenshot"
 

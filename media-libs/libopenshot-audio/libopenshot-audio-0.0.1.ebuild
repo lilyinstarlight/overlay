@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils bzr
 
-DESCRIPTION="An audio library that is a companion to libopenshot. It includes the JUCE library for audio processing."
+DESCRIPTION="The audio backend for libopenshot"
 HOMEPAGE="http://openshot.org/"
 EBZR_REPO_URI="lp:~openshot.code/libopenshot/libopenshot-audio"
 
