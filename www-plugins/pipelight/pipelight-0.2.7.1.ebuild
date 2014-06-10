@@ -5,8 +5,8 @@
 EAPI=5
 
 DESCRIPTION="Browser plugin allowing usage of Windows NPAPI plugins through Wine."
-HOMEPAGE="http://fds-team.de/cms/"
-COMMIT="487f8db5a03d"
+HOMEPAGE="http://pipelight.net/"
+COMMIT="e2362eb15df6"
 SRC_URI="
 	https://bitbucket.org/mmueller2012/${PN}/get/v${PV}.tar.gz -> ${P}.tar.gz
 	http://repos.fds-team.de/pluginloader/v${PV}/pluginloader.tar.gz -> ${P}-pluginloader.tar.gz
@@ -20,7 +20,7 @@ IUSE="+silverlight"
 
 RDEPEND="
 	x11-libs/libX11
-	silverlight? ( >=app-emulation/wine-1.7.5[compholio] app-arch/cabextract ) !silverlight? ( >=app-emulation/wine-1.7.5 )
+	silverlight? ( >=app-emulation/wine-1.7.5[pipelight] app-arch/cabextract ) !silverlight? ( >=app-emulation/wine-1.7.5 )
 "
 DEPEND="
 	${RDEPEND}
