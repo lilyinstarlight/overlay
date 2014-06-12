@@ -4,6 +4,8 @@
 
 EAPI=5
 
+inherit autotools
+
 DESCRIPTION="A library for emulating an AirPort Express"
 HOMEPAGE="https://github.com/amejia1/libshairport"
 COMMIT="16395d8"
@@ -22,3 +24,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 "
+
+src_prepare() {
+	eautoreconf
+}
