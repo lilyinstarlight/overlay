@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="A library for emulation an AirPort Express"
+DESCRIPTION="A library for emulating an AirPort Express"
 HOMEPAGE="https://github.com/amejia1/libshairport"
 COMMIT="16395d8"
 SRC_URI="https://github.com/amejia1/libshairport/tarball/${COMMIT} -> ${P}.tar.gz"
