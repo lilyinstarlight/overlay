@@ -18,8 +18,11 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE="kde"
 
-RDEPEND="
+CDEPEND="
 	x11-libs/libX11
+"
+RDEPEND="
+	${CDEPEND}
 	>=app-emulation/wine-1.7.5[pipelight]
 	media-fonts/corefonts
 	app-crypt/gnupg
@@ -27,7 +30,7 @@ RDEPEND="
 	!kde? ( gnome-extra/zenity ) kde? ( kde-base/kdialog )
 "
 DEPEND="
-	${RDEPEND}
+	${CDEPEND}
 "
 
 src_unpack() {
