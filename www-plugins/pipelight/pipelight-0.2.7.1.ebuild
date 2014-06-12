@@ -16,11 +16,15 @@ S="${WORKDIR}/mmueller2012-pipelight-${COMMIT}"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="+silverlight"
+IUSE="kde"
 
 RDEPEND="
 	x11-libs/libX11
-	silverlight? ( >=app-emulation/wine-1.7.5[pipelight] app-arch/cabextract ) !silverlight? ( >=app-emulation/wine-1.7.5 )
+	>=app-emulation/wine-1.7.5[pipelight]
+	media-fonts/corefonts
+	app-crypt/gnupg
+	app-arch/cabextract
+	!kde? ( gnome-extra/zenity ) kde? ( kde-base/kdialog )
 "
 DEPEND="
 	${RDEPEND}
@@ -44,12 +48,11 @@ src_install() {
 
 pkg_postinst() {
 	pipelight-plugin --create-mozilla-plugins
+	pipelight-plugin --update
 
-	use silverlight && \
-		einfo "To install Silverlight, run the following command:" && \
-		einfo "  $ pipelight-plugin --enable silverlight"
-	einfo "To install Adobe Flash, run the following command:"
-	einfo "  $ pipelight-plugin --enable flash"
+	einfo "To see available plugins and installation help, run:"
+	einfo "  $ pipelight-plugin --help"
 	einfo ""
-	einfo "To install plugins globally, run pipelight-plugin as root."
+	einfo "By default, plugins are installed on a per-user basis."
+	einfo "To install them globally, run pipelight-plugin as root."
 }
