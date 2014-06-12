@@ -14,14 +14,16 @@ S="${WORKDIR}/plex-home-theater-public-pht-v${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="airplay cec +opengl pulseaudio +samba +usb +xrandr"
+IUSE=""
 
 CDEPEND="
+	app-pda/libplist
 	dev-db/sqlite:3
 	dev-lang/python:2.7
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio
+	dev-libs/libcec
 	dev-libs/lzo
 	dev-libs/tinyxml
 	dev-libs/yajl
@@ -34,27 +36,24 @@ CDEPEND="
 	media-libs/libmodplug
 	media-libs/libmpeg2
 	media-libs/libsamplerate
+	media-libs/libshairport
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/taglib
 	media-sound/lame
 	media-video/rtmpdump
+	net-fs/samba[smbclient]
 	net-libs/libmicrohttpd
 	net-libs/libssh
 	net-misc/curl
+	virtual/libusb
+	virtual/opengl
 	x11-libs/libva
-
-	airplay? ( app-pda/libplist media-libs/libshairport )
-	cec? ( dev-libs/libcec )
-	opengl? ( virtual/opengl )
-	samba? ( net-fs/samba[smbclient] )
-	xrandr? ( x11-libs/libXrandr )
-	usb? ( virtual/libusb )
+	x11-libs/libXrandr
 "
 RDEPEND="
 	${CDEPEND}
 	virtual/jre
-	pulseaudio? ( media-sound/pulseaudio )
 "
 DEPEND="
 	${CDEPEND}
