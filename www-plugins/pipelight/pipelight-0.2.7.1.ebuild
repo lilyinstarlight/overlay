@@ -43,12 +43,6 @@ src_configure() {
 	econf --wine-path="/usr/bin/wine" --moz-plugin-path="/usr/lib/nsbrowser/plugins/" --win32-prebuilt
 }
 
-src_install() {
-	emake DESTDIR="${D}" install
-
-	dodoc LICENSE
-}
-
 pkg_postinst() {
 	pipelight-plugin --create-mozilla-plugins
 	pipelight-plugin --update
