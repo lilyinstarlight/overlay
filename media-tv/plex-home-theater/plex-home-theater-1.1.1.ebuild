@@ -10,6 +10,7 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/pht-v${PV}.tar.gz"
 S="${WORKDIR}/plex-home-theater-public-pht-v${PV}"
+CMAKE_IN_SOURCE_BUILD=1
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -74,8 +75,8 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	doicon ${S}/plex/Resources/plexhometheater.png
-	domenu ${S}/plex/Resources/plexhometheater.desktop
+	doicon "${S}/plex/Resources/plexhometheater.png"
+	domenu "${S}/plex/Resources/plexhometheater.desktop"
 
-	doexe ${FILESDIR}/plexhometheater.sh
+	doexe "${FILESDIR}/plexhometheater.sh"
 }
