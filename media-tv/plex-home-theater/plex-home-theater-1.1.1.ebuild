@@ -17,8 +17,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE="airplay cec +opengl pulseaudio +samba +usb +xrandr"
 
 CDEPEND="
+	dev-db/sqlite:3
 	dev-lang/python:2.7
 	dev-libs/boost
+	dev-libs/fribidi
 	dev-libs/libcdio
 	dev-libs/lzo
 	dev-libs/tinyxml
