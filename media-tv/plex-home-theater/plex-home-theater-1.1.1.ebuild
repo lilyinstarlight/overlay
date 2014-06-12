@@ -62,6 +62,10 @@ DEPEND="
 	dev-lang/swig
 "
 
+src_prepare() {
+	epatch "${FILESDIR}/cmake-fribidi.patch"
+}
+
 src_configure() {
 	mkdir build && cd build
 
