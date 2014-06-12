@@ -8,6 +8,7 @@ DESCRIPTION="A library for emulating an AirPort Express"
 HOMEPAGE="https://github.com/amejia1/libshairport"
 COMMIT="16395d8"
 SRC_URI="https://github.com/amejia1/libshairport/tarball/${COMMIT} -> ${P}.tar.gz"
+S="${WORKDIR}/amejia1-${PN}-${COMMIT}"
 
 LICENSE="GPL-2"
 SLOT="0"
