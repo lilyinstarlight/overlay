@@ -9,7 +9,7 @@ inherit cmake-utils
 DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/pht-v${PV}.tar.gz"
-S="plex-home-theater-public-pht-v${PV}"
+S="${WORKDIR}/plex-home-theater-public-pht-v${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
