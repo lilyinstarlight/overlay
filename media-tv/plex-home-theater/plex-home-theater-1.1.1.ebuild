@@ -44,7 +44,7 @@ CDEPEND="
 	net-misc/curl
 	x11-libs/libva
 
-	airplay? ( app-pda/libplist )
+	airplay? ( app-pda/libplist media-libs/libshairport )
 	cec? ( dev-libs/libcec )
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba[smbclient] )
