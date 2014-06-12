@@ -23,16 +23,16 @@ RDEPEND="
 		media-libs/ftgl
 		media-libs/glew
 		media-libs/libpng
-		media-libs/mesa
-		=media-libs/libsdl-1.2*
-		=media-libs/sdl-image-1.2*
-		=media-libs/sdl-mixer-1.2*
+		media-libs/libsdl
+		media-libs/sdl-image
+		media-libs/sdl-mixer
+		virtual/opengl
 	)
 "
 DEPEND="
+	${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/bison
-	${RDEPEND}
 "
 
 src_prepare() {
