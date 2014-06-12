@@ -66,9 +66,9 @@ src_prepare() {
 }
 
 src_configure() {
-	mkdir build && cd build
+	local mycmakeargs=( -DCMAKE_BUILD_TYPE='Release' -DCMAKE_INSTALL_PREFIX='/opt/plexhometheater' -DENABLE_{AUTOUPDATE,DUMP_SYMBOLS}='FALSE' -DENABLE_PYTHON='TRUE' -DPYTHON_EXEC='/usr/bin/python2' -DUSE_INTERNAL_FFMPEG='TRUE' -DCREATE_BUNDLE='FALSE' )
 
-	cmake .. -DCMAKE_BUILD_TYPE='Release' -DCMAKE_INSTALL_PREFIX='/opt/plexhometheater' -DENABLE_{AUTOUPDATE,DUMP_SYMBOLS}='FALSE' -DENABLE_PYTHON='TRUE' -DPYTHON_EXEC='/usr/bin/python2' -DUSE_INTERNAL_FFMPEG='TRUE' -DCREATE_BUNDLE='FALSE'
+	cmake-utils_src_configure
 }
 
 src_install() {
