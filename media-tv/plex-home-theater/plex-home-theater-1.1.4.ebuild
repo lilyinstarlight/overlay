@@ -4,13 +4,12 @@
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils eutils
 
 DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
-SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/pht-v${PV}.tar.gz"
+SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/pht-v${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/plex-home-theater-public-pht-v${PV}"
-CMAKE_IN_SOURCE_BUILD=1
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -67,16 +66,19 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs=( -DCMAKE_BUILD_TYPE='Release' -DCMAKE_INSTALL_PREFIX='/opt/plexhometheater' -DENABLE_{AUTOUPDATE,DUMP_SYMBOLS}='FALSE' -DENABLE_PYTHON='TRUE' -DPYTHON_EXEC='/usr/bin/python2' -DUSE_INTERNAL_FFMPEG='TRUE' -DCREATE_BUNDLE='FALSE' )
-
+	local mycmakeargs=( -DCMAKE_BUILD_TYPE='Release' -DCMAKE_INSTALL_PREFIX='/opt/plexhometheater' -DENABLE_AUTOUPDATE='FALSE' -DENABLE_DUMP_SYMBOLS='FALSE' -DENABLE_PYTHON='TRUE' -DPYTHON_EXEC='/usr/bin/python2' -DUSE_INTERNAL_FFMPEG='TRUE' -DCREATE_BUNDLE='FALSE' )
 	cmake-utils_src_configure
 }
 
-src_install() {
-	emake DESTDIR="${D}" install
+src_compile() {
+	cmake-utils_src_compile -j1
+}
 
-	doicon "${S}/plex/Resources/plexhometheater.png"
-	domenu "${S}/plex/Resources/plexhometheater.desktop"
+src_install() {
+	cmake-utils_src_install
+
+	doicon "plex/Resources/plexhometheater.png"
+	domenu "plex/Resources/plexhometheater.desktop"
 
 	doexe "${FILESDIR}/plexhometheater.sh"
 }
