@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils bzr
 
-DESCRIPTION="The audio backend for libopenshot"
+DESCRIPTION="A high-quality audio editing and playback library used by libopenshot."
 HOMEPAGE="http://openshot.org/"
 EBZR_REPO_URI="lp:~openshot.code/libopenshot/libopenshot-audio"
 

@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils bzr
 
-DESCRIPTION="An open-source, cross-platform C++ library for video editing, animation, and playback"
+DESCRIPTION="A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby."
 HOMEPAGE="http://openshot.org/"
 EBZR_REPO_URI="lp:libopenshot"
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND="
 	media-gfx/imagemagick
 	virtual/ffmpeg
-	media-libs/libopenshot-audio
+	=media-libs/libopenshot-audio-${PV}
 	>=media-libs/libsdl-1.2
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
@@ -29,3 +29,11 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 "
+
+src_configure() {
+	local mycmakeargs=(
+		-DMAGICKCORE_HDRI_ENABLE=1
+		-DMAGICKCORE_QUANTUM_DEPTH=16
+	)
+	cmake-utils_src_configure
+}
