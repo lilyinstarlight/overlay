@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils bzr
+inherit cmake-utils eutils bzr
 
 DESCRIPTION="A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby."
 HOMEPAGE="http://openshot.org/"
@@ -29,6 +29,10 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 "
+
+src_prepare() {
+	epatch "${FILESDIR}/qtexebug.patch"
+}
 
 src_configure() {
 	local mycmakeargs=(
