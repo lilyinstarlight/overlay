@@ -33,11 +33,3 @@ DEPEND="
 src_prepare() {
 	epatch "${FILESDIR}/qtexebug.patch"
 }
-
-src_configure() {
-	local mycmakeargs=(
-		-DMAGICKCORE_HDRI_ENABLE=1
-		-DMAGICKCORE_QUANTUM_DEPTH=16
-	)
-	cmake-utils_src_configure
-}
