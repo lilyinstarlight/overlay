@@ -25,7 +25,10 @@ Dwm is a dynamic (tiling and floating) window manager for X. This package uses m
 Primus is a LibGL bridge for people with two GPUs, one that outputs to the screen, and one that performs the heavy lifting. Primus is designed to be used in conjunction with Bumblebee, available in the official repository. Note: This package was taken, largely unmodified, from the [Bumblebee Overlay](https://github.com/Bumblebee-Project/bumblebee-gentoo).
 
 ### libopenshot ###
-The OpenShot Library is a high quality video editing library that will power OpenShot 2.0. This repository includes both the the libopenshot package and the libopenshot-audio package and a supporting package, unittest++. Note: To build libopenshot, qt5 is necessary and can (currently) be found in the qt overlay, `# layman -a qt`.
+The OpenShot Library is a high quality video editing library that will power OpenShot 2.0. This repository includes both the libopenshot package and the libopenshot-audio package and a supporting package, unittest++. Note: To build libopenshot, qt5 is necessary and can (currently) be found in the qt overlay, `# layman -a qt`.
 
 ### Plex Home Theater ###
 [Plex](http://plex.tv) is a service that allows convenient access to central media over a variety of devices. Plex Home Theater is an XBMC based client for Plex that includes a nice ten-foot interface and is designed for connecting to the television.
+
+### Chrome Remote Desktop ###
+[Chrome Remote Desktop](http://chrome.google.com/remotedesktop) is an application that integrates with Chrome or Chromium and allows one to remotely access their computer or receive assistance securely.
