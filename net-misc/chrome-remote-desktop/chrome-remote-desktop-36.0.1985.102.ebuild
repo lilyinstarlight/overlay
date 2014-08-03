@@ -84,4 +84,8 @@ pkg_postinst() {
 	einfo "To use this module, download and launch the"
 	einfo "Chrome Remote Desktop app in Chrome and select"
 	einfo "\"Enable remote connections\"."
+	einfo
+	einfo "After the initial setup, init files are provided"
+	einfo "to start the daemon for every user that is in"
+	einfo "the chrome-remote-desktop group."
 }
