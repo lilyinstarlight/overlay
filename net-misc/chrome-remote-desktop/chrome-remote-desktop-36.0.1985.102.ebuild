@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit python-single-r1 systemd unpacker
+inherit python-single-r1 systemd unpacker user
 
 DESCRIPTION="Chrome Remote Desktop allows you to securely access your computer over the Internet through the Chrome browser or a Chromebook."
 HOMEPAGE="https://chrome.google.com/remotedesktop"
@@ -45,10 +45,11 @@ S="${WORKDIR}"
 QA_PREBUILT="*"
 
 src_configure() {
+	#Fixes for non-Ubuntu systems
 	pushd opt/google/chrome-remote-desktop
 	python_fix_shebang chrome-remote-desktop
 	use policykit && sed -e '/^.*sudo_command =/ s/"gksudo .*"/"pkexec"/' -i chrome-remote-desktop
-#	sed	-e '/^.*command =/ s/s -- sh -c/s sh -c/' -i "${SRCDIR}/opt/google/chrome-remote-desktop/chrome-remote-desktop"
+	sed	-e '/^.*command =/ s/s -- sh -c/s sh -c/' -i chrome-remote-desktop
 	popd
 }
 
@@ -69,4 +70,12 @@ src_install() {
 
 	doinitd "${FILESDIR}"/openrc/chrome-remote-desktop
 	systemd_douserunit "${FILESDIR}"/systemd/chrome-remote-desktop.service
+
+	enewgroup chrome-remote-desktop
+
+	einfo "To use this module, open the Chrome Remote Desktop"
+	einfo "app in Chrome and select Enable Remote Connections."
+	einfo
+	einfo "Add each user that intends to use this to the"
+	einfo "chrome-remote-desktop group."
 }
