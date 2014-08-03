@@ -4,7 +4,9 @@
 
 EAPI=5
 
-inherit cmake-utils eutils
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit cmake-utils eutils python-single-r1
 
 DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
@@ -14,12 +16,12 @@ S="${WORKDIR}/plex-home-theater-public-pht-v${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 CDEPEND="
 	app-pda/libplist
 	dev-db/sqlite:3
-	dev-lang/python:2.7
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio
@@ -54,6 +56,7 @@ CDEPEND="
 RDEPEND="
 	${CDEPEND}
 	virtual/jre
+	${PYTHON_DEPS}
 "
 DEPEND="
 	${CDEPEND}
