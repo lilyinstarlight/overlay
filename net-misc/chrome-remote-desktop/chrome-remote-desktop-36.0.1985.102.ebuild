@@ -57,6 +57,9 @@ src_install() {
 	insinto /opt/google
 	doins -r opt/google/chrome-remote-desktop
 
+	#Fix executables
+	chmod 755 /opt/google/chrome-remote-desktop/{chrome-remote-desktop,chrome-remote-desktop-host,is-remoting-session,native-messaging-host,remote-assistance-host,start-host}
+
 	insinto /etc/opt/chrome
 	doins -r etc/opt/chrome/native-messaging-hosts
 
@@ -75,9 +78,10 @@ src_install() {
 pkg_postinst() {
 	enewgroup chrome-remote-desktop
 
-	einfo "To use this module, open the Chrome Remote Desktop"
-	einfo "app in Chrome and select Enable Remote Connections."
+	einfo "Add each user that intends to use Chrome Remote"
+	einfo "Desktop to the chrome-remote-desktop group."
 	einfo
-	einfo "Add each user that intends to use this to the"
-	einfo "chrome-remote-desktop group."
+	einfo "To use this module, download and launch the"
+	einfo "Chrome Remote Desktop app in Chrome and select"
+	einfo "Enable Remote Connections."
 }
