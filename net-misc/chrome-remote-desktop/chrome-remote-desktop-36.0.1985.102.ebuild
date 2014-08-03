@@ -70,7 +70,9 @@ src_install() {
 
 	doinitd "${FILESDIR}"/openrc/chrome-remote-desktop
 	systemd_douserunit "${FILESDIR}"/systemd/chrome-remote-desktop.service
+}
 
+pkg_postinst() {
 	enewgroup chrome-remote-desktop
 
 	einfo "To use this module, open the Chrome Remote Desktop"
