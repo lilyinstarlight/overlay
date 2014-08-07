@@ -42,6 +42,7 @@ RDEPEND="
 	dev-python/python-exec:2[${PYTHON_USEDEP}]
 	>=dev-python/sip-4.15.5:=[${PYTHON_USEDEP}]
 	~dev-qt/qtcore-${QT_PV}
+	~dev-qt/qtxml-${QT_PV}
 	X? (
 		~dev-qt/qtgui-${QT_PV}
 		~dev-qt/qttest-${QT_PV}
@@ -142,11 +143,6 @@ src_configure() {
 				$(use dbus && echo QtDBus) \
 				$(use designer && echo QtDesigner) \
 				$(use qml && echo "QtQml QtQuick"); do
-			# Run eqmake5 inside the qpy subdirectories to respect
-			# CC, CXX, CFLAGS, CXXFLAGS, LDFLAGS and avoid stripping.
-			pushd qpy/${mod} > /dev/null || return
-				eqmake5 $(ls w_qpy*.pro)
-			popd > /dev/null || return
 
 			# Fix insecure runpaths.
 			sed -i -e "/^LFLAGS\s*=/ s:-Wl,-rpath,${BUILD_DIR}/qpy/${mod}::" \
