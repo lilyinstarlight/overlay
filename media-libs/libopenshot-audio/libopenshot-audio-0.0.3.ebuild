@@ -4,11 +4,13 @@
 
 EAPI=5
 
-inherit cmake-utils bzr
+inherit cmake-utils
 
 DESCRIPTION="A high-quality audio editing and playback library used by libopenshot."
 HOMEPAGE="http://openshot.org/"
-EBZR_REPO_URI="lp:~openshot.code/libopenshot/libopenshot-audio"
+SRC_URI="
+	https://launchpad.net/libopenshot/0.0/${PV}/+download/${P}.tar.gz
+"
 
 LICENSE="GPL-3"
 SLOT="0"

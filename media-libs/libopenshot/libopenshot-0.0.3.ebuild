@@ -4,16 +4,17 @@
 
 EAPI=5
 
-inherit cmake-utils eutils bzr
+inherit cmake-utils eutils
 
 DESCRIPTION="A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby."
 HOMEPAGE="http://openshot.org/"
-EBZR_REPO_URI="lp:libopenshot"
+SRC_URI="
+	https://launchpad.net/libopenshot/0.0/${PV}/+download/${P}.tar.gz
+"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE=""
 
 RDEPEND="
 	media-gfx/imagemagick
