@@ -8,9 +8,7 @@ inherit cmake-utils eutils
 
 DESCRIPTION="A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby."
 HOMEPAGE="http://openshot.org/"
-SRC_URI="
-	https://launchpad.net/libopenshot/0.0/${PV}/+download/${P}.tar.gz
-"
+SRC_URI="https://launchpad.net/libopenshot/0.0/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -28,9 +26,7 @@ RDEPEND="
 	dev-lang/swig
 	dev-util/unittest++
 "
-DEPEND="
-	${RDEPEND}
-"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/qtexebug.patch"
