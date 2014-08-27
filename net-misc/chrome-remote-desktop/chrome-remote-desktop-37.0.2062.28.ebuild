@@ -33,7 +33,13 @@ RDEPEND="
 	${PYTHON_DEPS}
 	dev-python/psutil[$PYTHON_USEDEP]
 	x11-base/xorg-server[xvfb]
+	x11-apps/setxkbmap
+	x11-apps/xauth
+	x11-apps/xdpyinfo
 	x11-libs/libXrandr
+	gnome-base/gconf
+	dev-libs/nss
+	x11-libs/gtk+:2
 	sys-libs/pam
 	!policykit? (
 		x11-libs/gksu
