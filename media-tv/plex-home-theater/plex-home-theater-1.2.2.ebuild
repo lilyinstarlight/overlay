@@ -83,5 +83,5 @@ src_install() {
 	doicon "plex/Resources/plexhometheater.png"
 	domenu "plex/Resources/plexhometheater.desktop"
 
-	dobin "${FILESDIR}/plexhometheater.sh"
+	dobin "${FILESDIR}/plexhometheater"
 }
