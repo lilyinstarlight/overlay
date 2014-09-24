@@ -37,4 +37,7 @@ PyQt5 is a set of Qt5 bindings for the Python programming language. Note: This p
 [Chrome Remote Desktop](http://chrome.google.com/remotedesktop) is an application that integrates with Chrome or Chromium and allows one to remotely access their computer or receive assistance securely.
 
 ### awf ###
-A Widget Factory is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
+[A Widget Factory](https://github.com/valr/awf) is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
+
+### Clearlooks-Phenix ###
+[Clearlooks-Phenix](https://github.com/jpfleury/Clearlooks-Phenix) is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2.
