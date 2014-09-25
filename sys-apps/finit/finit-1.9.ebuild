@@ -14,7 +14,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE="alsa +bootmisc dbus +hwclock +initctl +resolvconf +tty urandom X"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	!sys-apps/sysvinit
+"
 
 use_plugin() {
 	if [ -z "$2" ]; then
@@ -26,12 +29,14 @@ use_plugin() {
 	use "$1" && echo "${pname}.so"
 }
 
+PLUGINS="$(use_plugin alsa alsa-utils) $(use_plugin bootmisc) $(use_plugin dbus) $(use_plugin hwclock) $(use_plugin initctl) $(use_plugin resolvconf) $(use_plugin tty) $(use_plugin urandom) $(use_plugin X x11-common)"
+
 src_compile() {
-	emake PLUGINS="$(use_plugin alsa alsa-utils) $(use_plugin bootmisc) $(use_plugin dbus) $(use_plugin hwclock) $(use_plugin initctl) $(use_plugin resolvconf) $(use_plugin tty) $(use_plugin urandom) $(use_plugin X x11-common)"
+	emake PLUGINS="${PLUGINS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake PLUGINS="${PLUGINS}" DESTDIR="${D}" install
 }
 
 pkg_postinst() {
