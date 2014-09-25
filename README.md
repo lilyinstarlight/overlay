@@ -41,3 +41,6 @@ PyQt5 is a set of Qt5 bindings for the Python programming language. Note: This p
 
 ### Clearlooks-Phenix ###
 [Clearlooks-Phenix](https://github.com/jpfleury/Clearlooks-Phenix) is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2.
+
+### finit ###
+[finit](https://github.com/troglobit/finit) is **f**ast **init** system supporting plugins and a configuration file.
