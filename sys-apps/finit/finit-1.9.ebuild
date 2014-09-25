@@ -37,8 +37,12 @@ src_install() {
 pkg_postinst() {
 	einfo "Neither finit nor Gentoo provides finit"
 	einfo "recipes for your services and programs."
-	einfo "You will need to make them yourself in"
+	einfo "You must to make them yourself in"
 	einfo "/etc/finit.conf and /etc/finit.d/*."
+	einfo
+	einfo "An example /etc/finit.conf is available"
+	einfo "in /usr/share/doc/finit/finit.conf."
+	einfo
 	einfo "The /etc/finit.d directory supports both"
 	einfo "finit configuration files and executables."
 }
