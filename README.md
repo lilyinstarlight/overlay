@@ -44,3 +44,9 @@ PyQt5 is a set of Qt5 bindings for the Python programming language. Note: This p
 
 ### finit ###
 [finit](https://github.com/troglobit/finit) is **f**ast **init** system supporting plugins and a configuration file.
+
+### Mumble/Murmur ###
+[Mumble](http://mumble.info/) is an open source, low-latency, high quality voice chat software designed with gamers in mind.
+
+### Deluge ###
+[Deluge](http://deluge-torrent.org/) is a lightweight client-server model BitTorrent client that includes GTK+, CLI, and web interfaces.
