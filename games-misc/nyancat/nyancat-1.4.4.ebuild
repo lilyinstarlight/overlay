@@ -20,4 +20,6 @@ src_install() {
 	doman "${PN}.1"
 
 	dodoc README.md
+
+	prepgamesdirs
 }
