@@ -27,9 +27,6 @@ Primus is a LibGL bridge for people with two GPUs, one that outputs to the scree
 ### libopenshot ###
 The OpenShot Library is a high quality video editing library that will power OpenShot 2.0. This repository includes both the libopenshot package and the libopenshot-audio package and a supporting package, unittest++. Note: To build libopenshot, qt5 is necessary and can (currently) be found in the qt overlay, `# layman -a qt`.
 
-### PyQt5 ###
-PyQt5 is a set of Qt5 bindings for the Python programming language. Note: This package was taken, unmodified, from the [unity-gentoo overlay](https://github.com/shiznix/unity-gentoo/).
-
 ### Plex Home Theater ###
 [Plex](http://plex.tv) is a service that allows convenient access to central media over a variety of devices. Plex Home Theater is an XBMC based client for Plex that includes a nice ten-foot interface and is designed for connecting to the television.
 
