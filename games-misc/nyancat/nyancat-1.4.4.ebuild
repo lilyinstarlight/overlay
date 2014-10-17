@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 src_install() {
-	emake DESTDIR="${D}" install
+	dogamesbin "src/${PN}"
+	doman "${PN}.1"
 
 	dodoc README.md
 }
