@@ -43,8 +43,14 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
+		--disable-uninstall
 		$(use_enable dedicated)
 		$(use_enable dedicated armathentication)
+}
+
+src_compile() {
+	# Parallel builds sometimes fail
+	emake -j1
 }
 
 src_install() {

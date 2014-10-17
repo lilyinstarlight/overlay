@@ -41,7 +41,13 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
+		--disable-uninstall
 		$(use_enable dedicated)
+}
+
+src_compile() {
+	#Parallel builds sometimes fail
+	emake -j1
 }
 
 src_install() {
