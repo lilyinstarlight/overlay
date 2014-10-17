@@ -40,7 +40,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
+	egamesconf \
 		$(use_enable dedicated)
 }
 
@@ -51,4 +51,6 @@ src_install() {
 	domenu desktop/armagetronad-armagetronad.desktop
 
 	dodoc AUTHORS ChangeLog COPYING NEWS README
+
+	prepgamesdirs
 }
