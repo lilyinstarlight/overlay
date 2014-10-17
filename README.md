@@ -53,3 +53,6 @@ PyQt5 is a set of Qt5 bindings for the Python programming language. Note: This p
 
 ### Namecoin ###
 [Namecoin](http://namecoin.info) is a decentralized open source information registration and transfer system based on the Bitcoin cryptocurrency.
+
+### Nyancat ###
+[Nyancat](https://github.com/klange/nyancat) is a CLI implementation of the famous poptart cat that supports many types of terminal.
