@@ -1,0 +1,17 @@
+[Unit]
+Description=Plex Media Server
+After=network.target
+After=avahi-daemon.service
+
+[Service]
+Type=simple
+User=plex
+Group=plex
+ExecStart=/usr/bin/start_pms
+Restart=on-failure
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+
+[Install]
+WantedBy=multi-user.target

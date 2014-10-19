@@ -1,0 +1,17 @@
+--- a/usr/sbin/start_pms	2014-10-19 10:31:38.141419761 -0400
++++ b/usr/sbin/start_pms	2014-10-19 10:32:19.174407396 -0400
+@@ -2,7 +2,7 @@
+ 
+ #change these parameters in /etc/default/plexmediaserver
+ export PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS=6
+-export PLEX_MEDIA_SERVER_HOME=/usr/lib/plexmediaserver
++export PLEX_MEDIA_SERVER_HOME=/opt/plexmediaserver
+ export PLEX_MEDIA_SERVER_MAX_STACK_SIZE=3000
+ export PLEX_MEDIA_SERVER_TMPDIR=/tmp
+ export PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR="${HOME}/Library/Application Support"
+@@ -26,4 +26,4 @@
+ 
+ ulimit -s $PLEX_MAX_STACK_SIZE
+ 
+-(cd /usr/lib/plexmediaserver; ./Plex\ Media\ Server)
++(cd "${PLEX_MEDIA_SERVER_HOME}"; ./Plex\ Media\ Server)

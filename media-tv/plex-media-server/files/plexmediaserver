@@ -1,0 +1,23 @@
+#!/sbin/runscript
+
+depend() {
+	need avahi-daemon
+}
+
+start() {
+	ebegin "Starting Plex Media Server"
+	start-stop-daemon -S -m -p /var/run/plex-media-server.pid -1 /var/log/pms/out.log -2 /var/log/pms/err.log --quiet -u plex -N -5 -b --exec /usr/bin/start_pms
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Plex Media Server"
+	start-stop-daemon --stop --pidfile /var/run/plex-media-server.pid --quiet --exec /usr/bin/start_pms
+	eend $?
+}
+
+restart() {
+	stop
+	sleep 3
+	start
+}
