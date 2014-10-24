@@ -10,7 +10,7 @@ SRC_URI="https://github.com/jpfleury/clearlooks-phenix/archive/${PV}.tar.gz -> $
 
 KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
-SLOT="3.14"
+SLOT="3.10"
 IUSE=""
 
 RDEPEND="
