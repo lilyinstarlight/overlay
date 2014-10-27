@@ -53,3 +53,6 @@ Packages
 
 ### Nyancat (games-misc/nyancat) ###
 [Nyancat](https://github.com/klange/nyancat) is a CLI implementation of the famous poptart cat.
+
+### nSnake ###
+[nSnake](https://github.com/alexdantas/nSnake) is a clone of the classic snake game on the terminal.
