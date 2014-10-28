@@ -24,10 +24,10 @@ Packages
 ### Primus (x11-misc/primus) ###
 [Primus](https://github.com/amonakov/primus) is a LibGL bridge for people with two GPUs, one that outputs to the screen and one that performs the heavy lifting of rendering. Primus is designed to be used in conjunction with Bumblebee, available in the official repository. Note: This package was taken, largely unmodified, from the [Bumblebee Overlay](https://github.com/Bumblebee-Project/bumblebee-gentoo).
 
-### OpenShot Library (media-libs/libopenshot, media-libs/libopenshot-audio) ###
+### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio) ###
 [OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
 
-### Plex Media Server/Plex Home Theater (media-tv/plex-media-server, media-tv/plex-home-theater) ###
+### Plex (media-tv/plex-media-server, media-tv/plex-home-theater) ###
 [Plex](http://plex.tv) is a service that allows convenient access to central media over a variety of devices. Plex Home Theater is an XBMC based client for Plex that includes a nice ten-foot interface and is designed for connecting to the television.
 
 ### Chrome Remote Desktop (net-misc/chrome-remote-desktop) ###
@@ -54,5 +54,5 @@ Packages
 ### Nyancat (games-misc/nyancat) ###
 [Nyancat](https://github.com/klange/nyancat) is a CLI implementation of the famous poptart cat.
 
-### nSnake ###
+### nSnake (games-arcade/nsnake) ###
 [nSnake](https://github.com/alexdantas/nSnake) is a clone of the classic snake game on the terminal.
