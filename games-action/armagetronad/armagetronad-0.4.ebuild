@@ -13,21 +13,20 @@ EBZR_REPO_URI="lp:armagetronad/${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="dedicated"
+IUSE="+auth +fortress glew +joystick +sound"
 
 RDEPEND="
 	dev-libs/boost[threads]
 	dev-libs/libxml2
 	dev-libs/protobuf
-	!dedicated? (
-		media-libs/ftgl
-		media-libs/glew
-		media-libs/libpng
-		media-libs/libsdl
-		media-libs/sdl-image
-		media-libs/sdl-mixer
-		virtual/opengl
-	)
+	media-libs/ftgl
+	media-libs/libpng
+	media-libs/libsdl
+	media-libs/sdl-image
+	media-libs/sdl-mixer
+	virtual/opengl
+
+	glew? ( media-libs/glew )
 "
 DEPEND="
 	${RDEPEND}
@@ -36,13 +35,17 @@ DEPEND="
 "
 
 src_prepare() {
-	"${WORKDIR}/${P}/bootstrap.sh"
+	"${WORKDIR}/${P}"/bootstrap.sh
 }
 
 src_configure() {
 	egamesconf \
 		--disable-uninstall
-		$(use_enable dedicated)
+		$(use_enable auth authentication)
+		$(use_enable fortress)
+		$(use_enable joystick)
+		$(use_enable sound)
+		$(use_with glew)
 }
 
 src_compile() {
