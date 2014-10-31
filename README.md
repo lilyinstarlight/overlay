@@ -15,7 +15,7 @@ Packages
 ### dwm (x11-wm/dwm, x11-misc/dwmstatus) ###
 [dwm](http://dwm.suckless.org) is a simplistic, dynamic (tiling and floating) window manager for X. This package uses my version from my [dwm](https://github.com/fkmclane/dwm) repository. This overlay also includes a package for my dwmstatus also located in my repository.
 
-### Armagetron Advanced (games-action/armagetronad) ###
+### Armagetron Advanced (games-action/armagetronad, games-action/armagetronad-dedicated) ###
 [Armagetron Advanced](http://armagetronad.org) is a fast-paced 3D implementation of lightcycles from the movie Tron. It features both single-player and multiplayer modes with online servers that have extensive configurability. This package includes the current stable release, 0.2.8, and the current bzr snapshot, 0.4.
 
 ### Pipelight (www-plugins/pipelight) ###
