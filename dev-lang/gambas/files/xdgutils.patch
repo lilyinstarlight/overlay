@@ -1,0 +1,41 @@
+diff -ur gambas3-3.3.2.orig/app/Makefile.am gambas3-3.3.2/app/Makefile.am
+--- gambas3-3.3.2.orig/app/Makefile.am	2012-09-25 16:03:56.000000000 +0200
++++ gambas3-3.3.2/app/Makefile.am	2012-10-10 19:24:55.000000000 +0200
+@@ -29,16 +29,8 @@
+ 	@echo "Installing the scripter..."
+ 	@ln -s gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION) || true
+ 	@ln -s gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbw$(GAMBAS_VERSION) || true
+-	@if test x"$(XDG_UTILS)" != x; then \
+-		$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons; \
+-		cp -f $(srcdir)/mime/application-x-gambas*.png $(DESTDIR)$(gbdatadir)/icons; \
+-		echo "Registering Gambas script mimetype"; \
+-		xdg-icon-resource install --context mimetypes --size 64 $(DESTDIR)$(gbdatadir)/icons/application-x-gambasscript.png application-x-gambasscript; \
+-		xdg-mime install $(srcdir)/mime/application-x-gambasscript.xml; \
+-		echo "Registering Gambas server page mimetype"; \
+-		xdg-icon-resource install --context mimetypes --size 64 $(DESTDIR)$(gbdatadir)/icons/application-x-gambasserverpage.png application-x-gambasserverpage; \
+-		xdg-mime install $(srcdir)/mime/application-x-gambasserverpage.xml; \
+-	fi
++	$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons;
++	cp -f $(srcdir)/mime/application-x-gambas*.png $(DESTDIR)$(gbdatadir)/icons;
+	@echo "Installing the Gambas appdata file"
+	@$(INSTALL) -d $(DESTDIR)$(datarootdir)/appdata
+	@$(INSTALL) $(srcdir)/desktop/gambas3.appdata.xml $(DESTDIR)$(datarootdir)/appdata
+diff -ur gambas3-3.3.2.orig/main/Makefile.am gambas3-3.3.2/main/Makefile.am
+--- gambas3-3.3.2.orig/main/Makefile.am	2012-09-25 16:04:20.000000000 +0200
++++ gambas3-3.3.2/main/Makefile.am	2012-10-10 19:43:23.000000000 +0200
+@@ -16,13 +16,8 @@
+ 	@echo "Making runtime symbolic link"
+ 	@$(LN_S) -f gbx$(GAMBAS_VERSION) $(DESTDIR)$(bindir)/gbr$(GAMBAS_VERSION) || true
+ 	
+-	@if test x"$(XDG_UTILS)" != x; then \
+-		echo "Registering Gambas executable mimetype"; \
+-		$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons; \
+-		cp -f $(srcdir)/mime/application-x-gambas3.png $(DESTDIR)$(gbdatadir)/icons; \
+-		xdg-icon-resource install --context mimetypes --size 64 $(DESTDIR)$(gbdatadir)/icons/application-x-gambas3.png application-x-gambas3; \
+-		xdg-mime install $(srcdir)/mime/application-x-gambas3.xml; \
+-	fi
++	$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons;
++	cp -f $(srcdir)/mime/application-x-gambas3.png $(DESTDIR)$(gbdatadir)/icons;
+ 
+ uninstall-local:
+ 	@rm -f $(DESTDIR)$(bindir)/gbr$(GAMBAS_VERSION)
