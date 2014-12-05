@@ -10,8 +10,13 @@ inherit cmake-utils eutils python-single-r1
 
 DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
-SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/pht-v${PV}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/plex-home-theater-public-pht-v${PV}"
+
+MY_PN="plex-home-theater-public"
+MAGIC="417-04be1687"
+MY_PV="${PV}.${MAGIC}"
+MY_P="${MY_PN}-${MY_PV}"
+
+SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -63,6 +68,8 @@ DEPEND="
 	virtual/jdk
 	dev-lang/swig
 "
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/cmake-fribidi.patch"
