@@ -2,7 +2,7 @@
 <repositories version="1.0">
 	<repo quality="experimental" status="unofficial">
 		<name>fkmclane</name>
-		<description>Various extra or patched ebuilds by fkmclane.</description>
+		<description>Personal overlay of fkmclane containing patched ebuilds and new ebuilds</description>
 		<homepage>https://github.com/fkmclane/overlay</homepage>
 		<owner>
 			<email>fkmclane@gmail.com</email>
