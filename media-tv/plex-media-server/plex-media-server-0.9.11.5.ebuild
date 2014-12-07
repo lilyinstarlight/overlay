@@ -10,7 +10,7 @@ DESCRIPTION="Plex Media Server is an organizer for your personal media and provi
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-MAGIC="739-a4e710f"
+MAGIC="774-760cb52"
 MY_PV="${PV}.${MAGIC}"
 MY_P="${MY_PN}_${MY_PV}"
 
@@ -25,7 +25,7 @@ SRC_URI="
 
 LICENSE="PMS-License"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="

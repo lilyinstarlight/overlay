@@ -1,0 +1,15 @@
+diff -Naur plex-home-theater-1.1.1/plex/CMakeModules/PlatformConfigLINUX.cmake plex-home-theater-1.1.1-no-pulse/plex/CMakeModules/PlatformConfigLINUX.cmake
+--- plex-home-theater-1.1.1/plex/CMakeModules/PlatformConfigLINUX.cmake	2014-05-23 15:04:41.000000000 +0200
++++ plex-home-theater-1.1.1-no-pulse/plex/CMakeModules/PlatformConfigLINUX.cmake	2014-05-28 07:30:12.474574447 +0200
+@@ -89,10 +89,7 @@
+   set(HAVE_LIBPTHREAD 1)
+ endif()
+ 
+-plex_find_package(PulseAudio 0 1)
+-if(HAVE_LIBPULSEAUDIO)
+-  set(HAVE_LIBPULSE 1)
+-endif()
++set(HAVE_LIBPULSE 0)
+ plex_find_package(Alsa 0 1)
+ 
+ plex_find_package(LibUSB 0 1)
