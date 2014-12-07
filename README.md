@@ -28,7 +28,7 @@ Packages
 [OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
 
 ### Plex (media-tv/plex-media-server, media-tv/plex-home-theater) ###
-[Plex](http://plex.tv) is a service that allows convenient access to central media over a variety of devices. Plex Home Theater is an XBMC based client for Plex that includes a nice ten-foot interface and is designed for connecting to the television.
+[Plex](http://plex.tv) is a service that allows convenient access to central media over a variety of devices. Plex Home Theater is an XBMC based client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can unmask the packages to get the latest Plex Pass versions.
 
 ### Chrome Remote Desktop (net-misc/chrome-remote-desktop) ###
 [Chrome Remote Desktop](http://chrome.google.com/remotedesktop) is an application that integrates with Chrome or Chromium and allows one to remotely access their computer or receive assistance securely.
