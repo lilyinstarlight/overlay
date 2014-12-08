@@ -11,14 +11,16 @@ EGIT_REPO_URI="https://github.com/fkmclane/dwm.git"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="xinerama"
 
-DEPEND="x11-libs/libX11
+DEPEND="
+	x11-libs/libX11
 	xinerama? (
 		x11-proto/xineramaproto
 		x11-libs/libXinerama
-		)"
+	)
+"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
