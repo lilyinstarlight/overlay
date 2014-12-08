@@ -75,6 +75,9 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}/cmake-fribidi.patch"
 	use pulseaudio || epatch "${FILESDIR}/nopulse.patch"
+
+	#Patch ffmpeg building to use MAKEOPTS
+	sed -i -e "s/BUILD_COMMAND make -j 4/BUILD_COMMAND make ${MAKEOPTS}/" lib/ffmpeg/CMakeLists.txt
 }
 
 src_configure() {
@@ -83,6 +86,7 @@ src_configure() {
 }
 
 src_compile() {
+	#Parallel build sometimes fails
 	cmake-utils_src_compile -j1
 }
 
