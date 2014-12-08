@@ -45,9 +45,6 @@ Packages
 #### Mumble/Murmur (media-sound/mumble, media-sound/murmur) ####
 [Mumble](http://mumble.info/) is an open source, low-latency, high quality voice chat software designed with gamers in mind.
 
-#### Deluge (net-p2p/deluge) ####
-[Deluge](http://deluge-torrent.org/) is a lightweight client-server model BitTorrent client that includes GTK+, CLI, and web interfaces.
-
 #### Namecoin (net-dns/namecoind, net-dns/namecoin-qt) ####
 [Namecoin](http://namecoin.info/) is a decentralized open source information registration and transfer system based on the Bitcoin cryptocurrency. This repository includes packages for both the headless daemon and the Qt client.
 
