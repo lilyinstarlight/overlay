@@ -23,7 +23,7 @@ SRC_URI="
 	)
 "
 
-LICENSE="PMS-License"
+LICENSE="PMS-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
