@@ -36,8 +36,8 @@ Packages
 #### A Widget Factory (x11-misc/awf) ####
 [A Widget Factory](https://github.com/valr/awf) is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
 
-#### Clearlooks-Phenix (x11-themes/clearlooks-phenix) ####
-[Clearlooks-Phenix](https://github.com/jpfleury/Clearlooks-Phenix) is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2.
+#### Clearlooks-Phénix (x11-themes/clearlooks-phenix) ####
+[Clearlooks-Phénix](https://github.com/jpfleury/Clearlooks-Phenix) is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2.
 
 #### finit (sys-apps/finit) ####
 [finit](https://github.com/troglobit/finit) is a **f**ast **init** system supporting plugins and a configuration file.
