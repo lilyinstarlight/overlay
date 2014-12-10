@@ -31,9 +31,11 @@ DEPEND="
 	sys-devel/bison
 "
 
+S="${WORKDIR}/${PN}-${VERSION}"
+
 src_prepare() {
-	sed -i "s/png_check_sig/png_sig_cmp" "${WORKDIR}/${P}"/configure.ac
-	"${WORKDIR}/${P}"/bootstrap.sh
+	sed -i -e "s/png_check_sig/png_sig_cmp/" configure.ac
+	./bootstrap.sh
 }
 
 src_configure() {
@@ -44,7 +46,7 @@ src_configure() {
 }
 
 src_compile() {
-	# Parallel builds sometimes fail
+	#Parallel builds sometimes fail
 	emake -j1
 }
 
