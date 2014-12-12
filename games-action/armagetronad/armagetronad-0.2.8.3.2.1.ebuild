@@ -24,6 +24,8 @@ RDEPEND="
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	virtual/opengl
+
+	auth? ( dev-libs/zthread )
 "
 DEPEND="
 	${RDEPEND}

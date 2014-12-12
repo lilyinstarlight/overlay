@@ -17,10 +17,11 @@ SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${MY_
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="auth"
+IUSE="+auth"
 
 RDEPEND="
 	dev-libs/libxml2
+
 	auth? ( dev-libs/zthread )
 "
 DEPEND="
@@ -29,11 +30,11 @@ DEPEND="
 	sys-devel/bison
 "
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_PN}-${VERSION}"
 
 src_prepare() {
-	sed -i "s/png_check_sig/png_sig_cmp" "${WORKDIR}/${MY_P}"/configure.ac
-	"${WORKDIR}/${MY_P}"/bootstrap.sh
+	sed -i -e "s/png_check_sig/png_sig_cmp/" configure.ac
+	./bootstrap.sh
 }
 
 src_configure() {
@@ -44,15 +45,12 @@ src_configure() {
 }
 
 src_compile() {
-	# Parallel builds sometimes fail
+	#Parallel builds sometimes fail
 	emake -j1
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
-
-	doicon desktop/icons/large/armagetronad.png
-	domenu desktop/armagetronad-armagetronad.desktop
 
 	dodoc AUTHORS ChangeLog COPYING NEWS README
 

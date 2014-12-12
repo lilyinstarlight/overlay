@@ -31,7 +31,7 @@ DEPEND="
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	"${WORKDIR}/${MY_P}"/bootstrap.sh
+	./bootstrap.sh
 }
 
 src_configure() {
