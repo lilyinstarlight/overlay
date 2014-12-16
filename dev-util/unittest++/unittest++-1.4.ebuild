@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="A lightweight unit testing framework for C++"
 HOMEPAGE="http://unittest-cpp.sourceforge.net/"
@@ -18,6 +18,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/respect-cxx.patch
+}
 
 src_install() {
 	dolib.a libUnitTest++.a
