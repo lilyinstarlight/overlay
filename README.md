@@ -53,3 +53,6 @@ Packages
 
 #### nSnake (games-arcade/nsnake) ####
 [nSnake](https://github.com/alexdantas/nSnake) is a clone of the classic snake game on the terminal.
+
+#### SuperTuxKart (games-action/supertuxkart) ####
+[SuperTuxKart](http://supertuxkart.sourceforge.net/) is a free 3D kart racing game featuring many tracks, items, and characters from the open source community. This overlay will temporarily host an ebuild for the 0.8.2 beta.
