@@ -6,7 +6,7 @@ EAPI=5
 
 DESCRIPTION="Browser plugin allowing usage of Windows NPAPI plugins through Wine."
 HOMEPAGE="http://pipelight.net/"
-COMMIT="79b1b7ba0032"
+COMMIT="b7b5e5471d52"
 SRC_URI="
 	https://bitbucket.org/mmueller2012/${PN}/get/v${PV}.tar.gz -> ${P}.tar.gz
 	http://repos.fds-team.de/pluginloader/v${PV}/pluginloader.tar.gz -> ${P}-pluginloader.tar.gz
