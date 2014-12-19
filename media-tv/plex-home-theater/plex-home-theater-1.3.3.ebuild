@@ -12,7 +12,7 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-MAGIC="417-04be1687"
+MAGIC="427-1fa83b88"
 MY_PV="${PV}.${MAGIC}"
 MY_P="${MY_PN}-${MY_PV}"
 
