@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="maim (make image) takes screenshots of your desktop and is designed to be an improved scrot"
+DESCRIPTION="maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot"
 HOMEPAGE="https://github.com/naelstrof/maim"
 SRC_URI="https://github.com/naelstrof/maim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

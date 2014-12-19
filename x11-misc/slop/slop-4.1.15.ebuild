@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="slop (select operation) is an application that querys for a selection from the user and prints the region to stdout"
+DESCRIPTION="slop (Select Operation) is an application that querys for a selection from the user and prints the region to stdout"
 HOMEPAGE="https://github.com/naelstrof/slop"
 SRC_URI="https://github.com/naelstrof/slop/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
