@@ -13,7 +13,7 @@ MY_P="namecoin-${MY_PV}"
 
 DESCRIPTION="A P2P network based domain name system"
 HOMEPAGE="https://namecoin.info/"
-SRC_URI="https://github.com/namecoin/namecoin/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/namecoin/namecoin/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="MIT ISC cryptopp"
 SLOT="0"
