@@ -12,8 +12,8 @@ SRC_URI="https://github.com/naelstrof/maim/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="+select"
+KEYWORDS="amd64 x86"
+IUSE=""
 
 DEPEND="
 	media-libs/imlib2
@@ -23,7 +23,7 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	select? ( x11-misc/slop )
+	x11-misc/slop
 "
 
 src_prepare() {
