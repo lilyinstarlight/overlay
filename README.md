@@ -59,3 +59,6 @@ Packages
 
 #### maim (media-gfx/maim) ####
 [maim](https://github.com/naelstrof/maim) (make image) is a utility that takes screenshots of your desktop and is designed to be an improved scrot. It optionally uses [slop](https://github.com/naelstrof/slop) for screen selections.
+
+#### m64py (games-emulation/m64py) ####
+[m64py](http://m64py.sourceforge.net/) is a PyQt4 front-end to the [mupen64plus](https://code.google.com/p/mupen64plus/) N64 emulator.
