@@ -10,7 +10,7 @@ DESCRIPTION="Plex Media Server is an organizer for your personal media and provi
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-MAGIC="800-831ffad"
+MAGIC="803-87d0708"
 MY_PV="${PV}.${MAGIC}"
 MY_P="${MY_PN}_${MY_PV}"
 
