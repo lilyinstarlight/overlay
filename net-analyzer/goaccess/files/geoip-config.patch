@@ -1,0 +1,13 @@
+diff --git a/config/goaccess.conf b/config/goaccess.conf
+index 3fcc04c..7f20331 100644
+--- a/config/goaccess.conf
++++ b/config/goaccess.conf
+@@ -253,7 +253,7 @@ with-output-resolver false
+ # wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+ # gunzip GeoLiteCity.dat.gz
+ #
+-#geoip-city-data /usr/local/share/GeoIP/GeoLiteCity.dat
++#geoip-city-data /usr/share/GeoIP/GeoLiteCity.dat
+ 
+ ######################################
+ # Tokyo Cabinet Options

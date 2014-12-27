@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A real-time web log analyzer and interactive viewer that runs in a terminal"
 HOMEPAGE="http://goaccess.io"
@@ -24,6 +24,10 @@ DEPEND="
 	${RDEPEND}
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	epatch "${FILESDIR}"/geoip-config.patch
+}
 
 src_configure() {
 	econf \
