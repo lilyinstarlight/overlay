@@ -39,8 +39,8 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-uninstall
-		--enable-dedicated
+		--disable-uninstall \
+		--enable-dedicated \
 		$(use_enable auth authentication)
 }
 

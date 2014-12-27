@@ -36,9 +36,9 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-uninstall
-		--enable-dedicated
-		$(use_enable auth authentication)
+		--disable-uninstall \
+		--enable-dedicated \
+		$(use_enable auth authentication) \
 		$(use_enable fortress)
 }
 

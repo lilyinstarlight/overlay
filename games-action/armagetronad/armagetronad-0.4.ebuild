@@ -40,11 +40,11 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-uninstall
-		$(use_enable auth authentication)
-		$(use_enable fortress)
-		$(use_enable joystick)
-		$(use_enable sound)
+		--disable-uninstall \
+		$(use_enable auth authentication) \
+		$(use_enable fortress) \
+		$(use_enable joystick) \
+		$(use_enable sound) \
 		$(use_with glew)
 }
 

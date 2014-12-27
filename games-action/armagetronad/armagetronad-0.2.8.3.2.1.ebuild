@@ -42,8 +42,8 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-uninstall
-		$(use_enable auth authentication)
+		--disable-uninstall \
+		$(use_enable auth authentication) \
 		$(use_enable music)
 }
 
