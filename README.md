@@ -21,9 +21,6 @@ Packages
 #### Pipelight (www-plugins/pipelight) ####
 [Pipelight](http://pipelight.net/) is a browser plugin that allows running Windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
 
-#### Primus (x11-misc/primus) ####
-[Primus](https://github.com/amonakov/primus) is a LibGL bridge for people with two GPUs, one that outputs to the screen and one that performs the heavy lifting of rendering. Primus is designed to be used in conjunction with Bumblebee, available in the official repository. Note: This package was taken, largely unmodified, from the [Bumblebee Overlay](https://github.com/Bumblebee-Project/bumblebee-gentoo).
-
 #### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio) ####
 [OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
 
