@@ -43,7 +43,7 @@ Packages
 [Mumble](http://mumble.info/) is an open source, low-latency, high quality voice chat software designed with gamers in mind.
 
 #### Namecoin (net-dns/namecoind, net-dns/namecoin-qt) ####
-[Namecoin](http://namecoin.info/) is a decentralized open source information registration and transfer system based on the Bitcoin cryptocurrency. This repository includes packages for both the headless daemon and the Qt client.
+[Namecoin](http://namecoin.info/) is a decentralized open source information registration and transfer system based on the Bitcoin cryptocurrency. This overlay includes packages for both the headless daemon and the Qt client.
 
 #### Nyancat (games-misc/nyancat) ####
 [Nyancat](https://github.com/klange/nyancat) is a CLI implementation of the famous poptart cat.
@@ -62,3 +62,6 @@ Packages
 
 #### GoAccess (net-analyzer/goaccess) ####
 [GoAccess](http://goaccess.io/) is an open source real-time web log analyzer and interactive viewer that runs in a terminal.
+
+#### Prosody (net-im/prosody) ####
+[prosody](https://prosody.im/) is a modern XMPP communication server aimed at being efficient and easy to configure. This overlay includes a live ebuild for the 0.10 branch of the project.
