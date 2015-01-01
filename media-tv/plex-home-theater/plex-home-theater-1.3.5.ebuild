@@ -12,15 +12,14 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-MAGIC="427-1fa83b88"
-MY_PV="${PV}.${MAGIC}"
-MY_P="${MY_PN}-${MY_PV}"
+COMMIT="7966a4df986f58c07a3dec446501f2f718e5daad"
+MY_P="${MY_PN}-${COMMIT}"
 
-SRC_URI="https://github.com/plexinc/plex-home-theater-public/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/plexinc/${MY_PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="pulseaudio"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -78,6 +77,9 @@ src_prepare() {
 
 	#Patch ffmpeg building to use MAKEOPTS
 	sed -i -e "s/BUILD_COMMAND make -j 4/BUILD_COMMAND make ${MAKEOPTS}/" lib/ffmpeg/CMakeLists.txt
+
+	#Save git revision for Plex version string
+	echo ${COMMIT:0:8} > GitRevision.txt
 }
 
 src_configure() {
