@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile1
+index 36d327f..5dc8fc7 100644
+--- a/Makefile
++++ b/Makefile1
+@@ -188,7 +188,7 @@ install-bin: $(BINARIES)
+ 	$(call install-replacing,syncmaildir.lua,share/lua/$(LUAV))
+ 
+ install-misc: $(MANPAGES1) $(MANPAGES5)
+-	$(call mkdir-p,$(DESTDIR)/etc/xdg/autostart)
++	#$(call mkdir-p,$(DESTDIR)/etc/xdg/autostart)
+ 	$(foreach d,\
+ 	  $(filter-out xdg,$(shell find xdg -type d)),\
+ 	  $(call mkdir-p,share/$(patsubst xdg/%,%,$(d)));)

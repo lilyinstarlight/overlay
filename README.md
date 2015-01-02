@@ -64,4 +64,7 @@ Packages
 [GoAccess](http://goaccess.io/) is an open source real-time web log analyzer and interactive viewer that runs in a terminal.
 
 #### Prosody (net-im/prosody) ####
-[prosody](https://prosody.im/) is a modern XMPP communication server aimed at being efficient and easy to configure. This overlay includes a live ebuild for the 0.10 branch of the project.
+[Prosody](https://prosody.im/) is a modern XMPP communication server aimed at being efficient and easy to configure. This overlay includes a live ebuild for the 0.10 branch of the project.
+
+#### Sync Mail Dir (net-mail/syncmaildir) ####
+[Sync Mail Dir](http://syncmaildir.sourceforge.net/) (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format. It is useful for IMAP-less client-server mail synchronization and for Maildir transistion.

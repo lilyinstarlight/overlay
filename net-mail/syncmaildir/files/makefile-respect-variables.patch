@@ -1,0 +1,27 @@
+diff --git a/Makefile b/Makefile
+index 36d327f..56d3f85 100644
+--- a/Makefile
++++ b/Makefile
+@@ -13,7 +13,6 @@ GSCHEMAS=xdg/glib-2.0/schemas/org.syncmaildir.applet.gschema.xml
+ GSCHEMAS_COMPILED=xdg/glib-2.0/schemas/gschemas.compiled
+ MANPAGES5=smd-config.5
+ HTML=index.html design.html hooks.html
+-DESTDIR=
+ SF_FRS=/home/frs/project/s/sy/syncmaildir/syncmaildir
+ SF_LOGIN=$(SF_USER),syncmaildir
+ SF_WEB=htdocs
+@@ -37,13 +36,12 @@ H=@
+ # they are meant to be overridden if necessary. See the end of this
+ # file for some templates setting them.
+ 
+-PREFIX=usr/local
+ SED=sed
+ XDELTA=xdelta
+ SSH=ssh
+ LUAV=5.1
+ LUA=lua$(LUAV)
+-CFLAGS=-O2 -Wall -Wextra -Wcast-align -g
++CFLAGS?=-O2 -Wall -Wextra -Wcast-align
+ PKG_FLAGS=
+ 
+ # ----------------------------------------------------------------------------
