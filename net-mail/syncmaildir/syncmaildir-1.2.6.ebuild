@@ -49,3 +49,12 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
 }
+
+pkg_postinst() {
+	einfo "Sync Mail Dir must be installed on both the"
+	einfo "client and the server between which mail will"
+	einfo "be synchronized."
+	einfo
+	einfo "See http://syncmaildir.sourceforge.net/ for"
+	einfo "configuration and security information."
+}
