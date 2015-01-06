@@ -16,8 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
 COMMON="
-	dev-libs/glib:2
+	>=dev-libs/glib-2.32:2
 	gnome? (
+		dev-libs/dbus-glib
+		x11-libs/gtk+:3
 		dev-lang/vala:0.22
 		x11-libs/libnotify
 		gnome-base/gconf:2
@@ -38,6 +40,7 @@ RDEPEND="
 src_prepare() {
 	epatch "${FILESDIR}"/makefile-destdir.patch
 	epatch "${FILESDIR}"/makefile-respect-variables.patch
+	epatch "${FILESDIR}"/makefile-no-doc.patch
 	use gnome && epatch "${FILESDIR}"/vala-unowned.patch || epatch "${FILESDIR}"/no-applet.patch
 }
 
@@ -48,6 +51,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
+
+	dodoc README KNOWN_BUGS DESIGN ChangeLog
+	dodoc -r sample-hooks
 }
 
 pkg_postinst() {
