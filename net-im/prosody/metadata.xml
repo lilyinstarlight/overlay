@@ -10,6 +10,9 @@
   <maintainer>
     <email>zx2c4@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>fkmclane@gmail.com</email>
+  </maintainer>
   <use>
     <flag name="libevent">Use libevent for event handling</flag>
     <flag name="zlib">Support for compressing XMPP streams with mod_compression</flag>

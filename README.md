@@ -39,12 +39,6 @@ Packages
 #### finit (sys-apps/finit) ####
 [finit](https://github.com/troglobit/finit) is a **f**ast **init** system supporting plugins and a configuration file.
 
-#### Mumble/Murmur (media-sound/mumble, media-sound/murmur) ####
-[Mumble](http://mumble.info/) is an open source, low-latency, high quality voice chat software designed with gamers in mind.
-
-#### Namecoin (net-dns/namecoind, net-dns/namecoin-qt) ####
-[Namecoin](http://namecoin.info/) is a decentralized open source information registration and transfer system based on the Bitcoin cryptocurrency. This overlay includes packages for both the headless daemon and the Qt client.
-
 #### Nyancat (games-misc/nyancat) ####
 [Nyancat](https://github.com/klange/nyancat) is a CLI implementation of the famous poptart cat.
 

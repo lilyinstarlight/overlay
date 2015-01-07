@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>fkmclane@gmail.com</email>
+	</maintainer>
+	<use>
+		<flag name="auth">Enable armathentication support</flag>
+		<flag name="fortress">Enable support for fortress game mode</flag>
+		<flag name="glew">Enable <pkg>media-libs/glew</pkg> opengl extension library support</flag>
+		<flag name="music">Enable background music support</flag>
+	</use>
+</pkgmetadata>

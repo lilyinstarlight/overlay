@@ -13,6 +13,7 @@ SRC_URI="https://launchpad.net/libopenshot/0.0/${PV}/+download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
+IUSE=""
 
 RDEPEND="
 	x11-libs/libX11
