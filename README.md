@@ -7,7 +7,7 @@ Installation
 The easiest way to add this overlay to your Portage tree is through layman.
 
 ```
-# layman -o https://raw.githubusercontent.com/fkmclane/overlay/master/repositories.xml -a fkmclane
+# layman -a fkmclane
 ```
 
 Packages
