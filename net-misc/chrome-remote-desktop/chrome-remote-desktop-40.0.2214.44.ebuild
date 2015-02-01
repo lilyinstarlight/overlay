@@ -36,6 +36,7 @@ RDEPEND="
 	x11-apps/setxkbmap
 	x11-apps/xauth
 	x11-apps/xdpyinfo
+	x11-apps/xrandr
 	x11-libs/libXrandr
 	gnome-base/gconf
 	dev-libs/nss
