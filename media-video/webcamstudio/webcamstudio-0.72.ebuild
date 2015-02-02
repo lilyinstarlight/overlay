@@ -60,7 +60,7 @@ EANT_BUILD_XML="${S}/build.xml"
 
 java_prepare() {
 	#Fix avconv/gstreamer/ffmpeg binaries absolute paths
-	einfo "Fixing some binaries' paths..."
+	einfo "Fixing some binaries' paths"
 	sed -i \
 		-e "s?=gst-launch-0.10?=/usr/bin/gst-launch-0.10?" \
 		-e "s?=avconv?=/usr/bin/ffmpeg?" \
@@ -78,7 +78,7 @@ java_prepare() {
 	cd "libraries"
 
 	#Remove some bundled java libs and use Gentoo native ones
-	einfo "Removing the unnecessary project's jar library files..."
+	einfo "Removing the unnecessary project's jar library files"
 	rm -v 	AbsoluteLayout*.jar \
 			AppFramework*.jar \
 			commons-*.jar \
