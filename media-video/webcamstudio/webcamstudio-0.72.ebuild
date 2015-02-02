@@ -19,7 +19,7 @@ SRC_URI="http://files.fkmclane.net/webcamstudio/${PN}_${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="policykit vloopback"
+IUSE="policykit +vloopback"
 
 DEPEND="
 	>=virtual/jdk-1.7
