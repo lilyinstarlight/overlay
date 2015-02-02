@@ -48,10 +48,7 @@ RDEPEND="
 	media-libs/gst-plugins-ugly
 	media-sound/pulseaudio
 	vloopback? (
-		|| (
-			media-video/webcamstudio-module
-			media-video/v4l2loopback
-		)
+		media-video/webcamstudio-module
 	)
 	!policykit? (
 		x11-libs/gksu

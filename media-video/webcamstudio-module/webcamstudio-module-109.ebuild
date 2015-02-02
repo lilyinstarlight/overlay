@@ -4,6 +4,8 @@
 
 EAPI=5
 
+S="${WORKDIR}/vloopback"
+
 inherit eutils linux-mod toolchain-funcs
 
 DESCRIPTION="Kernel module and helper library for WebcamStudio."
@@ -34,7 +36,7 @@ pkg_setup() {
 
 src_compile() {
 	# We use manual compile of the lib so be compliant to Gentoo flags
-	einfo "Compiling helper library..."
+	einfo "Compiling helper library"
 	$(tc-getCC) \
 		${CPPFLAGS} ${CFLAGS} \
 		-fPIC \
@@ -51,23 +53,12 @@ src_compile() {
 }
 
 src_install() {
-	einfo "Installing helper library..."
+	einfo "Installing helper library"
 	dolib libwebcamstudio.so libwebcamstudio.so.1.0.1
 
 	linux-mod_src_install
 }
 
-pkg_postinst() {
-	linux-mod_pkg_postinst
-
-	elog "To use WebcamStudio you need to have the \"webcamstudio\" module"
-	elog "loaded first."
-	elog ""
-	elog "If you want to do it automatically, please add \"webcamstudio\" to:"
-	if has_version sys-apps/openrc; then
-		elog "/etc/conf.d/modules"
-	else
-		elog "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
-	fi
-	elog ""
-}
+#pkg_postinst() {
+#	linux-mod_pkg_postinst
+#}
