@@ -6,7 +6,6 @@ EAPI=5
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-nodeps ant-junit4 ant-junit"
-EANT_BUILD_XML="${S}/build.xml"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -60,6 +59,7 @@ RDEPEND="
 "
 
 S="${WORKDIR}/${PN}"
+EANT_BUILD_XML="${S}/build.xml"
 
 java_prepare() {
 	#Fix avconv/gstreamer/ffmpeg binaries absolute paths
