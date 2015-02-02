@@ -65,3 +65,6 @@ Packages
 
 #### VMPK (media-sound/vmpk) ####
 [VMPK](http://vmpk.sourceforge.net/) is a virtual midi keyboard that uses [drumstick](http://drumstick.sourceforge.net/) for its backend. This overlay will temporarily host the Qt 5 version, 0.6.0.
+
+#### WebcamStudio (media-video/webcamstudio, media-video/webcamstudio-module) ####
+[WebcamStudio](https://code.google.com/p/webcamstudio/) is a live video mixer often used in conjunction with a virtual webcam driver to create professional looking broadcasts.

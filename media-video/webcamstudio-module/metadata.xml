@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>video</herd>
+<maintainer>
+	<email>phobosk@kbfx.net</email>
+	<name>PhobosK</name>
+	<description>Proxy maintainer. Assign bugs to him.</description>
+</maintainer>
+<longdescription>
+WebcamStudio For GNU/Linux creates a virtual webcam that can mix several video
+sources together and can be used for live broadcasting over Bambuser, UStream or Stickam.
+On this virtual webcam, you can broadcast your desktop, your webcam, a movie, some text,
+IRC channels, RSS Feed, animations, images or all of them at the same time.
+This is the kernel module needed for WebcamStudio to function.
+</longdescription>
+</pkgmetadata>
