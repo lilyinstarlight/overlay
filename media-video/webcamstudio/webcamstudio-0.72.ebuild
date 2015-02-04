@@ -41,12 +41,14 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	virtual/ffmpeg
-	media-libs/gstreamer:0.10
-	media-libs/gst-plugins-bad
-	media-libs/gst-plugins-base
-	media-libs/gst-plugins-good
-	media-libs/gst-plugins-ugly
+	media-libs/gstreamer:1.0
+	media-libs/gst-plugins-bad:1.0
+	media-libs/gst-plugins-base:1.0
+	media-libs/gst-plugins-good:1.0
+	media-libs/gst-plugins-ugly:1.0
+	media-plugins/gst-plugins-ximagesrc:1.0
 	media-sound/pulseaudio
+	x11-apps/xwininfo
 	vloopback? (
 		media-video/webcamstudio-module
 	)
@@ -62,8 +64,8 @@ java_prepare() {
 	#Fix avconv/gstreamer/ffmpeg binaries absolute paths
 	einfo "Fixing some binaries' paths"
 	sed -i \
-		-e "s?=gst-launch-0.10?=/usr/bin/gst-launch-0.10?" \
-		-e "s?=avconv?=/usr/bin/ffmpeg?" \
+		-e "s?=gst-launch-1.0?=/usr/bin/gst-launch-1.0?" \
+		-e "s?=avconv?=/usr/bin/avconv?" \
 		-e "s?=ffmpeg?=/usr/bin/ffmpeg?" \
 		src/webcamstudio/externals/linux/*.properties \
 		src/webcamstudio/externals/linux/*/*.properties \
