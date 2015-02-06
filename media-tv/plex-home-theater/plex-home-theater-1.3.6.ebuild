@@ -12,7 +12,7 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-MAGIC="431-7966a4df"
+MAGIC="441-309e72d1"
 MY_PV="${PV}.${MAGIC}"
 MY_P="${MY_PN}-${MY_PV}"
 
@@ -20,7 +20,7 @@ SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="pulseaudio"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
