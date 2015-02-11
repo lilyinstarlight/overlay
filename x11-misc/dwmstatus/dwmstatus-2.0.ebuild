@@ -17,7 +17,7 @@ IUSE="alsa"
 DEPEND="x11-libs/libX11
 	alsa? (
 		media-libs/alsa-lib
-		)"
+	)"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
