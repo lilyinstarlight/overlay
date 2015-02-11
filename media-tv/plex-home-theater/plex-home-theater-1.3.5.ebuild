@@ -30,7 +30,7 @@ CDEPEND="
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio
-	dev-libs/libcec
+	<dev-libs/libcec-2.2.0
 	dev-libs/lzo
 	dev-libs/tinyxml
 	dev-libs/yajl
