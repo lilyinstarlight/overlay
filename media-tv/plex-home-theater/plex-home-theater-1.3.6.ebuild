@@ -12,8 +12,9 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-MAGIC="441-309e72d1"
-MY_PV="${PV}.${MAGIC}"
+BUILD="441"
+COMMIT="309e72d1"
+MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}-${MY_PV}"
 
 SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
@@ -96,10 +97,13 @@ src_prepare() {
 	sed -i -e "s/BUILD_COMMAND make -j 4/BUILD_COMMAND make ${MAKEOPTS}/" lib/ffmpeg/CMakeLists.txt
 
 	#Save git revision for Plex version string
-	#echo ${COMMIT:0:8} > GitRevision.txt
+	echo ${COMMIT} > GitRevision.txt
 }
 
 src_configure() {
+	#Set build number for Plex version string
+	export BUILD_NUMBER=${BUILD}
+
 	local mycmakeargs=( -DCMAKE_BUILD_TYPE='Release' -DCMAKE_INSTALL_PREFIX='/opt/plexhometheater' -DENABLE_AUTOUPDATE='FALSE' -DENABLE_DUMP_SYMBOLS='FALSE' -DENABLE_PYTHON='TRUE' -DPYTHON_EXEC='/usr/bin/python2' -DUSE_INTERNAL_FFMPEG='TRUE' -DCREATE_BUNDLE='FALSE' )
 	cmake-utils_src_configure
 }
