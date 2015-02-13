@@ -25,43 +25,60 @@ IUSE="pulseaudio"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 CDEPEND="
+	app-arch/bzip2
 	app-pda/libplist
 	dev-db/sqlite:3
 	dev-libs/boost
+	dev-libs/expat
 	dev-libs/fribidi
-	dev-libs/libcdio
+	dev-libs/libcdio[-minimal]
 	<dev-libs/libcec-2.2.0
-	dev-libs/lzo
-	dev-libs/tinyxml
+	dev-libs/libpcre[cxx]
+	dev-libs/lzo:2
+	dev-libs/tinyxml[stl]
 	dev-libs/yajl
+	media-libs/alsa-lib
+	media-libs/flac
 	media-libs/fontconfig
-	media-libs/ftgl
+	media-libs/freetype
 	media-libs/glew
 	media-libs/libass
-	media-libs/libjpeg-turbo
 	media-libs/libmad
 	media-libs/libmodplug
 	media-libs/libmpeg2
+	media-libs/libogg
+	media-libs/libpng
 	media-libs/libsamplerate
+	media-libs/libsdl[alsa,sound,opengl,video,X]
 	media-libs/libshairport
-	media-libs/sdl-image
+	media-libs/libvorbis
+	media-libs/sdl-image[gif,jpeg,png]
 	media-libs/sdl-mixer
 	media-libs/taglib
+	media-libs/tiff
 	media-sound/lame
+	pulseaudio? ( media-sound/pulseaudio )
 	media-video/rtmpdump
+	net-dns/avahi
 	net-fs/samba[smbclient]
 	net-libs/libmicrohttpd
 	net-libs/libssh
 	net-misc/curl
+	sys-apps/dbus
+	sys-libs/libcap
+	sys-libs/zlib
+	virtual/jpeg
+	virtual/libiconv
 	virtual/libusb
 	virtual/opengl
-	x11-libs/libva
+	x11-libs/libva[opengl]
+	x11-libs/libX11
 	x11-libs/libXrandr
+	${PYTHON_DEPS}
 "
 RDEPEND="
 	${CDEPEND}
 	virtual/jre
-	${PYTHON_DEPS}
 "
 DEPEND="
 	${CDEPEND}
@@ -94,6 +111,9 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
+
+	#Build system puts a bunch of useless symbolic links in /opt/plexhometheater/bin
+	find "${D}"/opt/plexhometheater/bin/ -maxdepth 1 -type l -exec rm -f \{\} \;
 
 	doicon "plex/Resources/plexhometheater.png"
 	domenu "plex/Resources/plexhometheater.desktop"
