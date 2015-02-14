@@ -12,8 +12,8 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-BUILD="441"
-COMMIT="309e72d1"
+BUILD="431"
+COMMIT="7966a4df"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}-${MY_PV}"
 
