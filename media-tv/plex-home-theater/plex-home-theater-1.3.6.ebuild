@@ -30,7 +30,6 @@ CDEPEND="
 	app-pda/libplist
 	dev-db/sqlite:3
 	dev-libs/boost
-	dev-libs/expat
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
 	<dev-libs/libcec-2.2.0
