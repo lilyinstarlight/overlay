@@ -1,6 +1,6 @@
 Overlay
 =======
-This is my Portage overlay where I dump all of the packages I create or modify.
+This is my Portage overlay where I dump all of the packages I create or modify. If anything is out of date or doesn't build on your system, create a [new issue](https://github.com/fkmclane/overlay/issues/new) and attach a copy of the build log from a [pastebin](http://pastebin.com/).
 
 Installation
 ------------
