@@ -61,7 +61,7 @@ CDEPEND="
 	media-video/rtmpdump
 	net-dns/avahi
 	net-fs/samba[smbclient]
-	net-libs/libmicrohttpd
+	net-libs/libmicrohttpd[messages]
 	net-libs/libssh
 	net-misc/curl
 	sys-apps/dbus
