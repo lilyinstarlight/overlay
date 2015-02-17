@@ -9,11 +9,10 @@
 		<flag name='server'>Compile server (servatrice) support</flag>
 	</use>
 	<longdescription lang="en">
-		Cockatrice is an open-source multiplatform software for playing card
-		games, such as Magic: The Gathering, over a network. It is fully
-		client-server based to prevent any kind of cheating, though it supports
-		single-player games without a network interface as well. Both client
-		and server are written in Qt 4.
+		Cockatrice is a cross-platform virtual tabletop for multiplayer card
+		games, such as Magic: The Gathering, over a network. It follows a
+		client-server model for networked games but also supports local
+		single player.
 	</longdescription>
 </pkgmetadata>
 
