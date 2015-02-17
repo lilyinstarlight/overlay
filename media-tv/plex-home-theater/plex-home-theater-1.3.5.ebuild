@@ -72,6 +72,7 @@ CDEPEND="
 	virtual/libusb
 	virtual/opengl
 	x11-libs/libva[opengl]
+	x11-libs/libvdpau
 	x11-libs/libX11
 	x11-libs/libXrandr
 	${PYTHON_DEPS}
