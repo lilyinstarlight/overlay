@@ -32,6 +32,9 @@ Packages
 #### nSnake (games-arcade/nsnake) ####
 [nSnake](https://github.com/alexdantas/nSnake) is a clone of the classic snake game on the terminal.
 
+#### Cockatrice (games-board/cockatrice) ####
+[Cockatrice](http://www.reddit.com/r/Cockatrice) is a cross-platform virtual tabletop for multiplayer card games, such as Magic: The Gathering.
+
 #### m64py (games-emulation/m64py) ####
 [m64py](http://m64py.sourceforge.net/) is a PyQt4 front-end to the [mupen64plus](https://code.google.com/p/mupen64plus/) N64 emulator.
 
