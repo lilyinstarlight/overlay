@@ -63,6 +63,9 @@ Packages
 #### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio) ####
 [OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
 
+#### Pyglet (dev-python/pyglet) ####
+[Pyglet](http://pyglet.org/) is a cross-platform windowing and multimedia library for Python.
+
 ### GTK+
 
 #### Clearlooks-Phénix (x11-themes/clearlooks-phenix) ####
