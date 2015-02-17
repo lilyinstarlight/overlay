@@ -9,15 +9,17 @@ inherit cmake-utils games git-r3
 DESCRIPTION="A cross-platform virtual tabletop for multiplayer card games"
 HOMEPAGE="http://www.reddit.com/r/Cockatrice"
 EGIT_REPO_URI="git://github.com/Cockatrice/Cockatrice.git"
+EGIT_COMMIT="ef65434"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="+client server"
 
 #With Qt5, will additionally need qtnetwork and qtxml
 DEPEND="
 	dev-libs/libgcrypt:0
-	dev-libs/libprotobuf
+	dev-libs/protobuf
 	dev-qt/qtcore:4
 	client? (
 		dev-qt/qtgui:4
