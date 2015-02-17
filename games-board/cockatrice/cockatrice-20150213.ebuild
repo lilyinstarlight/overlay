@@ -36,6 +36,7 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with client CLIENT)
+		$(cmake-utils_use_with client ORACLE)
 		$(cmake-utils_use_with server SERVER)
 		-DWITH_QT4=ON
 		-DCMAKE_INSTALL_BINDIR="${GAMES_BINDIR}"
