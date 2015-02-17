@@ -56,3 +56,9 @@ src_install() {
 	cmake-utils_src_install
 	prepgamesdirs
 }
+
+pkg_postinst() {
+	use client && \
+		einfo "For initial installation, run 'oracle' before" && \
+		einfo "Cockatrice to download the card database."
+}
