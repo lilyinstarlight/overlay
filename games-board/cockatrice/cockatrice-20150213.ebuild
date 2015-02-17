@@ -15,6 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+client server"
+REQUIRED_USE="|| ( client server )"
 
 #With Qt5, will additionally need qtnetwork and qtxml
 DEPEND="
