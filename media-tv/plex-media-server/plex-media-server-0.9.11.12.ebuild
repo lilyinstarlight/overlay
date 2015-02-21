@@ -77,5 +77,5 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To start Plex Media Server, use the plexmediaserver init script or systemd unit."
-	einfo "You can manage your library and sign in to Plex from \"http://localhost:34200/web\"."
+	einfo "To manage your library and sign in to Plex, go to \"http://localhost:32400/web\"."
 }
