@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit autotools eutils git-r3
+inherit autotools git-r3
 
 DESCRIPTION="Ncurses based jabber client inspired by irssi"
 HOMEPAGE="http://www.profanity.im/"
@@ -18,7 +18,7 @@ IUSE="libnotify otr +themes xml xscreensaver"
 
 RDEPEND="
 	dev-libs/glib:2
-	dev-libs/libstrophe[xml=]
+	dev-libs/libstrophe
 	net-misc/curl
 	sys-libs/ncurses
 	otr? ( net-libs/libotr )
@@ -26,8 +26,6 @@ RDEPEND="
 	libnotify? ( x11-libs/libnotify )
 "
 DEPEND="${RDEPEND}"
-
-#S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_prepare() {
 	eautoreconf
