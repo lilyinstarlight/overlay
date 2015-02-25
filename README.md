@@ -71,6 +71,9 @@ Packages
 #### Pyglet (dev-python/pyglet)
 [Pyglet](http://pyglet.org/) is a cross-platform windowing and multimedia library for Python.
 
+#### libstrophe (dev-libs/libstrophe)
+[libstrophe](http://strophe.im/libstrophe/) is a minimal XMPP library written in C.
+
 ### GTK+
 
 #### Clearlooks-Phénix (x11-themes/clearlooks-phenix)
