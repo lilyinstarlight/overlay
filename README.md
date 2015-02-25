@@ -38,6 +38,11 @@ Packages
 #### m64py (games-emulation/m64py) ####
 [m64py](http://m64py.sourceforge.net/) is a PyQt4 front-end to the [mupen64plus](https://code.google.com/p/mupen64plus/) N64 emulator.
 
+### Messaging
+
+#### Profanity (net-im/profanity) ####
+[Profanity](http://www.profanity.im/) is a console based XMPP client inspired by Irssi.
+
 ### Utilities
 
 #### maim (media-gfx/maim) ####
