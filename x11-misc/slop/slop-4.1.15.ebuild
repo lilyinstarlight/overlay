@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="slop (Select Operation) is an application that querys for a selection from the user and prints the region to stdout"
+DESCRIPTION="slop (Select Operation) is an application that queries the user for a selection and prints it out"
 HOMEPAGE="https://github.com/naelstrof/slop"
 SRC_URI="https://github.com/naelstrof/slop/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

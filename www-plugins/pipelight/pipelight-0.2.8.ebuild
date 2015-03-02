@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/mmueller2012-pipelight-${COMMIT}"
 
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="kde"
 
 CDEPEND="
@@ -23,7 +23,7 @@ CDEPEND="
 "
 RDEPEND="
 	${CDEPEND}
-	>=app-emulation/wine-1.7.5[pipelight]
+	>=app-emulation/wine-1.7.28[pipelight]
 	media-fonts/corefonts
 	app-crypt/gnupg
 	app-arch/cabextract
@@ -34,9 +34,9 @@ DEPEND="
 "
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
-	unpack ${P}-pluginloader.tar.gz
+	unpack "${P}".tar.gz
+	cd "${S}"
+	unpack "${P}"-pluginloader.tar.gz
 }
 
 src_configure() {

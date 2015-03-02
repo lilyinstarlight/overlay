@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils systemd unpacker user
 
-DESCRIPTION="Plex Media Server is an organizer for your personal media and provides streaming over the web and to devices"
+DESCRIPTION="Plex Media Server is an organizer for your media and provides streaming over the web and to devices"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"

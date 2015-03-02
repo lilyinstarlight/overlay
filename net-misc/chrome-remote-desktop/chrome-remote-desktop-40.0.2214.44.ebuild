@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit python-single-r1 systemd unpacker user
 
-DESCRIPTION="Chrome Remote Desktop allows you to securely access your computer over the Internet through the Chrome browser or a Chromebook."
+DESCRIPTION="Chrome Remote Desktop allows you to securely access your computer over the Internet through Chrome."
 HOMEPAGE="https://chrome.google.com/remotedesktop"
 
 MY_P="${PN}_${PV}"

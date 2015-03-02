@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -59,7 +59,7 @@ src_install() {
 	doicon desktop/icons/large/armagetronad.png
 	domenu desktop/armagetronad-armagetronad.desktop
 
-	dodoc AUTHORS ChangeLog COPYING NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 
 	prepgamesdirs
 }
