@@ -89,8 +89,3 @@ Packages
 
 #### VMPK (media-sound/vmpk)
 [VMPK](http://vmpk.sourceforge.net/) is a virtual midi keyboard that uses [drumstick](http://drumstick.sourceforge.net/) for its backend. This overlay will temporarily host the Qt 5 version, 0.6.0.
-
-### Abandoned
-
-#### dwm (x11-wm/dwm, x11-misc/dwmstatus)
-[dwm](http://dwm.suckless.org/) is a simplistic, dynamic (tiling and floating) window manager for X. This package uses my version from my [dwm](https://github.com/fkmclane/dwm) repository. This overlay also includes a package for my dwmstatus also located in my repository.
