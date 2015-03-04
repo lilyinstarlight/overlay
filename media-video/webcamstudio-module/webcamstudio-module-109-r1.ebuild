@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="|| ( <sys-kernel/gentoo-sources-3.18 <sys-kernel/vanilla-sources-3.18 )"
+DEPEND="|| ( >sys-kernel/gentoo-sources-3.18 >sys-kernel/vanilla-sources-3.18 )"
 RDEPEND=""
 
 MODULE_NAMES="webcamstudio(misc:${S})"
@@ -32,6 +32,10 @@ pkg_setup() {
 	BUILD_PARAMS="-C ${KV_DIR} SUBDIRS=${S} KERNEL_DIR=${KV_DIR}"
 	BUILD_TARGETS="modules"
 	MODULESD_WEBCAMSTUDIO_ENABLED="yes"
+}
+
+src_prepare() {
+	sed -i -e "s/strict_strtoul/kstrtoul/" webcamstudio.c
 }
 
 src_compile() {
