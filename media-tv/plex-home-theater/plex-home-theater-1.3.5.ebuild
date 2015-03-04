@@ -79,9 +79,11 @@ CDEPEND="
 "
 RDEPEND="
 	${CDEPEND}
+	virtual/jre
 "
 DEPEND="
 	${CDEPEND}
+	virtual/jdk
 	dev-lang/swig
 "
 
