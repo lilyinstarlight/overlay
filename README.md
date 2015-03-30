@@ -21,6 +21,9 @@ Packages
 #### WebcamStudio (media-video/webcamstudio, media-video/webcamstudio-module)
 [WebcamStudio](https://code.google.com/p/webcamstudio/) is a live video mixer often used in conjunction with a virtual webcam driver to create professional looking broadcasts.
 
+#### Open Broadcaster Software (media-video/obs)
+[OBS](http://obsproject.com/) is free and open source software for video recording and live streaming. Note: This ebuild was taken largely unmodified from [obs-studio-overlay](https://github.com/saintdev/obs-studio-overlay) which was out of date.
+
 ### Games
 
 #### Armagetron Advanced (games-action/armagetronad, games-action/armagetronad-dedicated)
