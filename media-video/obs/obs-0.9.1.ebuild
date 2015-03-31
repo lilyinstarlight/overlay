@@ -4,6 +4,8 @@
 
 EAPI=5
 
+inherit cmake-utils
+
 DESCRIPTION="Open Broadcaster Software is free and open source software for video recording and live streaming."
 HOMEPAGE="https://obsproject.com/"
 SRC_URI="https://github.com/jp9000/obs-studio/archive/${PV}.tar.gz -> ${P}.tar.gz"
@@ -44,6 +46,8 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/obs-studio-${PV}"
+
 src_prepare() {
 	CMAKE_REMOVE_MODULES_LIST=(FindFreetype)
 
@@ -54,7 +58,8 @@ src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_find_package fdk Libfdk)
 		$(cmake-utils_use imagemagick LIBOBS_PREFER_IMAGEMAGICK)
-		$(cmake-utils_use_find_package pulseaudio PulseAudio)
+		$(cmake-utils_use_enable pulseaudio PULSEAUDIO)
+		$(cmake-utils_use_disable pulseaudio PULSEAUDIO)
 		$(cmake-utils_use_enable qt5 UI)
 		$(cmake-utils_use_disable qt5 UI)
 		$(cmake-utils_use_find_package truetype Freetype)
