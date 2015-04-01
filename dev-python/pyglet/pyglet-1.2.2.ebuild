@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Cross-platform windowing and multimedia library for Python"
 HOMEPAGE="http://www.pyglet.org/"
-SRC_URI="mirror://pypi/p/pyglet/pyglet-1.2.0.tar.gz"
+SRC_URI="mirror://pypi/p/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -21,7 +21,8 @@ RDEPEND="
 	virtual/opengl
 	alsa? ( media-libs/alsa-lib[alisp] )
 	gtk? ( x11-libs/gtk+:2 )
-	openal? ( media-libs/openal )"
+	openal? ( media-libs/openal )
+"
 DEPEND="${RDEPEND}"
 
 DOCS="NOTICE"
