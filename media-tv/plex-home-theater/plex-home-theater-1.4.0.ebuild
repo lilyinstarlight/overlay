@@ -12,8 +12,8 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-BUILD="441"
-COMMIT="309e72d1"
+BUILD="459"
+COMMIT="b41b1814"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}-${MY_PV}"
 
@@ -21,7 +21,7 @@ SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="pulseaudio"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
