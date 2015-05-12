@@ -9,7 +9,7 @@ inherit cmake-utils games git-r3
 DESCRIPTION="A cross-platform virtual tabletop for multiplayer card games"
 HOMEPAGE="http://www.reddit.com/r/Cockatrice"
 EGIT_REPO_URI="git://github.com/Cockatrice/Cockatrice.git"
-EGIT_COMMIT="ef65434"
+EGIT_COMMIT="18da49d"
 
 LICENSE="GPL-2"
 SLOT="0"
