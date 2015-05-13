@@ -21,8 +21,8 @@ Packages
 #### WebcamStudio (media-video/webcamstudio, media-video/webcamstudio-module)
 [WebcamStudio](https://code.google.com/p/webcamstudio/) is a live video mixer often used in conjunction with a virtual webcam driver to create professional looking broadcasts.
 
-#### Open Broadcaster Software (media-video/obs)
-[OBS](http://obsproject.com/) is free and open source software for video recording and live streaming. Note: This ebuild was taken largely unmodified from [obs-studio-overlay](https://github.com/saintdev/obs-studio-overlay) which was out of date.
+#### v4l2Loopback (media-video/v4l2loopback)
+[v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with WebcamStudio or other software (e.g. ffmpeg or gstreamer) to create a virtual webcam device. This version has been updated to compile with Linux 3.18.
 
 ### Games
 
@@ -54,9 +54,6 @@ Packages
 #### Chrome Remote Desktop (net-misc/chrome-remote-desktop)
 [Chrome Remote Desktop](http://chrome.google.com/remotedesktop) is an application that integrates with Chrome or Chromium and allows one to remotely access their computer or receive assistance securely.
 
-#### GoAccess (net-analyzer/goaccess)
-[GoAccess](http://goaccess.io/) is an open source real-time web log analyzer and interactive viewer that runs in a terminal.
-
 #### Sync Mail Dir (net-mail/syncmaildir)
 [Sync Mail Dir](http://syncmaildir.sourceforge.net/) (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format. It is useful for IMAP-less client-server mail synchronization and for Maildir transistion.
 
@@ -66,6 +63,11 @@ Packages
 #### Pipelight (www-plugins/pipelight)
 [Pipelight](http://pipelight.net/) is a browser plugin that allows running Windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
 
+### Office
+
+#### HomeBank (app-office/homebank)
+[HomeBank](http://homebank.free.fr/) is a personal finance program with a relatively good feature set and intuitive interface.
+
 ### Libraries
 
 #### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio)
@@ -74,8 +76,14 @@ Packages
 #### Pyglet (dev-python/pyglet)
 [Pyglet](http://pyglet.org/) is a cross-platform windowing and multimedia library for Python.
 
+#### Pymunk (dev-python/pymunk)
+[Pymunk](http://pymunk.org/) is a pythonic 2D physics library based on [Chipmunk2D](http://chipmunk-physics.net/).
+
 #### libstrophe (dev-libs/libstrophe)
 [libstrophe](http://strophe.im/libstrophe/) is a minimal XMPP library written in C.
+
+#### Chipmunk2D (sci-physics/chipmunk)
+[Chipmunk2D](http://chipmunk-physics.org/) is a simple, lightweight, fast and portable 2D rigid body physics library.
 
 ### GTK+
 
@@ -89,6 +97,3 @@ Packages
 
 #### Prosody (net-im/prosody)
 [Prosody](https://prosody.im/) is a modern XMPP communication server aimed at being efficient and easy to configure. This overlay includes a live ebuild for the 0.10 branch of the project.
-
-#### VMPK (media-sound/vmpk)
-[VMPK](http://vmpk.sourceforge.net/) is a virtual midi keyboard that uses [drumstick](http://drumstick.sourceforge.net/) for its backend. This overlay will temporarily host the Qt 5 version, 0.6.0.
