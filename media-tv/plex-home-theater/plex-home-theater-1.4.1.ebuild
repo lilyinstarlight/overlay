@@ -12,12 +12,14 @@ DESCRIPTION="Plex Home Theater"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plex-home-theater-public"
-BUILD="459"
-COMMIT="b41b1814"
+BUILD="469"
+COMMIT="47a90f01"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}-${MY_PV}"
 
-SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+#SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+# temporary until GitHub sources are updated
+SRC_URI="http://ppa.launchpad.net/plexapp/plexht/ubuntu/pool/main/p/plexhometheater/plexhometheater_1.4.1.469-201505131108-ubuntu85~ubuntu15.04.1.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -87,7 +89,9 @@ DEPEND="
 	dev-lang/swig
 "
 
-S="${WORKDIR}/${MY_P}"
+#S="${WORKDIR}/${MY_P}"
+# temporary until GitHub sources are updated
+S="${WORKDIR}/plexhometheater-1.4.1.469-201505131108"
 
 src_prepare() {
 	epatch "${FILESDIR}/cmake-fribidi.patch"
