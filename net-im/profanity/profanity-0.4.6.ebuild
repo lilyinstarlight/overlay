@@ -4,12 +4,11 @@
 
 EAPI=5
 
-inherit autotools git-r3
+inherit autotools
 
 DESCRIPTION="Ncurses based jabber client inspired by irssi"
 HOMEPAGE="http://www.profanity.im/"
-EGIT_REPO_URI="git://github.com/boothj5/profanity.git"
-EGIT_COMMIT="${PV/_/.}"
+SRC_URI="http://www.profanity.im/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
