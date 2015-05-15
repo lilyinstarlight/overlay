@@ -4,8 +4,6 @@
 
 EAPI=5
 
-inherit autotools
-
 DESCRIPTION="Ncurses based jabber client inspired by irssi"
 HOMEPAGE="http://www.profanity.im/"
 SRC_URI="http://www.profanity.im/${P}.tar.gz"
@@ -25,10 +23,6 @@ RDEPEND="
 	libnotify? ( x11-libs/libnotify )
 "
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	eautoreconf
-}
 
 src_configure() {
 	econf \
