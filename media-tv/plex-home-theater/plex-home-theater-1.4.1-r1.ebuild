@@ -17,9 +17,7 @@ COMMIT="47a90f01"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}-${MY_PV}"
 
-#SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-# temporary until GitHub sources are updated
-SRC_URI="http://ppa.launchpad.net/plexapp/plexht/ubuntu/pool/main/p/plexhometheater/plexhometheater_1.4.1.469-201505131108-ubuntu85~ubuntu15.04.1.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/plexinc/${MY_PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,7 +32,7 @@ CDEPEND="
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
-	<dev-libs/libcec-2.2.0
+	dev-libs/libcec
 	dev-libs/libpcre[cxx]
 	dev-libs/lzo:2
 	dev-libs/tinyxml[stl]
@@ -89,12 +87,12 @@ DEPEND="
 	dev-lang/swig
 "
 
-#S="${WORKDIR}/${MY_P}"
-# temporary until GitHub sources are updated
-S="${WORKDIR}/plexhometheater-1.4.1.469-201505131108"
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/cmake-fribidi.patch"
+	epatch "${FILESDIR}/cmake-dbus.patch"
+	epatch "${FILESDIR}/libcec.patch"
 	use pulseaudio || epatch "${FILESDIR}/nopulse.patch"
 
 	#Patch ffmpeg building to use MAKEOPTS

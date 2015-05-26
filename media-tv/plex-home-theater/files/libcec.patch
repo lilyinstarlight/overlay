@@ -1,0 +1,27 @@
+From eba66e1290c9bbb9d5e9b0d85c29f43bb7adad64 Mon Sep 17 00:00:00 2001
+From: Jonathan Leroy <jonathan@inikup.com>
+Date: Tue, 26 May 2015 05:26:09 +0200
+Subject: [PATCH] Support for libCEC >= 2.2.0
+
+---
+ xbmc/peripherals/devices/PeripheralCecAdapter.cpp | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/xbmc/peripherals/devices/PeripheralCecAdapter.cpp b/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
+index 056a77e..5d59e12 100644
+--- a/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
++++ b/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
+@@ -1379,7 +1379,13 @@ void CPeripheralCecAdapter::SetConfigurationFromSettings(void)
+   m_configuration.bShutdownOnStandby = iStandbyAction == 13005 ? 1 : 0;
+ 
+   // double tap prevention timeout in ms
++#if defined(CEC_DOUBLE_TAP_TIMEOUT_MS_OLD)
++  // libCEC >= 2.2.0 uses 50ms units
++  m_configuration.iDoubleTapTimeout50Ms = GetSettingInt("double_tap_timeout_ms") / 50;
++#else
++  // libCEC < 2.2.0
+   m_configuration.iDoubleTapTimeoutMs = GetSettingInt("double_tap_timeout_ms");
++#endif
+ }
+ 
+ void CPeripheralCecAdapter::ReadLogicalAddresses(const CStdString &strString, cec_logical_addresses &addresses)
