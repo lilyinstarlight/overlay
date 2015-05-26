@@ -6,7 +6,7 @@ EAPI=5
 
 inherit eutils systemd unpacker user
 
-DESCRIPTION="Plex Media Server is an organizer for your media and provides streaming over the web and to devices"
+DESCRIPTION="Plex Media Server is an organizer for your media that provides streaming over the web and to devices"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
