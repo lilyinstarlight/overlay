@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/m64py/m64py-0.2.1-r1.ebuild,v 1.1 2014/08/15 10:22:03 mgorny Exp $
+# $Header: $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="A frontend for Mupen64Plus"
 HOMEPAGE="http://m64py.sourceforge.net/"
-SRC_URI="mirror://sourceforge/m64py/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 LGPL-3 public-domain GPL-2 BSD CC-BY-SA-3.0"
 SLOT="0"
