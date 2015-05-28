@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format"
 HOMEPAGE="http://syncmaildir.sourceforge.net/"
-SRC_URI="mirror://sourceforge/syncmaildir/syncmaildir-1.2.6.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
