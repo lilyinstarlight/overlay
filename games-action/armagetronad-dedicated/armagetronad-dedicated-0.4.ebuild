@@ -6,7 +6,7 @@ EAPI=5
 
 inherit games bzr
 
-DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
+DESCRIPTION="A fast-paced 3D lightcycle game based on Tron - dedicated server"
 HOMEPAGE="http://armagetronad.org/"
 MY_PN="armagetronad"
 MY_P="${MY_PN}-${PV}"

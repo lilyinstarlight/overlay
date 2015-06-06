@@ -6,7 +6,7 @@ EAPI=5
 
 inherit games bzr
 
-DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
+DESCRIPTION="A fast-paced 3D lightcycle game based on Tron"
 HOMEPAGE="http://armagetronad.org/"
 EBZR_REPO_URI="lp:armagetronad/${PV}"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	dev-libs/libxml2
 	dev-libs/protobuf
 	media-libs/ftgl
-	media-libs/libpng
+	media-libs/libpng:*
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer

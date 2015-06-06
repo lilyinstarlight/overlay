@@ -6,12 +6,12 @@ EAPI=5
 
 inherit games
 
-DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
+DESCRIPTION="A fast-paced 3D lightcycle game based on Tron - dedicated server"
 HOMEPAGE="http://armagetronad.org/"
 MY_PN="armagetronad"
 MY_P="${MY_PN}-${PV}"
 BRANCH="0.2.8"
-VERSION="0.2.8.3.2"
+VERSION="0.2.8.3.x"
 SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${MY_P}.src.tar.bz2"
 
 LICENSE="GPL-2"

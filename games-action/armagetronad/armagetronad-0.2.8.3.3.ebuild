@@ -6,10 +6,10 @@ EAPI=5
 
 inherit games
 
-DESCRIPTION="A fast-paced 3D lightcycle game based on Tron."
+DESCRIPTION="A fast-paced 3D lightcycle game based on Tron"
 HOMEPAGE="http://armagetronad.org/"
 BRANCH="0.2.8"
-VERSION="0.2.8.3.2"
+VERSION="0.2.8.3.x"
 SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
@@ -19,7 +19,7 @@ IUSE="+auth music"
 
 RDEPEND="
 	dev-libs/libxml2
-	media-libs/libpng
+	media-libs/libpng:*
 	media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
@@ -32,8 +32,6 @@ DEPEND="
 	sys-devel/autoconf
 	sys-devel/bison
 "
-
-S="${WORKDIR}/${PN}-${VERSION}"
 
 src_prepare() {
 	sed -i -e "s/png_check_sig/png_sig_cmp/" configure.ac
