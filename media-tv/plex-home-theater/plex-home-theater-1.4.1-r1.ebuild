@@ -47,7 +47,7 @@ CDEPEND="
 	media-libs/libmodplug
 	media-libs/libmpeg2
 	media-libs/libogg
-	media-libs/libpng
+	media-libs/libpng:*
 	media-libs/libsamplerate
 	media-libs/libsdl[alsa,sound,opengl,video,X]
 	media-libs/libshairport
@@ -55,7 +55,7 @@ CDEPEND="
 	media-libs/sdl-image[gif,jpeg,png]
 	media-libs/sdl-mixer
 	media-libs/taglib
-	media-libs/tiff
+	media-libs/tiff:*
 	media-sound/lame
 	pulseaudio? ( media-sound/pulseaudio )
 	media-video/rtmpdump
@@ -67,9 +67,9 @@ CDEPEND="
 	sys-apps/dbus
 	sys-libs/libcap
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:*
 	virtual/libiconv
-	virtual/libusb
+	virtual/libusb:*
 	virtual/opengl
 	x11-libs/libva[opengl]
 	x11-libs/libvdpau

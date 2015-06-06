@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="policykit +vloopback"
 
 DEPEND="
-	>=virtual/jdk-1.7
+	virtual/jdk:1.7
 	dev-libs/glib:2
 	dev-java/absolutelayout
 	dev-java/appframework

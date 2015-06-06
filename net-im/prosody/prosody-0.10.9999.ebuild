@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.7.ebuild,v 1.1 2014/12/11 10:01:09 klausman Exp $
+# $Header: $
 
 EAPI=5
 
@@ -15,22 +15,26 @@ SLOT="0"
 KEYWORDS=""
 IUSE="ipv6 libevent mysql postgres sqlite ssl zlib jit"
 
-DEPEND="net-im/jabber-base
-		!jit? ( >=dev-lang/lua-5.1 )
-		jit? ( dev-lang/luajit )
-		>=net-dns/libidn-1.1
-		>=dev-libs/openssl-0.9.8"
-RDEPEND="${DEPEND}
-		>=dev-lua/luaexpat-1.3.0
-		dev-lua/luafilesystem
-		ipv6? ( >=dev-lua/luasocket-3 )
-		!ipv6? ( dev-lua/luasocket )
-		libevent? ( >=dev-lua/luaevent-0.4.3 )
-		mysql? ( dev-lua/luadbi[mysql] )
-		postgres? ( dev-lua/luadbi[postgres] )
-		sqlite? ( dev-lua/luadbi[sqlite] )
-		ssl? ( dev-lua/luasec )
-		zlib? ( dev-lua/lua-zlib )"
+DEPEND="
+	net-im/jabber-base
+	!jit? ( dev-lang/lua:0 )
+	jit? ( dev-lang/luajit:2 )
+	>=net-dns/libidn-1.1
+	dev-libs/openssl:*
+"
+RDEPEND="
+	${DEPEND}
+	>=dev-lua/luaexpat-1.3.0
+	dev-lua/luafilesystem
+	ipv6? ( >=dev-lua/luasocket-3 )
+	!ipv6? ( dev-lua/luasocket )
+	libevent? ( >=dev-lua/luaevent-0.4.3 )
+	mysql? ( dev-lua/luadbi[mysql] )
+	postgres? ( dev-lua/luadbi[postgres] )
+	sqlite? ( dev-lua/luadbi[sqlite] )
+	ssl? ( dev-lua/luasec )
+	zlib? ( dev-lua/lua-zlib )
+"
 
 JABBER_ETC="/etc/jabber"
 JABBER_SPOOL="/var/spool/jabber"
