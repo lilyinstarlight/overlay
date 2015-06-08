@@ -8,7 +8,7 @@ S="${WORKDIR}/vloopback"
 
 inherit eutils linux-mod toolchain-funcs
 
-DESCRIPTION="Kernel module and helper library for WebcamStudio."
+DESCRIPTION="Kernel module and helper library for WebcamStudio"
 HOMEPAGE="https://code.google.com/p/webcamstudio/"
 
 SRC_URI="http://webcamstudio.googlecode.com/files/${P}.tar.bz2"

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Browser plugin allowing usage of Windows NPAPI plugins through Wine."
+DESCRIPTION="Browser plugin allowing usage of Windows NPAPI plugins through Wine"
 HOMEPAGE="http://pipelight.net/"
 COMMIT="8a1bdc6c254f"
 SRC_URI="

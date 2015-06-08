@@ -9,7 +9,7 @@ WANT_ANT_TASKS="ant-nodeps ant-junit4 ant-junit"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
-DESCRIPTION="Creates virtual webcam to broadcast over the internet."
+DESCRIPTION="Virtual webcam studio to broadcast over the internet"
 HOMEPAGE="https://code.google.com/p/webcamstudio/"
 
 #SRC_URI="http://webcamstudio.googlecode.com/files/${PN}_${PV}.tar.bz2"

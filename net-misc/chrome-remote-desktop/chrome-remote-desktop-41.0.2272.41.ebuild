@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit python-single-r1 systemd unpacker user
 
-DESCRIPTION="Chrome Remote Desktop allows you to securely access your computer over the Internet through Chrome."
+DESCRIPTION="Chrome Remote Desktop allows you to securely access your computer over the Internet through Chrome"
 HOMEPAGE="https://chrome.google.com/remotedesktop"
 
 MY_P="${PN}_${PV}"
