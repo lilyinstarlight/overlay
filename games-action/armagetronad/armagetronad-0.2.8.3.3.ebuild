@@ -14,7 +14,7 @@ SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE="+auth music"
 
 RDEPEND="
