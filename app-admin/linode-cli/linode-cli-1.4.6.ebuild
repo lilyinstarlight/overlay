@@ -4,6 +4,8 @@
 
 EAPI=5
 
+inherit eutils
+
 DESCRIPTION="Command-line interface to the Linode platform"
 HOMEPAGE="https://www.linode.com/docs/platform/linode-cli"
 MY_PN="${PN/linode-/}"
@@ -29,6 +31,10 @@ RDEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}/systeminfo_gentoo.patch"
+}
 
 src_configure() {
 	perl Makefile.PL PREFIX=/usr INSTALLSITEMAN1DIR=/usr/share/man/man1 INSTALLSITEMAN3DIR=/usr/share/man/man3

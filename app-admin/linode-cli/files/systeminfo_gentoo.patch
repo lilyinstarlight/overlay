@@ -1,0 +1,12 @@
+diff --git a/lib/Linode/CLI/SystemInfo.pm b/lib/Linode/CLI/SystemInfo.pm
+--- a/lib/Linode/CLI/SystemInfo.pm
++++ b/lib/Linode/CLI/SystemInfo.pm
+@@ -43,7 +43,7 @@ sub system_info {
+     chomp(my $os_release = qx{uname -r 2>/dev/null} || 'unknown');
+ 
+     if ($^O eq 'linux') {
+-        $self->lsb_release() || $self->release_file();
++        $self->release_file() || $self->lsb_release();
+         my $release = [
+             $self->{name}    || 'linux',
+             $self->{release} || $os_release,
