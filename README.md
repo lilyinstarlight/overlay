@@ -93,6 +93,9 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 #### Chipmunk2D (sci-physics/chipmunk)
 [Chipmunk2D](http://chipmunk-physics.org/) is a simple, lightweight, fast and portable 2D rigid body physics library.
 
+#### CSFML (media-libs/csfml)
+CSFML is C binding for [Simple and Fast Multimedia Library](http://www.sfml-dev.org/).
+
 ### GTK+
 
 #### Clearlooks-Phénix (x11-themes/clearlooks-phenix)
