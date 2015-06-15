@@ -63,6 +63,9 @@ Packages
 #### Pipelight (www-plugins/pipelight)
 [Pipelight](http://pipelight.net/) is a browser plugin that allows running Windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
 
+#### cronic (app-misc/cronic)
+[cronic](http://habilis.net/cronic/) is a cure for cron's chronic email problem. It is a small shell script that helps to control cron's email output by wrapping commands and only showing program output on failure.
+
 ### Office
 
 #### HomeBank (app-office/homebank)
