@@ -68,6 +68,11 @@ Packages
 #### HomeBank (app-office/homebank)
 [HomeBank](http://homebank.free.fr/) is a personal finance program with a relatively good feature set and intuitive interface.
 
+### Administration
+
+#### Linode CLI (app-admin/linode-cli)
+Linode CLI is a command-line interface to the [Linode](http://linode.com/) platform.
+
 ### Libraries
 
 #### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio)
