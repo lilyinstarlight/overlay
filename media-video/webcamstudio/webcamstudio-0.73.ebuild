@@ -99,7 +99,7 @@ java_prepare() {
 	java-pkg_jar-from commons-httpclient-3 commons-httpclient.jar commons-httpclient-3.1.jar
 	java-pkg_jar-from jna jna.jar jna-3.4.0.jar
 	java-pkg_jar-from jna platform.jar jna-platform-3.4.0.jar
-	java-pkg_jar-from commons-io-1,commons-lang-2.1,jsr305,log4j,sun-javamail,slf4j-api,slf4j-nop,swing-worker
+	java-pkg_jar-from commons-io-1,commons-lang-2.1,jsr305,log4j,sun-javamail,slf4j-api,swing-worker
 }
 
 pkg_setup() {
