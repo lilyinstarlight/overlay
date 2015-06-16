@@ -5,7 +5,7 @@
 EAPI=5
 
 JAVA_PKG_IUSE="doc source"
-WANT_ANT_TASKS="ant-nodeps ant-junit4 ant-junit"
+WANT_ANT_TASKS="ant-nodeps ant-junit4"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
