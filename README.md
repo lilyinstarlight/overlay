@@ -91,10 +91,10 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 [libstrophe](http://strophe.im/libstrophe/) is a minimal XMPP library written in C.
 
 #### Chipmunk2D (sci-physics/chipmunk)
-[Chipmunk2D](http://chipmunk-physics.org/) is a simple, lightweight, fast and portable 2D rigid body physics library.
+[Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
 
 #### CSFML (media-libs/csfml)
-CSFML is C binding for [Simple and Fast Multimedia Library](http://www.sfml-dev.org/).
+CSFML is the official C binding for [Simple and Fast Multimedia Library](http://www.sfml-dev.org/).
 
 ### GTK+
 
