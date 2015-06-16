@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="${DEPEND}"
 
 MODULE_NAMES="webcamstudio(misc:${S})"
 CONFIG_CHECK="VIDEO_DEV"
