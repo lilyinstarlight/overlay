@@ -11,9 +11,8 @@ inherit eutils fdo-mime java-pkg-2 java-ant-2
 
 DESCRIPTION="Virtual webcam studio to broadcast over the internet"
 HOMEPAGE="https://code.google.com/p/webcamstudio/"
-
-#SRC_URI="http://webcamstudio.googlecode.com/files/${PN}_${PV}.tar.bz2"
-SRC_URI="http://files.fkmclane.net/webcamstudio/${PN}_${PV}.tar.bz2"
+REV="589"
+SRC_URI="mirror://sourceforge/webcamstudio/${PN}_${PV}-r${REV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,7 +34,6 @@ DEPEND="
 	dev-java/log4j
 	java-virtuals/javamail
 	dev-java/slf4j-api
-	dev-java/slf4j-nop
 	dev-java/swing-worker
 "
 RDEPEND="
@@ -57,7 +55,6 @@ RDEPEND="
 	)
 "
 
-S="${WORKDIR}/${PN}"
 EANT_BUILD_XML="${S}/build.xml"
 
 java_prepare() {
