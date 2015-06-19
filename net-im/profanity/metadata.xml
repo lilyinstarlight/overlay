@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer>
+        <email>pasis.ua@gmail.com</email>
+        <name>Dmitry Podgorny</name>
+    </maintainer>
+    <use>
+        <flag name='libnotify'>Enable desktop notifications support</flag>
+        <flag name='otr'>Enable Off-the-Record support (encryption)</flag>
+        <flag name='themes'>Install additional themes</flag>
+        <flag name='xscreensaver'>Use x11-libs/libXScrnSaver for checking idle time</flag>
+    </use>
+</pkgmetadata>

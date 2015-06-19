@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>fkmclane</name>
+		<description lang="en">Personal overlay of fkmclane containing patched ebuilds and new ebuilds</description>
+		<homepage>https://github.com/fkmclane/overlay</homepage>
+		<owner type="person">
+			<email>fkmclane@gmail.com</email>
+			<name>Foster McLane</name>
+		</owner>
+		<source type="git">git://github.com/fkmclane/overlay.git</source>
+		<source type="git">https://github.com/fkmclane/overlay.git</source>
+		<feed>https://github.com/fkmclane/overlay/commits/master.atom</feed>
+	</repo>
+</repositories>

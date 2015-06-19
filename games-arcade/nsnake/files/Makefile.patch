@@ -1,0 +1,49 @@
+diff --git a/Makefile b/Makefile
+index 40f0249..0b239af 100644
+--- a/Makefile
++++ b/Makefile
+@@ -38,14 +38,14 @@
+ 
+ # General Info
+ PACKAGE = nsnake
+-VERSION = 3.0.0
++VERSION = 3.0.1
+ DATE    = $(shell date "+%b%Y")
+ 
+ # Install dirs
+-PREFIX      = /usr
+-EXEC_PREFIX = $(PREFIX)
+-DATAROOTDIR = $(PREFIX)/share
+-BINDIR      = $(EXEC_PREFIX)/bin
++PREFIX      ?= /usr
++EXEC_PREFIX ?= $(PREFIX)
++DATAROOTDIR ?= $(PREFIX)/share
++BINDIR      ?= $(EXEC_PREFIX)/bin
+ 
+ # Misc stuff
+ PNGDIR     = $(DATAROOTDIR)/icons/hicolor
+@@ -62,9 +62,7 @@ MANPAGE     = doc/man/$(MANFILE)
+ 
+ # Build info
+ EXE         = $(PACKAGE)
+-CDEBUG      = -O2
+-CXXFLAGS    = $(CDEBUG) -Wall -Wextra $(CFLAGS_PLATFORM)
+-LDFLAGS     = -lncurses $(LDFLAGS_PLATFORM)
++LDFLAGS    += -lncurses
+ INCLUDESDIR = -I"src/" -I"deps/"
+ LIBSDIR     =
+ 
+@@ -81,7 +79,6 @@ DEFINES = -DVERSION=\""$(VERSION)"\"                  \
+ 
+ # commander stuff
+ COMMANDERDIR = deps/commander
+-COMMANDER_CFLAGS = -O2 -Wall -Wextra $(CFLAGS_PLATFORM)
+ COMMANDER_OBJS = $(COMMANDERDIR)/commander.o
+ 
+ # Distribution tarball
+@@ -204,4 +201,4 @@ docclean:
+ 
+ $(COMMANDERDIR)/commander.o: $(COMMANDERDIR)/commander.c
+ 	# Compiling $<...
+-	$(MUTE)$(CC) $(COMMANDER_CFLAGS) $< -c -o $@
++	$(MUTE)$(CC) $(CFLAGS) $< -c -o $@

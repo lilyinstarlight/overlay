@@ -1,0 +1,53 @@
+diff --git a/Makefile b/Makefile
+index 179371d..3e658af 100644
+--- a/Makefile
++++ b/Makefile
+@@ -5,9 +5,9 @@
+ PROJECTNAME=syncmaildir
+ VERSION=1.2.6
+ COPYRIGHT=© 2008-2013 Enrico Tassi <gares@fettunta.org>
+-BINARIES=mddiff smd-applet
++BINARIES=mddiff
+ MANPAGES1=mddiff.1 smd-server.1 smd-client.1 \
+-	 smd-pull.1 smd-push.1 smd-loop.1 smd-applet.1 smd-translate.1 \
++	 smd-pull.1 smd-push.1 smd-loop.1 smd-translate.1 \
+ 	 smd-check-conf.1 smd-restricted-shell.1 smd-uniform-names.1
+ GSCHEMAS=xdg/glib-2.0/schemas/org.syncmaildir.applet.gschema.xml
+ GSCHEMAS_COMPILED=xdg/glib-2.0/schemas/gschemas.compiled
+@@ -98,7 +98,7 @@ $(GSCHEMAS_COMPILED): $(GSCHEMAS)
+ 			%,$(notdir $(GSCHEMAS))) ||) \
+ 		echo WARN: export XDG_DATA_DIRS=\$$XDG_DATA_DIRS:xdg/
+ 
+-check-build: check-w-gcc check-w-$(VALAC) check-w-glib-compile-schemas
++check-build: check-w-gcc check-w-glib-compile-schemas
+ 	$H pkg-config $(PKGCONFIG_CHECK_GLIB_VERSION) || \
+ 		(echo glib version too old: \
+ 			`pkg-config $(PKGCONFIG_GLIB_VERSION)`; \
+@@ -170,7 +170,6 @@ install: install-bin install-misc
+ install-bin: $(BINARIES)
+ 	$(call mkdir-p,bin)
+ 	$(call mkdir-p,share/$(PROJECTNAME))
+-	$(call mkdir-p,share/$(PROJECTNAME)-applet)
+ 	$(call mkdir-p,share/lua/$(LUAV))
+ 	cp $(BINARIES) $(DESTDIR)/$(PREFIX)/bin
+ 	$(call install-replacing,smd-server,bin)
+@@ -187,13 +186,12 @@ install-bin: $(BINARIES)
+ 
+ install-misc: $(MANPAGES1) $(MANPAGES5)
+ 	#$(call mkdir-p,$(DESTDIR)/etc/xdg/autostart)
+-	$(foreach d,\
+-	  $(filter-out xdg,$(shell find xdg -type d)),\
+-	  $(call mkdir-p,share/$(patsubst xdg/%,%,$(d)));)
+-	$(foreach f,\
+-	  $(filter-out $(GSCHEMAS_COMPILED),$(shell find xdg -type f)),\
+-	  $(call install,$(f),share/$(patsubst xdg/%,%,$(dir $(f))));)
+-	$(call install,smd-applet.ui,share/$(PROJECTNAME)-applet)
++	#$(foreach d,\
++	#  $(filter-out xdg,$(shell find xdg -type d)),\
++	#  $(call mkdir-p,share/$(patsubst xdg/%,%,$(d)));)
++	#$(foreach f,\
++	#  $(filter-out $(GSCHEMAS_COMPILED),$(shell find xdg -type f)),\
++	#  $(call install,$(f),share/$(patsubst xdg/%,%,$(dir $(f))));)
+ 	$(call mkdir-p,share/man/man1)
+ 	$(call mkdir-p,share/man/man5)
+ 	cp $(MANPAGES1) $(DESTDIR)/$(PREFIX)/share/man/man1

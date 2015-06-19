@@ -1,0 +1,41 @@
+diff --git a/prosody.cfg.lua.dist b/prosody.cfg.lua.dist
+index d2af75a..a02b120 100644
+--- a/prosody.cfg.lua.dist
++++ b/prosody.cfg.lua.dist
+@@ -1,5 +1,3 @@
+--- Prosody Example Configuration File
+---
+ -- Information on configuring Prosody can be found on our
+ -- website at http://prosody.im/doc/configure
+ --
+@@ -7,9 +5,6 @@
+ -- when you have finished by running: prosodyctl check config
+ -- If there are any errors, it will let you know what and where
+ -- they are, otherwise it will keep quiet.
+---
+--- The only thing left to do is rename this file to remove the .dist ending, and fill in the
+--- blanks. Good luck, and happy Jabbering!
+ 
+ 
+ ---------- Server-wide settings ----------
+@@ -136,11 +131,18 @@ authentication = "internal_plain"
+ --sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "secret", host = "localhost" }
+ --sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "secret", host = "localhost" }
+ 
++-- Settings for Gentoo init script and net-im/jabber-base permissions system:
++daemonize = true
++prosody_user = "jabber"
++prosody_group = "jabber"
++pidfile = "/var/run/jabber/prosody.pid"
++
++
+ -- Logging configuration
+ -- For advanced logging see http://prosody.im/doc/logging
+ log = {
+-	info = "prosody.log"; -- Change 'info' to 'debug' for verbose logging
+-	error = "prosody.err";
++	info = "/var/log/jabber/prosody.log"; -- Change 'info' to 'debug' for verbose logging
++	error = "/var/log/jabber/prosody.err";
+ 	-- "*syslog"; -- Uncomment this for logging to syslog
+ 	-- "*console"; -- Log to the console, useful for debugging with daemonize=false
+ }

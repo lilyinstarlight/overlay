@@ -1,0 +1,48 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index fec7e03..30b0df4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -53,38 +53,21 @@ set( source
+ set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmakemodules" )
+ find_package( X11       REQUIRED )
+ find_package( XExt      REQUIRED )
+-# This library is needed only for Ubuntu it seems, some platforms don't even
+-# ship with it. I couldn't find a way to do a test compile to check if librt
+-# was needed, so instead I just didn't mark it as REQUIRED.
+-find_package( RT )
+ 
+ set( CMAKE_CXX_FLAGS
+      "${CMAKE_CXX_FLAGS} ${CMAKE_IMLIB2_CXX_FLAGS}" )
+ 
+ # Includes
+-if ( RT_INCLUDE_DIR )
+-    include_directories( ${X11_INCLUDE_DIR}
+-                         ${XEXT_INCLUDE_DIR}
+-                         ${RT_INCLUDE_DIR} )
+-else()
+-    include_directories( ${X11_INCLUDE_DIR}
+-                         ${XEXT_INCLUDE_DIR} )
+-endif()
++include_directories( ${X11_INCLUDE_DIR}
++                     ${XEXT_INCLUDE_DIR} )
+ 
+ # Executable
+ add_executable( "${BIN_TARGET}" ${source} )
+ 
+ # Libraries
+-if ( RT_LIBRARY )
+-    target_link_libraries( "${BIN_TARGET}"
+-                           ${X11_LIBRARIES}
+-                           "${XEXT_LIBRARY}"
+-                           "${RT_LIBRARY}" )
+-else()
+-    target_link_libraries( "${BIN_TARGET}"
+-                           ${X11_LIBRARIES}
+-                           "${XEXT_LIBRARY}" )
+-endif()
++target_link_libraries( "${BIN_TARGET}"
++                       ${X11_LIBRARIES}
++                       "${XEXT_LIBRARY}" )
+ 
+ install( TARGETS ${BIN_TARGET}
+          DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" )
