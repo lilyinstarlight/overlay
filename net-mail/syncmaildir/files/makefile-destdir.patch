@@ -1,7 +1,6 @@
-diff --git a/Makefile b/Makefile1
-index 36d327f..5dc8fc7 100644
+diff --git a/Makefile b/Makefile
 --- a/Makefile
-+++ b/Makefile1
++++ b/Makefile
 @@ -188,7 +188,7 @@ install-bin: $(BINARIES)
  	$(call install-replacing,syncmaildir.lua,share/lua/$(LUAV))
  

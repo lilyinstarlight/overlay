@@ -1,5 +1,4 @@
 diff --git a/Makefile b/Makefile
-index 179371d..f19507f 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -198,9 +198,6 @@ install-misc: $(MANPAGES1) $(MANPAGES5)
