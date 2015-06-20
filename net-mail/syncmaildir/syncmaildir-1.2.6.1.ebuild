@@ -33,7 +33,7 @@ DEPEND="
 RDEPEND="
 	${COMMON}
 	virtual/ssh
-	dev-util/xdelta
+	dev-util/xdelta:0
 	dev-lang/lua
 "
 
