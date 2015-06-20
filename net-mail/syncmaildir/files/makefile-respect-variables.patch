@@ -1,5 +1,4 @@
 diff --git a/Makefile b/Makefile
-index 36d327f..56d3f85 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -13,7 +13,6 @@ GSCHEMAS=xdg/glib-2.0/schemas/org.syncmaildir.applet.gschema.xml
