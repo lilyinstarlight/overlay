@@ -50,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install
+	emake DESTDIR="${D}" PREFIX="usr" install
 
 	dodoc README KNOWN_BUGS DESIGN ChangeLog
 	dodoc -r sample-hooks
