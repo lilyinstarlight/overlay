@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 
@@ -19,7 +19,7 @@ IUSE=""
 
 # SDL & libmupen64plus are through ctypes, so they rely on specific ABI
 RDEPEND="media-libs/libsdl:0/0[joystick]
-	dev-python/PyQt4[opengl,${PYTHON_USEDEP}]
+	dev-python/PyQt5[opengl,${PYTHON_USEDEP}]
 	>=games-emulation/mupen64plus-core-2.0-r1:0/2"
 
 python_prepare_all() {
