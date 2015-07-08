@@ -66,6 +66,9 @@ Packages
 #### cronic (app-misc/cronic)
 [cronic](http://habilis.net/cronic/) is a cure for cron's chronic email problem. It is a small shell script that helps to control cron's email output by wrapping commands and only showing program output on failure.
 
+#### tty-clock (app-misc/tty-clock)
+[tty-clock](https://github.com/xorg62/tty-clock) is a versatile clock in the terminal using ncurses.
+
 ### Office
 
 #### HomeBank (app-office/homebank)
