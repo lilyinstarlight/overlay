@@ -1,8 +1,7 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 0982647..fec7e03 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -31,29 +31,6 @@ else()
+@@ -33,29 +33,6 @@ else()
      message( FATAL_ERROR "Your operating system isn't supported yet! CMake will now exit." )
  endif()
  
