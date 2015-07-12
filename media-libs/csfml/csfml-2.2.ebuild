@@ -17,15 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-CDEPEND="
+RDEPEND="
 	~media-libs/libsfml-${PV}
 "
 DEPEND="
-	${CDEPEND}
+	${RDEPEND}
 	doc? ( app-doc/doxygen )
-"
-RDEPEND="
-	${CDEPEND}
 "
 
 DOCS="readme.txt"
