@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
-COMMON="
+CDEPEND="
 	>=dev-libs/glib-2.32:2
 	gnome? (
 		dev-libs/dbus-glib
@@ -27,11 +27,11 @@ COMMON="
 	)
 "
 DEPEND="
-	${COMMON}
+	${CDEPEND}
 	app-text/txt2man
 "
 RDEPEND="
-	${COMMON}
+	${CDEPEND}
 	virtual/ssh
 	dev-util/xdelta:0
 	dev-lang/lua
