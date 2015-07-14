@@ -84,9 +84,6 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 #### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio)
 [OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
 
-#### Pyglet (dev-python/pyglet)
-[Pyglet](http://pyglet.org/) is a cross-platform windowing and multimedia library for Python.
-
 #### Pymunk (dev-python/pymunk)
 [Pymunk](http://pymunk.org/) is a pythonic 2D physics library based on [Chipmunk2D](http://chipmunk-physics.net/).
 
