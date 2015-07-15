@@ -30,21 +30,40 @@ IUSE="policykit"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
-	${PYTHON_DEPS}
+	dev-libs/expat
+	dev-libs/glib:2
+	dev-libs/nspr
+	dev-libs/nss
 	dev-python/psutil[$PYTHON_USEDEP]
-	x11-base/xorg-server[xvfb]
+	gnome-base/gconf
+	media-libs/fontconfig
+	media-libs/freetype
+	sys-libs/pam
 	x11-apps/setxkbmap
 	x11-apps/xauth
 	x11-apps/xdpyinfo
 	x11-apps/xrandr
-	x11-libs/libXrandr
-	gnome-base/gconf
-	dev-libs/nss
+	x11-base/xorg-server[xvfb]
+	x11-libs/cairo
 	x11-libs/gtk+:2
-	sys-libs/pam
+	x11-libs/libX11
+	x11-libs/libXcomposite
+	x11-libs/libXdamage
+	x11-libs/libXext
+	x11-libs/libXfixes
+	x11-libs/libXi
+	x11-libs/libXrandr
+	x11-libs/libXtst
+	x11-libs/pango
+
+	policykit? (
+		sys-auth/polkit
+	)
 	!policykit? (
 		x11-libs/gksu
 	)
+
+	${PYTHON_DEPS}
 "
 
 S="${WORKDIR}"
