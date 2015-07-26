@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>saintdev@gmail.com</email>
+</maintainer>
+<longdescription>A rewrite of what was formerly known as "Open Broadcaster
+	Software", software originally designed for recording and streaming live
+	video content, efficiently.</longdescription>
+<use>
+	<flag name="fdk">Use the <pkg>media-sound/fdk-aac</pkg>library for AAC encoding.</flag>
+	<flag name="imagemagick">Use ImageMagick in place of ffmpeg for loading images.</flag>
+	<flag name="pulseaudio">Enable audio capture from the PulseAudio sound server.</flag>
+	<flag name="qt5">Enable the QT 5 GUI</flag>
+</use>
+</pkgmetadata>
