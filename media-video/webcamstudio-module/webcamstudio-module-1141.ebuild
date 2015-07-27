@@ -34,12 +34,6 @@ pkg_setup() {
 	MODULESD_WEBCAMSTUDIO_ENABLED="yes"
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/v4l2-dev-debug.patch"
-
-	linux-mode_src_prepare
-}
-
 src_compile() {
 	# We use manual compile of the lib so be compliant to Gentoo flags
 	einfo "Compiling helper library"

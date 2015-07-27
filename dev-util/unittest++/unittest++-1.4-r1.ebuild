@@ -7,9 +7,11 @@ EAPI=5
 inherit eutils multilib
 
 DESCRIPTION="A lightweight unit testing framework for C++"
-HOMEPAGE="http://unittest-cpp.sourceforge.net/"
-SRC_URI="http://downloads.sourceforge.net/project/unittest-cpp/UnitTest++/${PV}/unittest-cpp-${PV}.zip"
-S="${WORKDIR}/UnitTest++"
+HOMEPAGE="http://unittest-cpp.github.io/"
+MY_PN="unittest-cpp"
+MY_P="${MY_PN}-${PV}"
+SRC_URI="https://github.com/unittest-cpp/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="MIT"
 SLOT="0"
@@ -32,5 +34,5 @@ src_install() {
 	insinto /usr/include/unittest++/Posix
 	doins src/Posix/*.h
 
-	dodoc README
+	dodoc README docs/UnitTest++.html
 }
