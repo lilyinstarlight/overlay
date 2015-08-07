@@ -1,0 +1,9 @@
+[Unit]
+Description=Sync Mail Dir Loop
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/smd-loop
+
+[Install]
+WantedBy=default.target

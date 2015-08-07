@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils
+inherit eutils systemd
 
 DESCRIPTION="Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format"
 HOMEPAGE="http://syncmaildir.sourceforge.net/"
@@ -51,6 +51,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="usr" install
+
+	systemd_douserunit "${FILESDIR}"/smd-loop.service
 
 	dodoc README KNOWN_BUGS DESIGN ChangeLog
 	dodoc -r sample-hooks
