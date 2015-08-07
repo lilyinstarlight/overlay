@@ -41,7 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/makefile-destdir.patch
 	epatch "${FILESDIR}"/makefile-respect-variables.patch
 	epatch "${FILESDIR}"/makefile-no-doc.patch
-	use gnome && epatch "${FILESDIR}"/vala-unowned.patch || epatch "${FILESDIR}"/no-applet.patch
+	use gnome || epatch "${FILESDIR}"/no-applet.patch
 }
 
 src_compile() {
