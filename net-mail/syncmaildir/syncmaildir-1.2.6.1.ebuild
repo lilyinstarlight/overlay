@@ -20,10 +20,10 @@ CDEPEND="
 	gnome? (
 		dev-libs/dbus-glib
 		x11-libs/gtk+:3
-		dev-lang/vala:0.22
+		dev-lang/vala:0.26
 		x11-libs/libnotify
 		gnome-base/gconf:2
-		dev-libs/libgee:0
+		dev-libs/libgee:0.8
 	)
 "
 DEPEND="
