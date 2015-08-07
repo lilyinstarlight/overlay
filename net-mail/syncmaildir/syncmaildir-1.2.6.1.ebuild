@@ -20,10 +20,10 @@ CDEPEND="
 	gnome? (
 		dev-libs/dbus-glib
 		x11-libs/gtk+:3
-		dev-lang/vala:0.22
+		dev-lang/vala:0.26
 		x11-libs/libnotify
 		gnome-base/gconf:2
-		dev-libs/libgee:0
+		dev-libs/libgee:0.8
 	)
 "
 DEPEND="
@@ -41,7 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/makefile-destdir.patch
 	epatch "${FILESDIR}"/makefile-respect-variables.patch
 	epatch "${FILESDIR}"/makefile-no-doc.patch
-	use gnome && epatch "${FILESDIR}"/vala-unowned.patch || epatch "${FILESDIR}"/no-applet.patch
+	use gnome || epatch "${FILESDIR}"/no-applet.patch
 }
 
 src_compile() {
