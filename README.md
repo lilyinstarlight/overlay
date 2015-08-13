@@ -69,6 +69,9 @@ Packages
 #### tty-clock (app-misc/tty-clock)
 [tty-clock](https://github.com/xorg62/tty-clock) is a versatile clock in the terminal using ncurses.
 
+#### create\_ap (app-misc/create\_ap)
+[create\_ap](https://github.com/oblique/create_ap) is a script that creates a NATed or bridged WiFi access point given an Ethernet connection.
+
 ### Office
 
 #### HomeBank (app-office/homebank)
