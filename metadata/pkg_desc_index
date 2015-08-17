@@ -29,6 +29,7 @@ net-im/prosody 0.10.9999: Prosody is a flexible communications server for Jabber
 net-mail/syncmaildir 1.2.6.1: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format
 net-misc/chrome-remote-desktop 44.0.2403.44: Chrome Remote Desktop allows you to securely access your computer over the Internet through Chrome
 net-wireless/create_ap 0.1: A script to create a NATed or bridged WiFi access point
+sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 sys-apps/finit 1.10: Extremely fast /sbin/init replacement focused on small embedded GNU/Linux systems.
 www-plugins/pipelight 0.2.8.1: Browser plugin allowing usage of Windows NPAPI plugins through Wine
 x11-misc/awf 1.3.0: A Widget Factory
