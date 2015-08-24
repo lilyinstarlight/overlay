@@ -72,6 +72,9 @@ Packages
 #### create\_ap (app-misc/create\_ap)
 [create\_ap](https://github.com/oblique/create_ap) is a script that creates a NATed or bridged WiFi access point given an Ethernet connection.
 
+#### lemonbar (x11-misc/lemonbar)
+[lemonbar](https://github.com/LemonBoy/bar) is a featherweight, lemon-scented, bar based on xcb.
+
 ### Office
 
 #### HomeBank (app-office/homebank)
