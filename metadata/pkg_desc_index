@@ -33,6 +33,6 @@ sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portab
 sys-apps/finit 1.10: Extremely fast /sbin/init replacement focused on small embedded GNU/Linux systems.
 www-plugins/pipelight 0.2.8.1: Browser plugin allowing usage of Windows NPAPI plugins through Wine
 x11-misc/awf 1.3.0: A Widget Factory
-x11-misc/lemonbar 1.1: A featherweight, lemon-scented, bar based on xcb
+x11-misc/lemonbar 20150722: A featherweight, lemon-scented, bar based on xcb
 x11-misc/slop 4.2.19: slop (Select Operation) is an application that queries the user for a selection and prints it out
 x11-themes/clearlooks-phenix 5.0.7 6.0.3: Clearlooks-Phenix is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2
