@@ -4,6 +4,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/smd-loop
+Restart=on-failure
 
 [Install]
 WantedBy=default.target
