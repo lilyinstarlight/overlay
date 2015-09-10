@@ -60,7 +60,7 @@ CDEPEND="
 	pulseaudio? ( media-sound/pulseaudio )
 	media-video/rtmpdump
 	net-dns/avahi
-	net-fs/samba[smbclient]
+	net-fs/samba[smbclient(+)]
 	net-libs/libmicrohttpd[messages]
 	net-libs/libssh
 	net-misc/curl
