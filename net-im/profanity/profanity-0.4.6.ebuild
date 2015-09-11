@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
@@ -17,7 +17,7 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/libstrophe
 	net-misc/curl
-	sys-libs/ncurses
+	sys-libs/ncurses:0
 	otr? ( net-libs/libotr )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	libnotify? ( x11-libs/libnotify )

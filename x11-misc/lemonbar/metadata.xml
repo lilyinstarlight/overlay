@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>ryao@gentoo.org</email>
-		<name>Richard Yao</name>
+		<email>fkmclane@gmail.com</email>
 	</maintainer>
-	<upstream>
-		<remote-id type="launchpad">pipelight</remote-id>
-	</upstream>
 </pkgmetadata>
