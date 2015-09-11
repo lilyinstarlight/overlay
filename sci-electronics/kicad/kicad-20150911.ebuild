@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -12,9 +12,9 @@ inherit bzr cmake-utils fdo-mime flag-o-matic gnome2-utils python-r1 vcs-snapsho
 DESCRIPTION="Electronic Schematic and PCB design tools."
 HOMEPAGE="http://www.kicad-pcb.org"
 
-SRC_REVISION="2e4136720dbe98facf8888f714fa4418228af49b"
-LIB_REVISION="b47e3590880f533d28460e9b2ea09abd875e2348"
-DOC_REVISION="038dbff05834cc4000e92ada576c1d0073672008"
+SRC_REVISION="b6bb87af741711062116c553b1c24b51feddedf6"
+LIB_REVISION="f4614a103bd4c358d7984fe4e35c57442d08e993"
+DOC_REVISION="db042de5e18037c711ca9f86242f3f6c9bf5f4c4"
 SRC_URI="https://github.com/KiCad/${PN}-source-mirror/tarball/${SRC_REVISION} -> ${P}.tar.gz
 	!minimal? ( https://github.com/KiCad/${PN}-library/tarball/${LIB_REVISION} -> ${P}-library.tar.gz )
 	help? ( https://github.com/KiCad/${PN}-doc/tarball/${DOC_REVISION} -> ${P}-doc.tar.gz )
@@ -38,7 +38,7 @@ CDEPEND="x11-libs/wxGTK:${WX_GTK_VER}[X,opengl,webkit?]
 	x11-libs/cairo
 	media-libs/glew
 	app-arch/bzip2
-	dev-libs/openssl"
+	dev-libs/openssl:0"
 DEPEND="${CDEPEND}
 	>=dev-util/cmake-2.8.12.2
 	boost? ( >=dev-libs/boost-1.54[context,threads,python?] )
@@ -52,11 +52,11 @@ RDEPEND="${CDEPEND}
 src_prepare() {
 	# If help or i18n required link the unpacked doc dir into the main source
 	if use help || use i18n; then
-		ln -s ${WORKDIR}/${P}-doc ${S}/${PN}-doc || die "ln failed"
+		ln -s "${WORKDIR}/${P}"-doc "${S}/${PN}"-doc || die "ln failed"
 	fi
 	# If not minimal link the unpacked libraries dir into the main source
 	if ! use minimal; then
-		ln -s ${WORKDIR}/${P}-library ${S}/${PN}-library || die "ln failed"
+		ln -s "${WORKDIR}/${P}"-library "${S}/${PN}"-library || die "ln failed"
 	fi
 
 	if use python;then
@@ -109,7 +109,7 @@ src_prepare() {
 }
 
 src_configure() {
-	if ! use boost; then 
+	if ! use boost; then
 		bzr whoami "anonymous"
 	fi
 	if use amd64; then

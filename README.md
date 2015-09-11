@@ -1,14 +1,18 @@
 Overlay
 =======
+
 This is my Portage overlay where I dump all of the packages I create or modify. If anything is out of date or doesn't build on your system, create a [new issue](https://github.com/fkmclane/overlay/issues/new) and attach a copy of the build log from a [pastebin](http://pastebin.com/).
+
 
 Installation
 ------------
+
 The easiest way to add this overlay to your Portage tree is through layman.
 
 ```
 # layman -a fkmclane
 ```
+
 
 Packages
 --------
@@ -51,14 +55,8 @@ Packages
 #### maim (media-gfx/maim)
 [maim](https://github.com/naelstrof/maim) (make image) is a utility that takes screenshots of your desktop and is designed to be an improved scrot. It optionally uses [slop](https://github.com/naelstrof/slop) for screen selections.
 
-#### Chrome Remote Desktop (net-misc/chrome-remote-desktop)
-[Chrome Remote Desktop](http://chrome.google.com/remotedesktop) is an application that integrates with Chrome or Chromium and allows one to remotely access their computer or receive assistance securely.
-
 #### Sync Mail Dir (net-mail/syncmaildir)
 [Sync Mail Dir](http://syncmaildir.sourceforge.net/) (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format. It is useful for IMAP-less client-server mail synchronization and for Maildir transistion.
-
-#### finit (sys-apps/finit)
-[finit](https://github.com/troglobit/finit) is a **f**ast **init** system supporting plugins and a configuration file.
 
 #### Pipelight (www-plugins/pipelight)
 [Pipelight](http://pipelight.net/) is a browser plugin that allows running Windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
@@ -98,9 +96,6 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 
 #### Chipmunk2D (sci-physics/chipmunk)
 [Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
-
-#### CSFML (media-libs/csfml)
-CSFML is the official C binding for [Simple and Fast Multimedia Library](http://www.sfml-dev.org/).
 
 ### GTK+
 

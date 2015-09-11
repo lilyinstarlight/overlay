@@ -1,14 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils git-r3
 
 DESCRIPTION="A high-quality audio editing and playback library used by libopenshot."
 HOMEPAGE="http://openshot.org/"
-SRC_URI="https://launchpad.net/libopenshot/0.0/${PV}/+download/${P}.tar.gz"
+EGIT_REPO_URI="git://github.com/OpenShot/libopenshot-audio.git"
+EGIT_COMMIT="409522a"
 
 LICENSE="GPL-3"
 SLOT="0"
