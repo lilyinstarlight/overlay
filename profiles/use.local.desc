@@ -25,18 +25,9 @@ net-im/prosody:jit - Use LuaJIT instead of vanilla Lua
 net-im/prosody:libevent - Use libevent for event handling
 net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-mail/syncmaildir:gnome - Enable GNOME applet
+net-wireless/create_ap:haveged - Enable support for haveged
 sci-electronics/kicad:boost - Compile against dev-libs/boost libraries
 sci-electronics/kicad:github - Build GitHub plugin
 sci-electronics/kicad:help - Install help documentation and tutorials
 sci-electronics/kicad:i18n - Install GUI language files
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
-sys-apps/finit:X - Enable x11-common plugin
-sys-apps/finit:alsa - Enable alsa-utils plugin
-sys-apps/finit:bootmisc - Enable bootmisc plugin
-sys-apps/finit:dbus - Enable dbus plugin
-sys-apps/finit:hwclock - Enable hwclock plugin
-sys-apps/finit:initctl - Enable initctl plugin
-sys-apps/finit:resolvconf - Enable resolvconf plugin
-sys-apps/finit:tty - Enable tty plugin
-sys-apps/finit:urandom - Enable urandom plugin
-www-plugins/pipelight:kde - Use kdialog instead of zenity
