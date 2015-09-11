@@ -21,9 +21,9 @@ RDEPEND="
 	dev-libs/protobuf
 	media-libs/ftgl
 	media-libs/libpng:*
-	media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/libsdl2
+	media-libs/sdl2-image
+	media-libs/sdl2-mixer
 	virtual/opengl
 
 	glew? ( media-libs/glew )
