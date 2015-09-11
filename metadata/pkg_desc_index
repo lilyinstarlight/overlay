@@ -9,10 +9,10 @@ dev-util/unittest++ 1.4-r1: A lightweight unit testing framework for C++
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
-games-board/cockatrice 20150511: A cross-platform virtual tabletop for multiplayer card games
+games-board/cockatrice 20150809: A cross-platform virtual tabletop for multiplayer card games
 games-emulation/m64py 0.2.3: A frontend for Mupen64Plus
 games-misc/nyancat 1.4.4: Nyancat rendered in your terminal
-media-gfx/maim 3.4.45: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
+media-gfx/maim 3.4.46: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-libs/csfml 2.2: C library for the Simple and Fast Multimedia Library (SFML)
 media-libs/libopenshot 0.0.3: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
 media-libs/libopenshot-audio 0.0.3: A high-quality audio editing and playback library used by libopenshot.
