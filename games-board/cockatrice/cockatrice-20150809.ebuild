@@ -4,12 +4,14 @@
 
 EAPI=5
 
-inherit cmake-utils games git-r3
+inherit cmake-utils games
 
 DESCRIPTION="A cross-platform virtual tabletop for multiplayer card games"
-HOMEPAGE="http://www.reddit.com/r/Cockatrice"
-EGIT_REPO_URI="git://github.com/Cockatrice/Cockatrice.git"
-EGIT_COMMIT="18da49d"
+HOMEPAGE="https://github.com/Cockatrice/Cockatrice"
+MY_PN="Cockatrice"
+MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}-Release"
+MY_P="${MY_PN}-${MY_PV}"
+SRC_URI="https://github.com/Cockatrice/Cockatrice/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,9 +19,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+client server"
 REQUIRED_USE="|| ( client server )"
 
-#With Qt5, will additionally need qtnetwork and qtxml
+#With Qt5, will additionally need qtnetwork and qtxml and won't need libgcrypt
 DEPEND="
-	dev-libs/libgcrypt:0
 	dev-libs/protobuf
 	dev-qt/qtcore:4
 	client? (
@@ -28,10 +29,13 @@ DEPEND="
 		dev-qt/qtsvg:4
 	)
 	server? (
+		dev-libs/libgcrypt:0
 		dev-qt/qtsql:4
 	)
 "
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local mycmakeargs=(
@@ -60,5 +64,5 @@ src_install() {
 pkg_postinst() {
 	use client && \
 		einfo "For initial installation, run 'oracle' before" && \
-		einfo "Cockatrice to download the card database."
+		einfo "'cockatrice' to download the card database."
 }
