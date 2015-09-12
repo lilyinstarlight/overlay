@@ -17,7 +17,7 @@ media-libs/libopenshot-audio 0.0.5: A high-quality audio editing and playback li
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
 media-sound/mumble 1.2.10: Mumble is an open source, low-latency, high quality voice chat software
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
-media-tv/plex-media-server 0.9.12.11: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
+media-tv/plex-media-server 0.9.12.11 0.9.12.12: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
 media-video/obs-studio 0.11.2: Software for recording and streaming live video content
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
 media-video/webcamstudio 0.73: Virtual webcam studio to broadcast over the internet
