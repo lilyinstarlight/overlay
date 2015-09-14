@@ -12,9 +12,9 @@ inherit bzr cmake-utils fdo-mime flag-o-matic gnome2-utils python-r1 vcs-snapsho
 DESCRIPTION="Electronic Schematic and PCB design tools."
 HOMEPAGE="http://www.kicad-pcb.org"
 
-SRC_REVISION="b6bb87af741711062116c553b1c24b51feddedf6"
-LIB_REVISION="f4614a103bd4c358d7984fe4e35c57442d08e993"
-DOC_REVISION="db042de5e18037c711ca9f86242f3f6c9bf5f4c4"
+SRC_REVISION="ca1ae0d4a0a54e998a2cb9af68c350189a1d73d4"
+LIB_REVISION="73bdb9340b124bbb113d1fe6dc18da8a8328063b"
+DOC_REVISION="edf576ca666e644b5dfb98fe9d83843853595967"
 SRC_URI="https://github.com/KiCad/${PN}-source-mirror/tarball/${SRC_REVISION} -> ${P}.tar.gz
 	!minimal? ( https://github.com/KiCad/${PN}-library/tarball/${LIB_REVISION} -> ${P}-library.tar.gz )
 	help? ( https://github.com/KiCad/${PN}-doc/tarball/${DOC_REVISION} -> ${P}-doc.tar.gz )
