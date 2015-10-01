@@ -22,7 +22,7 @@ media-video/obs-studio 0.11.2: Software for recording and streaming live video c
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
 media-video/webcamstudio 0.73: Virtual webcam studio to broadcast over the internet
 media-video/webcamstudio-module 1141: Kernel module and helper library for WebcamStudio
-net-im/profanity 0.4.6: Ncurses based jabber client inspired by irssi
+net-im/profanity 0.4.7: Ncurses based jabber client inspired by irssi
 net-im/prosody 0.10.9999: Prosody is a flexible communications server for Jabber/XMPP written in Lua
 net-mail/syncmaildir 1.2.6.1: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format
 net-wireless/create_ap 0.1: A script to create a NATed or bridged WiFi access point
