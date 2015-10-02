@@ -1,0 +1,11 @@
+diff --git a/setup.py b/setup.py
+--- a/setup.py
++++ b/setup.py
+@@ -51,7 +51,6 @@ setup(
+         'mDNS',
+     ],
+     install_requires=[
+-        'enum-compat',
+         'netifaces',
+         'six',
+     ],
