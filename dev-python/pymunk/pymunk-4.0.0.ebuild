@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="pymunk is a pythonic 2d physics library based on Chipmunk"
 HOMEPAGE="http://www.pymunk.org/"
-SRC_URI="mirror://pypi/p/${PN}/${P}.zip"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
