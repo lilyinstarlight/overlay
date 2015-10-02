@@ -73,6 +73,10 @@ Packages
 #### lemonbar (x11-misc/lemonbar)
 [lemonbar](https://github.com/LemonBoy/bar) is a featherweight, lemon-scented, bar based on xcb.
 
+#### zget (net-p2p/zget)
+[zget](https://github.com/nils-werner/zget) is a zeroconf based peer to peer file transfer utility. It uses filenames to locate and transfer files instead of hostnames or IP addresses.
+
+
 ### Office
 
 #### HomeBank (app-office/homebank)
