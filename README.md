@@ -73,6 +73,9 @@ Packages
 #### zget (net-p2p/zget)
 [zget](https://github.com/nils-werner/zget) is a zeroconf based peer to peer file transfer utility. It uses filenames to locate and transfer files instead of hostnames or IP addresses.
 
+#### Viewnior (media-gfx/viewnior)
+[Viewnior](https://github.com/xsisqox/Viewnior) is a fast and elegant image viewer. It is desktop environment agnostic and supports a basic set of image viewing and manipulation features.
+
 
 ### Office
 
