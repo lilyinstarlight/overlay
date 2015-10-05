@@ -10,8 +10,6 @@ games-action/armagetronad-dedicated:auth - Enable armathentication support
 games-action/armagetronad-dedicated:fortress - Enable support for fortress game mode
 games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
-media-sound/mumble:g15 - Enable support for the Logitech G15 LCD (and compatible devices).
-media-sound/mumble:speech - Enable text-to-speech support in Mumble.
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.
 media-video/obs-studio:pulseaudio - Enable audio capture from the PulseAudio sound server.
