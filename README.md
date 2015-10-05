@@ -42,9 +42,6 @@ Packages
 #### Cockatrice (games-board/cockatrice)
 [Cockatrice](http://www.reddit.com/r/Cockatrice) is a cross-platform virtual tabletop for multiplayer card games, such as Magic: The Gathering, over a network.
 
-#### m64py (games-emulation/m64py)
-[m64py](http://m64py.sourceforge.net/) is a PyQt4 front-end to the [mupen64plus](https://code.google.com/p/mupen64plus/) N64 emulator.
-
 ### Messaging
 
 #### Profanity (net-im/profanity)
