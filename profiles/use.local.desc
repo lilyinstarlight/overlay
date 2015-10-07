@@ -29,3 +29,4 @@ sci-electronics/kicad:github - Build GitHub plugin
 sci-electronics/kicad:help - Install help documentation and tutorials
 sci-electronics/kicad:i18n - Install GUI language files
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
+www-client/vimb:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
