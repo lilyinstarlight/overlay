@@ -41,6 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/makefile-destdir.patch
 	epatch "${FILESDIR}"/makefile-respect-variables.patch
 	epatch "${FILESDIR}"/makefile-no-doc.patch
+	epatch "${FILESDIR}"/lua-no-slot.patch
 	use gnome || epatch "${FILESDIR}"/no-applet.patch
 }
 

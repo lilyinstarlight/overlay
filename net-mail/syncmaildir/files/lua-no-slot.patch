@@ -1,0 +1,48 @@
+diff --git a/Makefile b/Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -40,7 +40,7 @@ SED=sed
+ XDELTA=xdelta
+ SSH=ssh
+ LUAV=5.1
+-LUA=lua$(LUAV)
++LUA=lua
+ CFLAGS?=-O2 -Wall -Wextra -Wcast-align
+ PKG_FLAGS=
+ 
+diff --git a/misc/spit-tags b/misc/spit-tags
+--- a/misc/spit-tags
++++ b/misc/spit-tags
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env lua5.1
++#!/usr/bin/env lua
+ 
+ local f,g = io.open('smd-client'),io.open('syncmaildir.lua')
+ local data = f:read("*a") .. g:read("*a")
+diff --git a/smd-client b/smd-client
+--- a/smd-client
++++ b/smd-client
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env lua5.1
++#! /usr/bin/env lua
+ -- 
+ -- Released under the terms of GPLv3 or at your option any later version.
+ -- No warranties.
+diff --git a/smd-server b/smd-server
+--- a/smd-server
++++ b/smd-server
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env lua5.1
++#! /usr/bin/env lua
+ -- 
+ -- Released under the terms of GPLv3 or at your option any later version.
+ -- No warranties.
+diff --git a/smd-translate b/smd-translate
+--- a/smd-translate
++++ b/smd-translate
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env lua5.1
++#!/usr/bin/env lua
+ --
+ -- Released under the terms of GPLv3 or at your option any later version.
+ -- No warranties.
