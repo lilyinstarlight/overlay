@@ -1,10 +1,12 @@
 app-admin/linode-cli 1.4.6: Command-line interface to the Linode platform
+app-misc/blinkstick 1.1.7: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 2: A cure for cron's chronic email problem
 app-misc/tty-clock 20150318: analog clock in ncurses
 app-office/homebank 5.0.5: Free, easy, personal accounting for everyone
 dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clients
 dev-python/progressbar2 2.7.3: text progress bar library for Python
 dev-python/pymunk 4.0.0: pymunk is a pythonic 2d physics library based on Chipmunk
+dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-python/zeroconf 0.17.4: a pure python implementation of multicast DNS service discovery
 dev-util/unittest++ 1.4-r1: A lightweight unit testing framework for C++
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
