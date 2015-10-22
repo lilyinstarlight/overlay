@@ -1,0 +1,67 @@
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
+
+EAPI=5
+
+inherit eutils cmake-utils
+
+DESCRIPTION="next generation Plex client"
+HOMEPAGE="http://plex.tv/"
+
+BUILD="5"
+COMMIT="53192cb0"
+MY_PV="${PV}.${BUILD}-${COMMIT}"
+MY_P="${PN}-${MY_PV}"
+
+SRC_URI="https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+IUSE="cec joystick lirc"
+
+DEPEND="
+	>=dev-qt/qtcore-5.5.1
+	>=dev-qt/qtnetwork-5.5.1
+	>=dev-qt/qtxml-5.5.1
+	>=dev-qt/qtwebchannel-5.5.1[qml]
+	>=dev-qt/qtwebengine-5.5.1[qml,pmp]
+	>=media-video/mpv-0.11.0[libmpv]
+	virtual/opengl
+
+	cec? (
+		>=dev-libs/libcec-2.2.0
+	)
+
+	joystick? (
+		media-libs/libsdl2
+		virtual/libiconv
+	)
+"
+RDEPEND="
+	${DEPEND}
+
+	lirc? (
+		app-misc/lirc
+	)
+"
+
+S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/git-revision.patch
+}
+
+src_configure() {
+	local mycmakeargs="
+		$(cmake-utils_use_enable cec CEC)
+		$(cmake-utils_use_enable joystick SDL2)
+		$(cmake-utils_use_enable lirc LIRC)
+	"
+
+	export BUILD_NUMBER="${BUILD}"
+	export GIT_REVISION="${COMMIT}"
+
+	cmake-utils_src_configure
+}
