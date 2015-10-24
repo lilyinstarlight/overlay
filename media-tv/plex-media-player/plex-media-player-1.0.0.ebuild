@@ -11,10 +11,14 @@ HOMEPAGE="http://plex.tv/"
 
 BUILD="5"
 COMMIT="53192cb0"
+WEBCLIENT="a25311b"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="
+	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://nightlies.plex.tv/directdl/plex-web-client-plexmediaplayer/master/plex-web-client-konvergo-${WEBCLIENT}.cpp.bz2
+"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,6 +33,8 @@ DEPEND="
 	>=dev-qt/qtwebengine-5.5.1[qml,pmp]
 	>=media-video/mpv-0.11.0[libmpv]
 	virtual/opengl
+	x11-libs/libX11
+	x11-libs/libXrandr
 
 	cec? (
 		>=dev-libs/libcec-2.2.0
@@ -51,6 +57,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/git-revision.patch
+	epatch "${FILESDIR}"/web-client-resource.patch
+
+	mv "${WORKDIR}"/plex-web-client-konvergo-"${WEBCLIENT}".cpp web-client-"${WEBCLIENT}".cpp
 }
 
 src_configure() {
