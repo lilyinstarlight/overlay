@@ -22,7 +22,7 @@ diff --git a/CMakeModules/WebClientResources.cmake b/CMakeModules/WebClientResou
 -    COMMAND ${BUNZIP2} -k -f ${CMAKE_CURRENT_BINARY_DIR}/${WEB_CLIENT_CPP}.bz2
 -    DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${WEB_CLIENT_CPP}.bz2
 -    COMMENT "Unpacking: ${WEB_CLIENT_CPP}.bz2"
-+    RENAME ${CMAKE_SOURCE_DIR}/${WEB_CLIENT_CPP} ${CMAKE_CURRENT_BINARY_DIR}/${WEB_CLIENT_CPP}
++    RENAME ${CMAKE_SOURCE_DIR}/plex-web-client-konvergo-${WEB_CLIENT_VERSION}.cpp ${CMAKE_CURRENT_BINARY_DIR}/${WEB_CLIENT_CPP}
    )
  
    add_custom_target(UnpackWebClientResource

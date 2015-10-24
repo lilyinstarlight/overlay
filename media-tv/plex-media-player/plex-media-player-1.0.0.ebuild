@@ -55,11 +55,17 @@ RDEPEND="
 
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+	unpack "${P}".tar.gz
+
+	cd "${S}"
+
+	unpack plex-web-client-konvergo-"${WEBCLIENT}".cpp.bz2
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/git-revision.patch
 	epatch "${FILESDIR}"/web-client-resource.patch
-
-	mv "${WORKDIR}"/plex-web-client-konvergo-"${WEBCLIENT}".cpp web-client-"${WEBCLIENT}".cpp
 }
 
 src_configure() {
@@ -67,6 +73,7 @@ src_configure() {
 		$(cmake-utils_use_enable cec CEC)
 		$(cmake-utils_use_enable joystick SDL2)
 		$(cmake-utils_use_enable lirc LIRC)
+		-DQTROOT=/usr
 	"
 
 	export BUILD_NUMBER="${BUILD}"
