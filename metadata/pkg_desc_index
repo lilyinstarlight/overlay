@@ -13,7 +13,7 @@ dev-util/unittest++ 1.4-r1: A lightweight unit testing framework for C++
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
-games-board/cockatrice 20150809: A cross-platform virtual tabletop for multiplayer card games
+games-board/cockatrice 20150924: A cross-platform virtual tabletop for multiplayer card games
 games-misc/nyancat 1.4.5: Nyancat rendered in your terminal
 media-gfx/maim 3.4.46: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-gfx/viewnior 1.5: Fast and simple image viewer
