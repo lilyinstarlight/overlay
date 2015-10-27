@@ -24,6 +24,7 @@ DEPEND="
 	>=dev-qt/qtxmlpatterns-${PV}:5
 	dev-libs/nss
 	x11-libs/libXcomposite
+	x11-libs/libXcursor
 "
 RDEPEND="${DEPEND}"
 
