@@ -23,6 +23,8 @@ DEPEND="
 	>=dev-qt/qtwebchannel-${PV}:5
 	>=dev-qt/qtxmlpatterns-${PV}:5
 	dev-libs/nss
+	x11-libs/libXcomposite
+	x11-libs/libXcursor
 "
 RDEPEND="${DEPEND}"
 
