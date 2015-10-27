@@ -25,6 +25,7 @@ DEPEND="
 	dev-libs/nss
 	x11-libs/libXcomposite
 	x11-libs/libXcursor
+	x11-libs/libXtst
 "
 RDEPEND="${DEPEND}"
 
