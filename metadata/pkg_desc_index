@@ -20,6 +20,7 @@ media-gfx/viewnior 1.5: Fast and simple image viewer
 media-libs/libopenshot 0.0.5: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
 media-libs/libopenshot-audio 0.0.5: A high-quality audio editing and playback library used by libopenshot.
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
+media-tv/kodi 15.2: Kodi is a free and open source media-player and entertainment hub
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
 media-tv/plex-media-player 1.0.0 9999: next generation Plex client
 media-tv/plex-media-server 0.9.12.13 0.9.12.17: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
