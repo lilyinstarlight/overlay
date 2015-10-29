@@ -19,7 +19,6 @@ IUSE=""
 
 DEPEND="
 	dev-lang/perl
-	dev-perl/Crypt-SSLeay
 	dev-perl/JSON
 	dev-perl/Mozilla-CA
 	dev-perl/Try-Tiny
