@@ -28,6 +28,9 @@ Packages
 #### v4l2loopback (media-video/v4l2loopback)
 [v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with WebcamStudio or other software (e.g. ffmpeg or gstreamer) to create a virtual webcam device.
 
+#### amsynth (media-sound/amsynth)
+[amsynth](http://amsynth.github.io/) is an easy-to-use software synth with a classic subtractive synthesizer topology.
+
 ### Games
 
 #### Armagetron Advanced (games-action/armagetronad, games-action/armagetronad-dedicated)
