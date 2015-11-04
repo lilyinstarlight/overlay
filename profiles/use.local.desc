@@ -2,6 +2,7 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+dev-qt/qtwebengine:pmp - Apply necessary patches to support media-tv/plex-media-player
 dev-qt/qtwebengine:qml - Build QML/QtQuick bindings and imports
 games-action/armagetronad:auth - Enable armathentication support
 games-action/armagetronad:fortress - Enable support for fortress game mode
@@ -21,7 +22,6 @@ media-tv/kodi:goom - Enable GOOM visualization plugin
 media-tv/kodi:midi - Support MIDI files
 media-tv/kodi:nfs - Enable NFS client support
 media-tv/kodi:projectm - Enable projectM visualization plugin
-media-tv/kodi:pvr - Enable MythTV support
 media-tv/kodi:rsxs - Enable really slick X screensavers
 media-tv/kodi:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-tv/kodi:sftp - Support browsing files over SFTP
@@ -29,7 +29,7 @@ media-tv/kodi:spectrum - Enable spectrum visualization plugin
 media-tv/kodi:texturepacker - Support packing skin textures
 media-tv/kodi:waveform - Enable waveform visualization plugin
 media-tv/kodi:webserver - Enable internal webserver
-media-tv/kodi:xrandr - Support X randr extension
+media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.
 media-video/obs-studio:pulseaudio - Enable audio capture from the PulseAudio sound server.
@@ -44,9 +44,5 @@ net-im/prosody:libevent - Use libevent for event handling
 net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
-sci-electronics/kicad:boost - Compile against dev-libs/boost libraries
-sci-electronics/kicad:github - Build GitHub plugin
-sci-electronics/kicad:help - Install help documentation and tutorials
-sci-electronics/kicad:i18n - Install GUI language files
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
 www-client/vimb:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
