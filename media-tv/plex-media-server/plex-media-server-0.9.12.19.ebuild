@@ -38,6 +38,7 @@ RDEPEND="
 
 S="${WORKDIR}"
 
+RESTRICT="mirror"
 QA_PREBUILT="*"
 
 pkg_setup() {
