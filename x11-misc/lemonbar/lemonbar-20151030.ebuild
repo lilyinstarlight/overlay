@@ -13,9 +13,9 @@ HOMEPAGE="https://github.com/LemonBoy/bar"
 #SRC_URI="https://github.com/LemonBoy/bar/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 EGIT_REPO_URI="https://github.com/krypt-n/bar.git"
 if use xft; then
-	EGIT_COMMIT="020a3e1"
+	EGIT_COMMIT="2f66bb1"
 else
-	EGIT_COMMIT="a390ef6"
+	EGIT_COMMIT="2c0f57c"
 fi
 
 LICENSE="MIT"
