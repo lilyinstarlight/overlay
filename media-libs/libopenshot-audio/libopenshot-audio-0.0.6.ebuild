@@ -8,12 +8,12 @@ inherit cmake-utils git-r3
 
 DESCRIPTION="A high-quality audio editing and playback library used by libopenshot."
 HOMEPAGE="http://openshot.org/"
-EGIT_REPO_URI="git://github.com/OpenShot/libopenshot-audio.git"
-EGIT_COMMIT="409522a"
+EGIT_REPO_URI="https://github.com/OpenShot/libopenshot-audio.git"
+EGIT_COMMIT="2a383d0"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
