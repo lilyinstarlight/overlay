@@ -9,7 +9,7 @@ dev-python/pymunk 4.0.0: pymunk is a pythonic 2d physics library based on Chipmu
 dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-python/zeroconf 0.17.4: a pure python implementation of multicast DNS service discovery
 dev-qt/qtwebengine 5.5.1: Support library for rendering dynamic web content in Qt5 C++ and QML applications
-dev-util/unittest++ 1.4-r1: A lightweight unit testing framework for C++
+dev-util/unittest++ 1.5.0: A lightweight unit testing framework for C++
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
@@ -17,14 +17,14 @@ games-board/cockatrice 20150924: A cross-platform virtual tabletop for multiplay
 games-misc/nyancat 1.4.5: Nyancat rendered in your terminal
 media-gfx/maim 3.4.46: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-gfx/viewnior 1.5: Fast and simple image viewer
-media-libs/libopenshot 0.0.5: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
-media-libs/libopenshot-audio 0.0.5: A high-quality audio editing and playback library used by libopenshot.
+media-libs/libopenshot 0.0.6: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
+media-libs/libopenshot-audio 0.0.6: A high-quality audio editing and playback library used by libopenshot.
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
 media-sound/amsynth 1.6.3: analog modelling synthesizer with a classic subtractive synthesizer topology
 media-tv/kodi 15.2: Kodi is a free and open source media-player and entertainment hub
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
-media-tv/plex-media-player 1.0.1 9999: next generation Plex client
-media-tv/plex-media-server 0.9.12.19: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
+media-tv/plex-media-player 1.0.2 9999: next generation Plex client
+media-tv/plex-media-server 0.9.12.19 0.9.14.0: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
 media-video/obs-studio 0.12.0: Software for recording and streaming live video content
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
 media-video/webcamstudio 0.73: Virtual webcam studio to broadcast over the internet
