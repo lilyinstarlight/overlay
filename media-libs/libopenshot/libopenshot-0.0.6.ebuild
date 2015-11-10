@@ -8,8 +8,8 @@ inherit cmake-utils eutils git-r3
 
 DESCRIPTION="A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby"
 HOMEPAGE="http://openshot.org/"
-EGIT_REPO_URI="git://github.com/OpenShot/libopenshot.git"
-EGIT_COMMIT="652aa3d"
+EGIT_REPO_URI="https://github.com/OpenShot/libopenshot.git"
+EGIT_COMMIT="affaa7a"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -34,5 +34,5 @@ DEPEND="
 
 src_prepare() {
 	epatch "${FILESDIR}"/qt-exe.patch
-	epatch "${FILESDIR}"/swig-3.patch
+	#epatch "${FILESDIR}"/swig-3.patch
 }
