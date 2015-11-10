@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit systemd
+inherit bash-completion-r1 systemd
 
 DESCRIPTION="A script to create a NATed or bridged WiFi access point"
 HOMEPAGE="https://github.com/oblique/create_ap"
@@ -33,4 +33,5 @@ RDEPEND="
 src_install() {
 	dobin create_ap
 	systemd_dounit create_ap.service
+	newbashcomp bash_completion create_ap
 }
