@@ -9,9 +9,9 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-BUILD="42"
-COMMIT="56cc6ef9"
-WEBCLIENT="f7ae2f6"
+BUILD="68"
+COMMIT="b9d363b7"
+WEBCLIENT="c1f55d5"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
