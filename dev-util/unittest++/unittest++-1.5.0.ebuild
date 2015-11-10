@@ -4,35 +4,29 @@
 
 EAPI=5
 
-inherit eutils multilib
+inherit cmake-utils
 
 DESCRIPTION="A lightweight unit testing framework for C++"
 HOMEPAGE="http://unittest-cpp.github.io/"
+
 MY_PN="unittest-cpp"
 MY_P="${MY_PN}-${PV}"
+
 SRC_URI="https://github.com/unittest-cpp/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz"
-S="${WORKDIR}/${MY_P}"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND=""
 
-src_prepare() {
-	epatch "${FILESDIR}"/respect-cxx.patch
-}
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	dolib.a libUnitTest++.a
-	dosym libUnitTest++.a "/usr/$(get_libdir)/libunittest++.a"
+	cmake-utils_src_install
 
-	insinto /usr/include/unittest++
-	doins src/*.h
-	insinto /usr/include/unittest++/Posix
-	doins src/Posix/*.h
-
-	dodoc README docs/UnitTest++.html
+	dosym libUnitTest++.a "/usr/lib/libunittest++.a"
+	dosym UnitTest++ "/usr/include/unittest++"
 }
