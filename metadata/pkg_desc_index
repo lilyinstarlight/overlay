@@ -24,7 +24,7 @@ media-sound/amsynth 1.6.3: analog modelling synthesizer with a classic subtracti
 media-tv/kodi 15.2: Kodi is a free and open source media-player and entertainment hub
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
 media-tv/plex-media-player 1.0.2 9999: next generation Plex client
-media-tv/plex-media-server 0.9.12.19 0.9.14.0: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
+media-tv/plex-media-server 0.9.12.19 0.9.14.1: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
 media-video/obs-studio 0.12.0: Software for recording and streaming live video content
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
 media-video/webcamstudio 0.73: Virtual webcam studio to broadcast over the internet
