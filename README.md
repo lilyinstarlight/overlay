@@ -20,7 +20,7 @@ Packages
 ### Multimedia
 
 #### Plex (media-tv/plex-media-server, media-tv/plex-home-theater, media-tv/plex-media-player)
-[Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64 or ~x86" keywords to the packages to get the latest Plex Pass versions. Note: Plex Media Player requires a patched version of `dev-qt/qtwebengine` which was taken with a few modifications from [https://github.com/yuri-sevatz/qt]().
+[Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64 or ~x86" keywords to the packages to get the latest Plex Pass versions. Note: Plex Media Player requires a patched version of `dev-qt/qtwebengine` which was taken with a few modifications from <https://github.com/yuri-sevatz/qt>.
 
 #### WebcamStudio (media-video/webcamstudio, media-video/webcamstudio-module)
 [WebcamStudio](https://code.google.com/p/webcamstudio/) is a live video mixer often used in conjunction with a virtual webcam driver to create professional looking broadcasts.
