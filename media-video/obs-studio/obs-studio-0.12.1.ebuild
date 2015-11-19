@@ -4,7 +4,7 @@
 EAPI=5
 inherit eutils cmake-utils
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SRC_URI="https://github.com/jp9000/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 RESTRICT="primaryuri"
 
