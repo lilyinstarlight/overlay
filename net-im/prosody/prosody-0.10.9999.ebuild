@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit flag-o-matic multilib systemd versionator mercurial
+inherit flag-o-matic multilib systemd mercurial
 
 DESCRIPTION="Prosody is a flexible communications server for Jabber/XMPP written in Lua"
 HOMEPAGE="http://prosody.im/"
@@ -17,24 +17,23 @@ IUSE="ipv6 libevent mysql postgres sqlite ssl zlib jit"
 
 DEPEND="
 	net-im/jabber-base
-	!jit? ( dev-lang/lua:0 )
+	!jit? ( >=dev-lang/lua-5.1:0 )
 	jit? ( dev-lang/luajit:2 )
 	>=net-dns/libidn-1.1
-	dev-libs/openssl:*
-"
-RDEPEND="
-	${DEPEND}
-	>=dev-lua/luaexpat-1.3.0
-	dev-lua/luafilesystem
-	ipv6? ( >=dev-lua/luasocket-3 )
-	!ipv6? ( dev-lua/luasocket )
-	libevent? ( >=dev-lua/luaevent-0.4.3 )
-	mysql? ( dev-lua/luadbi[mysql] )
-	postgres? ( dev-lua/luadbi[postgres] )
-	sqlite? ( dev-lua/luadbi[sqlite] )
-	ssl? ( dev-lua/luasec )
-	zlib? ( dev-lua/lua-zlib )
-"
+	dev-libs/openssl:0"
+RDEPEND="${DEPEND}
+		>=dev-lua/luaexpat-1.3.0
+		dev-lua/luafilesystem
+		ipv6? ( >=dev-lua/luasocket-3 )
+		!ipv6? ( dev-lua/luasocket )
+		libevent? ( >=dev-lua/luaevent-0.4.3 )
+		mysql? ( dev-lua/luadbi[mysql] )
+		postgres? ( dev-lua/luadbi[postgres] )
+		sqlite? ( dev-lua/luadbi[sqlite] )
+		ssl? ( dev-lua/luasec )
+		zlib? ( dev-lua/lua-zlib )"
+
+S=${WORKDIR}/${MY_P}
 
 JABBER_ETC="/etc/jabber"
 JABBER_SPOOL="/var/spool/jabber"
@@ -58,7 +57,8 @@ src_configure() {
 	fi
 	./configure \
 		--ostype=linux $luajit \
-		--prefix="/usr" \
+		--prefix="${EPREFIX}/usr" \
+		--libdir="${EPREFIX}/usr/lib64" \
 		--sysconfdir="${JABBER_ETC}" \
 		--datadir="${JABBER_SPOOL}" \
 		--with-lua-include=/usr/include \
