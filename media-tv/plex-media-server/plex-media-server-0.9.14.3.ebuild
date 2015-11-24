@@ -10,8 +10,8 @@ DESCRIPTION="Plex Media Server is an organizer for your media and provides strea
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-BUILD="1547"
-COMMIT="60c867f"
+BUILD="1555"
+COMMIT="590ac74"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}_${MY_PV}"
 
