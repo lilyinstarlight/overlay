@@ -14,7 +14,8 @@ games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based o
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
 games-board/cockatrice 20150924: A cross-platform virtual tabletop for multiplayer card games
-games-misc/nyancat 1.5.0: Nyancat rendered in your terminal
+games-misc/nyancat 1.5.1: Nyancat rendered in your terminal
+games-misc/pipes 1.1.0: animated pipes terminal screensaver
 media-gfx/inkscape 0.91: A SVG based generic vector-drawing program
 media-gfx/maim 3.4.46: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-gfx/viewnior 1.5: Fast and simple image viewer
