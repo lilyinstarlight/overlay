@@ -39,6 +39,9 @@ Packages
 #### Nyancat (games-misc/nyancat)
 [Nyancat](https://github.com/klange/nyancat) is a CLI implementation of the famous poptart cat.
 
+#### pipes.sh (games-misc/pipes)
+[pipes.sh](https://github.com/pipeseroni/pipes.sh) is an animated pipes terminal screensaver. This package installs it with the command 'pipes'.
+
 #### nSnake (games-arcade/nsnake)
 [nSnake](https://github.com/alexdantas/nSnake) is a clone of the classic snake game on the terminal.
 
