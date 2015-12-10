@@ -8,7 +8,7 @@ inherit games
 
 DESCRIPTION="Nyancat rendered in your terminal"
 HOMEPAGE="https://github.com/klange/nyancat"
-SRC_URI="https://github.com/klange/nyancat/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/klange/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
