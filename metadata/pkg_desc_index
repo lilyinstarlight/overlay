@@ -2,7 +2,6 @@ app-admin/linode-cli 1.4.7: Command-line interface to the Linode platform
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 2: A cure for cron's chronic email problem
 app-misc/tty-clock 20150318: analog clock in ncurses
-app-office/homebank 5.0.6: Free, easy, personal accounting for everyone
 dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clients
 dev-python/progressbar2 3.5.0: text progress bar library for Python
 dev-python/pymunk 4.0.0: pymunk is a pythonic 2d physics library based on Chipmunk
