@@ -9,15 +9,15 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-BUILD="70"
-COMMIT="15a01542"
-WEBCLIENT="c1f55d5"
+BUILD="132"
+COMMIT="16fa0ecc"
+WEBCLIENT="f9aee64"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
-	https://nightlies.plex.tv/directdl/plex-web-client-plexmediaplayer/master/plex-web-client-konvergo-${WEBCLIENT}.cpp.bz2
+	https://nightlies.plex.tv/directdl/plex-dependencies/plex-web-client-plexmediaplayer/latest/plex-web-client-konvergo-${WEBCLIENT}.cpp.tbz2
 "
 
 LICENSE="GPL-2"
@@ -60,12 +60,14 @@ src_unpack() {
 
 	cd "${S}"
 
-	unpack plex-web-client-konvergo-"${WEBCLIENT}".cpp.bz2
+	unpack plex-web-client-konvergo-"${WEBCLIENT}".cpp.tbz2
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/git-revision.patch
 	epatch "${FILESDIR}"/web-client-resource.patch
+	epatch "${FILESDIR}"/no-qt-conf.patch
+	epatch "${FILESDIR}"/support-qt-5.5.patch
 }
 
 src_configure() {
