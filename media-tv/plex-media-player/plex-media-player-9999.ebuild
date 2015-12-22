@@ -44,6 +44,11 @@ RDEPEND="
 	)
 "
 
+src_prepare() {
+	epatch "${FILESDIR}"/no-qt-conf.patch
+	epatch "${FILESDIR}"/support-qt-5.5.patch
+}
+
 src_configure() {
 	local mycmakeargs="
 		$(cmake-utils_use_enable cec CEC)
