@@ -47,7 +47,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		CFLAGS="" \
-		CXXFLAGS="${CXXFLAGS}" \
+		CXXFLAGS="${CXXFLAGS} -std=c++11" \
 		$(use_with oss) \
 		$(use_with alsa) \
 		$(use_with jack) \
