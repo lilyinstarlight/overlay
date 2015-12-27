@@ -21,6 +21,8 @@ media-gfx/viewnior 1.5: Fast and simple image viewer
 media-libs/libopenshot 0.0.6: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
 media-libs/libopenshot-audio 0.0.6: A high-quality audio editing and playback library used by libopenshot.
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
+media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
+media-plugins/midifilter-lv2 0.4.3: LV2 plugins to filter MIDI events
 media-sound/amsynth 1.6.3: analog modelling synthesizer with a classic subtractive synthesizer topology
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
 media-tv/plex-media-player 1.0.3 9999: next generation Plex client

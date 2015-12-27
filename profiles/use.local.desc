@@ -17,6 +17,7 @@ media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
 media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
 media-gfx/inkscape:visio - Enable support for Microsoft Visio Diagrams
 media-gfx/inkscape:wpg - Enable support for WordPerfect Graphics
+media-plugins/calf:lv2 - Add support for Ladspa V2
 media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
