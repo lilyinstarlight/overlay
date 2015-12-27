@@ -31,6 +31,12 @@ Packages
 #### amsynth (media-sound/amsynth)
 [amsynth](http://amsynth.github.io/) is an easy-to-use software synth with a classic subtractive synthesizer topology.
 
+#### Calf Studio Gear (media-plugins/calf)
+[Calf Studio Gear](http://calf-studio-gear.org/) is a set of free and open source professional audio plug-ins. This package has an "experimental" use flag which enables experimental plugins.
+
+#### midifilter.lv2 (media-plugins/midifilter-lv2)
+[midifilter.lv2](https://github.com/x42/midifilter.lv2/) is an LV2 plugin to filter MIDI events.
+
 ### Games
 
 #### Armagetron Advanced (games-action/armagetronad, games-action/armagetronad-dedicated)
