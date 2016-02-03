@@ -9,9 +9,9 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-BUILD="132"
-COMMIT="16fa0ecc"
-WEBCLIENT="f9aee64"
+BUILD="169"
+COMMIT="da1dda84"
+WEBCLIENT="62b0efd"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
@@ -71,12 +71,12 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 		$(cmake-utils_use_enable cec CEC)
 		$(cmake-utils_use_enable joystick SDL2)
 		$(cmake-utils_use_enable lirc LIRC)
 		-DQTROOT=/usr
-	"
+	)
 
 	export BUILD_NUMBER="${BUILD}"
 	export GIT_REVISION="${COMMIT}"
