@@ -50,12 +50,12 @@ src_prepare() {
 }
 
 src_configure() {
-	local mycmakeargs="
+	local mycmakeargs=(
 		$(cmake-utils_use_enable cec CEC)
 		$(cmake-utils_use_enable joystick SDL2)
 		$(cmake-utils_use_enable lirc LIRC)
 		-DQTROOT=/usr
-	"
+	)
 
 	cmake-utils_src_configure
 }
