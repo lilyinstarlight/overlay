@@ -29,9 +29,6 @@ Packages
 #### v4l2loopback (media-video/v4l2loopback)
 [v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with WebcamStudio or other software (e.g. ffmpeg or gstreamer) to create a virtual webcam device.
 
-#### amsynth (media-sound/amsynth)
-[amsynth](http://amsynth.github.io/) is an easy-to-use software synth with a classic subtractive synthesizer topology.
-
 #### Calf Studio Gear (media-plugins/calf)
 [Calf Studio Gear](http://calf-studio-gear.org/) is a set of free and open source professional audio plug-ins. This package has an "experimental" use flag which enables experimental plugins.
 
@@ -112,9 +109,6 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 
 #### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio)
 [OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
-
-#### Pymunk (dev-python/pymunk)
-[Pymunk](http://pymunk.org/) is a pythonic 2D physics library based on [Chipmunk2D](http://chipmunk-physics.net/).
 
 #### libstrophe (dev-libs/libstrophe)
 [libstrophe](http://strophe.im/libstrophe/) is a minimal XMPP library written in C.
