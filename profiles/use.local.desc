@@ -12,11 +12,6 @@ games-action/armagetronad-dedicated:auth - Enable armathentication support
 games-action/armagetronad-dedicated:fortress - Enable support for fortress game mode
 games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
-media-gfx/inkscape:cdr - Enable support for CorelDRAW Diagrams
-media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
-media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
-media-gfx/inkscape:visio - Enable support for Microsoft Visio Diagrams
-media-gfx/inkscape:wpg - Enable support for WordPerfect Graphics
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec

@@ -3,22 +3,19 @@ app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connec
 app-misc/cronic 2: A cure for cron's chronic email problem
 app-misc/tty-clock 20150318: analog clock in ncurses
 dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clients
-dev-python/progressbar2 3.5.0: text progress bar library for Python
-dev-python/pymunk 4.0.0: pymunk is a pythonic 2d physics library based on Chipmunk
+dev-python/progressbar2 3.6.0: text progress bar library for Python
 dev-python/pyusb 1.0.0_beta1: USB support for Python
-dev-python/zeroconf 0.17.4: a pure python implementation of multicast DNS service discovery
 dev-qt/qtwebengine 5.5.1: Support library for rendering dynamic web content in Qt5 C++ and QML applications
-dev-util/unittest++ 1.5.0: A lightweight unit testing framework for C++
+dev-util/unittest++ 1.5.1: A lightweight unit testing framework for C++
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
-games-board/cockatrice 20150924: A cross-platform virtual tabletop for multiplayer card games
+games-board/cockatrice 20160203: A cross-platform virtual tabletop for multiplayer card games
 games-misc/nyancat 1.5.1: Nyancat rendered in your terminal
 games-misc/pipes 1.1.0: animated pipes terminal screensaver
 mail-mta/nullmailer 2.0: Simple relay-only local mail transport agent
-media-gfx/inkscape 0.91: A SVG based generic vector-drawing program
 media-gfx/maim 3.4.47: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
-media-gfx/viewnior 1.5: Fast and simple image viewer
+media-gfx/viewnior 1.6: Fast and simple image viewer
 media-libs/libopenshot 0.0.6: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
 media-libs/libopenshot-audio 0.0.6: A high-quality audio editing and playback library used by libopenshot.
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
@@ -35,7 +32,7 @@ media-video/webcamstudio-module 1141: Kernel module and helper library for Webca
 net-im/profanity 0.4.7: Ncurses based jabber client inspired by irssi
 net-im/prosody 0.10.9999: Prosody is a flexible communications server for Jabber/XMPP written in Lua
 net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format
-net-p2p/zget 0.9: zeroconf based peer to peer file transfer
+net-p2p/zget 0.10: zeroconf based peer to peer file transfer
 net-wireless/create_ap 0.2: A script to create a NATed or bridged WiFi access point
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 www-client/vimb 2.10: a fast, lightweight, vim-like browser based on webkit
