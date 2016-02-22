@@ -13,7 +13,6 @@ games-action/armagetronad-dedicated:fortress - Enable support for fortress game 
 games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
 media-plugins/calf:lv2 - Add support for Ladspa V2
-media-sound/amsynth:dssi - Enable support for DSSI Soft Synth Interface
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.

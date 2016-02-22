@@ -21,13 +21,12 @@ media-libs/libopenshot-audio 0.0.6: A high-quality audio editing and playback li
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/midifilter-lv2 0.4.3: LV2 plugins to filter MIDI events
-media-sound/amsynth 1.6.3: analog modelling synthesizer with a classic subtractive synthesizer topology
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
 media-tv/plex-media-player 1.0.4 9999: next generation Plex client
 media-tv/plex-media-server 0.9.15.3 0.9.15.5: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
-media-video/obs-studio 0.12.1: Software for recording and streaming live video content
+media-video/obs-studio 0.13.1: Software for recording and streaming live video content
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
-media-video/webcamstudio 0.73: Virtual webcam studio to broadcast over the internet
+media-video/webcamstudio 0.73_p604: Virtual webcam studio to broadcast over the internet
 media-video/webcamstudio-module 1141: Kernel module and helper library for WebcamStudio
 net-im/profanity 0.4.7: Ncurses based jabber client inspired by irssi
 net-im/prosody 0.10.9999: Prosody is a flexible communications server for Jabber/XMPP written in Lua
@@ -35,9 +34,9 @@ net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchroni
 net-p2p/zget 0.10: zeroconf based peer to peer file transfer
 net-wireless/create_ap 0.2: A script to create a NATed or bridged WiFi access point
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
-www-client/vimb 2.10: a fast, lightweight, vim-like browser based on webkit
+www-client/vimb 2.11: a fast, lightweight, vim-like browser based on webkit
 www-plugins/pipelight 0.2.8.2: Wine-based wrapper for running Windows plugins on POSIX systems
 x11-misc/awf 1.3.0: A Widget Factory
-x11-misc/lemonbar 20160103: A featherweight, lemon-scented, bar based on xcb
+x11-misc/lemonbar 20160119: A featherweight, lemon-scented, bar based on xcb
 x11-misc/slop 4.3.21: slop (Select Operation) is an application that queries the user for a selection and prints it out
 x11-themes/clearlooks-phenix 5.0.7 6.0.3: Clearlooks-Phenix is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2
