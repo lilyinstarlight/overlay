@@ -4,12 +4,11 @@
 
 EAPI=5
 
-inherit cmake-utils eutils git-r3
+inherit cmake-utils eutils
 
 DESCRIPTION="A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby"
 HOMEPAGE="http://openshot.org/"
-EGIT_REPO_URI="https://github.com/OpenShot/libopenshot.git"
-EGIT_COMMIT="affaa7a"
+SRC_URI="https://github.com/OpenShot/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,7 +18,7 @@ IUSE=""
 RDEPEND="
 	media-gfx/imagemagick
 	virtual/ffmpeg
-	=media-libs/libopenshot-audio-${PV}
+	>=media-libs/libopenshot-audio-0.0.6
 	>=media-libs/libsdl-1.2
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
