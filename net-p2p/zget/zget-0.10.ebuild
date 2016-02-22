@@ -17,9 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
-DEPEND="
+RDEPEND="
 	dev-python/netifaces
 	dev-python/progressbar2
 	dev-python/zeroconf
+"
+DEPEND="
+	${RDEPEND}
+	dev-python/Babel
 "
