@@ -4,12 +4,11 @@
 
 EAPI=5
 
-inherit cmake-utils git-r3
+inherit cmake-utils
 
 DESCRIPTION="A high-quality audio editing and playback library used by libopenshot."
 HOMEPAGE="http://openshot.org/"
-EGIT_REPO_URI="https://github.com/OpenShot/libopenshot-audio.git"
-EGIT_COMMIT="2a383d0"
+SRC_URI="https://github.com/OpenShot/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
