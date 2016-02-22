@@ -35,6 +35,9 @@ Packages
 #### midifilter.lv2 (media-plugins/midifilter-lv2)
 [midifilter.lv2](https://github.com/x42/midifilter.lv2/) is an LV2 plugin to filter MIDI events.
 
+#### OpenShot (media-video/openshot, media-libs/libopenshot, media-libs/libopenshot-audio)
+[OpenShot](http://openshot.org/) is a high quality non-linear video editor, rewritten with stability and modern technologies in mind for version 2.0.
+
 
 ### Games
 
@@ -106,9 +109,6 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 
 
 ### Libraries
-
-#### OpenShot (media-libs/libopenshot, media-libs/libopenshot-audio)
-[OpenShot Library](https://launchpad.net/libopenshot) is a high quality video editing library that powers OpenShot 2.0.
 
 #### libstrophe (dev-libs/libstrophe)
 [libstrophe](http://strophe.im/libstrophe/) is a minimal XMPP library written in C.
