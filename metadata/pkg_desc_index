@@ -22,7 +22,7 @@ media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Expre
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/midifilter-lv2 0.4.3: LV2 plugins to filter MIDI events
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
-media-tv/plex-media-player 1.0.4 9999: next generation Plex client
+media-tv/plex-media-player 1.0.5 9999: next generation Plex client
 media-tv/plex-media-server 0.9.15.3 0.9.15.5: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
 media-video/obs-studio 0.13.1: Software for recording and streaming live video content
 media-video/openshot 2.0.6: Free, open-source, non-linear video editor to create and edit videos and movies
