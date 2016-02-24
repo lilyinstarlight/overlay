@@ -13,7 +13,7 @@ games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
 games-board/cockatrice 20160203: A cross-platform virtual tabletop for multiplayer card games
 games-misc/nyancat 1.5.1: Nyancat rendered in your terminal
 games-misc/pipes 1.1.0: animated pipes terminal screensaver
-mail-mta/nullmailer 2.0: Simple relay-only local mail transport agent
+mail-mta/nullmailer 2.0-r1: Simple relay-only local mail transport agent
 media-gfx/maim 3.4.47: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-gfx/viewnior 1.6: Fast and simple image viewer
 media-libs/libopenshot 0.1.0: A high quality, open-source video editing, animation, and playback library for C++, Python, and Ruby
