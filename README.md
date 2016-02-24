@@ -59,9 +59,6 @@ Packages
 
 ### Messaging
 
-#### nullmailer (mail-mta/nullmailer)
-[nullmailer](http://untroubled.org/nullmailer/) is a relay-only MTA which is designed to be simple to configure, secure, and extendable.
-
 #### Profanity (net-im/profanity)
 [Profanity](http://www.profanity.im/) is a console based XMPP client inspired by Irssi.
 
