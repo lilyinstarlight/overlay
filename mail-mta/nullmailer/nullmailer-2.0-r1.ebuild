@@ -79,8 +79,8 @@ src_install () {
 	dosym /usr/sbin/sendmail /usr/"$(get_libdir)"/sendmail
 
 	# permissions stuff
-	keepdir /var/log/nullmailer /var/spool/nullmailer/{tmp,queue}
-	fperms 770 /var/log/nullmailer /var/spool/nullmailer/{tmp,queue}
+	keepdir /var/log/nullmailer /var/spool/nullmailer/{failed,tmp,queue}
+	fperms 770 /var/log/nullmailer /var/spool/nullmailer/{failed,tmp,queue}
 	fowners nullmail:nullmail /usr/sbin/nullmailer-queue /usr/bin/mailq
 	fperms 4711 /usr/sbin/nullmailer-queue /usr/bin/mailq
 
@@ -92,8 +92,8 @@ pkg_postinst() {
 	if [ ! -e "${ROOT}"/var/spool/nullmailer/trigger ]; then
 		mkfifo "${ROOT}"/var/spool/nullmailer/trigger
 	fi
-	chown nullmail:nullmail "${ROOT}"/var/log/nullmailer "${ROOT}"/var/spool/nullmailer/{tmp,queue,trigger}
-	chmod 770 "${ROOT}"/var/log/nullmailer "${ROOT}"/var/spool/nullmailer/{tmp,queue}
+	chown nullmail:nullmail "${ROOT}"/var/log/nullmailer "${ROOT}"/var/spool/nullmailer/{failed,tmp,queue,trigger}
+	chmod 770 "${ROOT}"/var/log/nullmailer "${ROOT}"/var/spool/nullmailer/{failed,tmp,queue}
 	chmod 660 "${ROOT}"/var/spool/nullmailer/trigger
 
 	if [ -z ${REPLACING_VERSIONS} ]; then
