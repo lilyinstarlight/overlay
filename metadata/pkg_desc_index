@@ -34,6 +34,7 @@ net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchroni
 net-p2p/zget 0.10: zeroconf based peer to peer file transfer
 net-wireless/create_ap 0.2: A script to create a NATed or bridged WiFi access point
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
+www-client/qutebrowser 0.5.1 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 www-client/vimb 2.11: a fast, lightweight, vim-like browser based on webkit
 www-plugins/pipelight 0.2.8.2: Wine-based wrapper for running Windows plugins on POSIX systems
 x11-misc/awf 1.3.0: A Widget Factory
