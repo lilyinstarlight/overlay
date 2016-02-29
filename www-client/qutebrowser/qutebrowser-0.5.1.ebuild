@@ -24,7 +24,7 @@ IUSE="gstreamer pdf test"
 
 COMMON_DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${COMMON_DEPEND}
-	app-text/asciidoc
+	app-text/asciidoc[highlight]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 RDEPEND="${COMMON_DEPEND}
 	>=dev-python/jinja-2.7.3[${PYTHON_USEDEP}]
@@ -39,6 +39,9 @@ RDEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 python_prepare_all() {
+	"${S}"/scripts/asciidoc2html.py
+
+	#TODO: bundle these in a SRC_URI thingy
 	use pdf && "${S}"/scripts/dev/update_3rdparty.py
 
 	distutils-r1_python_install_all

@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/The-Compiler/qutebrowser.git"
 	inherit git-r3
 else
-	SRC_URI="https://github.com/The-Compiler/qutebrowser/releases/download/v${PV}/qutebrowser-${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/The-Compiler/qutebrowser/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -24,7 +24,7 @@ IUSE="gstreamer pdf test"
 
 COMMON_DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${COMMON_DEPEND}
-	app-text/asciidoc
+	app-text/asciidoc[highlight]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 RDEPEND="${COMMON_DEPEND}
 	>=dev-python/jinja-2.7.3[${PYTHON_USEDEP}]
@@ -39,7 +39,10 @@ RDEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 python_prepare_all() {
-	use pdf && scripts/dev/update_3rdparty.py
+	"${S}"/scripts/asciidoc2html.py
+
+	#TODO: bundle these in a SRC_URI thingy
+	use pdf && "${S}"/scripts/dev/update_3rdparty.py
 
 	distutils-r1_python_install_all
 }
