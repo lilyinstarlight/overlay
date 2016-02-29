@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/The-Compiler/qutebrowser.git"
 	inherit git-r3
 else
-	SRC_URI="https://github.com/The-Compiler/qutebrowser/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	SRC_URI="https://github.com/The-Compiler/qutebrowser/releases/download/v${PV}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
@@ -34,18 +34,10 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/sip[${PYTHON_USEDEP}]
 	>=dev-python/pyyaml-3.11[${PYTHON_USEDEP}]
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
+	pdf? ( www-plugins/pdfjs )
 "
 
 RESTRICT="test"
-
-python_prepare_all() {
-	"${S}"/scripts/asciidoc2html.py
-
-	#TODO: bundle these in a SRC_URI thingy
-	use pdf && "${S}"/scripts/dev/update_3rdparty.py
-
-	distutils-r1_python_install_all
-}
 
 python_compile_all() {
 	if [[ ${PV} == "9999" ]]; then
