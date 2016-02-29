@@ -101,6 +101,9 @@ Packages
 #### BlinkStick (app-misc/blinkstick)
 [BlinkStick](https://www.blinkstick.com/) is a class of smart USB LED controllers. This package contains the command line client and Python module.
 
+#### pdf.js (www-plugins/pdfjs)
+[pdf.js](http://mozilla.github.io/pdf.js/) is a general-purpose, web standards-based platform for parsing and rendering PDFs.
+
 
 ### Administration
 
@@ -115,7 +118,6 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 
 #### Chipmunk2D (sci-physics/chipmunk)
 [Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
-
 
 ### GTK+
 
