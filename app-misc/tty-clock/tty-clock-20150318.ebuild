@@ -17,14 +17,18 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	sys-libs/ncurses:5
+	sys-libs/ncurses
 "
 RDEPEND="
 	${DEPEND}
 "
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} $(ncurses5-config --cflags)" LDFLAGS="${LDFLAGS} $(ncurses5-config --libs)"
+	if which ncurses6-config; then
+		emake CFLAGS="${CFLAGS} $(ncurses6-config --cflags)" LDFLAGS="${LDFLAGS} $(ncurses6-config --libs)"
+	else
+		emake CFLAGS="${CFLAGS} $(ncurses5-config --cflags)" LDFLAGS="${LDFLAGS} $(ncurses5-config --libs)"
+	fi
 }
 
 src_install() {
