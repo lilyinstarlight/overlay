@@ -6,7 +6,6 @@ dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clie
 dev-python/progressbar2 3.6.0: text progress bar library for Python
 dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-qt/qtwebengine 5.5.1: Support library for rendering dynamic web content in Qt5 C++ and QML applications
-dev-util/unittest++ 1.5.1: A lightweight unit testing framework for C++
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
