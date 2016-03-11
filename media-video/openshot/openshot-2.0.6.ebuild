@@ -20,6 +20,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="
+	dev-python/PyQt5
+	>=media-libs/libopenshot-0.1.0
+"
 
 S="${WORKDIR}/${MY_P}"

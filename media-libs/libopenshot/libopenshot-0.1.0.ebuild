@@ -28,7 +28,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-lang/swig
-	dev-util/unittest++
+	dev-libs/unittest++
 "
 
 src_prepare() {
