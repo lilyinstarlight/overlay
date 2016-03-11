@@ -21,8 +21,15 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	dev-python/PyQt5
+	dev-python/PyQt5[${PYTHON_USEDEP}]
+	dev-python/httplib2[${PYTHON_USEDEP}]
 	>=media-libs/libopenshot-0.1.0
 "
 
 S="${WORKDIR}/${MY_P}"
+
+python_prepare_all() {
+	local PATCHES=( "${FILESDIR}/no-root.patch" )
+
+	distutils-r1_python_prepare_all
+}
