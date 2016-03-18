@@ -1,22 +1,22 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
-PYTHON_COMPAT=( python3_4 )
+PYTHON_COMPAT=( python{3_4,3_5} )
 
 inherit gnome2-utils distutils-r1 eutils fdo-mime
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/The-Compiler/qutebrowser.git"
+	EGIT_REPO_URI="https://github.com/The-Compiler/${PN}.git"
 	inherit git-r3
 else
-	SRC_URI="https://github.com/The-Compiler/qutebrowser/releases/download/v${PV}/${P}.tar.gz"
+	SRC_URI="https://github.com/The-Compiler/${PN}/releases/download/v${PV}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit"
-HOMEPAGE="https://github.com/The-Compiler/qutebrowser"
+HOMEPAGE="http://www.qutebrowser.org/ https://github.com/The-Compiler/qutebrowser"
 
 LICENSE="GPL-3"
 SLOT="0"
