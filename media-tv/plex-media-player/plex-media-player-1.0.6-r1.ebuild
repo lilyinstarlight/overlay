@@ -68,6 +68,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/web-client-resource.patch
 	epatch "${FILESDIR}"/no-qt-conf.patch
 	epatch "${FILESDIR}"/support-qt-5.5.patch
+
+	#TODO: remove hack added because webclient disappeared
+	sed -i -e "s/f61ba32/${WEBCLIENT}/g" CMakeModules/WebClientVariables.cmake
 }
 
 src_configure() {
