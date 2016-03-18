@@ -35,9 +35,6 @@ Packages
 #### midifilter.lv2 (media-plugins/midifilter-lv2)
 [midifilter.lv2](https://github.com/x42/midifilter.lv2/) is an LV2 plugin to filter MIDI events.
 
-#### OpenShot (media-video/openshot, media-libs/libopenshot, media-libs/libopenshot-audio)
-[OpenShot](http://openshot.org/) is a high quality non-linear video editor, rewritten with stability and modern technologies in mind for version 2.0.
-
 
 ### Games
 
@@ -70,9 +67,6 @@ Packages
 
 #### Sync Mail Dir (net-mail/syncmaildir)
 [Sync Mail Dir](http://syncmaildir.sourceforge.net/) (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format. It is useful for IMAP-less client-server mail synchronization and for Maildir transistion.
-
-#### Pipelight (www-plugins/pipelight)
-[Pipelight](http://pipelight.net/) is a browser plugin that allows running Windows browser plugins in Wine in native browsers. It includes support for Silverlight, Adobe Flash, Adobe Shockwave, and Unity Webplayer. It requires Wine with the Compholio patches to run Silverlight or any DRM content.
 
 #### cronic (app-misc/cronic)
 [cronic](http://habilis.net/cronic/) is a cure for cron's chronic email problem. It is a small shell script that helps to control cron's email output by wrapping commands and only showing program output on failure.
@@ -120,9 +114,6 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 [Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
 
 ### GTK+
-
-#### Clearlooks-Phénix (x11-themes/clearlooks-phenix)
-[Clearlooks-Phénix](https://github.com/jpfleury/Clearlooks-Phenix) is a GTK+ 3 port of Clearlooks, the default theme for GNOME 2.
 
 #### A Widget Factory (x11-misc/awf)
 [A Widget Factory](https://github.com/valr/awf) is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
