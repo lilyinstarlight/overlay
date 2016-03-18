@@ -8,7 +8,7 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-qt/qtcore-5.5.1 >=dev-qt/qtnetwork-5.5.1 >=dev-qt/qtxml-5.5.1 >=dev-qt/qtwebchannel-5.5.1[qml] >=dev-qt/qtwebengine-5.5.1[qml,pmp] >=media-video/mpv-0.11.0[libmpv] virtual/opengl x11-libs/libX11 x11-libs/libXrandr cec? ( >=dev-libs/libcec-2.2.0 ) joystick? ( media-libs/libsdl2 virtual/libiconv ) lirc? ( app-misc/lirc )
 SLOT=0
-SRC_URI=https://github.com/plexinc/plex-media-player/archive/v1.0.5.210-9c69e092.tar.gz -> plex-media-player-1.0.5.tar.gz https://nightlies.plex.tv/directdl/plex-dependencies/plex-web-client-plexmediaplayer/latest/plex-web-client-konvergo-3263b2f.cpp.tbz2
+SRC_URI=https://github.com/plexinc/plex-media-player/archive/v1.0.6.229-1ce41570.tar.gz -> plex-media-player-1.0.6.tar.gz https://nightlies.plex.tv/directdl/plex-dependencies/plex-web-client-plexmediaplayer/latest/plex-web-client-konvergo-10e61bb.cpp.tbz2
 _eclass_exported_funcs=src_unpack:- src_prepare:- src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
 _eclasses_=cmake-utils	e79d341200cba811b41cc0728403c48d	eutils	9d81603248f2ba3ec59124320d123e5e	flag-o-matic	d270fa247153df66074f795fa42dba3e	multilib	3972ca401cf7dbb430df9995f5d8d580	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=d0f40b6cede6538cdcbaf600f5ed0589
+_md5_=24aec3c19cd1cc60eb57990c26406b04
