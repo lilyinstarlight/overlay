@@ -1,0 +1,11 @@
+diff --git a/setup.py b/setup.py
+--- a/setup.py
++++ b/setup.py
+@@ -70,7 +70,6 @@ setup(
+     include_package_data=True,
+     install_requires=install_reqs,
+     tests_require=tests_reqs,
+-    setup_requires=['setuptools', 'pytest-runner'],
+     zip_safe=False,
+     classifiers=[
+         'Development Status :: 5 - Production/Stable',
