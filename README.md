@@ -118,6 +118,9 @@ Linode CLI is a command-line interface to the [Linode](http://linode.com/) platf
 #### A Widget Factory (x11-misc/awf)
 [A Widget Factory](https://github.com/valr/awf) is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
 
+#### Arc Theme (x11-themes/arc)
+[arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elemnts for GTK+2, GTK+3, and Gnome Shell with support for a variety of desktop environments.
+
 
 ### Unstable
 
