@@ -86,11 +86,8 @@ Packages
 #### Viewnior (media-gfx/viewnior)
 [Viewnior](https://github.com/xsisqox/Viewnior) is a fast and elegant image viewer. It is desktop environment agnostic and supports a basic set of image viewing and manipulation features.
 
-#### vimb (www-client/vimb)
-[vimb](https://fanglingsu.github.io/vimb/) is a fast and lightweight vim like web browser based on the webkit web browser engine and the GTK toolkit.
-
 #### qutebrowser (www-client/qutebrowser)
-[qutebrowser](http://www.qutebrowser.org/) is a keyboard-driven, vim-like browser based on PyQt5 and QtWebKit.
+[qutebrowser](http://www.qutebrowser.org/) is a keyboard-driven, vim-like browser based on PyQt5 and QtWebKit. This package adds the 'pdf' use flag that pulls in pdfjs as a dependency.
 
 #### BlinkStick (app-misc/blinkstick)
 [BlinkStick](https://www.blinkstick.com/) is a class of smart USB LED controllers. This package contains the command line client and Python module.

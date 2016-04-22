@@ -47,7 +47,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/start_pms_opt.patch"
+	epatch "${FILESDIR}/start_pms.patch"
 }
 
 src_install() {
