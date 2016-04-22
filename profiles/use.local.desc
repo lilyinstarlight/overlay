@@ -13,6 +13,7 @@ games-action/armagetronad-dedicated:fortress - Enable support for fortress game 
 games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
 media-plugins/calf:lv2 - Add support for Ladspa V2
+media-sound/pms:regex - enable regular expression searching
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.
@@ -29,4 +30,3 @@ net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
-www-client/vimb:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/gtk+:2
