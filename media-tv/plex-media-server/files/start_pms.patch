@@ -1,6 +1,6 @@
-diff --git a/start_pms b/start_pms
---- a/start_pms
-+++ b/start_pms
+diff --git usr/sbin/start_pms usr/sbin/start_pms
+--- usr/sbin/start_pms
++++ usr/sbin/start_pms
 @@ -2,7 +2,7 @@
  
  #change these parameters in /etc/default/plexmediaserver
@@ -15,5 +15,5 @@ diff --git a/start_pms b/start_pms
  sleep 3
  
 -(cd /usr/lib/plexmediaserver; ./Plex\ Media\ Server)
-+cd "${PLEX_MEDIA_SERVER_HOME}";
++cd "${PLEX_MEDIA_SERVER_HOME}"
 +exec ./Plex\ Media\ Server
