@@ -1,6 +1,7 @@
 app-admin/linode-cli 1.4.7: Command-line interface to the Linode platform
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 2: A cure for cron's chronic email problem
+app-misc/lirc 0.9.3a: decode and send infra-red signals of many commonly used remote controls
 app-misc/tty-clock 20150318: analog clock in ncurses
 dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clients
 dev-python/progressbar2 3.6.2: text progress bar library for Python
