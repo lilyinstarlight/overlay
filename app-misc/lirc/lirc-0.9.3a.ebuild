@@ -4,6 +4,10 @@
 
 EAPI=5
 
+PYTHON_COMPAT=( python{3_3,3_4,3_5} )
+
+inherit python-single-r1
+
 DESCRIPTION="decode and send infra-red signals of many commonly used remote controls"
 HOMEPAGE="http://lirc.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -23,10 +27,12 @@ REQUIRED_USE="
 	lirc_devices_userspace? ( lirc_devices_alsa_usb lirc_devices_audio lirc_devices_audio_alsa lirc_devices_creative_infracd lirc_devices_devinput lirc_devices_dsp lirc_devices_ftdi lirc_devices_hiddev lirc_devices_i2cuser lirc_devices_iguanaIR lirc_devices_irman lirc_devices_usb )
 
 	lirc_devices_alsa_usb? ( lirc_devices_audio_alsa )
+
+	${PYTHON_REQUIRED_USE}
 "
 
 DEPEND="
-	>=dev-lang/python-3.3
+	${PYTHON_DEPS}
 
 	lirc_devices_audio? ( media-libs/portaudio )
 	lirc_devices_audio_alsa? ( media-libs/alsa-lib )
