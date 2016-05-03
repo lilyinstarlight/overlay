@@ -50,4 +50,6 @@ pkg_setup() {
 	use lirc_devices_dsp && linux_chkconfig_present SOUND
 	use lirc_devices_hiddev && linux_chkconfig_present USB_HIDDEV
 	use lirc_devices_i2cuser && linux_chkconfig_present I2C
+
+	python-single-r1_pkg_setup
 }
