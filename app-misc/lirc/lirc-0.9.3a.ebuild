@@ -33,6 +33,7 @@ REQUIRED_USE="
 
 DEPEND="
 	${PYTHON_DEPS}
+	dev-python/pyyaml[${PYTHON_USEDEP}]
 
 	lirc_devices_audio? ( media-libs/portaudio )
 	lirc_devices_audio_alsa? ( media-libs/alsa-lib )
