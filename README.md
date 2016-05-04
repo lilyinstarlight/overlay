@@ -35,6 +35,9 @@ Packages
 #### midifilter.lv2 (media-plugins/midifilter-lv2)
 [midifilter.lv2](https://github.com/x42/midifilter.lv2/) is an LV2 plugin to filter MIDI events.
 
+#### Kodi (media-tv/kodi)
+[Kodi](http://kodi.tv/) is a free and open source media player and entertainment hub. This package includes support for an AirPlay server via the `airtunes` use flag.
+
 #### shairplay (net-misc/shairplay)
 [shairplay](https://github.com/juhovh/shairplay) is an implementation of the Apple AirPlay and RAOP protocols.
 
@@ -99,7 +102,7 @@ Packages
 [pdf.js](http://mozilla.github.io/pdf.js/) is a general-purpose, web standards-based platform for parsing and rendering PDFs.
 
 #### udiskie (sys-fs/udiskie)
-[udiskie](https://github.com/coldfix/udiskie) is a udisks front-end for removable media such as CDs or flash drives. This is an updated version of the package in Gentoo.
+[udiskie](https://github.com/coldfix/udiskie) is a udisks front-end for removable media such as CDs or flash drives.
 
 
 ### Administration
