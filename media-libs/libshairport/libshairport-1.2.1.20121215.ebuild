@@ -12,7 +12,7 @@ COMMIT="16395d8"
 SRC_URI="https://github.com/amejia1/libshairport/tarball/${COMMIT} -> ${P}.tar.gz"
 S="${WORKDIR}/amejia1-${PN}-${COMMIT}"
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
