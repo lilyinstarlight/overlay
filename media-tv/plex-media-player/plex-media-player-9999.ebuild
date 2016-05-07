@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -17,11 +17,11 @@ KEYWORDS=""
 IUSE="cec joystick lirc"
 
 DEPEND="
-	>=dev-qt/qtcore-5.5.1
-	>=dev-qt/qtnetwork-5.5.1
-	>=dev-qt/qtxml-5.5.1
-	>=dev-qt/qtwebchannel-5.5.1[qml]
-	>=dev-qt/qtwebengine-5.5.1[qml,pmp]
+	>=dev-qt/qtcore-5.6
+	>=dev-qt/qtnetwork-5.6
+	>=dev-qt/qtxml-5.6
+	>=dev-qt/qtwebchannel-5.6[qml]
+	>=dev-qt/qtwebengine-5.6
 	>=media-video/mpv-0.11.0[libmpv]
 	virtual/opengl
 	x11-libs/libX11
@@ -44,10 +44,7 @@ RDEPEND="
 	)
 "
 
-src_prepare() {
-	epatch "${FILESDIR}"/no-qt-conf.patch
-	epatch "${FILESDIR}"/support-qt-5.5.patch
-}
+CMAKE_IN_SOURCE_BUILD=1
 
 src_configure() {
 	local mycmakeargs=(
