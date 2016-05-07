@@ -2,8 +2,6 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-dev-qt/qtwebengine:pmp - Apply necessary patches to support media-tv/plex-media-player
-dev-qt/qtwebengine:qml - Build QML/QtQuick bindings and imports
 games-action/armagetronad:auth - Enable armathentication support
 games-action/armagetronad:fortress - Enable support for fortress game mode
 games-action/armagetronad:glew - Enable media-libs/glew opengl extension library support
