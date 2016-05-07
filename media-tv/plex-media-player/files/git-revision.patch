@@ -1,8 +1,8 @@
 diff --git a/CMakeModules/VersionConfiguration.cmake b/CMakeModules/VersionConfiguration.cmake
 --- a/CMakeModules/VersionConfiguration.cmake
 +++ b/CMakeModules/VersionConfiguration.cmake
-@@ -4,13 +4,17 @@ include(WebClientVariables)
- today(CURRENT_DATE)
+@@ -3,12 +3,16 @@ include(WebClientVariables)
+ string(TIMESTAMP CURRENT_DATE "%Y-%m-%d")
  
  # Get git revision version
 -include(GetGitRevisionDescription)
