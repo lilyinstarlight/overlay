@@ -108,7 +108,7 @@ Packages
 ### Administration
 
 #### Linode CLI (app-admin/linode-cli)
-Linode CLI is a command-line interface to the [Linode](http://linode.com/) platform.
+[Linode CLI](https://github.com/linode/cli) is a command-line interface to the [Linode](http://linode.com/) platform.
 
 
 ### Libraries
