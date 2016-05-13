@@ -35,7 +35,7 @@ net-wireless/create_ap 0.2: A script to create a NATed or bridged WiFi access po
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 sys-fs/udiskie 1.4.9: An automatic disk mounting service using udisks
 www-client/qutebrowser 0.6.2 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
-www-plugins/pdfjs 1.3.91: a general-purpose, web standards-based platform for parsing and rendering PDFs
+www-plugins/pdfjs 1.4.20: a general-purpose, web standards-based platform for parsing and rendering PDFs
 x11-misc/awf 1.3.0: A Widget Factory
 x11-misc/lemonbar 20160119: A featherweight, lemon-scented, bar based on xcb
 x11-misc/slop 4.3.21: slop (Select Operation) is an application that queries the user for a selection and prints it out
