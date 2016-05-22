@@ -41,6 +41,10 @@ Packages
 #### shairplay (net-misc/shairplay)
 [shairplay](https://github.com/juhovh/shairplay) is an implementation of the Apple AirPlay and RAOP protocols.
 
+#### ympd (media-sound/ympd)
+
+[ympd](https://www.ympd.org/) is a standalone MPD web GUI written in C, utilizing websockets and Bootstrap/JS.
+
 
 ### Games
 
