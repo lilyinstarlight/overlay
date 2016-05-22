@@ -12,6 +12,7 @@ games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-sound/pms:regex - enable regular expression searching
+media-sound/ympd:hostchange - allow users of the web frontend to change the MPD host
 media-tv/kodi:airplay - enable AirPlay support
 media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
 media-tv/kodi:cec - Enable support for HDMI-CEC devices via libcec
