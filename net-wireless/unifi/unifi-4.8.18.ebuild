@@ -19,7 +19,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="
 	dev-db/mongodb
-	virtual/jdk
+	virtual/jre
 "
 
 S="${WORKDIR}/${MY_PN}"
