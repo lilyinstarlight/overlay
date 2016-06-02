@@ -1,7 +1,7 @@
 app-admin/linode-cli 1.4.7: Command-line interface to the Linode platform
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 2: A cure for cron's chronic email problem
-app-misc/lirc 0.9.3a: decode and send infra-red signals of many commonly used remote controls
+app-misc/lirc 0.9.4: decode and send infra-red signals of many commonly used remote controls
 app-misc/tty-clock 20150318: analog clock in ncurses
 dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clients
 dev-python/progressbar2 3.6.2: text progress bar library for Python
@@ -33,9 +33,9 @@ net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchroni
 net-misc/shairplay 20160101: Apple airplay and raop protocol server
 net-p2p/zget 0.10: zeroconf based peer to peer file transfer
 net-wireless/create_ap 0.2: A script to create a NATed or bridged WiFi access point
-net-wireless/unifi 4.8.18: Management Controller for Ubiquiti Networks UniFi APs
+net-wireless/unifi 5.0.6: Management Controller for Ubiquiti Networks UniFi APs
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
-sys-fs/udiskie 1.4.9: An automatic disk mounting service using udisks
+sys-fs/udiskie 1.4.12: An automatic disk mounting service using udisks
 www-client/qutebrowser 0.6.2 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 www-plugins/pdfjs 1.4.20: a general-purpose, web standards-based platform for parsing and rendering PDFs
 x11-misc/awf 1.3.0: A Widget Factory
