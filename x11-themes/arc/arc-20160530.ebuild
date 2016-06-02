@@ -15,7 +15,7 @@ SRC_URI="https://github.com/horst3180/arc-theme/archive/${PV}.tar.gz -> ${P}.tar
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+gtk2 +gtk3 +light +darker +dark +transparency cinnamon metacity unity xfwm xfce-notify gnome-shell"
+IUSE="+gtk2 +gtk3 +light +darker +dark +transparency cinnamon metacity unity xfwm gnome-shell"
 
 DEPEND="
 	x11-themes/gnome-themes-standard
@@ -43,6 +43,5 @@ src_configure() {
 		$(use_enable metacity) \
 		$(use_enable unity) \
 		$(use_enable xfwm) \
-		$(use_enable xfce-notify) \
 		$(use_enable gnome-shell)
 }
