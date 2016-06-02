@@ -15,13 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-RDEPEND="dev-python/docopt[${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/docopt[${PYTHON_USEDEP}]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
-	sys-fs/udisks:2"
-DEPEND="app-text/asciidoc
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+	sys-fs/udisks:2
+"
+DEPEND="
+	app-text/asciidoc
+	dev-python/setuptools[${PYTHON_USEDEP}]
+"
 
 src_prepare() {
 	sed -i \
