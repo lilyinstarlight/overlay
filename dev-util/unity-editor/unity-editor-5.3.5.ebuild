@@ -64,7 +64,7 @@ QA_PREBUILT="*"
 
 src_install() {
 	insinto /opt
-	doins opt/Unity
+	doins -r opt/Unity
 
 	dodoc usr/share/doc/unity-editor/{changelog.gz,copyright}
 
