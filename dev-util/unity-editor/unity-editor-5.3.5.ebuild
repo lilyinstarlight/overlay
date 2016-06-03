@@ -13,7 +13,7 @@ SRC_URI="http://download.unity3d.com/download_unity/linux/unity-editor-5.3.5f1+2
 LICENSE="Unity-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-IUSE="java"
+IUSE="android webgl"
 
 DEPEND=""
 RDEPEND="
@@ -50,11 +50,17 @@ RDEPEND="
 	dev-db/postgresql
 	sys-apps/lsb-release
 	x11-misc/xdg-utils
-	net-libs/nodejs
-	virtual/ffmpeg
-	app-arch/gzip
 
-	java? ( virtual/jdk:1.7 )
+	android? (
+		virtual/ffmpeg
+		app-arch/gzip
+		net-libs/nodejs
+		virtual/jre:1.7
+	)
+
+	webgl? (
+		virtual/jdk:1.7
+	)
 "
 
 S="${WORKDIR}"
