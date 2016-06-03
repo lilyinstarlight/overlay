@@ -71,8 +71,6 @@ QA_PREBUILT="*"
 src_install() {
 	cp -a opt "${D}"/opt
 
-	chmod 4755 "${D}"/opt/Unity/Editor/chrome-sandbox
-
 	dodoc usr/share/doc/unity-editor/{changelog.gz,copyright}
 
 	#doicon -s 48 usr/share/icons/hicolor/48x48/apps/unity-editor-icon.png
@@ -80,4 +78,9 @@ src_install() {
 
 	domenu usr/share/applications/unity-editor.desktop
 	domenu usr/share/applications/unity-monodevelop.desktop
+}
+
+pkg_postinst() {
+	# must have these exact permissions (i.e. cannot do go-r)
+	chmod 4755 /opt/Unity/Editor/chrome-sandbox
 }
