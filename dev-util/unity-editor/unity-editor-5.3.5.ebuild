@@ -65,7 +65,7 @@ RDEPEND="
 
 S="${WORKDIR}"
 
-RESTRICT="mirror preserve-libs"
+RESTRICT="mirror preserve-libs strip"
 QA_PREBUILT="*"
 
 src_install() {
