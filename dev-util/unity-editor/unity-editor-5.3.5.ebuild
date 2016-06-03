@@ -65,20 +65,19 @@ RDEPEND="
 
 S="${WORKDIR}"
 
-RESTRICT="mirror preserve-libs"
+RESTRICT="mirror preserve-libs strip"
 QA_PREBUILT="*"
 
 src_install() {
-	insinto /opt
-	doins -r opt/Unity
+	cp -a opt "${D}"/opt
+
+	chmod 4755 "${D}"/opt/Unity/Editor/chrome-sandbox
 
 	dodoc usr/share/doc/unity-editor/{changelog.gz,copyright}
 
-	doicon -s 48 usr/share/icons/hicolor/48x48/apps/unity-eidtor-icon.png
-	doicon -s 256 usr/share/icons/hicolor/256x256/apps/unity-eidtor-icon.png
+	#doicon -s 48 usr/share/icons/hicolor/48x48/apps/unity-editor-icon.png
+	doicon -s 256 usr/share/icons/hicolor/256x256/apps/unity-editor-icon.png
 
 	domenu usr/share/applications/unity-editor.desktop
 	domenu usr/share/applications/unity-monodevelop.desktop
-
-	chmod 4755 "${D}"/opt/Unity/Editor/chrome-sandbox
 }
