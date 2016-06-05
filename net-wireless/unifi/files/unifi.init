@@ -14,12 +14,12 @@ depend() {
 start() {
 	ebegin "Starting unifi"
 	cd "${UNIFI_PATH}"
-	start-stop-daemon --start --quiet -b --pidfile "${PID_FILE}" -m --exec ${DAEMON} -- -jar lib/ace.jar start
+	start-stop-daemon --start --quiet -b --pidfile "${PID_FILE}" -m --user unifi --exec ${DAEMON} -- -jar lib/ace.jar start
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping unifi"
-	start-stop-daemon --quiet --stop -R 20 --pidfile "${PID_FILE}"
+	start-stop-daemon --quiet --stop -R 20 --pidfile "${PID_FILE}" --user unifi
 	eend $?
 }
