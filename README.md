@@ -114,6 +114,15 @@ Packages
 #### Linode CLI (app-admin/linode-cli)
 [Linode CLI](https://github.com/linode/cli) is a command-line interface to the [Linode](http://linode.com/) platform.
 
+#### UniFi Controller (net-wireless/unifi)
+[UniFi Controller](http://wiki.ubnt.com/UniFi_FAQ) is a management controller and inferface for the Ubiquiti Networks UniFi access points.
+
+
+### Development
+
+#### Unity Editor (dev-util/unity-editor)
+[Unity Editor](http://unity3d.com/) is the editor for making games with the Unity game engine.
+
 
 ### Libraries
 
