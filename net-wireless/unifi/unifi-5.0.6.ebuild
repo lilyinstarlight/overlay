@@ -27,6 +27,11 @@ S="${WORKDIR}/${MY_PN}"
 RESTRICT="mirror preserve-libs"
 QA_PREBUILT="*"
 
+pkg_setup() {
+	enewgroup unifi
+	enewuser unifi -1 /bin/sh /var/lib/unifi "unifi" --system
+}
+
 src_install() {
 	dodir /usr/$(get_libdir)/unifi
 
@@ -35,6 +40,9 @@ src_install() {
 	keepdir /var/lib/unifi/data
 	dodir /var/lib/unifi/work
 	dodir /var/log/unifi
+
+	fowners -R unifi:unifi /var/lib/unifi
+	fowners -R unifi:unifi /var/log/unifi
 
 	dosym /var/lib/unifi/data /usr/$(get_libdir)/unifi/data
 	dosym /var/lib/unifi/work /usr/$(get_libdir)/unifi/work
