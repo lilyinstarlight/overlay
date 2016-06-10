@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit multilib systemd
+inherit multilib systemd user
 
 DESCRIPTION="Management Controller for Ubiquiti Networks UniFi APs"
 HOMEPAGE="http://wiki.ubnt.com/UniFi_FAQ"
