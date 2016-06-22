@@ -108,6 +108,9 @@ Packages
 #### udiskie (sys-fs/udiskie)
 [udiskie](https://github.com/coldfix/udiskie) is a udisks front-end for removable media such as CDs or flash drives.
 
+#### petty (sys-apps/petty)
+[petty](https://github.com/fkmclane/petty), short for practically enhanced tty, is a tty session starter.
+
 
 ### Administration
 
