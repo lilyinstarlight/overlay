@@ -27,8 +27,8 @@ src_install() {
 
 	dodir /usr/share/sessions
 
-	insinto /usr/share/sessions
-	doins sessions/xsession
+	exeinto /usr/share/sessions
+	doexe sessions/xsession
 }
 
 pkg_postinst() {
@@ -40,5 +40,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	ebegin "Updating /etc/shells"
 	ex "+g#/usr/bin/petty#d" -cwq /etc/shells
+	eend $?
 }
