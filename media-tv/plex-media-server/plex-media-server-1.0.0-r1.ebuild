@@ -4,15 +4,7 @@
 
 EAPI=5
 
-inherit eutils unpacker user
-
-if use systemd; then
-    inherit systemd
-fi
-
-if use hardened; then
-	inherit pax-utils
-fi
+inherit eutils pax-utils systemd unpacker user
 
 DESCRIPTION="Plex Media Server is an organizer for your media and provides streaming over the web and to devices"
 HOMEPAGE="http://plex.tv/"
@@ -33,7 +25,7 @@ SRC_URI="
 "
 
 LICENSE="PMS-EULA"
-SLOT="PlexPass"
+SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="hardened systemd"
 
@@ -59,19 +51,19 @@ src_prepare() {
 }
 
 src_install() {
-	#Package contents
+	# package contents
 	insinto /etc/default
 	doins etc/default/plexmediaserver
 
 	dodir /opt/plexmediaserver
 	cp -R usr/lib/plexmediaserver/* "${D}"/opt/plexmediaserver/
-	
+
 	if use hardened; then
-		pax-mark m "{D}"/opt/plexmediaserver/Plex\ Media\ Server
-		pax-mark m "{D}"/opt/plexmediaserver/Plex\ Media\ Scanner
-		pax-mark m "{D}"/opt/plexmediaserver/Plex\ Script\ Host
-		pax-mark m "{D}"/opt/plexmediaserver/libcrypto.so.1.0.0
-		pax-mark m "{D}"/opt/plexmediaserver/libgnsdk_dsp.so.3.07.7
+	    pax-mark m "{D}"/opt/plexmediaserver/Plex\ Media\ Server
+	    pax-mark m "{D}"/opt/plexmediaserver/Plex\ Media\ Scanner
+	    pax-mark m "{D}"/opt/plexmediaserver/Plex\ Script\ Host
+	    pax-mark m "{D}"/opt/plexmediaserver/libcrypto.so.1.0.0
+	    pax-mark m "{D}"/opt/plexmediaserver/libgnsdk_dsp.so.3.07.7
 	fi
 
 	dobin usr/sbin/start_pms
@@ -81,14 +73,14 @@ src_install() {
 
 	dodoc usr/share/doc/plexmediaserver/copyright
 
-	#Init files
+	# init files
 	doinitd "${FILESDIR}"/plexmediaserver
-	
-	if use systemd ; then
-		systemd_dounit "${FILESDIR}"/plexmediaserver.service
+
+	if use systemd; then
+	    systemd_dounit "${FILESDIR}"/plexmediaserver.service
 	fi
 
-	#Directories
+	# directories
 	dodir /var/lib/plexmediaserver
 	fowners plex:plex /var/lib/plexmediaserver
 	dodir /var/log/pms
