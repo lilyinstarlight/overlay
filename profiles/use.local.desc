@@ -37,6 +37,7 @@ media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for load
 media-video/obs-studio:pulseaudio - Enable audio capture from the PulseAudio sound server.
 media-video/obs-studio:qt5 - Enable the QT 5 GUI
 media-video/webcamstudio:vloopback - Enable support for a virtual video/webcam device
+net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
 net-im/profanity:libnotify - Enable desktop notifications support
 net-im/profanity:otr - Enable Off-the-Record support (encryption)
 net-im/profanity:themes - Install additional themes
