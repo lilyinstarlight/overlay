@@ -6,7 +6,7 @@ EAPI=6
 
 DESCRIPTION="petty, short for practically enhanced tty, is a tty session starter"
 HOMEPAGE="https://github.com/fkmclane/petty"
-SRC_URI="https://github.com/fkmclane/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/fkmclane/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
