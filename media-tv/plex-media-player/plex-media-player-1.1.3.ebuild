@@ -9,16 +9,17 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-BUILD="359"
-COMMIT="2b757d45"
-WEBCLIENT_BUILD="143"
-WEBCLIENT_COMMIT="5f79fce"
+BUILD="380"
+COMMIT="a2959899"
+WEBCLIENT_VERSION="2.6.9"
+WEBCLIENT_BUILD="149"
+WEBCLIENT_COMMIT="6ec8fed"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
-	https://nightlies.plex.tv/directdl/plex-dependencies/plex-web-client-plexmediaplayer/${WEBCLIENT_BUILD}/plex-web-client-konvergo-${WEBCLIENT_COMMIT}.cpp.tbz2
+	https://nightlies.plex.tv/directdl/plex-dependencies/plex-web-client-plexmediaplayer/${WEBCLIENT_BUILD}/plex-web-client-pmp-${WEBCLIENT_VERSION}-${WEBCLIENT_COMMIT}.tbz2
 "
 
 LICENSE="GPL-2"
@@ -65,7 +66,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	cp "${DISTDIR}"/plex-web-client-konvergo-"${WEBCLIENT_COMMIT}".cpp.tbz2 "${S}"/src
+	cp "${DISTDIR}"/plex-web-client-pmp-"${WEBCLIENT_VERSION}"-"${WEBCLIENT_COMMIT}".cpp.tbz2 "${S}"/src
 
 	cmake-utils_src_prepare
 }
