@@ -66,7 +66,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	cp "${DISTDIR}"/plex-web-client-pmp-"${WEBCLIENT_VERSION}"-"${WEBCLIENT_COMMIT}".tbz2 "${S}"/src
+	cp "${DISTDIR}"/plex-web-client-pmp-"${WEBCLIENT_VERSION}"-"${WEBCLIENT_COMMIT}".tbz2 "${S}"
 
 	cmake-utils_src_prepare
 }
