@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-r3 cmake-utils
+inherit eutils git-r3 cmake-utils
 
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
@@ -55,4 +55,16 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+
+	# menu items
+	domenu "${FILESDIR}/plexmediaplayer.desktop"
+	newicon -s 16 "${FILESDIR}/plexmediaplayer-16x16.png" plexmediaplayer.png
+	newicon -s 24 "${FILESDIR}/plexmediaplayer-24x24.png" plexmediaplayer.png
+	newicon -s 32 "${FILESDIR}/plexmediaplayer-32x32.png" plexmediaplayer.png
+	newicon -s 48 "${FILESDIR}/plexmediaplayer-48x48.png" plexmediaplayer.png
+	newicon -s 256 "${FILESDIR}/plexmediaplayer-256x256.png" plexmediaplayer.png
 }
