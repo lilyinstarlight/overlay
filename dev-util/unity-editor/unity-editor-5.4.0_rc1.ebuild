@@ -75,7 +75,7 @@ src_install() {
 
 	dodoc usr/share/doc/unity-editor/{changelog.gz,copyright}
 
-	doicon -s 48 usr/share/icons/hicolor/48x48/apps/unity-editor-icon.png
+	#doicon -s 48 usr/share/icons/hicolor/48x48/apps/unity-editor-icon.png
 	doicon -s 256 usr/share/icons/hicolor/256x256/apps/unity-editor-icon.png
 
 	domenu usr/share/applications/unity-editor.desktop
