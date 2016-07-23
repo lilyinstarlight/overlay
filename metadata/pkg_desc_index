@@ -6,7 +6,7 @@ app-misc/tty-clock 20150318: analog clock in ncurses
 dev-libs/libstrophe 0.8.8: A simple, lightweight C library for writing XMPP clients
 dev-python/progressbar2 3.6.2: text progress bar library for Python
 dev-python/pyusb 1.0.0_beta1: USB support for Python
-dev-util/unity-editor 5.3.5 5.4.0_rc1: Editor for the Unity game engine
+dev-util/unity-editor 5.3.6 5.4.0_rc1: Editor for the Unity game engine
 games-action/armagetronad 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3 0.4: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1: A clone of the classic snake game on the terminal
