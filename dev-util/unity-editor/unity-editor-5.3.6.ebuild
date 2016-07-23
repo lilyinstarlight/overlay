@@ -4,11 +4,13 @@
 
 EAPI=6
 
-inherit eutils unpacker
+inherit eutils unpacker versionator
 
 DESCRIPTION="Editor for the Unity game engine"
 HOMEPAGE="http://unity3d.com/"
-SRC_URI="http://download.unity3d.com/download_unity/linux/unity-editor-5.3.5f1+20160525_amd64.deb"
+DATE="20160720"
+RELEASE="f1"
+SRC_URI="http://download.unity3d.com/download_unity/linux/${PN}-$(get_version_component_range 1-3)${RELEASE}+${DATE}_amd64.deb"
 
 LICENSE="Unity-EULA"
 SLOT="0"
