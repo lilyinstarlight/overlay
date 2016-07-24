@@ -126,6 +126,9 @@ Packages
 #### Unity Editor (dev-util/unity-editor)
 [Unity Editor](http://unity3d.com/) is the editor for making games with the Unity game engine.
 
+#### Git LFS (dev-vcs/git-lfs)
+[Git LFS](https://git-lfs.github.com/) is a git extension for versioning large files via text pointers to a large file database.
+
 
 ### Libraries
 
