@@ -59,12 +59,12 @@ src_install() {
 	cp -R usr/lib/plexmediaserver/* "${D}"/opt/plexmediaserver/
 
 	if use pax_kernel; then
-	    pax-mark m "{D}"/opt/plexmediaserver/Plex\ Media\ Server
-	    pax-mark m "{D}"/opt/plexmediaserver/Plex\ Media\ Scanner
-	    pax-mark m "{D}"/opt/plexmediaserver/Plex\ DLNA\ Server
-	    pax-mark m "{D}"/opt/plexmediaserver/Resources/Plex\ Script\ Host
-	    pax-mark m "{D}"/opt/plexmediaserver/libcrypto.so.1.0.0
-	    pax-mark m "{D}"/opt/plexmediaserver/libgnsdk_dsp.so.3.07.7
+	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ Media\ Server
+	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ Media\ Scanner
+	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ DLNA\ Server
+	    pax-mark m "${D}"/opt/plexmediaserver/Resources/Plex\ Script\ Host
+	    pax-mark m "${D}"/opt/plexmediaserver/libcrypto.so.1.0.0
+	    pax-mark m "${D}"/opt/plexmediaserver/libgnsdk_dsp.so.3.07.7
 	fi
 
 	dobin usr/sbin/start_pms
