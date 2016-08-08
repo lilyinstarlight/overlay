@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
-inherit games
+inherit eutils
 
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron"
 HOMEPAGE="http://armagetronad.org/"
@@ -36,10 +36,12 @@ DEPEND="
 src_prepare() {
 	sed -i -e "s/png_check_sig/png_sig_cmp/" configure.ac
 	./bootstrap.sh
+
+	default
 }
 
 src_configure() {
-	egamesconf \
+	econf \
 		--disable-uninstall \
 		$(use_enable auth authentication) \
 		$(use_enable music)
@@ -51,12 +53,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	doicon desktop/icons/large/armagetronad.png
 	domenu desktop/armagetronad-armagetronad.desktop
-
-	dodoc AUTHORS ChangeLog NEWS README
-
-	prepgamesdirs
 }

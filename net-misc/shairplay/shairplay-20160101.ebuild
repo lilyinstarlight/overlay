@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit git-r3 autotools
 
@@ -26,6 +26,8 @@ src_prepare() {
 	eautoreconf
 
 	sed 's/airport.key/\/etc\/shairplay\/airport.key/' -i "${S}"/src/shairplay.c
+
+	default
 }
 
 src_install() {

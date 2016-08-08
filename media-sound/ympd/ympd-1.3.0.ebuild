@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit cmake-utils
 
@@ -24,9 +24,9 @@ RDEPEND="${DEPEND}"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_with hostchange MPD_HOST_CHANGE)
-		$(cmake-utils_use_with ipv6 IPV6)
-		$(cmake-utils_use_with ssl SSL)
+		-DWITH_MPD_HOST_CHANGE=$(usex hostchange)
+		-DWITH_IPV6=$(usex ipv6)
+		-DWITH_SSL=$(usex ssl)
 	)
 
 	cmake-utils_src_configure

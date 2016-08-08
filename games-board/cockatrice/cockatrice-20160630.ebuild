@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
-inherit cmake-utils games
+inherit cmake-utils
 
 DESCRIPTION="A cross-platform virtual tabletop for multiplayer card games"
 HOMEPAGE="https://github.com/Cockatrice/Cockatrice"
@@ -19,18 +19,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+client server"
 REQUIRED_USE="|| ( client server )"
 
-#With Qt5, will additionally need qtnetwork and qtxml and won't need libgcrypt
 DEPEND="
 	dev-libs/protobuf
-	dev-qt/qtcore:4
+	dev-qt/qtcore:5
+	dev-qt/qtnetwork:5
+	dev-qt/qtwidgets:5
 	client? (
-		dev-qt/qtgui:4
-		dev-qt/qtmultimedia:4
-		dev-qt/qtsvg:4
+		dev-qt/qtconcurrent:5
+		dev-qt/qtmultimedia:5
+		dev-qt/qtsvg:5
 	)
 	server? (
-		dev-libs/libgcrypt:0
-		dev-qt/qtsql:4
+		dev-qt/qtsql:5
+		dev-qt/qtwebsockets:5
 	)
 "
 RDEPEND="${DEPEND}"
@@ -39,26 +40,15 @@ S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_with client CLIENT)
-		$(cmake-utils_use_with client ORACLE)
-		$(cmake-utils_use_with server SERVER)
+		-DWITH_CLIENT=$(usex client)
+		-DWITH_ORACLE=$(usex client)
+		-DWITH_SERVER=$(usex server)
 		-DWITH_QT4=ON
-		-DCMAKE_INSTALL_BINDIR="${GAMES_BINDIR}"
-		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}"
 		-DICONDIR="/usr/share/icons"
 		-DDESKTOPDIR="/usr/share/applications"
 	)
 
 	cmake-utils_src_configure
-}
-
-src_compile() {
-	cmake-utils_src_compile
-}
-
-src_install() {
-	cmake-utils_src_install
-	prepgamesdirs
 }
 
 pkg_postinst() {

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit eutils cmake-utils
 
@@ -69,13 +69,15 @@ src_prepare() {
 	cp "${DISTDIR}"/plex-web-client-pmp-"${WEBCLIENT_VERSION}"-"${WEBCLIENT_COMMIT}".tbz2 "${S}"
 
 	cmake-utils_src_prepare
+
+	default
 }
 
 src_configure() {
 	local mycmakeargs=(
-		$(cmake-utils_use_enable cec CEC)
-		$(cmake-utils_use_enable joystick SDL2)
-		$(cmake-utils_use_enable lirc LIRC)
+		-DENABLE_CEC=$(usex cec)
+		-DENABLE_SDL2=$(usex joystick)
+		-DENABLE_LIRC=$(usex lirc)
 		-DQTROOT=/usr
 	)
 

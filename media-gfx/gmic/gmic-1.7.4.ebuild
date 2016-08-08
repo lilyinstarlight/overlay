@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit eutils toolchain-funcs bash-completion-r1 flag-o-matic
 
@@ -63,6 +63,8 @@ src_prepare() {
 		# disable display capabilities when X support is disabled
 		append-cxxflags -Dcimg_display=0
 	fi
+
+	default
 }
 
 src_compile() {

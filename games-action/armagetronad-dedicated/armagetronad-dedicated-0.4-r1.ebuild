@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit games bzr
+inherit bzr
 
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron - dedicated server"
 HOMEPAGE="http://armagetronad.org/"
@@ -32,10 +32,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	./bootstrap.sh
+
+	default
 }
 
 src_configure() {
-	egamesconf \
+	econf \
 		--disable-uninstall \
 		--enable-dedicated \
 		$(use_enable auth authentication) \
@@ -45,12 +47,4 @@ src_configure() {
 src_compile() {
 	#Parallel builds sometimes fail
 	emake -j1
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-
-	dodoc AUTHORS ChangeLog NEWS README
-
-	prepgamesdirs
 }

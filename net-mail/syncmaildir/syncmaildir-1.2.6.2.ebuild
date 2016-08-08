@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit eutils systemd
 
@@ -42,7 +42,10 @@ src_prepare() {
 	epatch "${FILESDIR}"/makefile-respect-variables.patch
 	epatch "${FILESDIR}"/makefile-no-doc.patch
 	epatch "${FILESDIR}"/lua-no-slot.patch
+
 	use gnome || epatch "${FILESDIR}"/no-applet.patch
+
+	default
 }
 
 src_compile() {

@@ -27,5 +27,7 @@ S="${WORKDIR}/${MY_P}"
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" LIBDIR="$(get_libdir)" install
 
-	default
+	for DOC in ${DOCS}; do
+		dodoc ${DOC}
+	done
 }

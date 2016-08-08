@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI=6
+
 EGO_PN="github.com/github/${PN}"
 
 if [[ ${PV} == *9999 ]]; then
