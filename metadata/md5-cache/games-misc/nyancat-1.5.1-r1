@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=nyancat rendered in your terminal
+EAPI=6
+HOMEPAGE=https://github.com/klange/nyancat
+KEYWORDS=amd64 x86
+LICENSE=UoI-NCSA
+SLOT=0
+SRC_URI=https://github.com/klange/nyancat/archive/1.5.1.tar.gz -> nyancat-1.5.1.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=19202f3cc13073fb696328dee9536c86

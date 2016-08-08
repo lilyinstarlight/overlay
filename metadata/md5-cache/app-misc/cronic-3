@@ -1,11 +1,11 @@
 DEFINED_PHASES=install unpack
-DESCRIPTION=A cure for cron's chronic email problem
-EAPI=5
+DESCRIPTION=a cure for cron's chronic email problem
+EAPI=6
 HOMEPAGE=http://habilis.net/cronic/
 KEYWORDS=amd64 x86
 LICENSE=CC0-1.0
 RDEPEND=app-shells/bash
 SLOT=0
-SRC_URI=http://habilis.net/cronic/cronic -> cronic-v2
+SRC_URI=http://habilis.net/cronic/cronic-v3
 _eclass_exported_funcs=src_unpack:- src_install:-
-_md5_=c8b1a3d3707ec288806050e8c62969c6
+_md5_=e3699523cd3acb05e4f15443f6820bbd

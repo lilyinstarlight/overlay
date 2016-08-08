@@ -2,6 +2,8 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+dev-util/unity-editor:android - Enable Android target support
+dev-util/unity-editor:webgl - Enable WebGL target support
 games-action/armagetronad:auth - Enable armathentication support
 games-action/armagetronad:fortress - Enable support for fortress game mode
 games-action/armagetronad:glew - Enable media-libs/glew opengl extension library support
@@ -12,41 +14,38 @@ games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
 media-gfx/gmic:graphicsmagick - Enable support for many common image file formats using the GraphicsMagick++ library
 media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
+media-plugins/calf:experimental - Add support for experimental plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-sound/pms:regex - enable regular expression searching
 media-sound/ympd:hostchange - allow users of the web frontend to change the MPD host
-media-tv/kodi:airplay - enable AirPlay support
+media-tv/kodi:airplay - Enable AirPlay support
+media-tv/kodi:airtunes - Enable AirPlay server support
 media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
 media-tv/kodi:cec - Enable support for HDMI-CEC devices via libcec
-media-tv/kodi:fishbmc - Enable fishBMC visualization plugin
 media-tv/kodi:gles - Enable support for GLES
-media-tv/kodi:goom - Enable GOOM visualization plugin
 media-tv/kodi:midi - Support MIDI files
 media-tv/kodi:nfs - Enable NFS client support
-media-tv/kodi:projectm - Enable projectM visualization plugin
-media-tv/kodi:pvr - Enable MythTV support
-media-tv/kodi:rsxs - Enable really slick X screensavers
 media-tv/kodi:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-tv/kodi:sftp - Support browsing files over SFTP
-media-tv/kodi:spectrum - Enable spectrum visualization plugin
 media-tv/kodi:texturepacker - Support packing skin textures
-media-tv/kodi:waveform - Enable waveform visualization plugin
 media-tv/kodi:webserver - Enable internal webserver
-media-tv/kodi:xrandr - Support X randr extension
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
+media-tv/plex-media-server:pax_kernel - Mark the necessary executables for use under a PaX kernel
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.
 media-video/obs-studio:pulseaudio - Enable audio capture from the PulseAudio sound server.
-media-video/obs-studio:qt5 - Enable the QT 5 GUI
-media-video/webcamstudio:vloopback - Enable support for a virtual video/webcam device
 net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
-net-im/profanity:libnotify - Enable desktop notifications support
-net-im/profanity:otr - Enable Off-the-Record support (encryption)
-net-im/profanity:themes - Install additional themes
-net-im/profanity:xscreensaver - Use x11-libs/libXScrnSaver for checking idle time
-net-im/prosody:jit - Use LuaJIT instead of vanilla Lua
-net-im/prosody:libevent - Use libevent for event handling
-net-im/prosody:zlib - Support for compressing XMPP streams with mod_compression
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
+x11-themes/arc:cinnamon - Enable support for Cinnamon
+x11-themes/arc:dark - Install the Dark theme
+x11-themes/arc:darker - Install the Darker theme
+x11-themes/arc:gnome-shell - Enable support for Gnome Shell
+x11-themes/arc:gtk2 - Enable the GTK+2 theme
+x11-themes/arc:gtk3 - Enable the GTK+3 theme
+x11-themes/arc:light - Install the Light theme
+x11-themes/arc:metacity - Enable support for Metacity
+x11-themes/arc:transparency - Utilize transparency in the GTK+3 theme
+x11-themes/arc:unity - Enable support for Unity
+x11-themes/arc:xfwm - Enable support for XFWM

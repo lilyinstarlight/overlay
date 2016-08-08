@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure prepare
+DEPEND=dev-libs/libxml2 auth? ( dev-libs/zthread ) sys-devel/autoconf sys-devel/bison
+DESCRIPTION=A fast-paced 3D lightcycle game based on Tron - dedicated server
+EAPI=6
+HOMEPAGE=http://armagetronad.org/
+IUSE=+auth
+KEYWORDS=amd64 x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libxml2 auth? ( dev-libs/zthread )
+SLOT=0
+SRC_URI=https://launchpad.net/armagetronad/0.2.8/0.2.8.3.x/+download/armagetronad-0.2.8.3.3.src.tar.bz2
+_eclass_exported_funcs=src_prepare:- src_configure:- src_compile:-
+_md5_=1e75b341d895ce3d2cbc920cdb62d5f1

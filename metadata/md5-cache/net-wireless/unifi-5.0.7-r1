@@ -1,7 +1,7 @@
 DEFINED_PHASES=install setup
 DEPEND=virtual/pkgconfig
 DESCRIPTION=Management Controller for Ubiquiti Networks UniFi APs
-EAPI=5
+EAPI=6
 HOMEPAGE=http://wiki.ubnt.com/UniFi_FAQ
 KEYWORDS=~amd64 ~x86
 LICENSE=UniFi-EULA
@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=http://dl.ubnt.com/unifi/5.0.7/UniFi.unix.zip -> unifi-5.0.7.zip
 _eclass_exported_funcs=pkg_setup:- src_install:-
 _eclasses_=multilib	d062ae4ba2fc40a19c11de2ad89b6616	systemd	3165c885f3c71ffae7a867d931fb0e07	toolchain-funcs	82165206dedb2075f9a0fb8f9b1f9441	user	c66cbe7502fe1161066eb947d15b79f6
-_md5_=71fb8df45b3fc2f4ba330d5f84edffae
+_md5_=aa55425204b13d5b763deecee92faccc
