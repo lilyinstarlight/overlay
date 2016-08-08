@@ -2,7 +2,7 @@ diff --git a/Makefile b/Makefile
 index 40f0249..0b239af 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -38,14 +38,14 @@
+@@ -38,7 +38,7 @@
  
  # General Info
  PACKAGE = nsnake
@@ -11,17 +11,6 @@ index 40f0249..0b239af 100644
  DATE    = $(shell date "+%b%Y")
  
  # Install dirs
--PREFIX      = /usr
--EXEC_PREFIX = $(PREFIX)
--DATAROOTDIR = $(PREFIX)/share
--BINDIR      = $(EXEC_PREFIX)/bin
-+PREFIX      ?= /usr
-+EXEC_PREFIX ?= $(PREFIX)
-+DATAROOTDIR ?= $(PREFIX)/share
-+BINDIR      ?= $(EXEC_PREFIX)/bin
- 
- # Misc stuff
- PNGDIR     = $(DATAROOTDIR)/icons/hicolor
 @@ -62,9 +62,7 @@ MANPAGE     = doc/man/$(MANFILE)
  
  # Build info

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils games
+inherit eutils
 
 MY_PN="nSnake"
 MY_P="${MY_PN}-${PV}"
@@ -28,16 +28,4 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/Makefile.patch
-}
-
-src_compile() {
-	PREFIX="${GAMES_PREFIX}" DATAROOTDIR="${GAMES_DATADIR_BASE}" EXEC_PREFIX="${GAMES_PREFIX}" BINDIR="${GAMES_BINDIR}" emake
-}
-
-src_install() {
-	PREFIX="${GAMES_PREFIX}" DATAROOTDIR="${GAMES_DATADIR_BASE}" EXEC_PREFIX="${GAMES_PREFIX}" BINDIR="${GAMES_BINDIR}" emake DESTDIR="${D}" install
-
-	dodoc README.md ChangeLog AUTHORS
-
-	prepgamesdirs
 }
