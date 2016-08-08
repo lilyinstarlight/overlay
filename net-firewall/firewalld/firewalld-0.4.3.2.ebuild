@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
+
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
-#BACKPORTS=
 
 inherit autotools eutils gnome2-utils python-r1 systemd multilib bash-completion-r1
 
@@ -41,8 +41,9 @@ src_prepare() {
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
 
-	epatch_user
 	eautoreconf
+
+	default
 }
 
 src_configure() {
@@ -56,7 +57,7 @@ src_configure() {
 		--with-ip6tables_restore="${EROOT}/sbin/ip6tables-restore" \
 		--with-ebtables="${EROOT}/sbin/ebtables" \
 		--with-ebtables_restore="${EROOT}/sbin/ebtables-restore" \
-		"$(systemd_with_unitdir 'systemd-unitdir')" \
+		--with-systemd-unitdir="$(systemd_get_systemunitdir)" \
 		--with-bashcompletiondir="$(get_bashcompdir)"
 }
 

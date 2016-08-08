@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit autotools git-r3
 
@@ -19,7 +19,7 @@ IUSE="regex"
 RDEPEND="
 	dev-libs/glib:2
 	media-libs/libmpdclient
-	sys-libs/ncurses
+	sys-libs/ncurses:=
 "
 DEPEND="
 	app-text/pandoc
@@ -30,6 +30,8 @@ DEPEND="
 
 src_prepare() {
 	eautoreconf
+
+	default
 }
 
 src_configure() {

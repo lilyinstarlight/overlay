@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit cmake-utils versionator
 
@@ -22,7 +22,7 @@ IUSE="demos"
 DEPEND="
 	demos? (
 		media-libs/glfw
-		media-libs/glew
+		media-libs/glew:0
 		virtual/opengl
 	)
 "
@@ -34,5 +34,6 @@ src_configure() {
 	local mycmakeargs=(
 		$(use demos && echo "-DBUILD_DEMOS=ON -DINSTALL_DEMOS=ON" || echo "-DBUILD_DEMOS=OFF -DINSTALL_DEMOS=OFF")
 	)
+
 	cmake-utils_src_configure
 }

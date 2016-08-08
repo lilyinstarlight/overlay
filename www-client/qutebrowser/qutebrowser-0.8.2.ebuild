@@ -3,6 +3,7 @@
 # $Id$
 
 EAPI=6
+
 PYTHON_COMPAT=( python{3_4,3_5} )
 
 inherit gnome2-utils distutils-r1 eutils fdo-mime

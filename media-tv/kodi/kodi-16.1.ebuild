@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI=6
 
 # Does not work with py3 here
 PYTHON_COMPAT=( python2_7 )
@@ -104,7 +104,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	opengl? (
 		virtual/glu
 		virtual/opengl
-		>=media-libs/glew-1.5.6
+		>=media-libs/glew-1.5.6:0
 	)
 	gles? (
 		media-libs/mesa[gles2]
@@ -197,6 +197,8 @@ src_prepare() {
 
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -exec touch -r configure {} +
+
+	default
 }
 
 src_configure() {

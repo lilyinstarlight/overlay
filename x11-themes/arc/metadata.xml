@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
+	<maintainer type="person">
 		<email>fkmclane@gmail.com</email>
+		<name>Foster McLane</name>
 	</maintainer>
+	<use>
+		<flag name="gtk2">Enable the GTK+2 theme</flag>
+		<flag name="gtk3">Enable the GTK+3 theme</flag>
+		<flag name="light">Install the Light theme</flag>
+		<flag name="darker">Install the Darker theme</flag>
+		<flag name="dark">Install the Dark theme</flag>
+		<flag name="transparency">Utilize transparency in the GTK+3 theme</flag>
+		<flag name="cinnamon">Enable support for Cinnamon</flag>
+		<flag name="metacity">Enable support for Metacity</flag>
+		<flag name="unity">Enable support for Unity</flag>
+		<flag name="xfwm">Enable support for XFWM</flag>
+		<flag name="gnome-shell">Enable support for Gnome Shell</flag>
+	</use>
 </pkgmetadata>

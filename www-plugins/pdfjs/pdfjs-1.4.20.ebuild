@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 DESCRIPTION="a general-purpose, web standards-based platform for parsing and rendering PDFs"
 HOMEPAGE="http://mozilla.github.io/pdf.js/"

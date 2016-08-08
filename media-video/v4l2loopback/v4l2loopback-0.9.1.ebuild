@@ -1,14 +1,14 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=6
 
 inherit linux-mod vcs-snapshot
 
 DESCRIPTION="v4l2 loopback device which output is it's own input"
 HOMEPAGE="https://github.com/umlaeute/v4l2loopback"
-SRC_URI="https://github.com/umlaeute/v4l2loopback/tarball/v${PV} -> ${P}.tar.gz"
+SRC_URI="https://github.com/umlaeute/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

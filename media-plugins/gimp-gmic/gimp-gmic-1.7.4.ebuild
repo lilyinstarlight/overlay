@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -41,6 +41,8 @@ src_prepare() {
 	if ! use openmp ; then
 		sed -i -r "s/^(OPENMP_(CFLAGS|LIBS) =).*/\1/" Makefile || die
 	fi
+
+	default
 }
 
 src_compile() {

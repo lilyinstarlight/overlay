@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit eutils pax-utils systemd unpacker user
 
@@ -48,6 +48,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/start_pms.patch"
+
+	default
 }
 
 src_install() {
