@@ -1,14 +1,14 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
-DESCRIPTION="A cure for cron's chronic email problem"
+DESCRIPTION="a cure for cron's chronic email problem"
 HOMEPAGE="http://habilis.net/cronic/"
 MY_PV="v${PV}"
 MY_P="${PN}-${MY_PV}"
-SRC_URI="http://habilis.net/cronic/${PN} -> ${MY_P}"
+SRC_URI="http://habilis.net/cronic/${MY_P}"
 
 LICENSE="CC0-1.0"
 SLOT="0"
