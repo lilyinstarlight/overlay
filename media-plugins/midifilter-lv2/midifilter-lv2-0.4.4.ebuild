@@ -1,9 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
-EAPI=5
-inherit base multilib
+EAPI=6
+
+inherit multilib
 
 DESCRIPTION="LV2 plugins to filter MIDI events"
 HOMEPAGE="https://github.com/x42/midifilter.lv2"
@@ -25,5 +26,6 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" LIBDIR="$(get_libdir)" install
-	base_src_install_docs
+
+	default
 }
