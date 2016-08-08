@@ -19,7 +19,7 @@ IUSE="regex"
 RDEPEND="
 	dev-libs/glib:2
 	media-libs/libmpdclient
-	sys-libs/ncurses
+	sys-libs/ncurses:=
 "
 DEPEND="
 	app-text/pandoc

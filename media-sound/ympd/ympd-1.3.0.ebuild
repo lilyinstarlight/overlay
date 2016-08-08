@@ -18,7 +18,7 @@ IUSE="+hostchange +ipv6 +ssl"
 DEPEND="
 	media-libs/libmpdclient
 
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 "
 RDEPEND="${DEPEND}"
 

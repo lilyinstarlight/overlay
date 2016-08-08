@@ -41,7 +41,7 @@ CDEPEND="
 	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
-	media-libs/glew
+	media-libs/glew:0
 	media-libs/libass
 	media-libs/libmad
 	media-libs/libmodplug

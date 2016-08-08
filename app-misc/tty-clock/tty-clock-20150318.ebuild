@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	sys-libs/ncurses
+	sys-libs/ncurses:=
 "
 RDEPEND="
 	${DEPEND}

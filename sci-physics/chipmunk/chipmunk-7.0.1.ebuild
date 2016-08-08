@@ -22,7 +22,7 @@ IUSE="demos"
 DEPEND="
 	demos? (
 		media-libs/glfw
-		media-libs/glew
+		media-libs/glew:0
 		virtual/opengl
 	)
 "

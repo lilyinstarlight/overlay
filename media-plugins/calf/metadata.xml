@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proaudio</herd>
+  <!--<herd>proaudio</herd>-->
   <use>
     <flag name="lv2">Add support for Ladspa V2</flag>
+    <flag name="experimental">Add support for experimental plugins</flag>
   </use>
   <upstream>
     <remote-id type="github">calf-studio-gear/calf</remote-id>

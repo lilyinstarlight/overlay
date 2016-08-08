@@ -26,7 +26,7 @@ RDEPEND="
 	media-libs/sdl2-mixer
 	virtual/opengl
 
-	glew? ( media-libs/glew )
+	glew? ( media-libs/glew:0 )
 "
 DEPEND="
 	${RDEPEND}

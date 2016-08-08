@@ -21,7 +21,7 @@ IUSE=""
 
 ### This version is compatible with both 0.X and 1.X versions of libusb
 DEPEND="
-	virtual/libusb
+	virtual/libusb:=
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
