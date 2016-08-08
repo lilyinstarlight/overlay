@@ -1,10 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
-
-inherit games
+EAPI=6
 
 DESCRIPTION="animated pipes terminal screensaver"
 MY_PN="pipes.sh"
@@ -20,10 +18,8 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	newgamesbin "${MY_PN}" "${PN}"
+	newbin "${MY_PN}" "${PN}"
 	newman "doc/${MY_PN}.6" "${PN}.6"
 
 	dodoc README.rst
-
-	prepgamesdirs
 }
