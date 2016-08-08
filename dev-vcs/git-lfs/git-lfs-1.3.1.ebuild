@@ -19,11 +19,12 @@ HOMEPAGE="https://git-lfs.github.com/"
 
 LICENSE="MIT BSD BSD-2 BSD-4 Apache-2.0"
 SLOT="0"
-IUSE=""
+IUSE="doc"
 
 DEPEND="
-	app-text/ronn
 	dev-lang/go
+
+	doc? ( app-text/ronn )
 "
 RDEPEND="
 	dev-vcs/git
@@ -35,10 +36,12 @@ src_compile() {
 	export GOPATH="${WORKDIR}/${P}"
 
 	script/bootstrap
-	script/man
+
+	use doc && script/man
 }
 
 src_install() {
 	dobin bin/git-lfs
-	doman man/*.1
+
+	use doc && doman man/*.1
 }
