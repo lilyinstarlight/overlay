@@ -23,9 +23,6 @@ Packages
 #### Plex [media-tv/plex-media-server, media-tv/plex-home-theater, media-tv/plex-media-player]
 [Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64" or "~x86" keywords to the packages to get the latest Plex Pass versions.
 
-#### WebcamStudio [media-video/webcamstudio, media-video/webcamstudio-module]
-[WebcamStudio](https://code.google.com/p/webcamstudio/) is a live video mixer often used in conjunction with a virtual webcam driver to create professional looking broadcasts.
-
 #### v4l2loopback [media-video/v4l2loopback]
 [v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with WebcamStudio or other software (e.g. ffmpeg or gstreamer) to create a virtual webcam device.
 
@@ -65,12 +62,6 @@ Packages
 
 #### Cockatrice [games-board/cockatrice]
 [Cockatrice](http://www.reddit.com/r/Cockatrice) is a cross-platform virtual tabletop for multiplayer card games, such as Magic: The Gathering, over a network.
-
-
-### Messaging
-
-#### Profanity [net-im/profanity]
-[Profanity](http://www.profanity.im/) is a console based XMPP client inspired by Irssi.
 
 
 ### Utilities
@@ -135,9 +126,6 @@ Packages
 
 ### Libraries
 
-#### libstrophe [dev-libs/libstrophe]
-[libstrophe](http://strophe.im/libstrophe/) is a minimal XMPP library written in C.
-
 #### Chipmunk2D [sci-physics/chipmunk]
 [Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
 
@@ -148,9 +136,3 @@ Packages
 
 #### Arc Theme [x11-themes/arc]
 [arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elemnts for GTK+2, GTK+3, and Gnome Shell with support for a variety of desktop environments.
-
-
-### Unstable
-
-#### Prosody [net-im/prosody]
-[Prosody](https://prosody.im/) is a modern XMPP communication server aimed at being efficient and easy to configure. This overlay includes a live ebuild for the 0.10 branch of the project.
