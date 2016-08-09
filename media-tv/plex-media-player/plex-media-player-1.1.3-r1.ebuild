@@ -70,7 +70,7 @@ src_prepare() {
 
 	cmake-utils_src_prepare
 
-	default
+	eapply_user
 }
 
 src_configure() {
