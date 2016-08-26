@@ -2,6 +2,7 @@ app-admin/linode-cli 1.4.7: Command-line interface to the Linode platform
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 3: a cure for cron's chronic email problem
 app-misc/tty-clock 20150318: analog clock in ncurses
+dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
 dev-python/progressbar2 3.10.0: text progress bar library for Python
 dev-python/python-utils 2.0.0: a collection of small functions and classes which make common patterns shorter and easier
 dev-python/pyusb 1.0.0_beta1: USB support for Python
