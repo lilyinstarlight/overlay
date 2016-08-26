@@ -21,7 +21,7 @@ KEYWORDS="-* ~amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="sys-devel/gcc[multilib]"
 
 S="${WORKDIR}/${MY_P}"
 
