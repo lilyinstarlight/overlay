@@ -4,12 +4,16 @@
 
 EAPI=6
 
-inherit eutils udev
+inherit eutils udev versionator
 
 DESCRIPTION="electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino"
 HOMEPAGE="http://energia.nu/"
 MY_PN="${PN/-bin}"
-MY_P="${MY_PN}-1.6.10E18"
+VER="$(get_version_component_range 1-3)"
+REL="$(get_version_component_range 4)"
+REL="${REL/p}"
+MY_PV="${VER}E${REL}"
+MY_P="${MY_PN}-${MY_PV}"
 SRC_URI="
 	http://energia.nu/downloads/downloadv4.php?file=${MY_P}-linux64.tar.xz -> ${MY_P}-linux64.tar.xz
 	http://energia.nu/files/71-ti-permissions.rules
