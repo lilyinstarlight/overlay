@@ -10,8 +10,8 @@ DESCRIPTION="Plex Media Server is an organizer for your media and provides strea
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-BUILD="2611"
-COMMIT="ba905d2"
+BUILD="2680"
+COMMIT="09e98fb"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}_${MY_PV}"
 
@@ -26,7 +26,7 @@ SRC_URI="
 
 LICENSE="PMS-EULA"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="pax_kernel systemd"
 
 DEPEND="
@@ -64,7 +64,7 @@ src_install() {
 	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ Media\ Server
 	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ Media\ Scanner
 	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ DLNA\ Server
-	    pax-mark m "${D}"/opt/plexmediaserver/Resources/Plex\ Script\ Host
+	    pax-mark m "${D}"/opt/plexmediaserver/Plex\ Script\ Host
 	    pax-mark m "${D}"/opt/plexmediaserver/libcrypto.so.1.0.0
 	    pax-mark m "${D}"/opt/plexmediaserver/libgnsdk_dsp.so.3.07.7
 	fi
