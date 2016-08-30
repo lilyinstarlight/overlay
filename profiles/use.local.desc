@@ -16,6 +16,7 @@ media-gfx/gmic:graphicsmagick - Enable support for many common image file format
 media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
 media-plugins/calf:experimental - Add support for experimental plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
+media-sound/ardour:lv2 - Add support for Ladspa V2
 media-sound/pms:regex - enable regular expression searching
 media-sound/ympd:hostchange - allow users of the web frontend to change the MPD host
 media-tv/kodi:airplay - Enable AirPlay support
@@ -38,6 +39,8 @@ net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ apple
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
+sys-kernel/pf-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
+sys-kernel/pf-sources:experimental - Apply patches that are considered experimental. For more information, check out the ChangeLog or the ebuild that interests you.
 x11-themes/arc:cinnamon - Enable support for Cinnamon
 x11-themes/arc:dark - Install the Dark theme
 x11-themes/arc:darker - Install the Darker theme

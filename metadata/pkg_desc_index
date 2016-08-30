@@ -20,6 +20,7 @@ media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Expre
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/gimp-gmic 1.7.4: G'MIC GIMP plugin
 media-plugins/midifilter-lv2 0.4.4: LV2 plugins to filter MIDI events
+media-sound/ardour 5.3 9999: Digital Audio Workstation
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
 media-sound/ympd 1.3.0: Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 media-tv/kodi 16.1: Kodi is a free and open source media-player and entertainment hub
@@ -37,6 +38,7 @@ net-wireless/unifi 5.0.7-r1: Management Controller for Ubiquiti Networks UniFi A
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session starter
 sys-fs/udiskie 1.5.1: An automatic disk mounting service using udisks
+sys-kernel/pf-sources 4.7_p2: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
 www-client/qutebrowser 0.8.2 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 www-plugins/pdfjs 1.4.20: a general-purpose, web standards-based platform for parsing and rendering PDFs
 x11-misc/awf 1.3.1: A Widget Factory
