@@ -26,7 +26,7 @@ SRC_URI="
 
 LICENSE="PMS-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="pax_kernel systemd"
 
 DEPEND="
