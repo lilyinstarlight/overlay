@@ -8,8 +8,8 @@ inherit eutils unpacker versionator
 
 DESCRIPTION="Editor for the Unity game engine"
 HOMEPAGE="http://unity3d.com/"
-DATE="20160727"
-RELEASE="f3"
+DATE="20160810"
+RELEASE="p1"
 SRC_URI="http://download.unity3d.com/download_unity/linux/${PN}-$(get_version_component_range 1-3)${RELEASE}+${DATE}_amd64.deb"
 
 LICENSE="Unity-EULA"
