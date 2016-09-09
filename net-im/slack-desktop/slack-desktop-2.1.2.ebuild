@@ -6,7 +6,7 @@ EAPI=6
 
 inherit eutils unpacker
 
-DESCRIPTION="Plex Media Server is an organizer for your media and provides streaming over the web and to devices"
+DESCRIPTION="Slack is a messaging app for teams"
 HOMEPAGE="https://slack.com/"
 SRC_URI="
 	x86? (
