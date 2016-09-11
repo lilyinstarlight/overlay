@@ -35,12 +35,12 @@ media-tv/plex-media-server:pax_kernel - Mark the necessary executables for use u
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.
 media-video/obs-studio:pulseaudio - Enable audio capture from the PulseAudio sound server.
-net-firewall/firewalld:gui - Builds and installs GUI configurator and GTK+ applet
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
 sys-kernel/pf-sources:deblob - Remove binary blobs from kernel sources to provide libre license compliance.
 sys-kernel/pf-sources:experimental - Apply patches that are considered experimental. For more information, check out the ChangeLog or the ebuild that interests you.
+x11-misc/lemonbar:sm - Enable support for monitor selection.
 x11-themes/arc:cinnamon - Enable support for Cinnamon
 x11-themes/arc:dark - Install the Dark theme
 x11-themes/arc:darker - Install the Darker theme
