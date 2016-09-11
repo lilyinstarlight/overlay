@@ -11,12 +11,14 @@ HOMEPAGE="https://github.com/LemonBoy/bar"
 #MY_PN="bar"
 #MY_P="${MY_PN}-${PV}"
 #SRC_URI="https://github.com/LemonBoy/bar/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-EGIT_REPO_URI="https://github.com/krypt-n/bar.git"
+EGIT_REPO_URI="https://github.com/osense/bar.git"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="xft"
+IUSE="sm xft"
+
+REQUIRED_USE="sm? ( xft )"
 
 CDEPEND="
 	x11-libs/libxcb
@@ -33,7 +35,9 @@ RDEPEND="
 #S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if use xft; then
+	if use sm; then
+		EGIT_COMMIT="6953c4f"
+	elif use xft; then
 		EGIT_COMMIT="a43b801"
 	else
 		EGIT_COMMIT="c788534"
