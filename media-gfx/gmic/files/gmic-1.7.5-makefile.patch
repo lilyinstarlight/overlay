@@ -8,9 +8,9 @@
 +	@./gmic gmic_stdlib.gmic raw:gmic_stdlib.gmic,char -compress_gmic_cli 1 -a y -serialize char,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_stdlib/' >> gmic_stdlib.h
  	@echo "#else" >> gmic_stdlib.h
 -	@\gmic gmic_stdlib.gmic raw:gmic_stdlib.gmic,char -compress_gmic_gimp 1 -a y -serialize char,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_stdlib/' >> gmic_stdlib.h
--	@\gmic -v - ../html/img/logoGMIC.ppm -permute cxyz -serialize uchar,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_logo/' >> gmic_stdlib.h
+-	@\gmic -v - ../html/img/gimp_logos.png -serialize uchar,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_logo/' >> gmic_stdlib.h
 +	@./gmic gmic_stdlib.gmic raw:gmic_stdlib.gmic,char -compress_gmic_gimp 1 -a y -serialize char,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_stdlib/' >> gmic_stdlib.h
-+	@./gmic -v - ../html/img/logoGMIC.ppm -permute cxyz -serialize uchar,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_logo/' >> gmic_stdlib.h
++	@./gmic -v - ../html/img/gimp_logos.png -serialize uchar,1,0 -o -.h,uchar | sed 's/unsigned char/const unsigned char/' | sed 's/unnamed/gmic_logo/' >> gmic_stdlib.h
  	@echo "const unsigned long size_data_gmic_logo = (unsigned long)sizeof(data_gmic_logo);" >> gmic_stdlib.h
  	@echo "#endif" >> gmic_stdlib.h
  	@echo "const unsigned long size_data_gmic_stdlib = (unsigned long)sizeof(data_gmic_stdlib);" >> gmic_stdlib.h
@@ -46,21 +46,21 @@
  	mkdir -p $(DESTDIR)$(USR)/$(INCLUDE)/
  	cp -f gmic.h $(DESTDIR)$(USR)/$(INCLUDE)/
 -	cp -f gmic_libc.h $(DESTDIR)$(USR)/$(INCLUDE)/
-+	@if [ -f gmic_libc.h ]; then cp -f gmic_libc.h $(DESTDIR)$(USR)/$(INCLUDE)/; fi
++	if [ -f gmic_libc.h ]; then cp -f gmic_libc.h $(DESTDIR)$(USR)/$(INCLUDE)/; fi
  
  ifneq ($(OS),Darwin)
  	mkdir -p $(DESTDIR)$(USR)/share
 @@ -607,16 +610,20 @@
- 	cp -f libgmic.so $(DESTDIR)$(USR)/$(LIB)/libgmic.so.1.7.4
- 	ln -fs libgmic.so.1.7.4 $(DESTDIR)$(USR)/$(LIB)/libgmic.so.1
+ 	cp -f libgmic.so $(DESTDIR)$(USR)/$(LIB)/libgmic.so.1.7.5
+ 	ln -fs libgmic.so.1.7.5 $(DESTDIR)$(USR)/$(LIB)/libgmic.so.1
  	ln -fs libgmic.so.1 $(DESTDIR)$(USR)/$(LIB)/libgmic.so
--	cp -f libcgmic.so $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1.7.4
--	ln -fs libcgmic.so.1.7.4 $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1
+-	cp -f libcgmic.so $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1.7.5
+-	ln -fs libcgmic.so.1.7.5 $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1
 -	ln -fs libcgmic.so.1 $(DESTDIR)$(USR)/$(LIB)/libcgmic.so
 -	cp -f ../zart/zart $(DESTDIR)$(USR)/$(BIN)/
 +	@if [ -f libcgmic.so ]; then \
-+		cp -f libcgmic.so $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1.7.4; \
-+		ln -fs libcgmic.so.1.7.4 $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1; \
++		cp -f libcgmic.so $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1.7.5; \
++		ln -fs libcgmic.so.1.7.5 $(DESTDIR)$(USR)/$(LIB)/libcgmic.so.1; \
 +		ln -fs libcgmic.so.1 $(DESTDIR)$(USR)/$(LIB)/libcgmic.so; \
 +	fi
 +	@if [ -f ../zart/zart ]; then cp -f ../zart/zart $(DESTDIR)$(USR)/$(BIN)/; fi
