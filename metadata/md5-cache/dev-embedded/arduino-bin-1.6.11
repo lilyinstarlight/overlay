@@ -1,4 +1,4 @@
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install
 DESCRIPTION=electronics prototyping platform based on easy-to-use hardware and software
 EAPI=6
 HOMEPAGE=https://www.arduino.cc/
@@ -7,6 +7,6 @@ LICENSE=GPL-2 LGPL-2.1
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=amd64? ( https://downloads.arduino.cc/arduino-1.6.11-linux64.tar.xz -> arduino-1.6.11-linux64.tar.xz ) x86? ( https://downloads.arduino.cc/arduino-1.6.11-linux32.tar.xz -> arduino-1.6.11-linux32.tar.xz )
-_eclass_exported_funcs=src_unpack:- src_install:-
+_eclass_exported_funcs=src_install:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	6198c04daba0e1307bd844df7d37f423
-_md5_=70363acf2c3792c13b3384fc2bedf46b
+_md5_=eda1ffe19313d420e30a8c208f7f9614
