@@ -27,10 +27,6 @@ S="${WORKDIR}/${MY_P}"
 
 RESTRICT="binchecks strip"
 
-src_unpack() {
-	unpack "${MY_P}"-linux64.tar.xz
-}
-
 src_install() {
 	newicon lib/arduino.png "${MY_PN}".png
 	make_desktop_entry "${MY_PN}" Arduino "${MY_PN}"
