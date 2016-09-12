@@ -123,6 +123,12 @@ Packages
 #### Git LFS [dev-vcs/git-lfs]
 [Git LFS](https://git-lfs.github.com/) is a git extension for versioning large files via text pointers to a large file database.
 
+#### Arduino [dev-embedded/arduino-bin]
+[Arduino](https://www.arduino.cc/) is an electronics prototyping platform designed from easy-to-use hardware and software.
+
+#### Teensyduino [dev-embedded/teensyduino-bin]
+[Teensyduino](https://www.pjrc.com/teensy/teensyduino.html) is a modified Arduino environment that supports the Teensy line on boards.
+
 #### Energia [dev-embedded/energia-bin]
 [Energia](http://energia.nu/) is an electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on [Wiring](http://www.wiring.org.co/) and [Arduino](https://www.arduino.cc/).
 
