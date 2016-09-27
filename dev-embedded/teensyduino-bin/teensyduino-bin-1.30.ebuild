@@ -43,7 +43,7 @@ RDEPEND=""
 
 S="${WORKDIR}/${ARDUINO_P}"
 
-RESTRICT="binchecks strip"
+RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
 	if use amd64; then
