@@ -147,3 +147,8 @@ Packages
 
 #### Arc Theme [x11-themes/arc]
 [arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elemnts for GTK+2, GTK+3, and Gnome Shell with support for a variety of desktop environments.
+
+### Analysis
+
+#### DMitry [net-analyzer/DMitry]
+[DMitry](http://mor-pah.net/software/dmitry-deepmagic-information-gathering-tool/) is the Deepmagic Information Gathering Tool.
