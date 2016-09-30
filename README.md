@@ -132,9 +132,6 @@ Packages
 #### Energia [dev-embedded/energia-bin]
 [Energia](http://energia.nu/) is an electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on [Wiring](http://www.wiring.org.co/) and [Arduino](https://www.arduino.cc/).
 
-#### Slack Desktop [net-im/slack-desktop]
-[Slack](https://slack.com/) is a team-oriented messaging application. This ebuild installs the binary for the desktop client.
-
 ### Libraries
 
 #### Chipmunk2D [sci-physics/chipmunk]
@@ -152,3 +149,6 @@ Packages
 
 #### DMitry [net-analyzer/DMitry]
 [DMitry](http://mor-pah.net/software/dmitry-deepmagic-information-gathering-tool/) is the Deepmagic Information Gathering Tool.
+
+#### Nikto2 [net-analyzer/nikto]
+[Nikto2](https://cirt.net/Nikto2) is a web server scanner that performs comprehensive tests to find vulnerabilities.
