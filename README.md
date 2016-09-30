@@ -152,3 +152,6 @@ Packages
 
 #### DMitry [net-analyzer/DMitry]
 [DMitry](http://mor-pah.net/software/dmitry-deepmagic-information-gathering-tool/) is the Deepmagic Information Gathering Tool.
+
+#### Nikto2 [net-analyzer/nikto]
+[Nikto2](https://cirt.net/Nikto2) is a web server scanner that performs comprehensive tests to find vulnerabilities.
