@@ -147,7 +147,7 @@ Packages
 
 ### Analysis
 
-#### DMitry [net-analyzer/DMitry]
+#### DMitry [net-analyzer/dmitry]
 [DMitry](http://mor-pah.net/software/dmitry-deepmagic-information-gathering-tool/) is the Deepmagic Information Gathering Tool.
 
 #### Nikto2 [net-analyzer/nikto]
