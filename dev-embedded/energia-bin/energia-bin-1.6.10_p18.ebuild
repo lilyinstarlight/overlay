@@ -29,7 +29,7 @@ RDEPEND="sys-devel/gcc[multilib]"
 
 S="${WORKDIR}/${MY_P}"
 
-RESTRICT="binchecks strip"
+RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
 	unpack "${MY_P}"-linux64.tar.xz
