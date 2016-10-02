@@ -39,16 +39,11 @@ Packages
 [shairplay](https://github.com/juhovh/shairplay) is an implementation of the Apple AirPlay and RAOP protocols.
 
 #### ympd [media-sound/ympd]
+
 [ympd](https://www.ympd.org/) is a standalone MPD web GUI written in C, utilizing websockets and Bootstrap/JS.
 
 #### G'MIC [media-gfx/gmic, media-plugins/gimp-gmic]
 [G'MIC](http://gmic.eu/) is a framework for image processing. It includes an optional GIMP plugin.
-
-#### Ardour [media-sound/ardour]
-[Ardour](http://ardour.org/) is a digital audio workstation.
-
-#### MuseScore [media-sound/musescore]
-[MuseScore](http://musescore.org/) is a WYSIWYG music score typesetter.
 
 
 ### Games
@@ -137,6 +132,9 @@ Packages
 #### Energia [dev-embedded/energia-bin]
 [Energia](http://energia.nu/) is an electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on [Wiring](http://www.wiring.org.co/) and [Arduino](https://www.arduino.cc/).
 
+#### Slack Desktop [net-im/slack-desktop]
+[Slack](https://slack.com/) is a team-oriented messaging application. This ebuild installs the binary for the desktop client.
+
 ### Libraries
 
 #### Chipmunk2D [sci-physics/chipmunk]
@@ -149,11 +147,3 @@ Packages
 
 #### Arc Theme [x11-themes/arc]
 [arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elemnts for GTK+2, GTK+3, and Gnome Shell with support for a variety of desktop environments.
-
-### Analysis
-
-#### DMitry [net-analyzer/dmitry]
-[DMitry](http://mor-pah.net/software/dmitry-deepmagic-information-gathering-tool/) is the Deepmagic Information Gathering Tool.
-
-#### Nikto2 [net-analyzer/nikto]
-[Nikto2](https://cirt.net/Nikto2) is a web server scanner that performs comprehensive tests to find vulnerabilities.

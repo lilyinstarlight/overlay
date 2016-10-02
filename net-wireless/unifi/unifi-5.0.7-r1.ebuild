@@ -24,7 +24,7 @@ RDEPEND="
 
 S="${WORKDIR}/${MY_PN}"
 
-RESTRICT="bindist mirror preserve-libs"
+RESTRICT="mirror preserve-libs"
 QA_PREBUILT="*"
 
 pkg_setup() {

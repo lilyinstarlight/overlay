@@ -25,7 +25,7 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
-RESTRICT="binchecks preserve-libs strip"
+RESTRICT="binchecks strip"
 
 src_install() {
 	newicon lib/arduino.png "${MY_PN}".png
