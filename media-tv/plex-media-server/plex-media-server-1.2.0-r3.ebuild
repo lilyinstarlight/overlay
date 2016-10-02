@@ -10,8 +10,8 @@ DESCRIPTION="Plex Media Server is an organizer for your media and provides strea
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-BUILD="2765"
-COMMIT="2d034d4"
+BUILD="2838"
+COMMIT="a68e2fe"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}_${MY_PV}"
 
@@ -27,7 +27,7 @@ SRC_URI="
 LICENSE="PMS-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="pax_kernel systemd"
+IUSE="pax_kernel"
 
 DEPEND="
 	net-dns/avahi
@@ -80,9 +80,7 @@ src_install() {
 	# init files
 	doinitd "${FILESDIR}"/plexmediaserver
 
-	if use systemd; then
-		systemd_dounit "${FILESDIR}"/plexmediaserver.service
-	fi
+	systemd_dounit "${FILESDIR}"/plexmediaserver.service
 
 	# directories
 	dodir /var/lib/plexmediaserver
