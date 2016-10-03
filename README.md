@@ -110,6 +110,9 @@ Packages
 #### petty [sys-apps/petty]
 [petty](https://github.com/fkmclane/petty), short for practically enhanced tty, is a tty session starter.
 
+#### Teleconsole [app-misc/teleconsole-bin]
+[Teleconsole](https://teleconsole.com/) is a command line tool to share your UNIX terminal and forward local TCP ports to people you trust.
+
 
 ### Administration
 
