@@ -1,6 +1,7 @@
 app-admin/linode-cli 1.4.7: Command-line interface to the Linode platform
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 3: a cure for cron's chronic email problem
+app-misc/teleconsole-bin 0.3.1: command line tool to share your UNIX terminal
 app-misc/tty-clock 20150318: analog clock in ncurses
 dev-embedded/arduino-bin 1.6.11: electronics prototyping platform based on easy-to-use hardware and software
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
