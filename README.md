@@ -113,6 +113,9 @@ Packages
 #### Teleconsole [app-misc/teleconsole-bin]
 [Teleconsole](https://teleconsole.com/) is a command line tool to share your UNIX terminal and forward local TCP ports to people you trust.
 
+#### Wemux [app-misc/wemux]
+[Wemux](https://github.com/zolrath/wemux) is multi-user tmux made easy.
+
 
 ### Administration
 
