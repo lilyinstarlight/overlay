@@ -39,14 +39,3 @@ net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
 x11-misc/lemonbar:sm - Enable support for monitor selection.
-x11-themes/arc:cinnamon - Enable support for Cinnamon
-x11-themes/arc:dark - Install the Dark theme
-x11-themes/arc:darker - Install the Darker theme
-x11-themes/arc:gnome-shell - Enable support for Gnome Shell
-x11-themes/arc:gtk2 - Enable the GTK+2 theme
-x11-themes/arc:gtk3 - Enable the GTK+3 theme
-x11-themes/arc:light - Install the Light theme
-x11-themes/arc:metacity - Enable support for Metacity
-x11-themes/arc:transparency - Utilize transparency in the GTK+3 theme
-x11-themes/arc:unity - Enable support for Unity
-x11-themes/arc:xfwm - Enable support for XFWM
