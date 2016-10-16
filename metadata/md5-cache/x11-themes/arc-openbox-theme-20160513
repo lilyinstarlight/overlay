@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Openbox theme created to fit in nicely with the Arc GTK theme
+EAPI=6
+HOMEPAGE=https://github.com/dglava/arc-openbox
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://github.com/dglava/arc-openbox/archive/e6df05c592f7bef1e7a521a7f4df7c7e8424cbd1.tar.gz -> arc-openbox-theme-20160513.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=92aabc92a150484cd29aab1878b5adb6
