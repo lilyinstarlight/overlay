@@ -43,7 +43,7 @@ sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portab
 sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session starter
 sys-fs/exfat-nofuse 20160519: Non-fuse kernel driver for exFat and VFat file systems
 sys-fs/udiskie 1.5.1: An automatic disk mounting service using udisks
-sys-kernel/pf-sources 4.8_p1: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
+sys-kernel/pf-sources 4.8_p2: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
 www-client/qutebrowser 0.8.2 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 www-plugins/pdfjs 1.4.20: a general-purpose, web standards-based platform for parsing and rendering PDFs
 x11-misc/awf 1.3.1: A Widget Factory
