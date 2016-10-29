@@ -41,9 +41,6 @@ Packages
 #### ympd [media-sound/ympd]
 [ympd](https://www.ympd.org/) is a standalone MPD web GUI written in C, utilizing websockets and Bootstrap/JS.
 
-#### G'MIC [media-gfx/gmic, media-plugins/gimp-gmic]
-[G'MIC](http://gmic.eu/) is a framework for image processing. It includes an optional GIMP plugin.
-
 #### Ardour [media-sound/ardour]
 [Ardour](http://ardour.org/) is a digital audio workstation.
 
