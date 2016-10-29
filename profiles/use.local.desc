@@ -12,8 +12,6 @@ games-action/armagetronad-dedicated:auth - Enable armathentication support
 games-action/armagetronad-dedicated:fortress - Enable support for fortress game mode
 games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
-media-gfx/gmic:graphicsmagick - Enable support for many common image file formats using the GraphicsMagick++ library
-media-gfx/gmic:opencv - Enable support for webcams using the OpenCV library
 media-plugins/calf:experimental - Add support for experimental plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-sound/ardour:lv2 - Add support for Ladspa V2
