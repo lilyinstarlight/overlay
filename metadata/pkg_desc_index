@@ -39,6 +39,7 @@ net-wireless/create_ap 0.3: A script to create a NATed or bridged WiFi access po
 net-wireless/unifi 5.0.7-r1: Management Controller for Ubiquiti Networks UniFi APs
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session starter
+sys-firmware/edk2-ovmf 9999 20161104: EDK II Open Source UEFI Firmware
 sys-fs/exfat-nofuse 20160519: Non-fuse kernel driver for exFat and VFat file systems
 sys-fs/udiskie 1.5.1: An automatic disk mounting service using udisks
 sys-kernel/pf-sources 4.8_p5: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
