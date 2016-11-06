@@ -2,6 +2,8 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+dev-lang/crystal:xml - Use the dev-libs/libxml2 library to enable Crystal xml module
+dev-lang/crystal:yaml - Use the dev-libs/libyaml library to enable Crystal yaml module
 dev-util/unity-editor:android - Enable Android target support
 dev-util/unity-editor:webgl - Enable WebGL target support
 games-action/armagetronad:auth - Enable armathentication support

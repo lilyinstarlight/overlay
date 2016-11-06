@@ -7,6 +7,7 @@ app-misc/wemux 20150822: multi-user tmux made easy
 dev-embedded/arduino-bin 1.6.11: electronics prototyping platform based on easy-to-use hardware and software
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
 dev-embedded/teensyduino-bin 1.30: USB-based electronics prototyping platform compatible with Arduino
+dev-lang/crystal 0.19.4-r1: The Crystal Programming Language
 dev-python/progressbar2 3.10.0: text progress bar library for Python
 dev-python/python-utils 2.0.0: a collection of small functions and classes which make common patterns shorter and easier
 dev-python/pyusb 1.0.0_beta1: USB support for Python
