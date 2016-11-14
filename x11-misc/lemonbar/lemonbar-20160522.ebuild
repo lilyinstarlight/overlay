@@ -36,11 +36,11 @@ RDEPEND="
 
 pkg_setup() {
 	if use sm; then
-		EGIT_COMMIT="6953c4f"
+		EGIT_COMMIT="1b9b3cb"
 	elif use xft; then
-		EGIT_COMMIT="a43b801"
+		EGIT_COMMIT="043ad47"
 	else
-		EGIT_COMMIT="c788534"
+		EGIT_COMMIT="d680ea4"
 	fi
 }
 
