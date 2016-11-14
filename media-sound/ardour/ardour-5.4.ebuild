@@ -5,18 +5,17 @@
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE='threads(+)'
-#EPYTHON='python2.7'
 inherit eutils toolchain-funcs flag-o-matic python-any-r1 waf-utils
 
 DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
 
 if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="https://github.com/Ardour/ardour.git"
+	EGIT_REPO_URI="https://github.com/Ardour/${PN}.git"
 	inherit git-r3
 else
 	KEYWORDS="~amd64 ~x86"
-	#SRC_URI="https://github.com/Ardour/ardour/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	#SRC_URI="https://github.com/Ardour/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	SRC_URI="http://community.ardour.org/srctar -> ${P}.tar.bz2"
 	S="${WORKDIR}/Ardour-${PV}.0"
 fi
