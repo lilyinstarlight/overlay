@@ -4,7 +4,7 @@ app-misc/cronic 3: a cure for cron's chronic email problem
 app-misc/teleconsole-bin 0.3.1: command line tool to share your UNIX terminal
 app-misc/tty-clock 20150318: analog clock in ncurses
 app-misc/wemux 20150822: multi-user tmux made easy
-dev-embedded/arduino-bin 1.6.11: electronics prototyping platform based on easy-to-use hardware and software
+dev-embedded/arduino-bin 1.6.12: electronics prototyping platform based on easy-to-use hardware and software
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
 dev-embedded/teensyduino-bin 1.30: USB-based electronics prototyping platform compatible with Arduino
 dev-lang/crystal 0.19.4-r1: The Crystal Programming Language
@@ -12,7 +12,7 @@ dev-python/progressbar2 3.10.0: text progress bar library for Python
 dev-python/python-utils 2.0.0: a collection of small functions and classes which make common patterns shorter and easier
 dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-util/unity-editor 5.4.1 5.5.0_beta2: Editor for the Unity game engine
-dev-vcs/git-lfs 1.4.1: git extension for versioning large files
+dev-vcs/git-lfs 1.4.4: git extension for versioning large files
 games-action/armagetronad 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1-r1: A clone of the classic snake game on the terminal
@@ -40,10 +40,10 @@ net-wireless/create_ap 0.3: A script to create a NATed or bridged WiFi access po
 net-wireless/unifi 5.0.7-r1: Management Controller for Ubiquiti Networks UniFi APs
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session starter
-sys-firmware/edk2-ovmf 9999 20161104: EDK II Open Source UEFI Firmware
+sys-firmware/edk2-ovmf 9999 20161111: EDK II Open Source UEFI Firmware
 sys-fs/exfat-nofuse 20160519: Non-fuse kernel driver for exFat and VFat file systems
 sys-fs/udiskie 1.5.1: An automatic disk mounting service using udisks
-sys-kernel/pf-sources 4.8_p5: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
+sys-kernel/pf-sources 4.8_p7: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
 www-client/qutebrowser 0.8.4 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 www-plugins/pdfjs 1.5.188: a general-purpose, web standards-based platform for parsing and rendering PDFs
 x11-misc/awf 1.3.1: A Widget Factory
