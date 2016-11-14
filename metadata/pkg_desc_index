@@ -8,15 +8,15 @@ dev-embedded/arduino-bin 1.6.12: electronics prototyping platform based on easy-
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
 dev-embedded/teensyduino-bin 1.30: USB-based electronics prototyping platform compatible with Arduino
 dev-lang/crystal 0.19.4-r1: The Crystal Programming Language
-dev-python/progressbar2 3.10.0: text progress bar library for Python
+dev-python/progressbar2 3.11.0: text progress bar library for Python
 dev-python/python-utils 2.0.0: a collection of small functions and classes which make common patterns shorter and easier
 dev-python/pyusb 1.0.0_beta1: USB support for Python
-dev-util/unity-editor 5.4.1 5.5.0_beta2: Editor for the Unity game engine
+dev-util/unity-editor 5.4.1 5.5.0_beta5: Editor for the Unity game engine
 dev-vcs/git-lfs 1.4.4: git extension for versioning large files
 games-action/armagetronad 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1-r1: A clone of the classic snake game on the terminal
-games-board/cockatrice 20160630: A cross-platform virtual tabletop for multiplayer card games
+games-board/cockatrice 20161030: A cross-platform virtual tabletop for multiplayer card games
 games-misc/nyancat 1.5.1-r1: nyancat rendered in your terminal
 games-misc/pipes 1.2.0: animated pipes terminal screensaver
 media-gfx/maim 3.4.47: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
@@ -31,13 +31,13 @@ media-tv/kodi 16.1: Kodi is a free and open source media-player and entertainmen
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
 media-tv/plex-media-player 1.1.6 9999: next generation Plex client
 media-tv/plex-media-server 1.2.0-r3 1.2.7: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
-media-video/obs-studio 0.15.4: software for recording and streaming live video content
+media-video/obs-studio 0.16.5: software for recording and streaming live video content
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
 net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format
 net-misc/shairplay 20160101: Apple airplay and raop protocol server
 net-p2p/zget 0.11: zeroconf based peer to peer file transfer
-net-wireless/create_ap 0.3: A script to create a NATed or bridged WiFi access point
-net-wireless/unifi 5.0.7-r1: Management Controller for Ubiquiti Networks UniFi APs
+net-wireless/create_ap 0.4.3: A script to create a NATed or bridged WiFi access point
+net-wireless/unifi 5.2.9: Management Controller for Ubiquiti Networks UniFi APs
 sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
 sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session starter
 sys-firmware/edk2-ovmf 9999 20161111: EDK II Open Source UEFI Firmware
@@ -47,7 +47,7 @@ sys-kernel/pf-sources 4.8_p7: Linux kernel fork with new features (-ck patchset 
 www-client/qutebrowser 0.8.4 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 www-plugins/pdfjs 1.5.188: a general-purpose, web standards-based platform for parsing and rendering PDFs
 x11-misc/awf 1.3.1: A Widget Factory
-x11-misc/lemonbar 20160119: a featherweight, lemon-scented, bar based on xcb
+x11-misc/lemonbar 20160522: a featherweight, lemon-scented, bar based on xcb
 x11-misc/slop 4.3.21: slop (Select Operation) is an application that queries the user for a selection and prints it out
 x11-themes/arc-openbox-theme 20160513: Openbox theme created to fit in nicely with the Arc GTK theme
 x11-wm/bspwm 0.9.2: Tiling window manager based on binary space partitioning

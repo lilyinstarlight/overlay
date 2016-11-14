@@ -11,4 +11,4 @@ REQUIRED_USE=sm? ( xft )
 SLOT=0
 _eclass_exported_funcs=pkg_setup:- src_unpack:git-r3 src_prepare:-
 _eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	git-r3	e928b84a9f6f1d9076d1d27687876dc6	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=699fe8dcd1a387ee20d6946e50bca253
+_md5_=cddb2d873b27252be28c0c42b5f2f6ff
