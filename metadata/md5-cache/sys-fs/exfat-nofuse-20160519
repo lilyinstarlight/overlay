@@ -1,5 +1,5 @@
-DEFINED_PHASES=compile install postinst postrm preinst prepare setup unpack
-DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) >=dev-vcs/git-1.8.2.1
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup
+DEPEND=kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=Non-fuse kernel driver for exFat and VFat file systems
 EAPI=6
 HOMEPAGE=https://github.com/dorimanx/exfat-nofuse
@@ -8,6 +8,7 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=kernel_linux? ( virtual/modutils )
 SLOT=0
-_eclass_exported_funcs=pkg_preinst:linux-mod pkg_postrm:linux-mod pkg_postinst:linux-mod pkg_setup:linux-mod src_unpack:git-r3 src_prepare:- src_compile:- src_install:linux-mod
-_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	git-r3	e928b84a9f6f1d9076d1d27687876dc6	linux-info	fd1e29abbb02cbc49f1a14299846e9c4	linux-mod	4755518412586c2fd655ff6e55780bcb	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=02fe2f62e9e6a4b4bcd26680d8576828
+SRC_URI=https://github.com/dorimanx/exfat-nofuse/archive/051167ceccbe75d9d77fc4f5356f5a39a01779e8.tar.gz -> exfat-nofuse-20160519.tar.gz
+_eclass_exported_funcs=pkg_preinst:linux-mod pkg_postrm:linux-mod pkg_postinst:linux-mod pkg_setup:linux-mod src_prepare:- src_compile:- src_install:linux-mod
+_eclasses_=eutils	b83a2420b796f7c6eff682679d08fe25	linux-info	fd1e29abbb02cbc49f1a14299846e9c4	linux-mod	4755518412586c2fd655ff6e55780bcb	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=74a3224dd8f137ff51eef33a2925c1a5
