@@ -4,18 +4,20 @@
 
 EAPI=6
 
-inherit linux-mod git-r3
+inherit linux-mod
 
 DESCRIPTION="Non-fuse kernel driver for exFat and VFat file systems"
 HOMEPAGE="https://github.com/dorimanx/exfat-nofuse"
 
-EGIT_REPO_URI="git://github.com/dorimanx/exfat-nofuse.git"
-EGIT_COMMIT="051167c"
+COMMIT="051167ceccbe75d9d77fc4f5356f5a39a01779e8"
+SRC_URI="https://github.com/dorimanx/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+S="${WORKDIR}/${PN}-${COMMIT}"
 
 MODULE_NAMES="exfat(kernel/fs:${S})"
 BUILD_TARGETS="all"
