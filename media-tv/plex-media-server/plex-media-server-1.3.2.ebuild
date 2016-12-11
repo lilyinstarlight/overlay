@@ -79,7 +79,6 @@ src_install() {
 
 	# init files
 	doinitd "${FILESDIR}"/plexmediaserver
-
 	systemd_dounit "${FILESDIR}"/plexmediaserver.service
 
 	# directories

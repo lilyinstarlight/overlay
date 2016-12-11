@@ -27,7 +27,7 @@ SRC_URI="
 LICENSE="PMS-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="pax_kernel systemd"
+IUSE="pax_kernel"
 
 DEPEND="
 	net-dns/avahi
@@ -79,10 +79,7 @@ src_install() {
 
 	# init files
 	doinitd "${FILESDIR}"/plexmediaserver
-
-	if use systemd; then
-		systemd_dounit "${FILESDIR}"/plexmediaserver.service
-	fi
+	systemd_dounit "${FILESDIR}"/plexmediaserver.service
 
 	# directories
 	dodir /var/lib/plexmediaserver
