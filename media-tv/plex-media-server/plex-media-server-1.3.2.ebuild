@@ -10,8 +10,8 @@ DESCRIPTION="Plex Media Server is an organizer for your media and provides strea
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-BUILD="2838"
-COMMIT="a68e2fe"
+BUILD="3112"
+COMMIT="1751929"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}_${MY_PV}"
 
@@ -26,7 +26,7 @@ SRC_URI="
 
 LICENSE="PMS-EULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="pax_kernel"
 
 DEPEND="

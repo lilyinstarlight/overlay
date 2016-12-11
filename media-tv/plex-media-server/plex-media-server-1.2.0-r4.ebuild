@@ -6,12 +6,12 @@ EAPI=6
 
 inherit eutils pax-utils systemd unpacker user
 
-DESCRIPTION="Plex Media Server is an organizer for your media and provides streaming over the web and to devices"
+DESCRIPTION="Plex Media Server is an organizer for your media and provides streaming over the web and to devices, DVR Edition"
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-BUILD="2987"
-COMMIT="1bef33a"
+BUILD="3114"
+COMMIT="de38375"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}_${MY_PV}"
 
@@ -26,8 +26,8 @@ SRC_URI="
 
 LICENSE="PMS-EULA"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
-IUSE="pax_kernel"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="pax_kernel systemd"
 
 DEPEND="
 	net-dns/avahi
@@ -80,7 +80,9 @@ src_install() {
 	# init files
 	doinitd "${FILESDIR}"/plexmediaserver
 
-	systemd_dounit "${FILESDIR}"/plexmediaserver.service
+	if use systemd; then
+		systemd_dounit "${FILESDIR}"/plexmediaserver.service
+	fi
 
 	# directories
 	dodir /var/lib/plexmediaserver
