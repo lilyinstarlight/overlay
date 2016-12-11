@@ -10,8 +10,8 @@ DESCRIPTION="Plex Media Server is an organizer for your media and provides strea
 HOMEPAGE="http://plex.tv/"
 
 MY_PN="plexmediaserver"
-BUILD="2987"
-COMMIT="1bef33a"
+BUILD="3112"
+COMMIT="1751929"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${MY_PN}_${MY_PV}"
 
@@ -79,7 +79,6 @@ src_install() {
 
 	# init files
 	doinitd "${FILESDIR}"/plexmediaserver
-
 	systemd_dounit "${FILESDIR}"/plexmediaserver.service
 
 	# directories
