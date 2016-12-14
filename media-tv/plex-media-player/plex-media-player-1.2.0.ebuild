@@ -9,30 +9,27 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-BUILD="408"
-COMMIT="7375112a"
-WEBCLIENT_VERSION="2.10.0"
-WEBCLIENT_BUILD="153"
-WEBCLIENT_COMMIT="f5036c1"
+BUILD="481"
+COMMIT="b45bbf24"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
-	https://nightlies.plex.tv/directdl/plex-dependencies/plex-web-client-plexmediaplayer/${WEBCLIENT_BUILD}/plex-web-client-pmp-${WEBCLIENT_VERSION}-${WEBCLIENT_COMMIT}.tbz2
 "
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 PMS-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cec joystick lirc"
+IUSE="cec +desktop joystick lirc"
 
-DEPEND="
+CDEPEND="
 	>=dev-qt/qtcore-5.6
 	>=dev-qt/qtnetwork-5.6
 	>=dev-qt/qtxml-5.6
 	>=dev-qt/qtwebchannel-5.6[qml]
 	>=dev-qt/qtwebengine-5.6
+	>=dev-qt/qtquickcontrols-5.6
 	>=media-video/mpv-0.11.0[libmpv]
 	virtual/opengl
 	x11-libs/libX11
@@ -46,6 +43,11 @@ DEPEND="
 		media-libs/libsdl2
 		virtual/libiconv
 	)
+"
+DEPEND="
+	${CDEPEND}
+
+	dev-util/conan
 "
 RDEPEND="
 	${DEPEND}
@@ -63,10 +65,19 @@ CMAKE_IN_SOURCE_BUILD=1
 
 src_unpack() {
 	unpack "${P}".tar.gz
+
+	cd "${S}"
+
+	sed -i -e 's/stable/public/g' conanfile.py
+
+	env HOME="${S}" conan remote add plex https://conan.plex.tv
+	env HOME="${S}" conan install -o include_desktop=$(usex desktop True False)
 }
 
+
 src_prepare() {
-	cp "${DISTDIR}"/plex-web-client-pmp-"${WEBCLIENT_VERSION}"-"${WEBCLIENT_COMMIT}".tbz2 "${S}"
+	sed -i -e '/^  install(FILES ${QTROOT}\/resources\/qtwebengine_devtools_resources.pak DESTINATION resources)$/d' src/CMakeLists.txt
+	sed -i -e 's/set(REQUIRED_QT_VERSION ".*")/set(REQUIRED_QT_VERSION "5.6.0")/' CMakeModules/QtConfiguration.cmake
 
 	cmake-utils_src_prepare
 
