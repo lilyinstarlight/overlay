@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-qt/qtcore-5.6 >=dev-qt/qtnetwork-5.6 >=dev-qt/qtxml-5.6 >=dev-qt/qtwebchannel-5.6[qml] >=dev-qt/qtwebengine-5.6 >=media-video/mpv-0.11.0[libmpv] virtual/opengl x11-libs/libX11 x11-libs/libXrandr cec? ( >=dev-libs/libcec-2.2.0 ) joystick? ( media-libs/libsdl2 virtual/libiconv ) >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12
+DEPEND=>=dev-qt/qtcore-5.6 >=dev-qt/qtnetwork-5.6 >=dev-qt/qtxml-5.6 >=dev-qt/qtwebchannel-5.6[qml] >=dev-qt/qtwebengine-5.6 >=dev-qt/qtquickcontrols-5.6 >=media-video/mpv-0.11.0[libmpv] virtual/opengl x11-libs/libX11 x11-libs/libXrandr cec? ( >=dev-libs/libcec-2.2.0 ) joystick? ( media-libs/libsdl2 virtual/libiconv ) dev-util/conan >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12
 DESCRIPTION=next generation Plex client
 EAPI=6
 HOMEPAGE=http://plex.tv/
-IUSE=cec joystick lirc
+IUSE=cec +desktop joystick lirc
 LICENSE=GPL-2
-RDEPEND=>=dev-qt/qtcore-5.6 >=dev-qt/qtnetwork-5.6 >=dev-qt/qtxml-5.6 >=dev-qt/qtwebchannel-5.6[qml] >=dev-qt/qtwebengine-5.6 >=media-video/mpv-0.11.0[libmpv] virtual/opengl x11-libs/libX11 x11-libs/libXrandr cec? ( >=dev-libs/libcec-2.2.0 ) joystick? ( media-libs/libsdl2 virtual/libiconv ) lirc? ( app-misc/lirc )
+RDEPEND=>=dev-qt/qtcore-5.6 >=dev-qt/qtnetwork-5.6 >=dev-qt/qtxml-5.6 >=dev-qt/qtwebchannel-5.6[qml] >=dev-qt/qtwebengine-5.6 >=dev-qt/qtquickcontrols-5.6 >=media-video/mpv-0.11.0[libmpv] virtual/opengl x11-libs/libX11 x11-libs/libXrandr cec? ( >=dev-libs/libcec-2.2.0 ) joystick? ( media-libs/libsdl2 virtual/libiconv ) lirc? ( app-misc/lirc )
 SLOT=0
-_eclass_exported_funcs=src_unpack:git-r3 src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
+_eclass_exported_funcs=src_unpack:- src_prepare:- src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
 _eclasses_=cmake-utils	16e40479aefbbed67ea20779992ab90e	eutils	b83a2420b796f7c6eff682679d08fe25	flag-o-matic	7366202dd55cb8f018f5d450d54e7749	git-r3	e928b84a9f6f1d9076d1d27687876dc6	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=33cd1fc3a4601950a981b38d9a095db4
+_md5_=47b9fb4d8f75540e34cabf3cb4ef1fb7

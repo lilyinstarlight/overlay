@@ -31,6 +31,7 @@ media-tv/kodi:sftp - Support browsing files over SFTP
 media-tv/kodi:texturepacker - Support packing skin textures
 media-tv/kodi:webserver - Enable internal webserver
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
+media-tv/plex-media-player:desktop - Enable support for the desktop web-client
 media-tv/plex-media-server:pax_kernel - Mark the necessary executables for use under a PaX kernel
 media-video/obs-studio:fdk - Use the media-sound/fdk-aaclibrary for AAC encoding.
 media-video/obs-studio:imagemagick - Use ImageMagick in place of ffmpeg for loading images.
