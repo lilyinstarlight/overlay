@@ -11,7 +11,7 @@ HOMEPAGE="http://plex.tv/"
 
 EGIT_REPO_URI="https://github.com/plexinc/plex-media-player.git"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 PMS-EULA"
 SLOT="0"
 KEYWORDS=""
 IUSE="cec +desktop joystick lirc"
