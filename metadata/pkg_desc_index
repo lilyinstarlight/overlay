@@ -33,6 +33,7 @@ media-tv/plex-media-player 1.2.0 9999: next generation Plex client
 media-tv/plex-media-server 1.2.0-r4 1.3.2: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
 media-video/obs-studio 0.16.5: software for recording and streaming live video content
 media-video/v4l2loopback 0.9.1: v4l2 loopback device which output is it's own input
+net-analyzer/nikto 2.1.6_p20161212: Web Server vulnerability scanner
 net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format
 net-misc/shairplay 20160101: Apple airplay and raop protocol server
 net-p2p/zget 0.11: zeroconf based peer to peer file transfer
