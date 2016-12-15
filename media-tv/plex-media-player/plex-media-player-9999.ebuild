@@ -17,12 +17,13 @@ KEYWORDS=""
 IUSE="cec +desktop joystick lirc"
 
 CDEPEND="
-	>=dev-qt/qtcore-5.6
-	>=dev-qt/qtnetwork-5.6
-	>=dev-qt/qtxml-5.6
-	>=dev-qt/qtwebchannel-5.6[qml]
-	>=dev-qt/qtwebengine-5.6
-	>=dev-qt/qtquickcontrols-5.6
+	>=dev-qt/qtcore-5.7
+	>=dev-qt/qtnetwork-5.7
+	>=dev-qt/qtxml-5.7
+	>=dev-qt/qtwebchannel-5.7[qml]
+	>=dev-qt/qtwebengine-5.7
+	>=dev-qt/qtdeclarative-5.7
+	>=dev-qt/qtx11extras-5.7
 	>=media-video/mpv-0.11.0[libmpv]
 	virtual/opengl
 	x11-libs/libX11
@@ -63,7 +64,6 @@ src_unpack() {
 
 src_prepare() {
 	sed -i -e '/^  install(FILES ${QTROOT}\/resources\/qtwebengine_devtools_resources.pak DESTINATION resources)$/d' src/CMakeLists.txt || die
-	sed -i -e 's/set(REQUIRED_QT_VERSION ".*")/set(REQUIRED_QT_VERSION "5.6.0")/' CMakeModules/QtConfiguration.cmake || die
 
 	cmake-utils_src_prepare
 
