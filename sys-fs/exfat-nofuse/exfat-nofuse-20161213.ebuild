@@ -9,7 +9,7 @@ inherit linux-mod
 DESCRIPTION="Non-fuse kernel driver for exFat and VFat file systems"
 HOMEPAGE="https://github.com/dorimanx/exfat-nofuse"
 
-COMMIT="051167ceccbe75d9d77fc4f5356f5a39a01779e8"
+COMMIT="a877c799d00eb0618aad15c6658650dac9a18a45"
 SRC_URI="https://github.com/dorimanx/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
@@ -24,8 +24,6 @@ BUILD_TARGETS="all"
 
 src_prepare(){
 	sed -i -e "/^KREL/,2d" Makefile || die
-
-	epatch "${FILESDIR}"/linux-4.8.patch
 
 	default
 }
