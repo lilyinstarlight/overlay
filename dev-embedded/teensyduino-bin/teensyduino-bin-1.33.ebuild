@@ -14,7 +14,7 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${PV}"
 
 ARDUINO_PN="arduino"
-ARDUINO_PV="1.6.12"
+ARDUINO_PV="1.6.13"
 ARDUINO_P="${ARDUINO_PN}-${ARDUINO_PV}"
 
 SRC_URI="
