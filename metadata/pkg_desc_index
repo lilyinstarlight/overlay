@@ -11,7 +11,7 @@ dev-lang/crystal 0.19.4-r1: The Crystal Programming Language
 dev-python/progressbar2 3.11.0: text progress bar library for Python
 dev-python/python-utils 2.0.0: a collection of small functions and classes which make common patterns shorter and easier
 dev-python/pyusb 1.0.0_beta1: USB support for Python
-dev-util/unity-editor 5.4.1 5.5.0_beta5: Editor for the Unity game engine
+dev-util/unity-editor 5.5.0 5.6.0_beta1: Editor for the Unity game engine
 dev-vcs/git-lfs 1.4.4: git extension for versioning large files
 games-action/armagetronad 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron - dedicated server
