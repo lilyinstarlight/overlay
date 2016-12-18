@@ -30,6 +30,12 @@ CDEPEND="
 	x11-libs/libX11
 	x11-libs/libXrandr
 
+	|| (
+		media-video/ffmpeg[openssl]
+		media-video/ffmpeg[gnutls]
+		media-video/ffmpeg[securetransport]
+	)
+
 	cec? (
 		<dev-libs/libcec-4.0.0
 	)
