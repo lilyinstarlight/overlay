@@ -9,8 +9,8 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-BUILD="481"
-COMMIT="b45bbf24"
+BUILD="494"
+COMMIT="7e6bbc6f"
 MY_PV="${PV}.${BUILD}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
@@ -69,8 +69,6 @@ src_unpack() {
 	unpack "${P}".tar.gz
 
 	cd "${S}"
-
-	sed -i -e 's/stable/public/g' conanfile.py
 
 	env HOME="${S}" conan remote add plex https://conan.plex.tv
 	env HOME="${S}" conan install -o include_desktop=$(usex desktop True False)
