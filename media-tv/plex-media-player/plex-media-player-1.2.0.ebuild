@@ -37,7 +37,7 @@ CDEPEND="
 	x11-libs/libXrandr
 
 	cec? (
-		>=dev-libs/libcec-2.2.0
+		<dev-libs/libcec-4.0.0
 	)
 
 	joystick? (
