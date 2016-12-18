@@ -58,9 +58,7 @@ RDEPEND="
 	)
 "
 
-CMAKE_MIN_VERSION="3.7.0"
-
-PATCHES=( "${FILESDIR}"/git-revision.patch )
+PATCHES=( "${FILESDIR}"/iconv-fix.patch "${FILESDIR}"/git-revision.patch )
 
 S="${WORKDIR}/${MY_P}"
 

@@ -51,7 +51,7 @@ RDEPEND="
 	)
 "
 
-CMAKE_MIN_VERSION="3.7.0"
+PATCHES=( "${FILESDIR}"/iconv-fix.patch )
 
 CMAKE_IN_SOURCE_BUILD=1
 
