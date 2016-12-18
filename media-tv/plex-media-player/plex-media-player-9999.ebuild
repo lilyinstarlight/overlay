@@ -23,6 +23,7 @@ CDEPEND="
 	>=dev-qt/qtwebchannel-5.7[qml]
 	>=dev-qt/qtwebengine-5.7
 	>=dev-qt/qtdeclarative-5.7
+	>=dev-qt/qtquickcontrols-5.7
 	>=dev-qt/qtx11extras-5.7
 	>=media-video/mpv-0.11.0[libmpv]
 	virtual/opengl
@@ -51,7 +52,7 @@ RDEPEND="
 	)
 "
 
-CMAKE_MIN_VERSION="3.7.0"
+PATCHES=( "${FILESDIR}"/iconv-fix.patch )
 
 CMAKE_IN_SOURCE_BUILD=1
 
