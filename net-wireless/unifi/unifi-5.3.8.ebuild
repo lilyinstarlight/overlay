@@ -29,7 +29,7 @@ QA_PREBUILT="*"
 
 pkg_setup() {
 	enewgroup unifi
-	enewuser unifi -1 /bin/sh /var/lib/unifi "unifi" --system
+	enewuser unifi -1 /bin/sh /var/lib/unifi "unifi"
 }
 
 src_install() {
