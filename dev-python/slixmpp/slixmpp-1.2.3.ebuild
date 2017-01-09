@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python{3_4,3_5} )
 
 inherit eutils distutils-r1
 
-DESCRIPTION="Python library for XMPP - non-threading fork"
+DESCRIPTION="Python library for XMPP - asyncio fork"
 HOMEPAGE="https://dev.louiz.org/projects/slixmpp"
 SRC_URI="https://dev.louiz.org/attachments/download/114/${P}.tar.gz"
 
