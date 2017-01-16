@@ -8,9 +8,13 @@ inherit eutils unpacker versionator
 
 DESCRIPTION="Editor for the Unity game engine"
 HOMEPAGE="http://unity3d.com/"
-DATE="20161125"
-RELEASE="f3"
-SRC_URI="http://download.unity3d.com/download_unity/linux/${PN}-$(get_version_component_range 1-3)${RELEASE}+${DATE}_amd64.deb"
+
+DOWNLOAD="59c25c92588f"
+
+RELEASE="$(get_version_component_range 4)"
+RELEASE="${RELEASE/beta/b}"
+
+SRC_URI="http://beta.unity3d.com/download/${DOWNLOAD}/${PN}_amd64-$(get_version_component_range 1-3)x${RELEASE}Linux.deb"
 
 LICENSE="Unity-EULA"
 SLOT="0"
@@ -34,6 +38,8 @@ RDEPEND="
 	dev-libs/glib:2
 	virtual/glu
 	x11-libs/gtk+:2
+	dev-dotnet/gtk-sharp
+	dev-dotnet/gnome-sharp
 	dev-libs/nspr
 	dev-libs/nss
 	x11-libs/pango
@@ -52,11 +58,11 @@ RDEPEND="
 	dev-db/postgresql
 	sys-apps/lsb-release
 	x11-misc/xdg-utils
+	net-libs/nodejs
 
 	android? (
 		virtual/ffmpeg
 		app-arch/gzip
-		net-libs/nodejs
 		virtual/jre:1.7
 	)
 
