@@ -40,6 +40,7 @@ RDEPEND="
 	x11-libs/gtk+:2
 	dev-dotnet/gtk-sharp
 	dev-dotnet/gnome-sharp
+	dev-lang/mono
 	dev-libs/nspr
 	dev-libs/nss
 	x11-libs/pango
@@ -56,7 +57,6 @@ RDEPEND="
 	sys-libs/zlib
 	media-libs/libpng
 	dev-db/postgresql
-	dev-libs/libpqxx
 	sys-apps/lsb-release
 	x11-misc/xdg-utils
 	net-libs/nodejs[npm]
