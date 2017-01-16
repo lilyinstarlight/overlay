@@ -54,15 +54,18 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXtst
 	sys-libs/zlib
-	media-libs/libpng:1.2
+	media-libs/libpng
 	dev-db/postgresql
+	dev-libs/libpqxx
 	sys-apps/lsb-release
 	x11-misc/xdg-utils
-	net-libs/nodejs
+	net-libs/nodejs[npm]
+	sys-apps/fakeroot
 
 	android? (
 		virtual/ffmpeg
 		app-arch/gzip
+		dev-util/android-sdk-update-manager
 		virtual/jre:1.7
 	)
 
