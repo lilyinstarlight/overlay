@@ -56,7 +56,6 @@ RDEPEND="
 	sys-libs/zlib
 	media-libs/libpng
 	dev-db/postgresql
-	dev-libs/libpqxx
 	sys-apps/lsb-release
 	x11-misc/xdg-utils
 	net-libs/nodejs[npm]
