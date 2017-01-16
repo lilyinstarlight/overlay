@@ -32,9 +32,9 @@ RDEPEND="${COMMON_DEPEND}
 	>=dev-python/jinja-2.8[${PYTHON_USEDEP}]
 	>=dev-python/pygments-2.1.3[${PYTHON_USEDEP}]
 	>=dev-python/pypeg2-2.15.2[${PYTHON_USEDEP}]
-	dev-python/PyQt5[${PYTHON_USEDEP},gui,network,printsupport,webkit,widgets]
+	dev-python/PyQt5[${PYTHON_USEDEP},declarative,gui,network,printsupport,webkit,widgets]
 	dev-python/sip[${PYTHON_USEDEP}]
-	>=dev-python/pyyaml-3.11[${PYTHON_USEDEP}]
+	>=dev-python/pyyaml-3.12[${PYTHON_USEDEP}]
 	gstreamer? ( dev-qt/qtwebkit:5[gstreamer] )
 	pdf? ( www-plugins/pdfjs )
 "
