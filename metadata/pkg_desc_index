@@ -25,6 +25,7 @@ games-misc/nyancat 1.5.1-r1: nyancat rendered in your terminal
 games-misc/pipes 1.2.0: animated pipes terminal screensaver
 media-gfx/maim 3.4.47: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
+media-libs/mesa 17.0.0_rc1: OpenGL-like graphic library for Linux
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/midifilter-lv2 0.4.5: LV2 plugins to filter MIDI events
 media-sound/ardour 5.4 9999: Digital Audio Workstation
@@ -48,7 +49,7 @@ sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session 
 sys-firmware/edk2-ovmf 9999 20161111: EDK II Open Source UEFI Firmware
 sys-fs/exfat-nofuse 20161213: Non-fuse kernel driver for exFat and VFat file systems
 sys-fs/udiskie 1.5.1: An automatic disk mounting service using udisks
-sys-kernel/pf-sources 4.9_p3: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
+sys-kernel/pf-sources 4.9_p4: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
 www-client/qutebrowser 0.9.1 9999: A keyboard-driven, vim-like browser based on PyQt5 and QtWebKit
 x11-misc/awf 1.3.1: A Widget Factory
 x11-misc/barline 0.1: a simple data collector and formatter for lemonbar and bspwm
