@@ -32,20 +32,8 @@ Packages
 #### midifilter.lv2 [media-plugins/midifilter-lv2]
 [midifilter.lv2](https://github.com/x42/midifilter.lv2/) is an LV2 plugin to filter MIDI events.
 
-#### Kodi [media-tv/kodi]
-[Kodi](http://kodi.tv/) is a free and open source media player and entertainment hub. This package includes support for an AirPlay server via the `airtunes` use flag.
-
-#### shairplay [net-misc/shairplay]
-[shairplay](https://github.com/juhovh/shairplay) is an implementation of the Apple AirPlay and RAOP protocols.
-
 #### ympd [media-sound/ympd]
 [ympd](https://www.ympd.org/) is a standalone MPD web GUI written in C, utilizing websockets and Bootstrap/JS.
-
-#### Ardour [media-sound/ardour]
-[Ardour](http://ardour.org/) is a digital audio workstation.
-
-#### MuseScore [media-sound/musescore]
-[MuseScore](http://musescore.org/) is a WYSIWYG music score typesetter.
 
 
 ### Games
@@ -89,23 +77,17 @@ Packages
 #### zget [net-p2p/zget]
 [zget](https://github.com/nils-werner/zget) is a zeroconf based peer to peer file transfer utility. It uses filenames to locate and transfer files instead of hostnames or IP addresses.
 
-#### Viewnior [media-gfx/viewnior]
-[Viewnior](https://github.com/xsisqox/Viewnior) is a fast and elegant image viewer. It is desktop environment agnostic and supports a basic set of image viewing and manipulation features.
-
-#### qutebrowser [www-client/qutebrowser]
-[qutebrowser](http://www.qutebrowser.org/) is a keyboard-driven, vim-like browser based on PyQt5 and QtWebKit. This package adds the 'pdf' use flag that pulls in pdfjs as a dependency.
-
 #### BlinkStick [app-misc/blinkstick]
 [BlinkStick](https://www.blinkstick.com/) is a class of smart USB LED controllers. This package contains the command line client and Python module.
-
-#### pdf.js [www-plugins/pdfjs]
-[pdf.js](http://mozilla.github.io/pdf.js/) is a general-purpose, web standards-based platform for parsing and rendering PDFs.
 
 #### udiskie [sys-fs/udiskie]
 [udiskie](https://github.com/coldfix/udiskie) is a udisks front-end for removable media such as CDs or flash drives.
 
 #### petty [sys-apps/petty]
 [petty](https://github.com/fkmclane/petty), short for practically enhanced tty, is a tty session starter.
+
+#### barline [x11-misc/barline]
+[barline](https://github.com/fkmclane/barline) is a data collector and bar generator for lemonbar.
 
 #### Teleconsole [app-misc/teleconsole-bin]
 [Teleconsole](https://teleconsole.com/) is a command line tool to share your UNIX terminal and forward local TCP ports to people you trust.
@@ -144,6 +126,12 @@ Packages
 
 #### Chipmunk2D [sci-physics/chipmunk]
 [Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
+
+#### Boto [dev-python/boto]
+[Boto](https://github.com/boto/boto/) is a Python interface to Amazon Web Services.
+
+#### SliXMPP [dev-python/slixmpp]
+[SliXMPP](https://dev.louiz.org/projects/slixmpp) is a Python library for XMPP. It is the asyncio fork of SleekXMPP
 
 ### GTK+
 

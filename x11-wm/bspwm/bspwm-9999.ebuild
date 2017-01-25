@@ -1,20 +1,17 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=6
-inherit toolchain-funcs
+inherit git-r3 toolchain-funcs
 
 DESCRIPTION="Tiling window manager based on binary space partitioning"
 HOMEPAGE="https://github.com/baskerville/bspwm/"
-SRC_URI="
-	https://github.com/baskerville/bspwm/archive/${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/baskerville/bspwm/commit/73be87d104cf7d7c292538d49e6952cdad73c07c.patch
-"
+EGIT_REPO_URI="https://github.com/baskerville/bspwm.git"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="examples"
 
 DEPEND="
@@ -25,8 +22,6 @@ DEPEND="
 RDEPEND="${DEPEND}
 	x11-misc/sxhkd
 "
-
-PATCHES="${DISTDIR}/73be87d104cf7d7c292538d49e6952cdad73c07c.patch"
 
 src_compile() {
 	emake PREFIX=/usr CC="$(tc-getCC)"
@@ -45,7 +40,7 @@ src_install() {
 	insinto /etc/xdg/sxhkd
 	doins examples/sxhkdrc
 
-	if use examples ; then
+	if use examples; then
 		dodoc -r examples
 		docompress -x /usr/share/doc/${PF}/examples
 	fi
