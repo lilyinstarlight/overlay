@@ -24,7 +24,6 @@ games-misc/nyancat 1.5.1-r1: nyancat rendered in your terminal
 games-misc/pipes 1.2.0: animated pipes terminal screensaver
 media-gfx/maim 3.4.47: maim (Make Image) takes screenshots of your desktop and is designed to be an improved scrot
 media-libs/libshairport 1.2.1.20121215: A library for emulating an AirPort Express
-media-libs/mesa 17.0.0_rc1: OpenGL-like graphic library for Linux
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/midifilter-lv2 0.4.5: LV2 plugins to filter MIDI events
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
