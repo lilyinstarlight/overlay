@@ -31,8 +31,8 @@ src_install() {
 	newicon lib/arduino.png "${MY_PN}".png
 	make_desktop_entry "${MY_PN}" Arduino "${MY_PN}"
 
-	mkdir -p "${D}"/opt/"${PN}"
-	cp -a * "${D}"/opt/"${PN}"
+	mkdir -p "${D}"/opt/"${PN}" || die
+	cp -a * "${D}"/opt/"${PN}" || die
 
 	make_wrapper ${MY_PN} "${EROOT}opt/${PN}/${MY_PN}" "${EROOT}opt/${PN}"
 }

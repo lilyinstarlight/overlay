@@ -26,9 +26,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i -e "s#/usr/local/etc#/etc#g" wemux
-
-	sed -i -e "16ihost_groups=(wemux)" wemux.conf.example
+	sed -i -e "s#/usr/local/etc#/etc#g" wemux || die
+	sed -i -e "16ihost_groups=(wemux)" wemux.conf.example || die
 
 	default
 }

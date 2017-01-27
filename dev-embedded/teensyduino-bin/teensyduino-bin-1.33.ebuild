@@ -47,22 +47,22 @@ RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
 	if use amd64; then
-		xdelta patch "${DISTDIR}/${MY_P}"-linux64.vcdiff "${DISTDIR}/${ARDUINO_P}"-linux64.tar.xz "${ARDUINO_P}"-teensy-linux64.tar.xz
+		xdelta patch "${DISTDIR}/${MY_P}"-linux64.vcdiff "${DISTDIR}/${ARDUINO_P}"-linux64.tar.xz "${ARDUINO_P}"-teensy-linux64.tar.xz || die
 		unpack "${WORKDIR}/${ARDUINO_P}"-teensy-linux64.tar.xz
 	else
-		xdelta patch "${DISTDIR}/${MY_P}"-linux32.vcdiff "${DISTDIR}/${ARDUINO_P}"-linux32.tar.xz "${ARDUINO_P}"-teensy-linux32.tar.xz
+		xdelta patch "${DISTDIR}/${MY_P}"-linux32.vcdiff "${DISTDIR}/${ARDUINO_P}"-linux32.tar.xz "${ARDUINO_P}"-teensy-linux32.tar.xz || die
 		unpack "${WORKDIR}/${ARDUINO_P}"-teensy-linux32.tar.xz
 	fi
 
-	cp "${DISTDIR}"/49-teensy.rules "${WORKDIR}"
+	cp "${DISTDIR}"/49-teensy.rules "${WORKDIR}" || die
 }
 
 src_install() {
 	newicon lib/arduino.png "${MY_PN}".png
 	make_desktop_entry "${MY_PN}" Teensyduino "${MY_PN}"
 
-	mkdir -p "${D}"/opt/"${PN}"
-	cp -a * "${D}"/opt/"${PN}"
+	mkdir -p "${D}"/opt/"${PN}" || die
+	cp -a * "${D}"/opt/"${PN}" || die
 
 	make_wrapper ${MY_PN} "${EROOT}opt/${PN}/${ARDUINO_PN}" "${EROOT}opt/${PN}"
 

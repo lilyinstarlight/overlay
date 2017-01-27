@@ -258,8 +258,6 @@ RESTRICT="
 	gpl? ( openssl? ( bindist ) fdk? ( bindist ) )
 "
 
-S="${WORKDIR}/${P}"
-
 PATCHES=( )
 
 MULTILIB_WRAPPED_HEADERS=(

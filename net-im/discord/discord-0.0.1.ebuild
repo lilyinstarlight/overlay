@@ -35,10 +35,10 @@ src_install() {
 	doicon Discord/discord.png
 	domenu Discord/discord.desktop
 
-	rm Discord/{discord.png,discord.desktop,postinst.sh}
+	rm Discord/{discord.png,discord.desktop,postinst.sh} || die
 
-	mkdir "${D}"/opt
-	cp -a Discord "${D}"/opt/
+	mkdir "${D}"/opt || die
+	cp -a Discord "${D}"/opt/ || die
 
 	make_wrapper discord /opt/Discord/Discord /opt/Discord /opt/Discord
 }

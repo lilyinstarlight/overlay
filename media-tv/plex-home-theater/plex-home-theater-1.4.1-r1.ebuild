@@ -96,10 +96,10 @@ src_prepare() {
 	use pulseaudio || epatch "${FILESDIR}/nopulse.patch"
 
 	#Patch ffmpeg building to use MAKEOPTS
-	sed -i -e "s/BUILD_COMMAND make -j 4/BUILD_COMMAND make ${MAKEOPTS}/" lib/ffmpeg/CMakeLists.txt
+	sed -i -e "s/BUILD_COMMAND make -j 4/BUILD_COMMAND make ${MAKEOPTS}/" lib/ffmpeg/CMakeLists.txt || die
 
 	#Save git revision for Plex version string
-	echo ${COMMIT} > GitRevision.txt
+	echo ${COMMIT} > GitRevision.txt || die
 
 	default
 }
@@ -121,7 +121,7 @@ src_install() {
 	cmake-utils_src_install
 
 	#Build system puts a bunch of useless symbolic links in /opt/plexhometheater/bin
-	find "${D}"/opt/plexhometheater/bin/ -maxdepth 1 -type l -exec rm -f \{\} \;
+	find "${D}"/opt/plexhometheater/bin/ -maxdepth 1 -type l -exec rm -f \{\} \; || die
 
 	doicon "plex/Resources/plexhometheater.png"
 	domenu "plex/Resources/plexhometheater.desktop"

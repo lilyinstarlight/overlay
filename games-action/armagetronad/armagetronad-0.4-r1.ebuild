@@ -35,7 +35,7 @@ DEPEND="
 "
 
 src_prepare() {
-	./bootstrap.sh
+	./bootstrap.sh || die
 
 	default
 }

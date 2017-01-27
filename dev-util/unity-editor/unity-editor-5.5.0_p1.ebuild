@@ -80,7 +80,7 @@ RESTRICT="bindist mirror preserve-libs strip"
 QA_PREBUILT="*"
 
 src_install() {
-	cp -a opt "${D}"/opt
+	cp -a opt "${D}"/opt || die
 
 	dodoc usr/share/doc/unity-editor/{changelog.gz,copyright}
 
@@ -95,5 +95,5 @@ src_install() {
 
 pkg_postinst() {
 	# must have these exact permissions (i.e. cannot do go-r)
-	chmod 4755 /opt/Unity/Editor/chrome-sandbox
+	chmod 4755 /opt/Unity/Editor/chrome-sandbox || die
 }

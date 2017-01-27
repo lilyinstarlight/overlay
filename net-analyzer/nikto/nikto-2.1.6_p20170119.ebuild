@@ -28,9 +28,9 @@ RDEPEND="
 S="${WORKDIR}/${MY_P}/program"
 
 src_prepare() {
-	sed -i -e 's:config.txt:nikto.conf:g' plugins/*
-	sed -i -e 's:/etc/nikto.conf:/etc/nikto/nikto.conf:' nikto.pl
-	sed -i -e 's:# EXECDIR=/opt/nikto:EXECDIR=/usr/share/nikto:' nikto.conf
+	sed -i -e 's:config.txt:nikto.conf:g' plugins/* || die
+	sed -i -e 's:/etc/nikto.conf:/etc/nikto/nikto.conf:' nikto.pl || die
+	sed -i -e 's:# EXECDIR=/opt/nikto:EXECDIR=/usr/share/nikto:' nikto.conf || die
 
 	default
 }

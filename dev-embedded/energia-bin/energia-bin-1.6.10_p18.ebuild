@@ -33,15 +33,15 @@ RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
 	unpack "${MY_P}"-linux64.tar.xz
-	cp "${DISTDIR}"/71-ti-permissions.rules "${WORKDIR}"
+	cp "${DISTDIR}"/71-ti-permissions.rules "${WORKDIR}" || die
 }
 
 src_install() {
 	newicon lib/arduino.png "${MY_PN}".png
 	make_desktop_entry "${MY_PN}" Energia "${MY_PN}"
 
-	mkdir -p "${D}"/opt/"${PN}"
-	cp -a * "${D}"/opt/"${PN}"
+	mkdir -p "${D}"/opt/"${PN}" || die
+	cp -a * "${D}"/opt/"${PN}" || die
 
 	make_wrapper ${MY_PN} "${EROOT}opt/${PN}/${MY_PN}" "${EROOT}opt/${PN}"
 
