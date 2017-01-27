@@ -19,6 +19,60 @@ media-sound/ympd:hostchange - allow users of the web frontend to change the MPD 
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
 media-tv/plex-media-player:desktop - Enable support for the desktop web-client
 media-tv/plex-media-server:pax_kernel - Mark the necessary executables for use under a PaX kernel
+media-tv/plex-media-server:plex-ffmpeg - Replace the Transcoder with plex-ffmpeg package.
+media-video/plex-ffmpeg:aacplus - AAC+ encoding via media-libs/libaacplus.
+media-video/plex-ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
+media-video/plex-ffmpeg:amrenc - Enables Adaptive Multi-Rate Audio encoding support with media-libs/vo-amrwbenc.
+media-video/plex-ffmpeg:armv5te - Enables optimizations for armv5te processors.
+media-video/plex-ffmpeg:armv6 - Enables optimizations for armv6 processors.
+media-video/plex-ffmpeg:armv6t2 - Enables optimizations for armv6t2 processors.
+media-video/plex-ffmpeg:armvfp - Enables VFP optimizations for ARM processors.
+media-video/plex-ffmpeg:bluray - Enable playback of Blu-ray filesystems
+media-video/plex-ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
+media-video/plex-ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.
+media-video/plex-ffmpeg:celt - Adds Xiph CELT audio decoding support via media-libs/celt
+media-video/plex-ffmpeg:chromaprint - Enables audio fingerprinting support with media-libs/chromaprint.
+media-video/plex-ffmpeg:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
+media-video/plex-ffmpeg:ebur128 - Enables EBU R128 loudness normalization filter via media-libs/libebur128
+media-video/plex-ffmpeg:faac - Use external faac library for AAC encoding
+media-video/plex-ffmpeg:fdk - Use external fdk-aac library for AAC encoding
+media-video/plex-ffmpeg:flite - Adds a text-to-speech filter based on app-accessibility/flite.
+media-video/plex-ffmpeg:frei0r - Enable frei0r wrapping in libavfilter
+media-video/plex-ffmpeg:fribidi - Enables fribidi support in the drawtext filter.
+media-video/plex-ffmpeg:gcrypt - Enables gcrypt support: Needed for rtmp(t)e support if openssl, librtmp or gmp is not used.
+media-video/plex-ffmpeg:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
+media-video/plex-ffmpeg:gpl - Build GPL code. Should be enabled unless you require LGPL binaries.
+media-video/plex-ffmpeg:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
+media-video/plex-ffmpeg:iec61883 - Support for FireWire DV/HDV input device using media-libs/libiec61883.
+media-video/plex-ffmpeg:kvazaar - Enables media-libs/kvazaar based HEVC encoder.
+media-video/plex-ffmpeg:libilbc - Enables iLBC de/encoding via media-libs/libilbc.
+media-video/plex-ffmpeg:librtmp - Enables Real Time Messaging Protocol using librtmp (media-video/rtmpdump) in addition to FFmpeg's native implementation.
+media-video/plex-ffmpeg:libsoxr - Enables audio resampling through media-libs/soxr.
+media-video/plex-ffmpeg:libv4l - Uses media-libs/libv4l for video4linux instead of direct calls. Adds support for more devices via the userspace library.
+media-video/plex-ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
+media-video/plex-ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
+media-video/plex-ffmpeg:mipsfpu - Enables floating point MIPS optimizations.
+media-video/plex-ffmpeg:mmal - Enables Multi-Media Abstraction Layer (MMAL) decoding support: Available e.g. on the Raspberry Pi.
+media-video/plex-ffmpeg:network - Enables network streaming support
+media-video/plex-ffmpeg:nvenc - Adds support for NVIDIA Encoder (NVENC) API for hardware accelerated encoding on NVIDIA cards.
+media-video/plex-ffmpeg:openh264 - Enables H.264 encoding suppoprt via media-libs/openh264.
+media-video/plex-ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for encrypted network protocols (TLS/HTTPS).
+media-video/plex-ffmpeg:opus - Adds (decoding) support for the Opus codec via media-libs/opus.
+media-video/plex-ffmpeg:pic - Force shared libraries to be built as PIC (this is slower)
+media-video/plex-ffmpeg:plex-decoders - Enable decoders used by plex
+media-video/plex-ffmpeg:plex-encoders - Enable encoders used by plex
+media-video/plex-ffmpeg:postproc - Build and install libpostproc.
+media-video/plex-ffmpeg:quvi - Adds support for playing media from Internet services using the quvi project.
+media-video/plex-ffmpeg:rubberband - Adds time-stretching and pitch-shifting audio filter based on media-libs/rubberband.
+media-video/plex-ffmpeg:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
+media-video/plex-ffmpeg:snappy - Enable app-arch/snappy support. Required for e.g. Vidvox Hap encoder.
+media-video/plex-ffmpeg:ssh - Enable SSH/sftp support via net-libs/libssh.
+media-video/plex-ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an alternative to the internal encoder.
+media-video/plex-ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
+media-video/plex-ffmpeg:webp - Enables WebP encoding with media-libs/libwebp.
+media-video/plex-ffmpeg:x265 - Enables HEVC encoding with media-libs/x265.
+media-video/plex-ffmpeg:zimg - Enables media-libs/zimg based scale filter.
+media-video/plex-ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos

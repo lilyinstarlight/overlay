@@ -4,7 +4,7 @@ app-misc/cronic 3: a cure for cron's chronic email problem
 app-misc/teleconsole-bin 0.3.1: command line tool to share your UNIX terminal
 app-misc/tty-clock 2.3: analog clock in ncurses
 app-misc/wemux 3.2.0_p20150822: multi-user tmux made easy
-dev-embedded/arduino-bin 1.6.13: electronics prototyping platform based on easy-to-use hardware and software
+dev-embedded/arduino-bin 1.8.1: electronics prototyping platform based on easy-to-use hardware and software
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
 dev-embedded/teensyduino-bin 1.33: USB-based electronics prototyping platform compatible with Arduino
 dev-python/boto 2.45.0: Amazon Web Services API
@@ -26,11 +26,15 @@ media-gfx/maim 3.4.47: maim (Make Image) takes screenshots of your desktop and i
 media-libs/libshairport 1.2.1_p20121215: A library for emulating an AirPort Express
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/midifilter-lv2 0.4.6: LV2 plugins to filter MIDI events
+media-plugins/plex-for-kodi 0.0.98: Plex's official Plex add-on for Kodi.
+media-plugins/plex-kodi-connect 1.5.1: Combine the best frontend media player Kodi with the best multimedia backend server Plex.
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
 media-sound/ympd 1.3.0: Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
-media-tv/plex-media-player 1.2.2 9999: next generation Plex client
-media-tv/plex-media-server 1.2.0-r4 1.3.3: Plex Media Server is an organizer for your media and provides streaming over the web and to devices
+media-tv/plex-media-player 1.2.2.555-r1 9999: next generation Plex client
+media-tv/plex-media-server 1.2.0.3167 1.3.3.3148 1.4.0.3224: A free media library that is intended for use with a plex client.
+media-tv/plexpy 1.4.16: A python based web application for monitoring your Plex Media Server.
+media-video/plex-ffmpeg 2016.12: Plex Transcoder, a ffmpeg fork from Plex Inc.
 media-video/v4l2loopback 0.10.0: v4l2 loopback device which output is it's own input
 net-analyzer/nikto 2.1.6_p20170119: web server vulnerability scanner
 net-im/discord 0.0.1: All-in-one voice and text chat for gamers

@@ -1,0 +1,14 @@
+DEFINED_PHASES=install setup
+DEPEND=>=dev-lang/python-2.7.5-r2:2.7[sqlite(+)] >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),python_single_target_python2_7(+)] virtual/pkgconfig
+DESCRIPTION=A python based web application for monitoring your Plex Media Server.
+EAPI=6
+HOMEPAGE=https://github.com/drzoidberg33/plexpy
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-python/pyopenssl
+SLOT=0
+SRC_URI=https://github.com/drzoidberg33/plexpy/archive/v1.4.16.tar.gz
+_eclass_exported_funcs=pkg_setup:python-single-r1 src_install:-
+_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	python-single-r1	19a74c6b5c191723a997dc7e0cc6bb09	python-utils-r1	d275302cd06aedef2ba08f81f3104206	systemd	5b6ca8b2fc1307ca593223f327342c96	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_md5_=04d00f95e4d95f310c17e7421e9f0101
