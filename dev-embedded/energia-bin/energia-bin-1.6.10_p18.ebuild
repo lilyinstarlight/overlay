@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,7 @@ EAPI=6
 
 inherit eutils udev versionator
 
-DESCRIPTION="electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino"
+DESCRIPTION="electronics prototyping platform for TI MSP430 LaunchPad based on Arduino"
 HOMEPAGE="http://energia.nu/"
 MY_PN="${PN/-bin}"
 VER="$(get_version_component_range 1-3)"

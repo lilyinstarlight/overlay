@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -64,7 +64,6 @@ src_install() {
 		find -name "Plex Transcoder" -exec mv {} {}.orig \; -exec ln -sf /usr/bin/plex-ffmpeg {} \;
 	fi
 	cp -rp usr/ "${ED}" || die
-
 
 	# Move the config to the correct place
 	local CONFIG_VANILLA="${S}/etc/default/plexmediaserver"

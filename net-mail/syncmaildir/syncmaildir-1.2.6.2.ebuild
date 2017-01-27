@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,7 @@ EAPI=6
 
 inherit eutils systemd
 
-DESCRIPTION="Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format"
+DESCRIPTION="Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes"
 HOMEPAGE="http://syncmaildir.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
