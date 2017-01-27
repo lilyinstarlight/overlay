@@ -15,9 +15,8 @@ SLOT="0"
 IUSE="debug +qemu +secure-boot"
 
 MY_PN="edk2"
-COMMIT="bab82372a9e6ce066fa725a792e71d07191046ca"
+COMMIT="465663e9f128428323e6c6e4431dd15ac287a24c"
 MY_P="${MY_PN}-${COMMIT}"
-
 SRC_URI="https://github.com/tianocore/${MY_PN}/archive/${COMMIT}.tar.gz -> ${MY_P}.tar.gz"
 
 KEYWORDS="-* ~amd64 ~x86"
