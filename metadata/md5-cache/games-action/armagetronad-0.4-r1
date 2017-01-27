@@ -10,4 +10,4 @@ RDEPEND=dev-libs/boost[threads] dev-libs/libxml2 dev-libs/protobuf media-libs/ft
 SLOT=0
 _eclass_exported_funcs=src_unpack:bzr src_prepare:- src_configure:- src_compile:- src_install:-
 _eclasses_=bzr	5272f165267e987795a8e13fd8f42f4f	eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=021e32730a8e651094089cf8c66d1845
+_md5_=2e3a17581350e506930b7fd51b5bc94c
