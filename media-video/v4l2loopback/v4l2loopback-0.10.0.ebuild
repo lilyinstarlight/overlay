@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -20,7 +20,9 @@ MODULE_NAMES="v4l2loopback(video:)"
 BUILD_TARGETS="all"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="
+	media-libs/gstreamer:1.0
+"
 
 src_compile() {
 	linux-mod_src_compile
