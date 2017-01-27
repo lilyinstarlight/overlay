@@ -9,7 +9,7 @@ inherit autotools
 DESCRIPTION="A library for emulating an AirPort Express"
 HOMEPAGE="https://github.com/amejia1/libshairport"
 COMMIT="16395d8"
-SRC_URI="https://github.com/amejia1/libshairport/tarball/${COMMIT} -> ${P}.tar.gz"
+SRC_URI="https://github.com/amejia1/libshairport/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/amejia1-${PN}-${COMMIT}"
 
 LICENSE="MIT"
