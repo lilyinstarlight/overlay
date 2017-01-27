@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install
+DEPEND=x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-wm
+DESCRIPTION=Tiling window manager based on binary space partitioning
+EAPI=6
+HOMEPAGE=https://github.com/baskerville/bspwm/
+IUSE=examples
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=x11-libs/libxcb x11-libs/xcb-util x11-libs/xcb-util-wm x11-misc/sxhkd
+SLOT=0
+SRC_URI=https://github.com/baskerville/bspwm/archive/184f44430957f021b57e3354d617d38a4246b022.tar.gz -> bspwm-0.9.2_p20170115.tar.gz
+_eclass_exported_funcs=src_compile:- src_install:-
+_eclasses_=multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_md5_=3a1f6e6791777689c716578551f6f3bb
