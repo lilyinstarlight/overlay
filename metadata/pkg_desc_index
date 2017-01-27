@@ -18,7 +18,7 @@ dev-vcs/git-lfs 1.4.4: git extension for versioning large files
 games-action/armagetronad 0.2.8.3.4 0.4-r1: A fast-paced 3D lightcycle game based on Tron
 games-action/armagetronad-dedicated 0.2.8.3.4 0.4-r1: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1-r1: A clone of the classic snake game on the terminal
-games-board/cockatrice 20161030: A cross-platform virtual tabletop for multiplayer card games
+games-board/cockatrice 20170120: A cross-platform virtual tabletop for multiplayer card games
 games-misc/lolcat 42.24.0: Rainbows and unicorns!
 games-misc/nyancat 1.5.1-r1: nyancat rendered in your terminal
 games-misc/pipes 1.2.0: animated pipes terminal screensaver
