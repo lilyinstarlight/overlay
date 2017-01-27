@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -267,7 +267,7 @@ MULTILIB_WRAPPED_HEADERS=(
 src_unpack() {
 	mkdir -p "${S}"
 	cd "${S}"
-	unpack "${A}"
+	unpack ${A}
 }
 
 src_prepare() {
@@ -423,7 +423,7 @@ multilib_src_compile() {
 multilib_src_install() {
 	emake V=1 DESTDIR="${D}" install install-doc
 
-	into "${EPREFIX}/usr/$(get_libdir)/${PN}"
+	into "/usr/$(get_libdir)/${PN}"
 	if multilib_is_native_abi; then
 		for i in "${FFTOOLS[@]}" ; do
 			if use fftools_${i} ; then
@@ -432,11 +432,11 @@ multilib_src_install() {
 		done
 	fi
 
-	exeinto "${EPREFIX}/usr/$(get_libdir)/${PN}"
+	exeinto "/usr/$(get_libdir)/${PN}"
 	doexe "${FILESDIR}/${PN}"
 
-	into "${EPREFIX}/usr/bin"
-	dosym "${EPREFIX}/usr/$(get_libdir)/${PN}/${PN}" "${EPREFIX}/usr/bin/${PN}"
+	into "/usr/bin"
+	dosym "/usr/$(get_libdir)/${PN}/${PN}" "/usr/bin/${PN}"
 }
 
 multilib_src_install_all() {

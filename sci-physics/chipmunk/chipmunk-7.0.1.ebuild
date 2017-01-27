@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,7 @@ EAPI=6
 
 inherit cmake-utils versionator
 
-DESCRIPTION="Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library"
+DESCRIPTION="Chipmunk2D is a lightweight, fast, and portable 2D rigid body physics library"
 HOMEPAGE="http://chipmunk-physics.net/"
 MY_PN="Chipmunk"
 MY_P="${MY_PN}-${PV}"
