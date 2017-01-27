@@ -2,21 +2,21 @@ app-admin/linode-cli 1.4.7: Command-line interface to the Linode platform
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 3: a cure for cron's chronic email problem
 app-misc/teleconsole-bin 0.3.1: command line tool to share your UNIX terminal
-app-misc/tty-clock 20150318: analog clock in ncurses
+app-misc/tty-clock 20170114: analog clock in ncurses
 app-misc/wemux 20150822: multi-user tmux made easy
 dev-embedded/arduino-bin 1.6.13: electronics prototyping platform based on easy-to-use hardware and software
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
 dev-embedded/teensyduino-bin 1.33: USB-based electronics prototyping platform compatible with Arduino
 dev-python/boto 2.45.0: Amazon Web Services API
-dev-python/progressbar2 3.11.0: text progress bar library for Python
-dev-python/python-utils 2.0.0: a collection of small functions and classes which make common patterns shorter and easier
+dev-python/progressbar2 3.12.0: text progress bar library for Python
+dev-python/python-utils 2.0.1: a collection of small functions and classes which make common patterns shorter and easier
 dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-python/slixmpp 1.2.3: Python library for XMPP - asyncio fork
 dev-python/twilio 6.0.0_rc12: Helper library for the Twilio API
 dev-util/unity-editor 5.5.0_p1 5.6.0_beta3: Editor for the Unity game engine
 dev-vcs/git-lfs 1.4.4: git extension for versioning large files
-games-action/armagetronad 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron
-games-action/armagetronad-dedicated 0.2.8.3.3-r1 0.4-r1: A fast-paced 3D lightcycle game based on Tron - dedicated server
+games-action/armagetronad 0.2.8.3.4 0.4-r1: A fast-paced 3D lightcycle game based on Tron
+games-action/armagetronad-dedicated 0.2.8.3.4 0.4-r1: A fast-paced 3D lightcycle game based on Tron - dedicated server
 games-arcade/nsnake 3.0.1-r1: A clone of the classic snake game on the terminal
 games-board/cockatrice 20161030: A cross-platform virtual tabletop for multiplayer card games
 games-misc/lolcat 42.24.0: Rainbows and unicorns!
