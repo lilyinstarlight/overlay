@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -15,10 +15,9 @@ SLOT="0"
 IUSE="debug +qemu +secure-boot"
 
 MY_PN="edk2"
-
 EGIT_REPO_URI="https://github.com/tianocore/${MY_PN}"
 
-KEYWORDS="-*"
+KEYWORDS=""
 
 OPENSSL_PV="1.0.2j"
 OPENSSL_P="openssl-${OPENSSL_PV}"

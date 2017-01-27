@@ -4,7 +4,7 @@
 
 EAPI=6
 
-EGO_PN="github.com/github/${PN}"
+EGO_PN="github.com/git-lfs/${PN}"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit golang-vcs
@@ -36,9 +36,9 @@ S="${WORKDIR}/${P}/src/${EGO_PN}"
 src_compile() {
 	export GOPATH="${WORKDIR}/${P}"
 
-	script/bootstrap
+	script/bootstrap || die
 
-	use doc && script/man
+	use doc && script/man || die
 }
 
 src_install() {
