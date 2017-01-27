@@ -4,12 +4,9 @@
 
 EAPI=6
 
-inherit git-r3
-
 DESCRIPTION="analog clock in ncurses"
 HOMEPAGE="https://github.com/xorg62/tty-clock"
-EGIT_REPO_URI="https://github.com/xorg62/tty-clock.git"
-EGIT_COMMIT="8868f3e"
+SRC_URI="https://github.com/xorg62/${PN}/archive/v${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
