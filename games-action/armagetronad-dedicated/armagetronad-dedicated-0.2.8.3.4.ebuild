@@ -9,7 +9,7 @@ HOMEPAGE="http://armagetronad.org/"
 MY_PN="armagetronad"
 MY_P="${MY_PN}-${PV}"
 BRANCH="0.2.8"
-VERSION="0.2.8.3.x"
+VERSION="0.2.8.3.4"
 SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${MY_P}.src.tar.bz2"
 
 LICENSE="GPL-2"
