@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure prepare unpack
 DEPEND=dev-libs/boost[threads] dev-libs/libxml2 dev-libs/protobuf sys-devel/autoconf sys-devel/bison >=dev-vcs/bzr-2.0.1
 DESCRIPTION=A fast-paced 3D lightcycle game based on Tron - dedicated server
-EAPI=5
+EAPI=6
 HOMEPAGE=http://armagetronad.org/
 IUSE=+auth +fortress
 KEYWORDS=~amd64 ~x86
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/boost[threads] dev-libs/libxml2 dev-libs/protobuf
 SLOT=0
 _eclass_exported_funcs=src_unpack:bzr src_prepare:- src_configure:- src_compile:-
 _eclasses_=bzr	5272f165267e987795a8e13fd8f42f4f	eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
-_md5_=33656b7b406578e1bf4eb890bfa2cb04
+_md5_=eb67dc7f9277a2924a221d9d8db8d0f1

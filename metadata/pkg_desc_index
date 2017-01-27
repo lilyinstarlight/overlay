@@ -5,11 +5,11 @@ app-misc/teleconsole-bin 0.3.1: command line tool to share your UNIX terminal
 app-misc/tty-clock 2.3: analog clock in ncurses
 app-misc/wemux 3.2.0_p20150822: multi-user tmux made easy
 dev-embedded/arduino-bin 1.8.1: electronics prototyping platform based on easy-to-use hardware and software
-dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
-dev-embedded/teensyduino-bin 1.33: USB-based electronics prototyping platform compatible with Arduino
+dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for TI MSP430 LaunchPad based on Arduino
+dev-embedded/teensyduino-bin 1.35: USB-based electronics prototyping platform compatible with Arduino
 dev-python/boto 2.45.0: Amazon Web Services API
 dev-python/progressbar2 3.12.0: text progress bar library for Python
-dev-python/python-utils 2.0.1: a collection of small functions and classes which make common patterns shorter and easier
+dev-python/python-utils 2.0.1: a collection of functions and classes which shortens common patterns
 dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-python/slixmpp 1.2.3: Python library for XMPP - asyncio fork
 dev-python/twilio 6.0.0_rc12: Helper library for the Twilio API
@@ -26,7 +26,7 @@ media-libs/libshairport 1.2.1_p20121215: A library for emulating an AirPort Expr
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
 media-plugins/midifilter-lv2 0.4.6: LV2 plugins to filter MIDI events
 media-plugins/plex-for-kodi 0.0.98: Plex's official Plex add-on for Kodi.
-media-plugins/plex-kodi-connect 1.5.1: Combine the best frontend media player Kodi with the best multimedia backend server Plex.
+media-plugins/plex-kodi-connect 1.5.1: Combine the frontend media player Kodi with the multimedia backend server Plex
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
 media-sound/ympd 1.3.0: Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 media-tv/plex-home-theater 1.4.1-r1: Plex Home Theater
@@ -37,11 +37,11 @@ media-video/plex-ffmpeg 2016.12: Plex Transcoder, a ffmpeg fork from Plex Inc.
 media-video/v4l2loopback 0.10.0: v4l2 loopback device which output is it's own input
 net-analyzer/nikto 2.1.6_p20170119: web server vulnerability scanner
 net-im/discord 0.0.1: All-in-one voice and text chat for gamers
-net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format
+net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes
 net-p2p/zget 0.11.1: zeroconf based peer to peer file transfer
 net-wireless/create_ap 0.4.6: A script to create a NATed or bridged WiFi access point
 net-wireless/unifi 5.4.9: Management Controller for Ubiquiti Networks UniFi APs
-sci-physics/chipmunk 7.0.1: Chipmunk2D is a simple, lightweight, fast and portable 2D rigid body physics library
+sci-physics/chipmunk 7.0.1: Chipmunk2D is a lightweight, fast, and portable 2D rigid body physics library
 sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session starter
 sys-firmware/edk2-ovmf 0_p20170120 9999: EDK II Open Source UEFI Firmware
 sys-fs/exfat-nofuse 0_p20170103: Non-fuse kernel driver for exFat and VFat file systems

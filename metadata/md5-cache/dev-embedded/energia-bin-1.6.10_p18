@@ -1,6 +1,6 @@
 DEFINED_PHASES=install postinst unpack
 DEPEND=virtual/pkgconfig
-DESCRIPTION=electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on Wiring and Arduino
+DESCRIPTION=electronics prototyping platform for TI MSP430 LaunchPad based on Arduino
 EAPI=6
 HOMEPAGE=http://energia.nu/
 KEYWORDS=-* ~amd64
@@ -11,4 +11,4 @@ SLOT=0
 SRC_URI=http://energia.nu/downloads/downloadv4.php?file=energia-1.6.10E18-linux64.tar.xz -> energia-1.6.10E18-linux64.tar.xz http://energia.nu/files/71-ti-permissions.rules
 _eclass_exported_funcs=pkg_postinst:- src_unpack:- src_install:-
 _eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	udev	0498b698e76cdc94930b59a00c73dd9c	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=3f1a247e03656428395c5dcb34ce66bc
+_md5_=d7713373dd9c6864dac90f33ed3ac571
