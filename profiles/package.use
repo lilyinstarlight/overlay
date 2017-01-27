@@ -1,0 +1,1 @@
+media-video/plex-ffmpeg gnutls -X -alsa -opengl -pulseaudio -sdl cpudetection gcrypt libass librtmp opus zvbi

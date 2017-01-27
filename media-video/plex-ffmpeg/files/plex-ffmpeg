@@ -1,0 +1,11 @@
+#!/bin/sh
+
+PLEX_FFMPEG_DIR="$(dirname "$(realpath -e "$0")")"
+
+export LD_LIBRARY_PATH="${PLEX_FFMPEG_DIR}"
+
+export -n LIBVA_DRIVERS_PATH
+# export -n LIBVA_DRIVERS_NAME
+
+exec -a "$0" "${PLEX_FFMPEG_DIR}/ffmpeg" "$@"
+

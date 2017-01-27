@@ -2,10 +2,23 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>fkmclane@gmail.com</email>
-		<name>Foster McLane</name>
+		<email>fearedbliss@gentoo.org</email>
+		<name>Jonathan Vasquez</name>
 	</maintainer>
+	<maintainer type="person">
+		<email>luigi.mantellini@gmail.com</email>
+		<name>Luigi 'Comio' Mantellini</name>
+	</maintainer>
+        <maintainer type="person">
+                <email>fkmclane@gmail.com</email>
+                <name>Foster McLane</name>
+        </maintainer>
+	<upstream>
+		<changelog>http://forums.plex.tv/discussion/62832/plex-media-server#latest</changelog>
+		<doc>https://support.plex.tv/hc/en-us/categories/200007268-Getting-Started</doc>
+	</upstream>
 	<use>
 		<flag name="pax_kernel">Mark the necessary executables for use under a PaX kernel</flag>
+		<flag name="plex-ffmpeg">Replace the Transcoder with plex-ffmpeg package.</flag>
 	</use>
 </pkgmetadata>
