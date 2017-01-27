@@ -56,9 +56,6 @@ Packages
 
 ### Utilities
 
-#### maim [media-gfx/maim]
-[maim](https://github.com/naelstrof/maim) (make image) is a utility that takes screenshots of your desktop and is designed to be an improved scrot. It optionally uses [slop](https://github.com/naelstrof/slop) for screen selections.
-
 #### Sync Mail Dir [net-mail/syncmaildir]
 [Sync Mail Dir](http://syncmaildir.sourceforge.net/) (smd) is a set of tools to synchronize a pair of mailboxes in Maildir format. It is useful for IMAP-less client-server mail synchronization and for Maildir transistion.
 

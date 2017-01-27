@@ -31,8 +31,8 @@ DEPEND="
 S="${WORKDIR}/${MY_PN}-${VERSION}"
 
 src_prepare() {
-	sed -i -e "s/png_check_sig/png_sig_cmp/" configure.ac
-	./bootstrap.sh
+	sed -i -e "s/png_check_sig/png_sig_cmp/" configure.ac || die
+	./bootstrap.sh || die
 
 	default
 }
