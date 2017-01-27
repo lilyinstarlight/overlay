@@ -3,15 +3,18 @@
 # $Id$
 
 EAPI=6
-inherit git-r3 toolchain-funcs
+
+inherit toolchain-funcs
 
 DESCRIPTION="Tiling window manager based on binary space partitioning"
 HOMEPAGE="https://github.com/baskerville/bspwm/"
-EGIT_REPO_URI="https://github.com/baskerville/bspwm.git"
+COMMIT="184f44430957f021b57e3354d617d38a4246b022"
+MY_P="${PN}-${COMMIT}"
+SRC_URI="https://github.com/baskerville/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 DEPEND="
@@ -19,9 +22,12 @@ DEPEND="
 	x11-libs/xcb-util
 	x11-libs/xcb-util-wm
 "
-RDEPEND="${DEPEND}
+RDEPEND="
+	${DEPEND}
 	x11-misc/sxhkd
 "
+
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	emake PREFIX=/usr CC="$(tc-getCC)"
