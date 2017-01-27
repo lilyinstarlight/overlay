@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	=dev-python/python-utils-2.0.0
+	>=dev-python/python-utils-2.0.0
 "
 RDEPEND="
 	${DEPEND}

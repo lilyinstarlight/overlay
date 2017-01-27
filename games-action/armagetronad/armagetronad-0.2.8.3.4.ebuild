@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron"
 HOMEPAGE="http://armagetronad.org/"
 BRANCH="0.2.8"
-VERSION="0.2.8.3.x"
+VERSION="0.2.8.3.4"
 SRC_URI="https://launchpad.net/armagetronad/${BRANCH}/${VERSION}/+download/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
