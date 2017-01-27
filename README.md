@@ -127,8 +127,8 @@ Packages
 #### Boto [dev-python/boto]
 [Boto](https://github.com/boto/boto/) is a Python interface to Amazon Web Services.
 
-#### SliXMPP [dev-python/slixmpp]
-[SliXMPP](https://dev.louiz.org/projects/slixmpp) is a Python library for XMPP. It is the asyncio fork of SleekXMPP
+#### Slixmpp [dev-python/slixmpp]
+[Slixmpp](https://dev.louiz.org/projects/slixmpp) is a Python library for XMPP. It is the asyncio fork of SleekXMPP
 
 ### GTK+
 
