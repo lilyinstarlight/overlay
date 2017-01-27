@@ -1,15 +1,6 @@
 diff --git usr/sbin/start_pms usr/sbin/start_pms
---- usr/sbin/start_pms
-+++ usr/sbin/start_pms
-@@ -2,7 +2,7 @@
- 
- #change these parameters in /etc/default/plexmediaserver
- export PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS=6
--export PLEX_MEDIA_SERVER_HOME=/usr/lib/plexmediaserver
-+export PLEX_MEDIA_SERVER_HOME=/opt/plexmediaserver
- export PLEX_MEDIA_SERVER_MAX_STACK_SIZE=3000
- export PLEX_MEDIA_SERVER_TMPDIR=/tmp
- export PLEX_MEDIA_SERVER_APPLICATION_SUPPORT_DIR="${HOME}/Library/Application Support"
+--- ./usr/sbin/start_pms
++++ ./usr/sbin/start_pms
 @@ -29,4 +29,5 @@ ulimit -s $PLEX_MAX_STACK_SIZE
  # Add sleep - Possible fix for start on boot.
  sleep 3

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>luigi.mantellini@gmail.com</email>
+		<name>Luigi 'Comio' Mantellini</name>
+	</maintainer>
+	<upstream>
+		<changelog>https://github.com/drzoidberg33/plexpy/blob/master/CHANGELOG.md</changelog>
+		<doc>https://github.com/drzoidberg33/plexpy/wiki/Installation</doc>
+	</upstream>
+	<use/>
+</pkgmetadata>
