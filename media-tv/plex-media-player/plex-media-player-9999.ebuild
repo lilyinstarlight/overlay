@@ -37,6 +37,7 @@ CDEPEND="
 	)
 
 	cec? (
+		<dev-libs/libcec-4.0.0
 		>=dev-libs/libcec-2.2.0
 	)
 
