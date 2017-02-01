@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=simple clipboard manager
+EAPI=6
+HOMEPAGE=https://github.com/mrichar1/clipster
+KEYWORDS=~amd64 ~x86
+LICENSE=AGPL-3
+RDEPEND=dev-lang/python:*
+SLOT=0
+SRC_URI=https://github.com/mrichar1/clipster/archive/b5f826bbcecfd2c3316b1a96ada7bcaf92d2f256.tar.gz -> clipster-0_p20170123.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=5fbf183056cde3dbaceadfa5bc8973de
