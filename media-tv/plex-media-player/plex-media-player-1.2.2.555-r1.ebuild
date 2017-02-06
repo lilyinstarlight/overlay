@@ -31,7 +31,7 @@ CDEPEND="
 	>=dev-qt/qtdeclarative-5.7
 	>=dev-qt/qtquickcontrols-5.7
 	>=dev-qt/qtx11extras-5.7
-	>=media-video/mpv-0.11.0[libmpv]
+	>=media-video/mpv-0.22.0[libmpv]
 	virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXrandr
