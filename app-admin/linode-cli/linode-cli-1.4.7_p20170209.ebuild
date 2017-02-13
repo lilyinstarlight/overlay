@@ -9,8 +9,9 @@ inherit eutils
 DESCRIPTION="Command-line interface to the Linode platform"
 HOMEPAGE="https://www.linode.com/docs/platform/linode-cli"
 MY_PN="${PN/linode-/}"
-MY_P="${MY_PN}-${PV}"
-SRC_URI="https://github.com/linode/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+MY_PV="8d475f3ff161b64dbe1aff167897974f92475a3c"
+MY_P="${MY_PN}-${MY_PV}"
+SRC_URI="https://github.com/linode/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
