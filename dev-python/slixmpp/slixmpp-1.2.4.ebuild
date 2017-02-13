@@ -9,7 +9,8 @@ inherit eutils distutils-r1
 
 DESCRIPTION="Python library for XMPP - asyncio fork"
 HOMEPAGE="https://dev.louiz.org/projects/slixmpp"
-SRC_URI="https://dev.louiz.org/attachments/download/114/${P}.tar.gz"
+DOWNLOAD_ID="117"
+SRC_URI="https://dev.louiz.org/attachments/download/${DOWNLOAD_ID}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
