@@ -6,7 +6,7 @@ EAPI=6
 
 inherit eutils user systemd unpacker
 
-COMMIT="7d2c839"
+COMMIT="77c6a4f80"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
