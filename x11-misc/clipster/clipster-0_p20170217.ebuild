@@ -6,7 +6,7 @@ EAPI=6
 
 DESCRIPTION="simple clipboard manager"
 HOMEPAGE="https://github.com/mrichar1/clipster"
-COMMIT="b5f826bbcecfd2c3316b1a96ada7bcaf92d2f256"
+COMMIT="2b044049552ff8cb4ce84fd9734f804a47be9aae"
 SRC_URI="https://github.com/mrichar1/clipster/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="AGPL-3"
