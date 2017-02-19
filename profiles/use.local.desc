@@ -68,6 +68,9 @@ media-video/plex-ffmpeg:webp - Enables WebP encoding with media-libs/libwebp.
 media-video/plex-ffmpeg:x265 - Enables HEVC encoding with media-libs/x265.
 media-video/plex-ffmpeg:zimg - Enables media-libs/zimg based scale filter.
 media-video/plex-ffmpeg:zvbi - Enables media-libs/zvbi based teletext decoder.
+net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
+net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
+net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing
 net-mail/syncmaildir:gnome - Enable GNOME applet
 net-wireless/create_ap:haveged - Enable support for haveged
 sci-physics/chipmunk:demos - Build and install Chipmunk demos
