@@ -1,0 +1,273 @@
+From 2840e5618b87c845268c2535bbbb0b28af4fc1fb Mon Sep 17 00:00:00 2001
+Message-Id: <2840e5618b87c845268c2535bbbb0b28af4fc1fb.1484567201.git.mprivozn@redhat.com>
+From: Michal Privoznik <michal.privoznik@gmail.com>
+Date: Mon, 16 Jan 2017 12:29:57 +0100
+Subject: [PATCH] Introduce new sys-libs/osinfo-db{-tools} packages
+
+As of 3ed9a1d2cf218ce78ea82594a20fcc3f5a69ce68 (v1.0.0) the
+libosinfo repository is split into three parts:
+
+1) libosinfo - this is still the main library that contains the
+   actual interesting code
+2) osinfo-db - the DB data were moved to this separate repository
+3) osinfo-db-tools - some supplementary tools for manipulating
+   osinfo-db
+
+The dependencies are as follows then:
+
+  libosinfo -> osinfo-db -> osinfo-db-tools
+
+The reasoning behind is that the osinfo-db can be updated
+separately of libosinfo and also be used by other tools
+independently of libosinfo.
+
+Signed-off-by: Michal Privoznik <michal.privoznik@gmail.com>
+---
+ sys-libs/libosinfo/libosinfo-9999.ebuild           | 60 ++++++++++++++++++++++
+ sys-libs/osinfo-db-tools/Manifest                  |  2 +
+ .../osinfo-db-tools/osinfo-db-tools-1.0.0.ebuild   |  1 +
+ .../osinfo-db-tools/osinfo-db-tools-1.1.0.ebuild   |  1 +
+ .../osinfo-db-tools/osinfo-db-tools-9999.ebuild    | 47 +++++++++++++++++
+ sys-libs/osinfo-db/Manifest                        |  4 ++
+ sys-libs/osinfo-db/osinfo-db-20160728.ebuild       |  1 +
+ sys-libs/osinfo-db/osinfo-db-20161026.ebuild       |  1 +
+ sys-libs/osinfo-db/osinfo-db-20170107.ebuild       |  1 +
+ sys-libs/osinfo-db/osinfo-db-20170114.ebuild       |  1 +
+ sys-libs/osinfo-db/osinfo-db-9999.ebuild           | 31 +++++++++++
+ 11 files changed, 150 insertions(+)
+ create mode 100644 sys-libs/libosinfo/libosinfo-9999.ebuild
+ create mode 100644 sys-libs/osinfo-db-tools/Manifest
+ create mode 120000 sys-libs/osinfo-db-tools/osinfo-db-tools-1.0.0.ebuild
+ create mode 120000 sys-libs/osinfo-db-tools/osinfo-db-tools-1.1.0.ebuild
+ create mode 100644 sys-libs/osinfo-db-tools/osinfo-db-tools-9999.ebuild
+ create mode 100644 sys-libs/osinfo-db/Manifest
+ create mode 120000 sys-libs/osinfo-db/osinfo-db-20160728.ebuild
+ create mode 120000 sys-libs/osinfo-db/osinfo-db-20161026.ebuild
+ create mode 120000 sys-libs/osinfo-db/osinfo-db-20170107.ebuild
+ create mode 120000 sys-libs/osinfo-db/osinfo-db-20170114.ebuild
+ create mode 100644 sys-libs/osinfo-db/osinfo-db-9999.ebuild
+
+diff --git a/sys-libs/libosinfo/libosinfo-9999.ebuild b/sys-libs/libosinfo/libosinfo-9999.ebuild
+new file mode 100644
+index 0000000000..d35d2d86b3
+--- /dev/null
++++ b/sys-libs/libosinfo/libosinfo-9999.ebuild
+@@ -0,0 +1,60 @@
++# Copyright 1999-2017 Gentoo Foundation
++# Distributed under the terms of the GNU General Public License v2
++# $Id$
++
++EAPI=6
++VALA_USE_DEPEND="vapigen"
++
++inherit gnome2 udev vala
++
++DESCRIPTION="GObject library for managing information about real and virtual OSes"
++HOMEPAGE="http://libosinfo.org/"
++
++if [[ ${PV} = *9999* ]]; then
++	inherit git-r3 autotools
++	EGIT_REPO_URI="https://gitlab.com/libosinfo/libosinfo.git"
++	SRC_URI=""
++	KEYWORDS=""
++else
++    SRC_URI="https://releases.pagure.org/libosinfo/libosinfo-${PV}.tar.xz"
++	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
++fi
++
++LICENSE="GPL-2 LGPL-2.1"
++SLOT="0"
++KEYWORDS=""
++IUSE="+introspection +vala test"
++
++RDEPEND="
++	>=dev-libs/glib-2.36.0:2
++	>=dev-libs/libxslt-1.0.0:=
++	dev-libs/libxml2:=
++	>=net-libs/libsoup-2.42:2.4
++	sys-apps/hwids
++	sys-libs/osinfo-db
++	introspection? ( >=dev-libs/gobject-introspection-0.9.7:= )
++"
++DEPEND="${RDEPEND}
++	dev-libs/gobject-introspection-common
++	>=dev-util/gtk-doc-am-1.10
++	virtual/pkgconfig
++	test? ( dev-libs/check )
++	vala? ( $(vala_depend) )
++"
++
++src_prepare() {
++	if [[ ${PV} = *9999* ]]; then
++		eautoreconf
++	fi
++	gnome2_src_prepare
++	use vala && vala_src_prepare
++}
++
++src_configure() {
++	gnome2_src_configure \
++		--disable-static \
++		$(use_enable test tests) \
++		$(use_enable introspection) \
++		$(use_enable vala) \
++		--disable-coverage
++}
+diff --git a/sys-libs/osinfo-db-tools/Manifest b/sys-libs/osinfo-db-tools/Manifest
+new file mode 100644
+index 0000000000..9ee1f356c6
+--- /dev/null
++++ b/sys-libs/osinfo-db-tools/Manifest
+@@ -0,0 +1,2 @@
++DIST osinfo-db-tools-1.0.0.tar.gz 492552 SHA256 c1c0aea03617105aad0bf0460bc946c2eef082f3505af639234bbb626ba84d0a SHA512 f52a78a6c7dee7658c26a6e934ad1f843835711c72baf1cc712ccff8133f1fcbb30787aa918a29e7251efa242a1e38fb53daf4f75038da5c3f392ca80feed941 WHIRLPOOL 6fe6b7dcceed586eea882102c061d364fdee1faa48da8932608d85f47345deca8a77015547a5e82cad083e4f5877bd0d8c7d3a556a2488d4c1b402778c066fda
++DIST osinfo-db-tools-1.1.0.tar.gz 481935 SHA256 a141cd2fc07c30d84801b5dbf6b11f2c2e708b0e81216277d052ac0b57fe546b SHA512 52e08e67b75fb84c7d7721dd76f1bf09f71c27deffc4d8391234aec939863de4e96cbd8fc9783944b2493fef183518a21ff185ec5a5d9934adc6d3c67bf0f972 WHIRLPOOL e80ff164d6af0aab33ad1b025490893e226c28792b4ba8e585c0a17a8188e05f311268b26048367f8347bf97d31b59f7a523218e7262e8c578d4becebb70a0e5
+diff --git a/sys-libs/osinfo-db-tools/osinfo-db-tools-1.0.0.ebuild b/sys-libs/osinfo-db-tools/osinfo-db-tools-1.0.0.ebuild
+new file mode 120000
+index 0000000000..ab16f75c6e
+--- /dev/null
++++ b/sys-libs/osinfo-db-tools/osinfo-db-tools-1.0.0.ebuild
+@@ -0,0 +1 @@
++osinfo-db-tools-9999.ebuild
+\ No newline at end of file
+diff --git a/sys-libs/osinfo-db-tools/osinfo-db-tools-1.1.0.ebuild b/sys-libs/osinfo-db-tools/osinfo-db-tools-1.1.0.ebuild
+new file mode 120000
+index 0000000000..ab16f75c6e
+--- /dev/null
++++ b/sys-libs/osinfo-db-tools/osinfo-db-tools-1.1.0.ebuild
+@@ -0,0 +1 @@
++osinfo-db-tools-9999.ebuild
+\ No newline at end of file
+diff --git a/sys-libs/osinfo-db-tools/osinfo-db-tools-9999.ebuild b/sys-libs/osinfo-db-tools/osinfo-db-tools-9999.ebuild
+new file mode 100644
+index 0000000000..6320fffb71
+--- /dev/null
++++ b/sys-libs/osinfo-db-tools/osinfo-db-tools-9999.ebuild
+@@ -0,0 +1,47 @@
++# Copyright 1999-2017 Gentoo Foundation
++# Distributed under the terms of the GNU General Public License v2
++# $Id$
++
++EAPI=6
++
++inherit gnome2
++
++DESCRIPTION="Libosinfo database tools"
++HOMEPAGE="http://libosinfo.org/"
++
++if [[ ${PV} = *9999* ]]; then
++	inherit git-r3 autotools
++	EGIT_REPO_URI="https://gitlab.com/libosinfo/osinfo-db-tools"
++	SRC_URI=""
++	KEYWORDS=""
++else
++    SRC_URI="https://releases.pagure.org/libosinfo/osinfo-db-tools-${PV}.tar.gz"
++	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
++fi
++
++LICENSE="GPL-2 LGPL-2.1"
++SLOT="0"
++KEYWORDS=""
++IUSE=""
++
++RDEPEND="
++	>=dev-libs/glib-2.36.0:2
++	dev-libs/libxml2:=
++	>=app-arch/libarchive-3.0.0
++	sys-devel/gettext
++"
++DEPEND="${RDEPEND}
++	dev-util/intltool
++	dev-libs/libxslt
++"
++
++src_prepare() {
++	if [[ ${PV} = *9999* ]]; then
++		eautoreconf
++	fi
++	gnome2_src_prepare
++}
++
++src_configure() {
++	gnome2_src_configure
++}
+diff --git a/sys-libs/osinfo-db/Manifest b/sys-libs/osinfo-db/Manifest
+new file mode 100644
+index 0000000000..2294bf2d65
+--- /dev/null
++++ b/sys-libs/osinfo-db/Manifest
+@@ -0,0 +1,4 @@
++DIST osinfo-db-20160728.tar.xz 53872 SHA256 4373f1b216c1a4e026576e105ad4cb524d0ee484d0ab8dcfcec21cbf119de6fb SHA512 f9ab6d71eafb5bfe607982597fe875f99c5eab171219e5382011a38b893e6dc5b7f19a49c9be7ca794316edcc332a31fa90a2074d82a66d6671ab29673081cc2 WHIRLPOOL 9c308582fd34fd2158678d9d2544c088fad704538840d899b1bd8e11230d70dc5f26e4fb29938355327347550c1014be7521a846496f2ba45b56a602574a258e
++DIST osinfo-db-20161026.tar.xz 61140 SHA256 962a68287dac6308a2e86123f700bdaa0c5bd433763c1000032a4b6b71a443d1 SHA512 44d5e63722f1ed8f78f0d239be083449ec47e8f8855cca99f91831b308cb5b0d1f74621f5bfd217b23c12b664774492b1c75a83e79bb4be9bbddfb2ba3d1de1e WHIRLPOOL 50f9770c442422553df927d3563d04ddc224940ca09abe023701625954b1f8a03186aea03cac45d40d249e06ede16ac9945618b73610e2f9bbf472e8fb6bd5ea
++DIST osinfo-db-20170107.tar.xz 62288 SHA256 5210de08635c4219e0b6ffcefe4e9c8eafb7ca84088fb6c7a2793866e9e5d7b6 SHA512 c63fa775d7433a5fddecfcc1494b8451717b81b922732cfdea55ca64ca3a15e0e68eb55ac781cf42424f3c7f638d824905367b0fc43857811e62360cbd42e508 WHIRLPOOL beca7d7f3fda738bed02f9b6eeb9153f803e9eb3229ef88bf0aedd078075c0a60ed01971fe6ab3b2a3e17de490bf11a4deac057202368480d5c3115e77d585da
++DIST osinfo-db-20170114.tar.xz 62420 SHA256 360fa897d569cb55531d1f5aaee441733d9d067ba1ee043a91f62f08e7dffece SHA512 8092dd52c7cc2a03d8a8eafab6e8e33ede32f7d56defa68b4fb0944406a45cfe1d12f7d2f55b0140ae192808040285ff6652c5eea8f1388d4acb78cafe173259 WHIRLPOOL 2c00b4c5a4188a24db593f8c862d90b451073dad9d92434583e41ad405535db1c5afa506d549a2f202eae287cc0f40dcdfe8e08f913b6b6eb2e0d39a91afafba
+diff --git a/sys-libs/osinfo-db/osinfo-db-20160728.ebuild b/sys-libs/osinfo-db/osinfo-db-20160728.ebuild
+new file mode 120000
+index 0000000000..238dad6df0
+--- /dev/null
++++ b/sys-libs/osinfo-db/osinfo-db-20160728.ebuild
+@@ -0,0 +1 @@
++osinfo-db-9999.ebuild
+\ No newline at end of file
+diff --git a/sys-libs/osinfo-db/osinfo-db-20161026.ebuild b/sys-libs/osinfo-db/osinfo-db-20161026.ebuild
+new file mode 120000
+index 0000000000..238dad6df0
+--- /dev/null
++++ b/sys-libs/osinfo-db/osinfo-db-20161026.ebuild
+@@ -0,0 +1 @@
++osinfo-db-9999.ebuild
+\ No newline at end of file
+diff --git a/sys-libs/osinfo-db/osinfo-db-20170107.ebuild b/sys-libs/osinfo-db/osinfo-db-20170107.ebuild
+new file mode 120000
+index 0000000000..238dad6df0
+--- /dev/null
++++ b/sys-libs/osinfo-db/osinfo-db-20170107.ebuild
+@@ -0,0 +1 @@
++osinfo-db-9999.ebuild
+\ No newline at end of file
+diff --git a/sys-libs/osinfo-db/osinfo-db-20170114.ebuild b/sys-libs/osinfo-db/osinfo-db-20170114.ebuild
+new file mode 120000
+index 0000000000..238dad6df0
+--- /dev/null
++++ b/sys-libs/osinfo-db/osinfo-db-20170114.ebuild
+@@ -0,0 +1 @@
++osinfo-db-9999.ebuild
+\ No newline at end of file
+diff --git a/sys-libs/osinfo-db/osinfo-db-9999.ebuild b/sys-libs/osinfo-db/osinfo-db-9999.ebuild
+new file mode 100644
+index 0000000000..2a2d5e63d3
+--- /dev/null
++++ b/sys-libs/osinfo-db/osinfo-db-9999.ebuild
+@@ -0,0 +1,31 @@
++# Copyright 1999-2017 Gentoo Foundation
++# Distributed under the terms of the GNU General Public License v2
++# $Id$
++
++EAPI=6
++
++DESCRIPTION="Libosinfo database"
++HOMEPAGE="http://libosinfo.org/"
++
++if [[ ${PV} = *9999* ]]; then
++	inherit git-r3
++	EGIT_REPO_URI="https://gitlab.com/libosinfo/osinfo-db"
++	SRC_URI=""
++	KEYWORDS=""
++else
++    SRC_URI="https://releases.pagure.org/libosinfo/osinfo-db-${PV}.tar.xz"
++	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
++fi
++
++LICENSE="GPL-2 LGPL-2.1"
++SLOT="0"
++KEYWORDS=""
++IUSE=""
++
++RDEPEND="
++	sys-apps/hwids
++"
++DEPEND="${RDEPEND}
++    dev-util/intltool
++	sys-libs/osinfo-db-tools
++"
+-- 
+2.11.0
