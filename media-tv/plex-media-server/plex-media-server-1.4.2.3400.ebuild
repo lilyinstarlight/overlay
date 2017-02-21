@@ -6,7 +6,7 @@ EAPI=6
 
 inherit eutils user systemd unpacker
 
-COMMIT="77c6a4f80"
+COMMIT="ab906953b"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -19,6 +19,7 @@ DESCRIPTION="A free media library that is intended for use with a plex client."
 HOMEPAGE="http://www.plex.tv/"
 SRC_URI="
 	amd64? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_amd64.deb )
+	x86? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_i386.deb )
 "
 SLOT="0"
 LICENSE="Plex"
