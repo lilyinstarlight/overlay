@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -9,7 +9,7 @@ inherit linux-mod
 DESCRIPTION="Non-fuse kernel driver for exFat and VFat file systems"
 HOMEPAGE="https://github.com/dorimanx/exfat-nofuse"
 
-COMMIT="a877c799d00eb0618aad15c6658650dac9a18a45"
+COMMIT="97f9e2d6259aa0820d23c7259aac50467d208a32"
 SRC_URI="https://github.com/dorimanx/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
