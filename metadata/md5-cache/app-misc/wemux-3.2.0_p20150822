@@ -8,5 +8,5 @@ RDEPEND=>=app-misc/tmux-1.6
 SLOT=0
 SRC_URI=https://github.com/zolrath/wemux/archive/01c6541f8deceff372711241db2a13f21c4b210c.tar.gz -> wemux-3.2.0_p20150822.tar.gz
 _eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_install:-
-_eclasses_=user	80aaa71614ced86f02ee1a513821dc87
+_eclasses_=user	e10ccb95af96d45f86016fa982a949bb
 _md5_=09bf557e2968b5a2035d828865cda139
