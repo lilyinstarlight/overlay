@@ -37,7 +37,8 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	dev-util/xdelta:3
+	dev-util/xdelta:0
+	virtual/libusb:0
 "
 RDEPEND=""
 
