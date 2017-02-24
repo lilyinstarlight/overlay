@@ -66,6 +66,7 @@ net-analyzer/metasploit 4.13.24: Advanced framework for developing, testing, and
 net-analyzer/nikto 2.1.6_p20170209: web server vulnerability scanner
 net-im/discord 0.0.1: All-in-one voice and text chat for gamers
 net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes
+net-misc/chrome-remote-desktop 56.0.2924.51: access remote computers via Chrome!
 net-p2p/zget 0.11.1: zeroconf based peer to peer file transfer
 net-wireless/create_ap 0.4.6: A script to create a NATed or bridged WiFi access point
 net-wireless/unifi 5.4.11: Management Controller for Ubiquiti Networks UniFi APs
@@ -79,7 +80,7 @@ sys-libs/libosinfo 9999: GObject library for managing information about real and
 sys-libs/osinfo-db 9999 20170211: Libosinfo database
 sys-libs/osinfo-db-tools 1.1.0 9999: Libosinfo database tools
 x11-misc/awf 1.3.1: A Widget Factory
-x11-misc/barline 0.2.2: a simple data collector and formatter for lemonbar and bspwm
+x11-misc/barline 0.2.3: a simple data collector and formatter for lemonbar and bspwm
 x11-misc/clipster 0_p20170217: simple clipboard manager
 x11-misc/lemonbar 1.2_p20161116: a featherweight, lemon-scented, bar based on xcb
 x11-misc/slop 5.3.21: An application that queries the user for a selection for printing
