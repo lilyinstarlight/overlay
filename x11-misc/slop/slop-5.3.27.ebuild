@@ -24,5 +24,3 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	media-libs/glm"
-
-PATCHES=( "${FILESDIR}/${PN}-5.3.21-fkmclane.patch" )
