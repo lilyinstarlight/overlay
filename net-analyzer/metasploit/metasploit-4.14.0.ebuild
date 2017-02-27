@@ -37,25 +37,24 @@ IUSE="development +java oracle +pcap test"
 RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
-	>=dev-ruby/activesupport-4.2.6:4.2
-	>=dev-ruby/actionpack-4.2.6:4.2
-	>=dev-ruby/activerecord-4.2.6:4.2
+	>=dev-ruby/activesupport-4.2.8:4.2
+	>=dev-ruby/actionpack-4.2.8:4.2
+	>=dev-ruby/activerecord-4.2.8:4.2
 	dev-ruby/bcrypt-ruby
 	dev-ruby/bit-struct
 	dev-ruby/builder:3
 	dev-ruby/bundler
 	dev-ruby/filesize
-	>=dev-ruby/jsobfu-0.4.1:0
+	>=dev-ruby/jsobfu-0.4.2:0
 	dev-ruby/json:*
 	dev-ruby/kissfft
 	dev-ruby/metasm:1.0.2
-	>=dev-ruby/metasploit_data_models-2.0.0
-	dev-ruby/meterpreter_bins:0.0.22
-	dev-ruby/metasploit-payloads:1.1.13
-	dev-ruby/metasploit_payloads-mettle:0.0.6
-	>=dev-ruby/metasploit-credential-2.0.0
-	>=dev-ruby/metasploit-concern-2.0.0
-	>=dev-ruby/metasploit-model-2.0.0
+	>=dev-ruby/metasploit_data_models-2.0.14
+	dev-ruby/metasploit-payloads:1.2.14
+	dev-ruby/metasploit_payloads-mettle:0.1.7
+	>=dev-ruby/metasploit-credential-2.0.8
+	>=dev-ruby/metasploit-concern-2.0.3
+	>=dev-ruby/metasploit-model-2.0.3
 	dev-ruby/msgpack
 	dev-ruby/nessus_rest
 	dev-ruby/net-ssh:*
@@ -64,9 +63,10 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/openvas-omp
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
+	>=dev-ruby/railties-4.2.8
 	dev-ruby/recog:2.0.14
 	dev-ruby/redcarpet
-	=dev-ruby/rkelly-remix-0.0.6
+	=dev-ruby/rkelly-remix-0.0.7
 	dev-ruby/rex-arch
 	dev-ruby/rex-bin_tools
 	dev-ruby/rex-core
@@ -86,7 +86,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/sqlite3
 	>=dev-ruby/pg-0.11
 	dev-ruby/packetfu:1.1.11
-	>=dev-ruby/rubyzip-1.1
+	>=dev-ruby/rubyzip-1.2.1
 	dev-ruby/rb-readline
 	dev-ruby/robots
 	dev-ruby/sshkey
