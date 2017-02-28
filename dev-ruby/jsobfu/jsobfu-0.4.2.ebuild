@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
-ruby_add_rdepend "!dev-ruby/jsobfu:0
-		>=dev-ruby/rkelly-remix-0.0.6:0"
+ruby_add_rdepend "!dev-ruby/jsobfu:0 >=dev-ruby/rkelly-remix-0.0.7:0"
 
 ruby_add_bdepend "test? ( dev-ruby/execjs )"
 
@@ -28,6 +27,4 @@ all_ruby_prepare() {
 	sed -i -e '/simplecov/ s:^:#:' \
 		-e '/config.\(color\|tty\|formatter\)/ s:^:#:' \
 		spec/spec_helper.rb || die
-
-	sed -i -e '/rkelly-remix/,/name:/ s/=/~>/' ../metadata || die
 }

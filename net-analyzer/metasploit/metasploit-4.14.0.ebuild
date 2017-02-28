@@ -58,6 +58,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/msgpack
 	dev-ruby/nessus_rest
 	dev-ruby/net-ssh:*
+	dev-ruby/nexpose
 	dev-ruby/nokogiri
 	dev-ruby/octokit
 	dev-ruby/openvas-omp
