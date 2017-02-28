@@ -21,6 +21,7 @@ dev-ruby/metasploit-payloads 1.2.14: Compiled binaries for Metasploit's Meterpre
 dev-ruby/metasploit_data_models 2.0.14: The database layer for Metasploit
 dev-ruby/metasploit_payloads-mettle 0.1.7: Compiled binaries for Metasploit's next-gen Meterpreter
 dev-ruby/nessus_rest 0.1.6: Nessus REST interface library
+dev-ruby/nexpose 5.3.0: Nexpose API client library
 dev-ruby/openvas-omp 0.0.4: OpenVAS communication library through OMP
 dev-ruby/packetfu 1.1.13_pre: A mid-level packet manipulation library
 dev-ruby/rex-arch 0.1.4: architecture specific information for Rex
