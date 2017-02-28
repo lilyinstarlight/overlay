@@ -10,5 +10,5 @@ RDEPEND=qemu? ( app-emulation/qemu )
 SLOT=0
 SRC_URI=https://github.com/tianocore/edk2/archive/296153c5bf9976a3b5f00566819f109d1c23c135.tar.gz -> edk2-296153c5bf9976a3b5f00566819f109d1c23c135.tar.gz mirror://openssl/source/openssl-1.0.2j.tar.gz
 _eclass_exported_funcs=src_prepare:- src_configure:- src_compile:- src_install:-
-_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783
+_eclasses_=eutils	3c847a0129fed780bd709b98e426f89c	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	toolchain-funcs	53b75b4a49cf3e61530a523804045432
 _md5_=af4ad05cb3a4c75ab2190e75d4ee003a
