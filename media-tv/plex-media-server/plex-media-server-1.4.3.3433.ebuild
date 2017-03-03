@@ -6,7 +6,7 @@ EAPI=6
 
 inherit eutils user systemd unpacker
 
-COMMIT="ab906953b"
+COMMIT="03e4cfa35"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -24,7 +24,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
-KEYWORDS="-* ~amd64"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
