@@ -3,8 +3,8 @@
 # $Id$
 
 EAPI=6
-
-inherit eutils user systemd unpacker
+PYTHON_COMPAT=( python2_7 )
+inherit eutils user systemd unpacker pax-utils python-single-r1
 
 COMMIT="7d2c839"
 
@@ -27,11 +27,11 @@ KEYWORDS="-* ~amd64"
 
 IUSE="plex-ffmpeg"
 
-DEPEND="
-	net-dns/avahi
-	sys-apps/fix-gnustack"
+DEPEND="sys-apps/fix-gnustack
+	dev-python/virtualenv[${PYTHON_USEDEP}]"
 
-RDEPEND="plex-ffmpeg? ( >=media-video/plex-ffmpeg-2016.12 )"
+RDEPEND="plex-ffmpeg? ( >=media-video/plex-ffmpeg-2016.12 )
+	net-dns/avahi"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
 QA_PREBUILT="*"
@@ -41,10 +41,11 @@ QA_MULTILIB_PATHS=(
 )
 
 EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*" )
+BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host" )
 
 PATCHES=(
 	"${FILESDIR}/plexmediamanager.desktop.patch"
-	"${FILESDIR}/start_pms.patch"
+	"${FILESDIR}/virtualenvize_start_pms.patch"
 )
 
 S="${WORKDIR}"
@@ -71,6 +72,8 @@ src_install() {
 	dodir "${CONFIG_PATH}"
 	insinto "${CONFIG_PATH}"
 	doins "${CONFIG_VANILLA}"
+	sed -e "s#${CONFIG_VANILLA}#${CONFIG_PATH}#g" \
+		-i "${S}"/usr/sbin/start_pms || die
 
 	# Remove Debian specific files
 	rm -rf "${ED%/}/usr/share/doc" || die
@@ -97,11 +100,19 @@ src_install() {
 	systemd_newunit "${INIT}" "${INIT_NAME}"
 
 	_remove_execstack_markings
+	_add_pax_markings
+
+    einfo "Configuring virtualenv"
+    virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"usr/lib/plexmediaserver/Resources/Python || die
+    pushd "${ED}"usr/lib/plexmediaserver/Resources/Python &>/dev/null || die
+    find . -type f -exec sed -i -e "s#${D}##g" {} + || die
+    popd &>/dev/null || die
+
 }
 
 pkg_postinst() {
 	einfo ""
-	elog "Plex Media Server is now installed. Please check the configuration file in /etc/plex/${_SHORTNAME} to verify the default settings."
+	elog "Plex Media Server is now installed. Please check the configuration file in /etc/${_SHORTNAME}/${_APPNAME} to verify the default settings."
 	elog "To start the Plex Server, run 'rc-config start plex-media-server', you will then be able to access your library at http://<ip>:32400/web/"
 }
 
@@ -116,11 +127,16 @@ _handle_multilib() {
 
 	doenvd "${T}"/66plex
 }
-
 # Remove execstack flag from library so that it works in hardened setups.
 _remove_execstack_markings() {
 	for f in "${EXECSTACKED_BINS[@]}"; do
 		# Unquoting 'f' so that expansion works.
 		fix-gnustack -f ${f} > /dev/null
 	done
+}
+# Add pax markings to some binaries so that they work on hardened setup.
+_add_pax_markings() {
+    for f in "${BINS_TO_PAX_MARK[@]}"; do
+        pax-mark m "${f}"
+    done
 }
