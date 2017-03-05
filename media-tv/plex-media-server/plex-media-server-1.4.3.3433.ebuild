@@ -1,19 +1,20 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-MINOR1="3433"
-MINOR2="03e4cfa35"
+#MINOR1="3433"
+#MINOR2="03e4cfa35"
+COMMIT="03e4cfa35"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
 _SHORTNAME="${_USERNAME}"
-_FULL_VERSION="${PV}.${MINOR1}-${MINOR2}"
+#_FULL_VERSION="${PV}.${MINOR1}-${MINOR2}"
+_FULL_VERSION="${PV}-${COMMIT}"
 
 URI="https://downloads.plex.tv/plex-media-server"
 
@@ -26,7 +27,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 
 IUSE="pax_kernel dlna"
 
@@ -92,14 +93,13 @@ src_install() {
 	chown "${_USERNAME}":"${_USERNAME}" "${ED%/}/${DEFAULT_LIBRARY_DIR}" || die
 
 	# Install the OpenRC init/conf files depending on dlna.
-    if use dlna; then
+	if use dlna; then
 	    doinitd "${FILESDIR}/init.d/${PN}"
-    else
+	else
 		cp "${FILESDIR}/init.d/${PN}" "${S}/init.d/${PN}";
 		sed -e '/need/ s/^#*/#/' -i "${S}/init.d/${PN}"
-    	doinitd "${FILESDIR}/init.d/${PN}"
-    fi
-
+		doinitd "${FILESDIR}/init.d/${PN}"
+	fi
 
 	doconfd "${FILESDIR}/conf.d/${PN}"
 
@@ -117,13 +117,11 @@ src_install() {
 	popd &>/dev/null || die
 
 # Add PaX marking for hardened systems
-    if use pax_kernel; then
-    _remove_execstack_markings
-    _add_pax_markings
-    _add_pax_flags
+	if use pax_kernel; then
+		_remove_execstack_markings
+		_add_pax_markings
+		_add_pax_flags
 	fi
-	
-
 }
 
 pkg_postinst() {
