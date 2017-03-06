@@ -6,8 +6,8 @@ EAPI=6
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-#MINOR1="3433"
-#MINOR2="03e4cfa35"
+MINOR1="3433"
+MINOR2="03e4cfa35"
 COMMIT="03e4cfa35"
 
 _APPNAME="plexmediaserver"
@@ -29,11 +29,11 @@ LICENSE="Plex"
 RESTRICT="mirror bindist strip"
 KEYWORDS="-* amd64 x86"
 
-IUSE="pax_kernel dlna"
+IUSE="pax_kernel avahi"
 
 DEPEND="pax_kernel? ( "sys-apps/fix-gnustack" )
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
-RDEPEND="dlna? ( "net-dns/avahi" )
+RDEPEND="avahi? ( "net-dns/avahi" )
 	${PYTHON_DEPS}"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
@@ -43,7 +43,8 @@ QA_MULTILIB_PATHS=(
 	"usr/lib/${_APPNAME}/Resources/Python/lib/python2.7/.*"
 )
 
-EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*" )
+EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*"
+					"${ED%/})/usr/lib/plexmediaserver/Plex Media Scanner" )
 BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host" )
 BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin/python" )
 
@@ -92,13 +93,15 @@ src_install() {
 	dodir "${DEFAULT_LIBRARY_DIR}"
 	chown "${_USERNAME}":"${_USERNAME}" "${ED%/}/${DEFAULT_LIBRARY_DIR}" || die
 
-	# Install the OpenRC init/conf files depending on dlna.
-	if use dlna; then
+	# Install the OpenRC init/conf files depending on avahi.
+	if use avahi; then
 	    doinitd "${FILESDIR}/init.d/${PN}"
 	else
-		cp "${FILESDIR}/init.d/${PN}" "${S}/init.d/${PN}";
-		sed -e '/need/ s/^#*/#/' -i "${S}/init.d/${PN}"
-		doinitd "${FILESDIR}/init.d/${PN}"
+		cp "${FILESDIR}/init.d/${PN}" "${S}/${PN}";
+		sed -e '/depend/ s/^#*/#/' -i "${S}/${PN}"
+		sed -e '/need/ s/^#*/#/' -i "${S}/${PN}"
+		sed -e '1,/^}/s/^}/#}/' -i "${S}/${PN}"
+		doinitd "${S}/${PN}"
 	fi
 
 	doconfd "${FILESDIR}/conf.d/${PN}"

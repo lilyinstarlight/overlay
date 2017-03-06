@@ -1,6 +1,5 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
@@ -102,12 +101,11 @@ src_install() {
 	_remove_execstack_markings
 	_add_pax_markings
 
-    einfo "Configuring virtualenv"
-    virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"usr/lib/plexmediaserver/Resources/Python || die
-    pushd "${ED}"usr/lib/plexmediaserver/Resources/Python &>/dev/null || die
-    find . -type f -exec sed -i -e "s#${D}##g" {} + || die
-    popd &>/dev/null || die
-
+	einfo "Configuring virtualenv"
+	virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"usr/lib/plexmediaserver/Resources/Python || die
+	pushd "${ED}"usr/lib/plexmediaserver/Resources/Python &>/dev/null || die
+	find . -type f -exec sed -i -e "s#${D}##g" {} + || die
+	popd &>/dev/null || die
 }
 
 pkg_postinst() {
@@ -136,7 +134,7 @@ _remove_execstack_markings() {
 }
 # Add pax markings to some binaries so that they work on hardened setup.
 _add_pax_markings() {
-    for f in "${BINS_TO_PAX_MARK[@]}"; do
-        pax-mark m "${f}"
-    done
+	for f in "${BINS_TO_PAX_MARK[@]}"; do
+		pax-mark m "${f}"
+	done
 }
