@@ -24,13 +24,14 @@ LICENSE="Plex"
 RESTRICT="mirror bindist strip"
 KEYWORDS="-* ~amd64"
 
-IUSE="plex-ffmpeg"
+IUSE="plex-ffmpeg pax_kernel avahi"
+REQUIRED_USE="plex-ffmpeg"
 
-DEPEND="sys-apps/fix-gnustack
+DEPEND="pax_kernel? ( "sys-apps/fix-gnustack" )
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
 
-RDEPEND="plex-ffmpeg? ( >=media-video/plex-ffmpeg-2016.12 )
-	net-dns/avahi"
+RDEPEND=">=media-video/plex-ffmpeg-2016.12
+	avahi? ( "net-dns/avahi" )"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
 QA_PREBUILT="*"
@@ -39,12 +40,16 @@ QA_MULTILIB_PATHS=(
 	"usr/lib/${_APPNAME}/Resources/Python/lib/python2.7/.*"
 )
 
-EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*" )
+EXECSTACKED_BINS=(
+	"${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*"
+	"${ED%/})/usr/lib/plexmediaserver/Plex Media Scanner"
+)
 BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host" )
+BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin/python" )
 
 PATCHES=(
 	"${FILESDIR}/plexmediamanager.desktop.patch"
-	"${FILESDIR}/virtualenvize_start_pms.patch"
+	"${FILESDIR}/virtualenv_start_pms.patch"
 )
 
 S="${WORKDIR}"
@@ -88,7 +93,16 @@ src_install() {
 	chown "${_USERNAME}":"${_USERNAME}" "${ED%/}/${DEFAULT_LIBRARY_DIR}" || die
 
 	# Install the OpenRC init/conf files
-	doinitd "${FILESDIR}/init.d/${PN}"
+	if use avahi; then
+		doinitd "${FILESDIR}/init.d/${PN}"
+	else
+	cp "${FILESDIR}/init.d/${PN}" "${S}/${PN}";
+		sed -e '/depend/ s/^#*/#/' -i "${S}/${PN}"
+		sed -e '/need/ s/^#*/#/' -i "${S}/${PN}"
+		sed -e '1,/^}/s/^}/#}/' -i "${S}/${PN}"
+		doinitd "${S}/${PN}"
+	fi
+
 	doconfd "${FILESDIR}/conf.d/${PN}"
 
 	_handle_multilib
@@ -98,8 +112,11 @@ src_install() {
 	local INIT="${FILESDIR}/systemd/${INIT_NAME}"
 	systemd_newunit "${INIT}" "${INIT_NAME}"
 
-	_remove_execstack_markings
-	_add_pax_markings
+	if use pax_kernel; then
+		_remove_execstack_markings
+		_add_pax_markings
+		_add_pax_flags
+	fi
 
 	einfo "Configuring virtualenv"
 	virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"usr/lib/plexmediaserver/Resources/Python || die
@@ -136,5 +153,11 @@ _remove_execstack_markings() {
 _add_pax_markings() {
 	for f in "${BINS_TO_PAX_MARK[@]}"; do
 		pax-mark m "${f}"
+	done
+}
+# Create default PaX markings on virtualenvironment's pythin
+_add_pax_flags() {
+	for f in "${BINS_TO_PAX_CREATE_FLAGS[@]}"; do
+		pax-mark c "${F}"
 	done
 }

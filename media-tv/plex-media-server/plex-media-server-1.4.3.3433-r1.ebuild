@@ -6,14 +6,11 @@ EAPI=6
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-MINOR1="3433"
-MINOR2="03e4cfa35"
 COMMIT="03e4cfa35"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
 _SHORTNAME="${_USERNAME}"
-#_FULL_VERSION="${PV}.${MINOR1}-${MINOR2}"
 _FULL_VERSION="${PV}-${COMMIT}"
 
 URI="https://downloads.plex.tv/plex-media-server"
@@ -43,8 +40,10 @@ QA_MULTILIB_PATHS=(
 	"usr/lib/${_APPNAME}/Resources/Python/lib/python2.7/.*"
 )
 
-EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*"
-					"${ED%/})/usr/lib/plexmediaserver/Plex Media Scanner" )
+EXECSTACKED_BINS=(
+	"${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*"
+	"${ED%/})/usr/lib/plexmediaserver/Plex Media Scanner"
+)
 BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host" )
 BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin/python" )
 
@@ -62,7 +61,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	eapply "${FILESDIR}"/virtualenvize_start_pms.patch
+	eapply "${FILESDIR}"/virtualenv_start_pms.patch
 	eapply "${FILESDIR}"/plexmediamanager.desktop.patch
 	default
 }
@@ -95,7 +94,7 @@ src_install() {
 
 	# Install the OpenRC init/conf files depending on avahi.
 	if use avahi; then
-	    doinitd "${FILESDIR}/init.d/${PN}"
+		doinitd "${FILESDIR}/init.d/${PN}"
 	else
 		cp "${FILESDIR}/init.d/${PN}" "${S}/${PN}";
 		sed -e '/depend/ s/^#*/#/' -i "${S}/${PN}"
