@@ -25,13 +25,12 @@ RESTRICT="mirror bindist strip"
 KEYWORDS="-* ~amd64"
 
 IUSE="plex-ffmpeg pax_kernel avahi"
-REQUIRED_USE="plex-ffmpeg"
 
-DEPEND="pax_kernel? ( "sys-apps/fix-gnustack" )
+DEPEND="pax_kernel? ( sys-apps/fix-gnustack )
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
 
-RDEPEND=">=media-video/plex-ffmpeg-2016.12
-	avahi? ( "net-dns/avahi" )"
+RDEPEND="plex-ffmpeg? ( >=media-video/plex-ffmpeg-2016.12 )
+	avahi? ( net-dns/avahi )"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
 QA_PREBUILT="*"
