@@ -19,7 +19,7 @@ EGIT_REPO_URI="https://github.com/tianocore/${MY_PN}"
 
 KEYWORDS=""
 
-OPENSSL_PV="1.0.2j"
+OPENSSL_PV="1.0.2k"
 OPENSSL_P="openssl-${OPENSSL_PV}"
 SRC_URI="mirror://openssl/source/${OPENSSL_P}.tar.gz"
 
@@ -88,11 +88,12 @@ src_compile() {
 
 src_install() {
 	local fv="Build/OvmfX64/${TARGET_NAME}_${TARGET_TOOLS}/FV"
-	insinto /usr/share/${PN}
+	insinto /usr/share/"${PN}"
 	doins "${fv}"/OVMF{,_CODE,_VARS}.fd
-	dosym OVMF.fd /usr/share/${PN}/bios.bin
+	dosym OVMF.fd /usr/share/"${PN}"/bios.bin
+	dosym "${PN}" /usr/share/OVMF
 
 	if use qemu; then
-		dosym ../${PN}/OVMF.fd /usr/share/qemu/efi-bios.bin
+		dosym ../"${PN}"/OVMF.fd /usr/share/qemu/efi-bios.bin
 	fi
 }
