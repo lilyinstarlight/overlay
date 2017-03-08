@@ -15,13 +15,13 @@ SLOT="0"
 IUSE="debug +qemu +secure-boot"
 
 MY_PN="edk2"
-COMMIT="296153c5bf9976a3b5f00566819f109d1c23c135"
+COMMIT="bdecff6c0f23027c643cce70ae2004420dc81324"
 MY_P="${MY_PN}-${COMMIT}"
 SRC_URI="https://github.com/tianocore/${MY_PN}/archive/${COMMIT}.tar.gz -> ${MY_P}.tar.gz"
 
 KEYWORDS="-* ~amd64 ~x86"
 
-OPENSSL_PV="1.0.2j"
+OPENSSL_PV="1.0.2k"
 OPENSSL_P="openssl-${OPENSSL_PV}"
 SRC_URI+="
 	mirror://openssl/source/${OPENSSL_P}.tar.gz
@@ -88,11 +88,12 @@ src_compile() {
 
 src_install() {
 	local fv="Build/OvmfX64/${TARGET_NAME}_${TARGET_TOOLS}/FV"
-	insinto /usr/share/${PN}
+	insinto /usr/share/"${PN}"
 	doins "${fv}"/OVMF{,_CODE,_VARS}.fd
-	dosym OVMF.fd /usr/share/${PN}/bios.bin
+	dosym OVMF.fd /usr/share/"${PN}"/bios.bin
+	dosym "${PN}" /usr/share/OVMF
 
 	if use qemu; then
-		dosym ../${PN}/OVMF.fd /usr/share/qemu/efi-bios.bin
+		dosym ../"${PN}"/OVMF.fd /usr/share/qemu/efi-bios.bin
 	fi
 }
