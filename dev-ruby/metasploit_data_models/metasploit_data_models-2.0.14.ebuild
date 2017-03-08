@@ -26,7 +26,7 @@ ruby_add_rdepend "
 		>=dev-ruby/activerecord-4.2.8:4.2[postgres]
 		>=dev-ruby/activesupport-4.2.8:4.2
 		dev-ruby/pg
-		dev-ruby/postgres_ext
+		dev-ruby/postgres_ext:3
 		>=dev-ruby/railties-4.2.6:4.2
 		>=dev-ruby/recog-2.0.0:*
 		dev-ruby/arel-helpers
