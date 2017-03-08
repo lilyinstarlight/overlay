@@ -20,7 +20,7 @@ Packages
 
 ### Multimedia
 
-#### Plex [media-tv/plex-media-server, media-tv/plex-home-theater, media-tv/plex-media-player]
+#### Plex [media-tv/plex-media-server, media-tv/plex-home-theater, media-tv/plex-media-player, media-tv/plexpy, media-video/plex-ffmpeg, media-plugins/plex-for-kodi, media-plugins/plex-kodi-connect]
 [Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64" or "~x86" keywords to the packages to get the latest Plex Pass versions.
 
 #### v4l2loopback [media-video/v4l2loopback]
@@ -34,6 +34,12 @@ Packages
 
 #### ympd [media-sound/ympd]
 [ympd](https://www.ympd.org/) is a standalone MPD web GUI written in C, utilizing websockets and Bootstrap/JS.
+
+#### OpenVR [media-libs/openvr]
+[OpenVR](https://github.com/ValveSoftware/openvr) is an API and runtime for abstracting various VR hardware.
+
+#### Discord [net-im/discord]
+[Discord](https://discordapp.com/) is an all-in-one voice and text chat for gamers.
 
 
 ### Games
@@ -102,13 +108,18 @@ Packages
 [UniFi Controller](http://wiki.ubnt.com/UniFi_FAQ) is a management controller and inferface for the Ubiquiti Networks UniFi access points.
 
 
+### Operating System
+
+#### exfat-nofuse [sys-fs/exfat-nofuse]
+[exfat-nofuse](https://github.com/dorimanx/exfat-nofuse) is a non-FUSE kernel driver for exFat and VFat file systems.
+
+#### EDK2 OVMF [sys-firmware/edk2-ovmf]
+[EDK2 OVMF](http://www.tianocore.org/) is a firmware image for the EDK II UEFI firmware.
+
 ### Development
 
 #### Unity Editor [dev-util/unity-editor]
 [Unity Editor](http://unity3d.com/) is the editor for making games with the Unity game engine.
-
-#### Git LFS [dev-vcs/git-lfs]
-[Git LFS](https://git-lfs.github.com/) is a git extension for versioning large files via text pointers to a large file database.
 
 #### Arduino [dev-embedded/arduino-bin]
 [Arduino](https://www.arduino.cc/) is an electronics prototyping platform designed from easy-to-use hardware and software.
@@ -134,3 +145,6 @@ Packages
 
 #### A Widget Factory [x11-misc/awf]
 [A Widget Factory](https://github.com/valr/awf) is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
+
+#### Arc Theme [x11-themes/arc-openbox-theme, x11-themes/arc-icon-theme]
+[Arc Theme](https://github.com/horst3180/arc-theme) is a flat GTK+ theme with transparent elements.
