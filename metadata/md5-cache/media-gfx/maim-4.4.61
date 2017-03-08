@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=x11-libs/libX11 x11-libs/libXext media-libs/glew:0= media-libs/glm virtual/opengl media-libs/glm sys-devel/make >=dev-util/cmake-3.6.3
-DESCRIPTION=An application that queries the user for a selection for printing
+DEPEND=virtual/jpeg:* media-libs/libpng:0 x11-libs/libX11 x11-libs/libXrandr x11-libs/libXfixes x11-misc/slop sys-devel/make >=dev-util/cmake-3.6.3
+DESCRIPTION=Command line tool to take screenshots of the desktop
 EAPI=6
-HOMEPAGE=https://github.com/naelstrof/slop
+HOMEPAGE=https://github.com/naelstrof/maim
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=x11-libs/libX11 x11-libs/libXext media-libs/glew:0= media-libs/glm virtual/opengl
+RDEPEND=virtual/jpeg:* media-libs/libpng:0 x11-libs/libX11 x11-libs/libXrandr x11-libs/libXfixes x11-misc/slop
 SLOT=0
-SRC_URI=https://github.com/naelstrof/slop/archive/v5.3.35.tar.gz -> slop-5.3.35.tar.gz
+SRC_URI=https://github.com/naelstrof/maim/archive/v4.4.61.tar.gz -> maim-4.4.61.tar.gz
 _eclass_exported_funcs=src_prepare:cmake-utils src_configure:cmake-utils src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
 _eclasses_=cmake-utils	dd1d263f83f0791bd433b134f40db39b	eutils	3c847a0129fed780bd709b98e426f89c	flag-o-matic	61cad4fb5d800b29d484b27cb033f59b	multilib	0236be304ee52e7f179ed2f337075515	multiprocessing	284a473719153462f3e974d86c8cb81c	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	versionator	c80ccf29e90adea7c5cae94b42eb76d0
-_md5_=3d28e8a99ac428adfc8c6a7911d271d3
+_md5_=cd6f013ec5b3e345877fabec699e0149
