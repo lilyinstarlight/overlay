@@ -49,8 +49,9 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/json:*
 	dev-ruby/kissfft
 	dev-ruby/metasm:1.0.2
+	>=dev-ruby/metasploit-aggregator-0.1.3
 	>=dev-ruby/metasploit_data_models-2.0.14
-	dev-ruby/metasploit-payloads:1.2.14
+	dev-ruby/metasploit-payloads:1.2.16
 	dev-ruby/metasploit_payloads-mettle:0.1.7
 	>=dev-ruby/metasploit-credential-2.0.8
 	>=dev-ruby/metasploit-concern-2.0.3
@@ -72,7 +73,9 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-bin_tools
 	dev-ruby/rex-core
 	dev-ruby/rex-encoder
+	dev-ruby/rex-exploitation
 	dev-ruby/rex-java
+	dev-ruby/rex-mime
 	dev-ruby/rex-nop
 	dev-ruby/rex-ole
 	dev-ruby/rex-powershell
@@ -86,7 +89,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-zip
 	dev-ruby/sqlite3
 	>=dev-ruby/pg-0.11
-	dev-ruby/packetfu:1.1.11
+	dev-ruby/packetfu:1.1.13_pre
 	>=dev-ruby/rubyzip-1.2.1
 	dev-ruby/rb-readline
 	dev-ruby/robots
