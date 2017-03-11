@@ -9,7 +9,7 @@ dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for TI MSP
 dev-embedded/teensyduino-bin 1.35: USB-based electronics prototyping platform compatible with Arduino
 dev-lang/kaitai-struct-compiler 0.6: Compiler for the Kaitai Struct project
 dev-python/boto 2.45.0: Amazon Web Services API
-dev-python/kaitaistruct 0.6: Kaitai Struct API for Python
+dev-python/kaitaistruct 0.6: Kaitai Struct runtime for Python
 dev-python/progressbar2 3.12.0: text progress bar library for Python
 dev-python/python-utils 2.0.1: a collection of functions and classes which shortens common patterns
 dev-python/pyusb 1.0.0_beta1: USB support for Python
