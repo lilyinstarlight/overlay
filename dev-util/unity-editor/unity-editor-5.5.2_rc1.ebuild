@@ -9,7 +9,7 @@ inherit eutils unpacker versionator
 DESCRIPTION="Editor for the Unity game engine"
 HOMEPAGE="http://unity3d.com/"
 
-DOWNLOAD="35e1927e3b6b"
+DOWNLOAD="e06241adb51f"
 
 RELEASE="$(get_version_component_range 4)"
 RELEASE="${RELEASE/rc/f}"
