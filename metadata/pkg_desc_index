@@ -91,7 +91,7 @@ sys-libs/libosinfo 9999: GObject library for managing information about real and
 sys-libs/osinfo-db 9999 20170225: Libosinfo database
 sys-libs/osinfo-db-tools 1.1.0 9999: Libosinfo database tools
 x11-misc/awf 1.3.1: A Widget Factory
-x11-misc/barline 0.2.4: a simple data collector and formatter for lemonbar and bspwm
+x11-misc/barline 0.2.5: a simple data collector and formatter for lemonbar and bspwm
 x11-misc/clipster 0_p20170227: simple clipboard manager
 x11-misc/lemonbar 1.2_p20161116: a featherweight, lemon-scented, bar based on xcb
 x11-misc/slop 5.3.37: An application that queries the user for a selection for printing
