@@ -6,7 +6,7 @@ EAPI=6
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-COMMIT="03e4cfa35"
+COMMIT="edef59192"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -24,7 +24,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 IUSE="pax_kernel avahi"
 
@@ -40,11 +40,10 @@ QA_MULTILIB_PATHS=(
 	"usr/lib/${_APPNAME}/Resources/Python/lib/python2.7/.*"
 )
 
-EXECSTACKED_BINS=(
-	"${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*"
+EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*" )
+BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host"
 	"${ED%/})/usr/lib/plexmediaserver/Plex Media Scanner"
 )
-BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host" )
 BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin/python" )
 
 S="${WORKDIR}"
@@ -105,8 +104,6 @@ src_install() {
 
 	doconfd "${FILESDIR}/conf.d/${PN}"
 
-	_handle_multilib
-
 	# Install systemd service file
 	local INIT_NAME="${PN}.service"
 	local INIT="${FILESDIR}/systemd/${INIT_NAME}"
@@ -124,6 +121,8 @@ src_install() {
 		_add_pax_markings
 		_add_pax_flags
 	fi
+
+	_handle_multilib
 }
 
 pkg_postinst() {
