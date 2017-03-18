@@ -1,20 +1,33 @@
 app-admin/linode-cli 1.4.7_p20170209: Command-line interface to the Linode platform
+app-crypt/johntheripper 1.8.0_p20170317: fast password cracker
 app-misc/blinkstick 1.1.8: Python interface to control BlinkStick devices connected to the computer
 app-misc/cronic 3: a cure for cron's chronic email problem
 app-misc/teleconsole-bin 0.3.1: command line tool to share your UNIX terminal
 app-misc/tty-clock 2.3: analog clock in ncurses
 app-misc/wemux 3.2.0_p20150822: multi-user tmux made easy
+dev-db/sqlmap 1.1.3 9999: Automatic SQL injection and database takeover tool
 dev-embedded/arduino-bin 1.8.1: electronics prototyping platform based on easy-to-use hardware and software
 dev-embedded/energia-bin 1.6.10_p18: electronics prototyping platform for TI MSP430 LaunchPad based on Arduino
 dev-embedded/teensyduino-bin 1.35: USB-based electronics prototyping platform compatible with Arduino
 dev-lang/kaitai-struct-compiler 0.6: Compiler for the Kaitai Struct project
 dev-python/boto 2.45.0: Amazon Web Services API
+dev-python/brotlipy 0.6.0-r1: Python binding to the Brotli library
+dev-python/construct 2.8.10: Construct is a powerful declarative parser (and builder) for binary data
+dev-python/editorconfig 0.12.1: EditorConfig File Locator and Interpreter for Python
+dev-python/h2 2.6.1: Hyper: HTTP/2 Client for Python
+dev-python/jsbeautifier 1.6.11: Beautify, unpack or deobfuscate JavaScript
 dev-python/kaitaistruct 0.6: Kaitai Struct runtime for Python
 dev-python/progressbar2 3.12.0: text progress bar library for Python
+dev-python/pyperclip 1.5.27: Cross-platform clipboard module
+dev-python/python-ntlm 1.1.0: Clamd is a python interface to Clamd (Clamav daemon)
 dev-python/python-utils 2.0.1: a collection of functions and classes which shortens common patterns
 dev-python/pyusb 1.0.0_beta1: USB support for Python
+dev-python/ruamel-ordereddict 0.4.9: An ordered dictionary with KIO/KVIO
+dev-python/ruamel-yaml 0.13.14: YAML parser/emitter that supports roundtrip comment preservation
 dev-python/slixmpp 1.2.4: Python library for XMPP - asyncio fork
 dev-python/twilio 6.0.0_rc13: Helper library for the Twilio API
+dev-ruby/celluloid-io 0.16.2-r1: Evented IO for Celluloid actors
+dev-ruby/em-proxy 0.1.9: EventMachine Proxy DSL
 dev-ruby/google-protobuf 3.2.0: Google Protocol Buffers
 dev-ruby/googleauth 0.5.1: Simple authorization for Google APIs
 dev-ruby/grpc 1.1.2: Send RPCs using GRPC
@@ -27,6 +40,7 @@ dev-ruby/metasploit-payloads 1.2.16: Compiled binaries for Metasploit's Meterpre
 dev-ruby/metasploit_data_models 2.0.14: The database layer for Metasploit
 dev-ruby/metasploit_payloads-mettle 0.1.7: Compiled binaries for Metasploit's next-gen Meterpreter
 dev-ruby/nessus_rest 0.1.6: Nessus REST interface library
+dev-ruby/net-dns 0.8.0: Ruby DNS library, with a clean OO interface and an extensible API
 dev-ruby/nexpose 5.3.0: Nexpose API client library
 dev-ruby/openvas-omp 0.0.4: OpenVAS communication library through OMP
 dev-ruby/os 1.0.0: Useful OS detection functions
@@ -47,6 +61,7 @@ dev-ruby/rex-rop_builder 0.1.1: Ruby Exploitation(Rex) library for building ROP 
 dev-ruby/rex-socket 0.1.3: Ruby Exploitation(Rex) socket abstraction library
 dev-ruby/rex-sslscan 0.1.2: Ruby Exploitation(Rex) library for discovering supported cipher suites
 dev-ruby/rex-text 0.2.12: Rex library for text generation and manipulation
+dev-ruby/rubydns 1.0.3: A tool to intercept and modify DNS requests
 dev-ruby/signet 0.7.3: An OAuth 1.0/2.0 implementation
 dev-ruby/windows_error 0.1.0: Reference for Windows API error codes
 dev-util/unity-editor 5.5.2_rc1 5.6.0_beta10: Editor for the Unity game engine
@@ -72,6 +87,7 @@ media-tv/plex-media-server 1.4.0.3224-r1 1.4.4.3495 1.5.0.3501: A free media lib
 media-tv/plexpy 1.4.17: A python based web application for monitoring your Plex Media Server.
 media-video/plex-ffmpeg 2016.12: Plex Transcoder, a ffmpeg fork from Plex Inc.
 media-video/v4l2loopback 0.10.0: v4l2 loopback device which output is it's own input
+net-analyzer/bettercap 1.6.0: A complete, modular, portable and easily extensible MITM framework
 net-analyzer/metasploit 4.14.1: Advanced framework for developing, testing, and using vulnerability exploit code
 net-analyzer/nikto 2.1.6_p20170302: web server vulnerability scanner
 net-im/discord 0.0.1: All-in-one voice and text chat for gamers
