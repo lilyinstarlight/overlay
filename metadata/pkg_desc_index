@@ -102,7 +102,7 @@ sys-apps/petty 0.1: petty, short for practically enhanced tty, is a tty session 
 sys-firmware/edk2-ovmf 0_p20170308 9999: EDK II Open Source UEFI Firmware
 sys-fs/exfat-nofuse 0_p20170220: Non-fuse kernel driver for exFat and VFat file systems
 sys-fs/udiskie 1.6.2: An automatic disk mounting service using udisks
-sys-kernel/pf-sources 4.10_p1: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
+sys-kernel/pf-sources 4.10_p2: Linux kernel fork with new features (-ck patchset (BFS), BFQ, TuxOnIce and UKSM)
 sys-libs/libosinfo 9999: GObject library for managing information about real and virtual OSes
 sys-libs/osinfo-db 9999 20170225: Libosinfo database
 sys-libs/osinfo-db-tools 1.1.0 9999: Libosinfo database tools
