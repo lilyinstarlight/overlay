@@ -10,19 +10,19 @@ DESCRIPTION="Cross-platform clipboard module"
 HOMEPAGE="https://github.com/asweigart/pyperclip https://pypi.python.org/pypi/pyperclip"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
-LICENSE=""
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	app-arch/unzip
+RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	app-arch/unzip"
+DEPEND="${RDEPEND}
 	test? (
 		|| ( x11-misc/xsel
 			x11-misc/xclip
 			dev-python/PyQt4[${PYTHON_USEDEP}] )
 	)"
-RDEPEND="${DEPEND}"
 
 RESTRICT="test"
 # tests are not part of the pypi tarball and there are no tags on github
