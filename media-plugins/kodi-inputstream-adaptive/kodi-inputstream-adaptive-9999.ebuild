@@ -11,6 +11,7 @@ SRC_URI=""
 
 case ${PV} in
 9999)
+	KEYWORDS=""
 	SRC_URI=""
 	inherit git-r3
 	;;
