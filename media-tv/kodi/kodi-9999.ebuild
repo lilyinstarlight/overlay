@@ -131,6 +131,7 @@ case ${PV} in
 	inherit git-r3
 	# Force java for latest git version to avoid having to hand maintain the
 	# generated addons package.  #488118
+	KEYWORDS=""
 	DEPEND+="
 		virtual/jre
 		"

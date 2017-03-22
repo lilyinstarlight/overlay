@@ -10,6 +10,7 @@ HOMEPAGE="https://github.com/asciidisco/plugin.video.netflix"
 
 case ${PV} in
 9999)
+	KEYWORDS=""
 	SRC_URI=""
 	EGIT_REPO_URI="git://github.com/asciidisco/plugin.video.netflix.git"
 	inherit git-r3
