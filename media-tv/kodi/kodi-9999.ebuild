@@ -197,10 +197,6 @@ src_prepare() {
 	sed -i \
 		-e '/dbus_connection_send_with_reply_and_block/s:-1:3000:' \
 		xbmc/linux/*.cpp || die
-
-	sed -i \
-		-e '39 a#include <fmt/printf.h>' \
-		xbmc/utils/StringUtils.h || die
 }
 
 src_configure() {
