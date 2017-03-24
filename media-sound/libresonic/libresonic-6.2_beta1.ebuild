@@ -1,0 +1,75 @@
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id$
+
+EAPI=6
+
+inherit eutils user systemd
+
+MY_PV="${PV/_/.}"
+MY_P="${PN}-${MY_PV}"
+
+DESCRIPTION="Libresonic is a free, web-based media streamer, providing ubiqutious access to your music."
+HOMEPAGE="http://libresonic.org"
+SRC_URI="https://github.com/Libresonic/libresonic/archive/v${MY_PV}.zip -> ${MY_P}.zip"
+
+LICENSE="GPL-3.0"
+SLOT="0"
+KEYWORDS="~x86 ~amd64"
+IUSE="ffmpeg lame selinux"
+
+RDEPEND="
+	>=virtual/jre-1.8
+	lame? ( media-sound/lame )
+	ffmpeg? ( virtual/ffmpeg )"
+
+DEPEND="${RDEPEND}
+	>=virtual/jdk-1.8
+	dev-java/maven-bin"
+
+S="${WORKDIR}/${MY_P}"
+LIBRESONIC_HOME="/var/lib/${PN}"
+USER_GROUP="libresonic"
+
+pkg_setup() {
+	enewgroup "${USER_GROUP}"
+	enewuser "${USER_GROUP}" -1 -1 ${LIBRESONIC_HOME} "${USER_GROUP}"
+}
+
+src_compile() {
+	cd "${S}"
+	mvn -Dmaven.repo.local="${S}/.m2" package || die
+}
+
+src_install() {
+	local dir="/usr/libexec/${PN}"
+
+	dodoc "${S}/README.md" "${S}/libresonic-main/Getting Started.html"
+
+	insinto ${dir}
+	doins "${S}/libresonic-main/target/${PN}.war"
+
+	exeinto ${dir}
+	doexe "${FILESDIR}/libresonic.sh"
+
+	systemd_dounit "${FILESDIR}/libresonic.service"
+	systemd_install_serviced "${FILESDIR}/libresonic.service.conf"
+
+	newinitd "${FILESDIR}/libresonic.initd" libresonic
+	newconfd "${FILESDIR}/libresonic.confd" libresonic
+
+	make_wrapper "${PN}" "${dir}/libresonic.sh"
+
+	if use ffmpeg; then
+		dodir ${LIBRESONIC_HOME}/transcode
+		dosym /usr/bin/ffmpeg "${LIBRESONIC_HOME}/transcode/ffmpeg"
+	fi
+
+	if use lame; then
+		dodir "${LIBRESONIC_HOME}/transcode"
+		dosym /usr/bin/lame "${LIBRESONIC_HOME}/transcode/lame"
+	fi
+
+	keepdir "${LIBRESONIC_HOME}"
+	fowners -R ${USER_GROUP}:${USER_GROUP} "${LIBRESONIC_HOME}"
+}

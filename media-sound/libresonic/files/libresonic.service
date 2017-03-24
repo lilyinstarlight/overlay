@@ -1,0 +1,27 @@
+[Unit]
+Description=Libresonic Service
+After=network.target local-fs.target
+ 
+[Service]
+User=${LIBRESONIC_USER}
+Group=${LIBRESONIC_GROUP}
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/run/libresonic
+ExecStartPre=/bin/chown -R libresonic:libresonic /var/run/libresonic
+PIDFile=/var/run/libresonic/libresonic.pid
+ExecStart=/usr/bin/libresonic \
+		--home="${LIBRESONIC_HOME}" \
+		--host="${LIBRESONIC_HOST}" \
+		--port=${LIBRESONIC_PORT} \
+		--https-port=${LIBRESONIC_HTTPS_PORT} \
+		--context-path="${LIBRESONIC_CONTEXT_PATH}" \
+		--max-memory="${LIBRESONIC_MAX_MEMORY}" \
+		--default-music-folder="${LIBRESONIC_DEFAULT_MUSIC_FOLDER}" \
+		--default-podcast-folder="${LIBRESONIC_DEFAULT_PODCAST_FOLDER}" \
+		--default-playlist-folder="${LIBRESONIC_DEFAULT_PLAYLIST_FOLDER}" \
+		--pidfile="/var/run/libresonic/libresonic.pid" \
+		--quiet
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
