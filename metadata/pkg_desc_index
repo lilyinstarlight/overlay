@@ -73,7 +73,7 @@ games-board/cockatrice 20170120: A cross-platform virtual tabletop for multiplay
 games-misc/lolcat 42.24.0: Rainbows and unicorns!
 games-misc/nyancat 1.5.1-r1: nyancat rendered in your terminal
 games-misc/pipes 1.2.0: animated pipes terminal screensaver
-media-gfx/maim 4.4.61: Command line tool to take screenshots of the desktop
+media-gfx/maim 4.4.62: Command line tool to take screenshots of the desktop
 media-libs/libshairport 1.2.1_p20121215: A library for emulating an AirPort Express
 media-libs/openvr 1.0.6: API and runtime for accessing VR hardware from multiple vendors
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
