@@ -83,6 +83,7 @@ media-plugins/kodi-widevine 1.4.8.970: An adapter for playing DRM content
 media-plugins/midifilter-lv2 0.4.6: LV2 plugins to filter MIDI events
 media-plugins/plex-for-kodi 0.0.98: Plex's official Plex add-on for Kodi.
 media-plugins/plex-kodi-connect 1.5.1: Combine the frontend media player Kodi with the multimedia backend server Plex
+media-sound/libresonic 6.1 6.2_beta1: Libresonic is a free, web-based media streamer, providing ubiqutious access to your music.
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
 media-sound/ympd 1.3.0: Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 media-tv/kodi 9999: Kodi is a free and open source media-player and entertainment hub
