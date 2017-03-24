@@ -1,0 +1,43 @@
+#!/sbin/openrc-run
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+LIBRESONIC_HOME=${LIBRESONIC_HOME:-/var/lib/${SVCNAME}}
+LIBRESONIC_USER=${LIBRESONIC_USER:-${SVCNAME}}
+PIDFILE=/run/libresonic/libresonic.pid
+
+depend() {
+	after net
+}
+
+start() {
+	checkpath -dq -o libresonic:libresonic -m 755 /run/libresonic/
+
+	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon \
+		--start --user "${LIBRESONIC_USER}" --name libresonic \
+		--env HOME="${LIBRESONIC_HOME}" --exec /usr/bin/libresonic \
+		--pidfile="${PIDFILE}" \
+		--nicelevel "${NICELEVEL}" \
+		-- \
+		--home="${LIBRESONIC_HOME}" \
+		--host="${LIBRESONIC_HOST}" \
+		--port="${LIBRESONIC_PORT}" \
+		--https-port="${LIBRESONIC_HTTPS_PORT}" \
+		--context-path="${LIBRESONIC_CONTEXT_PATH}" \
+		--max-memory="${LIBRESONIC_MAX_MEMORY}" \
+		--default-music-folder="${LIBRESONIC_DEFAULT_MUSIC_FOLDER}" \
+		--default-podcast-folder="${LIBRESONIC_DEFAULT_PODCAST_FOLDER}" \
+		--default-playlist-folder="${LIBRESONIC_DEFAULT_PLAYLIST_FOLDER}" \
+		--pidfile="${PIDFILE}" --quiet \
+		${LIBRESONIC_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon --stop --user "${LIBRESONIC_USER}" \
+		--pidfile "${PIDFILE}" \
+		--wait 15000 \
+		--progress
+	eend $?
+}

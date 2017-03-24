@@ -1,0 +1,20 @@
+
+# Host and port to listen on
+LIBRESONIC_HOST=0.0.0.0
+LIBRESONIC_PORT=4040
+
+# To disable https, set to 0
+LIBREONIC_HTTPS_PORT=0
+
+LIBRESONIC_CONTEXT_PATH=/
+LIBRESONIC_MAX_MEMORY=100
+
+# Music directories
+LIBRESONIC_DEFAULT_MUSIC_FOLDER=/var/lib/libresonic/music
+LIBRESONIC_DEFAULT_PODCAST_FOLDER=/var/lib/libresonic/music/Podcast
+LIBRESONIC_DEFAULT_PLAYLIST_FOLDER=/var/lib/libresonic/playlists
+
+NICELEVEL=0
+
+# Further subsonic start script options, if ever needed
+LIBRESONIC_OPTS=""
