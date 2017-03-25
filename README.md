@@ -24,7 +24,7 @@ Packages
 [Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64" or "~x86" keywords to the packages to get the latest Plex Pass versions.
 
 #### v4l2loopback [media-video/v4l2loopback]
-[v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with WebcamStudio or other software (e.g. ffmpeg or gstreamer) to create a virtual webcam device.
+[v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with software (e.g. ffmpeg or gstreamer) to create a virtual webcam device.
 
 #### Calf Studio Gear [media-plugins/calf]
 [Calf Studio Gear](http://calf-studio-gear.org/) is a set of free and open source professional audio plug-ins. This package has an "experimental" use flag which enables experimental plugins.
