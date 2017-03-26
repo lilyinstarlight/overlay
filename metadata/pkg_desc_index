@@ -76,13 +76,16 @@ games-misc/pipes 1.2.0: animated pipes terminal screensaver
 media-gfx/maim 4.4.62: Command line tool to take screenshots of the desktop
 media-libs/libshairport 1.2.1_p20121215: A library for emulating an AirPort Express
 media-libs/openvr 1.0.6: API and runtime for accessing VR hardware from multiple vendors
+media-libs/zita-resampler 1.6.0: A C++ library for resampling audio signals
 media-plugins/calf 0.0.60 9999: A set of open source instruments and effects for digital audio workstations
+media-plugins/gxplugins-lv2 0.2 9999: A set of LV2 plugins from the Guitarix project
 media-plugins/kodi-inputstream-adaptive 9999: Kodi's Adaptive inputstream addon
 media-plugins/kodi-netflix 9999: Inputstream based Netflix plugin for Kodi
 media-plugins/kodi-widevine 1.4.8.970: An adapter for playing DRM content
 media-plugins/midifilter-lv2 0.4.6: LV2 plugins to filter MIDI events
 media-plugins/plex-for-kodi 0.0.98: Plex's official Plex add-on for Kodi.
 media-plugins/plex-kodi-connect 1.5.1: Combine the frontend media player Kodi with the multimedia backend server Plex
+media-sound/gxtuner 2.3 9999: A simple guitar tuner for JACK
 media-sound/libresonic 6.1 6.2_beta1: Libresonic is a free, web-based media streamer, providing ubiqutious access to your music.
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
 media-sound/ympd 1.3.0: Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS

@@ -13,6 +13,7 @@ games-action/armagetronad-dedicated:auth - Enable armathentication support
 games-action/armagetronad-dedicated:fortress - Enable support for fortress game mode
 games-board/cockatrice:client - Compile client (cockatrice and oracle) support
 games-board/cockatrice:server - Compile server (servatrice) support
+media-libs/zita-resampler:tools - Install zresample and zretune
 media-plugins/calf:experimental - Add support for experimental plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
 media-sound/pms:regex - enable regular expression searching
