@@ -98,6 +98,8 @@ Packages
 #### Wemux [app-misc/wemux]
 [Wemux](https://github.com/zolrath/wemux) is multi-user tmux made easy.
 
+#### Komodo-Edit [app-editors/komodo-edit-bin]
+[Komodo-Edit-bin](http://www.activestate.com/komodo-edit) Freeware advanced editor for dynamic and Web languages 
 
 ### Administration
 
