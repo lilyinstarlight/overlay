@@ -1,0 +1,11 @@
+diff --git a/libs/Makefile b/libs/Makefile
+--- a/libs/Makefile
++++ b/libs/Makefile
+@@ -57,6 +57,7 @@ install:	$(ZITA-RESAMPLER_MIN)
+ 	install -d $(DESTDIR)$(PREFIX)/$(LIBDIR)
+ 	install -m 644 $(ZITA-RESAMPLER_H) $(DESTDIR)$(PREFIX)/include/zita-resampler
+ 	install -m 644 $(ZITA-RESAMPLER_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)
++	ln -sf $(ZITA-RESAMPLER_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)/$(ZITA-RESAMPLER_MAJ)
+ 	ln -sf $(ZITA-RESAMPLER_MIN) $(DESTDIR)$(PREFIX)/$(LIBDIR)/$(ZITA-RESAMPLER_SO)
+ 	ldconfig
+ 
