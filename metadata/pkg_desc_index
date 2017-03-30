@@ -37,16 +37,16 @@ dev-ruby/metasploit-aggregator 0.1.3: Proxy for Meterpreter sessions
 dev-ruby/metasploit-concern 2.0.3: Metasploit concern allows you to define concerns in app/concerns.
 dev-ruby/metasploit-credential 2.0.8: Code for modeling and managing credentials in Metasploit
 dev-ruby/metasploit-model 2.0.3: Common code, such as validators and mixins
-dev-ruby/metasploit-payloads 1.2.16: Compiled binaries for Metasploit's Meterpreter
+dev-ruby/metasploit-payloads 1.2.19: Compiled binaries for Metasploit's Meterpreter
 dev-ruby/metasploit_data_models 2.0.14: The database layer for Metasploit
-dev-ruby/metasploit_payloads-mettle 0.1.7: Compiled binaries for Metasploit's next-gen Meterpreter
+dev-ruby/metasploit_payloads-mettle 0.1.8: Compiled binaries for Metasploit's next-gen Meterpreter
 dev-ruby/nessus_rest 0.1.6: Nessus REST interface library
 dev-ruby/net-dns 0.8.0: Ruby DNS library, with a clean OO interface and an extensible API
 dev-ruby/nexpose 5.3.0: Nexpose API client library
 dev-ruby/openvas-omp 0.0.4: OpenVAS communication library through OMP
 dev-ruby/os 1.0.0: Useful OS detection functions
 dev-ruby/packetfu 1.1.11-r2 1.1.13_pre: A mid-level packet manipulation library
-dev-ruby/rex-arch 0.1.4: architecture specific information for Rex
+dev-ruby/rex-arch 0.1.5: architecture specific information for Rex
 dev-ruby/rex-bin_tools 0.1.1: Ruby Exploitation(Rex) tools for analyzing executable binaries
 dev-ruby/rex-core 0.1.7: Ruby Exploitation(Rex) core library
 dev-ruby/rex-encoder 0.1.2: Ruby Exploitation(Rex) library for polymorphic encoders for payloads
@@ -97,8 +97,8 @@ media-tv/plexpy 1.4.17: A python based web application for monitoring your Plex 
 media-video/plex-ffmpeg 2016.12: Plex Transcoder, a ffmpeg fork from Plex Inc.
 media-video/v4l2loopback 0.10.0: v4l2 loopback device which output is it's own input
 net-analyzer/bettercap 1.6.0: A complete, modular, portable and easily extensible MITM framework
-net-analyzer/metasploit 4.14.1: Advanced framework for developing, testing, and using vulnerability exploit code
-net-analyzer/nikto 2.1.6_p20170302: web server vulnerability scanner
+net-analyzer/metasploit 4.14.5: Advanced framework for developing, testing, and using vulnerability exploit code
+net-analyzer/nikto 2.1.6_p20170328: web server vulnerability scanner
 net-im/discord 0.0.1: All-in-one voice and text chat for gamers
 net-mail/syncmaildir 1.2.6.2: Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes
 net-misc/chrome-remote-desktop 56.0.2924.51: access remote computers via Chrome!
