@@ -1,0 +1,2 @@
+move sys-libs/osinfo-db-tools sys-apps/osinfo-db-tools
+move sys-libs/osinfo-db sys-apps/osinfo-db
