@@ -3,8 +3,6 @@
 
 EAPI=6
 
-inherit autotools
-
 DESCRIPTION="A set of LV2 plugins from the Guitarix project"
 HOMEPAGE="http://guitarix.org/"
 MY_PN="GxPlugins.lv2"

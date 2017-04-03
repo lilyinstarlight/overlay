@@ -14,9 +14,9 @@ SRC_URI="https://github.com/magnumripper/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="commoncrypto custom-cflags kerberos -minimal mpi opencl openmp +openssl pcap rexgen"
-REQUIRED_USE="!minimal ^^ ( openssl commoncrypto )"
+REQUIRED_USE="!minimal ^^ ( openssl commoncrypto ) !commoncrypto !rexgen"
 
 DEPEND="openssl? ( >=dev-libs/openssl-1.0.1:0 )
 	mpi? ( virtual/mpi )

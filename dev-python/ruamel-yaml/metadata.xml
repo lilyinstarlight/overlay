@@ -5,4 +5,7 @@
 		<email>fkmclane@gmail.com</email>
 		<name>Foster McLane</name>
 	</maintainer>
+	<use>
+		<flag name="libyaml">Add LibYAML support</flag>
+	</use>
 </pkgmetadata>
