@@ -30,7 +30,7 @@ CDEPEND="
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/ipython[${PYTHON_USEDEP}]
 	dev-python/qtconsole[${PYTHON_USEDEP}]
-	devpython/pastebin[${PYTHON_USEDEP}]
+	dev-python/pastebin[${PYTHON_USEDEP}]
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
