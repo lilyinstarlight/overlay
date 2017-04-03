@@ -1,16 +1,15 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
 inherit eutils user systemd
 
-DESCRIPTION="Libresonic is a free, web-based media streamer, providing ubiqutious access to your music."
+DESCRIPTION="Libresonic is a free, web-based music streamer"
 HOMEPAGE="http://libresonic.org"
 SRC_URI="https://github.com/Libresonic/libresonic/archive/v${PV}.zip -> ${P}.zip"
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="ffmpeg lame selinux"
@@ -34,7 +33,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	cd "${S}"
 	mvn -Dmaven.repo.local="${S}/.m2" -P full -pl libresonic-booter -am install || die
 	mvn -Dmaven.repo.local="${S}/.m2" package || die
 }
