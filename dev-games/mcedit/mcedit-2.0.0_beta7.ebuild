@@ -34,6 +34,9 @@ CDEPEND="
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
+
+	dev-python/pyside-tools[${PYTHON_USEDEP}]
+
 	${CDEPEND}
 "
 RDEPEND="
@@ -43,10 +46,19 @@ RDEPEND="
 S="${WORKDIR}/${MY_P}"
 
 python_prepare() {
+	eapply "${FILESDIR}/mcedit2_plugins_directory.patch"
+
 	sed -i -e "s#include_package_data=True#package_data={'mcedit2': [$(find src/mcedit2 -type f -not -name '*.py*' -not -name '*.ui' -not -name '*.qrc' -not -name 'Makefile' -printf "'%P',")]}#g" setup_mcedit2.py || die
 	sed -i -e "s/git describe --tags/echo ${MY_PV}/g" mcedit2.spec src/mcedit2/__init__.py || die
 
 	for file in $(find . -name '*.ui'); do
 		pyside-uic "$file" > "${file::-2}py" || die
 	done
+}
+
+src_install() {
+	distutils-r1_src_install
+
+	doicon "${FILESDIR}/mcedit2.png"
+	domenu "${FILESDIR}/mcedit2.desktop"
 }
