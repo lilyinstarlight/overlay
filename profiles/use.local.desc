@@ -2,6 +2,13 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-crypt/johntheripper:commoncrypto - Use CommonCrypto instead of OpenSSL
+app-crypt/johntheripper:opencl - Enable OpenCL support
+app-crypt/johntheripper:openssl - Use OpenSSL
+app-crypt/johntheripper:pcap - Build helpers depending on pcap
+app-crypt/johntheripper:rexgen - Enable librexgen support
+dev-db/sqlmap:ntlm - Add NTLM support
+dev-python/ruamel-yaml:libyaml - Add LibYAML support
 dev-python/slixmpp:cython - Enable Cython support
 dev-util/unity-editor:android - Enable Android target support
 dev-util/unity-editor:webgl - Enable WebGL target support
@@ -16,8 +23,10 @@ games-board/cockatrice:server - Compile server (servatrice) support
 media-libs/zita-resampler:tools - Install zresample and zretune
 media-plugins/calf:experimental - Add support for experimental plugins
 media-plugins/calf:lv2 - Add support for Ladspa V2
+media-plugins/kodi-inputstream-adaptive:agile - Use Kodi Agile branch
 media-sound/pms:regex - enable regular expression searching
 media-sound/ympd:hostchange - allow users of the web frontend to change the MPD host
+media-tv/kodi:agile - Use Kodi Agile branch
 media-tv/kodi:airplay - enable AirPlay support
 media-tv/kodi:bluray - Enable playback of Blu-ray filesystems
 media-tv/kodi:cec - Enable support for HDMI-CEC devices via libcec
@@ -25,18 +34,16 @@ media-tv/kodi:dvd - Enable optical (CD/DVD drive) support
 media-tv/kodi:gles - Enable support for GLES
 media-tv/kodi:libusb - Use virtual/libusb for usb device hotplug support. This flag should only be enabled if you're running a non-Linux kernel or you don't want to use sys-fs/udev.
 media-tv/kodi:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
-media-tv/kodi:midi - Support MIDI files
 media-tv/kodi:nfs - Enable NFS client support
 media-tv/kodi:nonfree - Enable non-free components
-media-tv/kodi:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-tv/kodi:sftp - Support browsing files over SFTP
 media-tv/kodi:system-ffmpeg - Use system ffmpeg instead of the bundled one
-media-tv/kodi:texturepacker - Support packing skin textures
 media-tv/kodi:udev - Use sys-fs/udev rules to handle devices' permissions and hotplug support. Unless you know what you're doing do not disable this flag on Linux kernels. This is provided as an option for completeness.
 media-tv/kodi:webserver - Enable internal webserver
 media-tv/kodi:xslt - Enable XSLT support using dev-libs/libxslt
 media-tv/plex-media-player:cec - Enable support for HDMI-CEC devices via dev-libs/libcec
 media-tv/plex-media-player:desktop - Enable support for the desktop web-client
+media-tv/plex-media-server:pax_kernel - Add PaX markings to executables
 media-tv/plex-media-server:plex-ffmpeg - Replace the Transcoder with plex-ffmpeg package.
 media-video/plex-ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/plex-ffmpeg:amrenc - Enables Adaptive Multi-Rate Audio encoding support with media-libs/vo-amrwbenc.

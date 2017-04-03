@@ -7,4 +7,4 @@ LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://github.com/dglava/arc-openbox/archive/d6bfa0ec2dedee3f45c263b01b7eeb9635402ac3.tar.gz -> arc-openbox-theme-0_p20170104.tar.gz
 _eclass_exported_funcs=src_install:-
-_md5_=a73b3712097887d0884dd83dd0c8de05
+_md5_=94429b8010482a4fe498d15d0d38041a

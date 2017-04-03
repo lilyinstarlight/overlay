@@ -7,4 +7,4 @@ LICENSE=UoI-NCSA
 SLOT=0
 SRC_URI=https://github.com/klange/nyancat/archive/1.5.1.tar.gz -> nyancat-1.5.1.tar.gz
 _eclass_exported_funcs=src_install:-
-_md5_=19202f3cc13073fb696328dee9536c86
+_md5_=442094665eae225349b6229cf10bf412

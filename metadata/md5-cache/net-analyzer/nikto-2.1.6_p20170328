@@ -9,4 +9,4 @@ RDEPEND=dev-lang/perl virtual/perl-JSON-PP net-analyzer/nmap ssl? ( dev-libs/ope
 SLOT=0
 SRC_URI=https://github.com/sullo/nikto/archive/a930c04f565800314e1af2d10746ddc6fb82ee7a.tar.gz -> nikto-2.1.6_p20170328.tar.gz
 _eclass_exported_funcs=src_prepare:- src_install:-
-_md5_=bf2480020e6e0afcec400012b02f6108
+_md5_=25d2e86bdb7ea042c12f46c61e2fbcd0

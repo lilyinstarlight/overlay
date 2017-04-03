@@ -7,4 +7,4 @@ LICENSE=MIT
 SLOT=0
 SRC_URI=https://github.com/pipeseroni/pipes.sh/archive/v1.2.0.tar.gz -> pipes-1.2.0.tar.gz
 _eclass_exported_funcs=src_install:-
-_md5_=868e0bf2bd1128618726caaeb3c9e89b
+_md5_=5eccd53f1c52f4ad9d017f73ede2b981

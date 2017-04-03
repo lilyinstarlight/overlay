@@ -22,7 +22,7 @@ dev-python/pastebin 1.1.2: Python Pastebin.com API
 dev-python/progressbar2 3.12.0: text progress bar library for Python
 dev-python/pycryptodomex 3.4.5: A self-contained cryptographic library for Python - independent library version
 dev-python/pyperclip 1.5.27: Cross-platform clipboard module
-dev-python/python-ntlm 1.1.0: Clamd is a python interface to Clamd (Clamav daemon)
+dev-python/python-ntlm 1.1.0: Python library for NTLM support
 dev-python/python-utils 2.0.1: a collection of functions and classes which shortens common patterns
 dev-python/pyusb 1.0.0_beta1: USB support for Python
 dev-python/ruamel-ordereddict 0.4.9: An ordered dictionary with KIO/KVIO
@@ -88,7 +88,7 @@ media-plugins/midifilter-lv2 0.4.6: LV2 plugins to filter MIDI events
 media-plugins/plex-for-kodi 0.0.98: Plex's official Plex add-on for Kodi.
 media-plugins/plex-kodi-connect 1.5.1: Combine the frontend media player Kodi with the multimedia backend server Plex
 media-sound/gxtuner 2.3 9999: A simple guitar tuner for JACK
-media-sound/libresonic 6.1 6.2_beta1: Libresonic is a free, web-based media streamer, providing ubiqutious access to your music.
+media-sound/libresonic 6.1 6.2_beta1: Libresonic is a free, web-based music streamer
 media-sound/pms 20160131: Practical Music Search: an open source ncurses client for mpd, written in C++
 media-sound/ympd 1.3.0: Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS
 media-tv/kodi 9999: Kodi is a free and open source media-player and entertainment hub
