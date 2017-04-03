@@ -1,0 +1,12 @@
+diff --git a/src/mcedit2/editorapp.py b/src/mcedit2/editorapp.py
+--- a/src/mcedit2/editorapp.py
++++ b/src/mcedit2/editorapp.py
+@@ -344,7 +344,7 @@ class MCEditApp(QtGui.QApplication):
+ 
+         log.info("Finding plugins")
+ 
+-        if getattr(sys, 'frozen', False):
++        if getattr(sys, 'frozen', True):
+             # frozen - load from app dir
+             pluginsDir = getUserPluginsDirectory()
+             plugins.findNewPluginsInDir(pluginsDir)

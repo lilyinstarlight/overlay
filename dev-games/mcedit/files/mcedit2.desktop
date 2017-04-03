@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=MCEdit 2.0
+Comment=Minecraft save editor
+Icon=mcedit2
+Categories=Game
+Exec=mcedit2 %U
+TryExec=mcedit2
+Terminal=false
+StartupNotify=false
+StartupWMClass=mcedit2
