@@ -29,6 +29,9 @@ Packages
 #### Calf Studio Gear [media-plugins/calf]
 [Calf Studio Gear](http://calf-studio-gear.org/) is a set of free and open source professional audio plug-ins. This package has an "experimental" use flag which enables experimental plugins.
 
+#### GxPlugins [media-plugins/gxplugins-lv2]
+[GxPlugins](https://github.com/brummer10/GxPlugins.lv2) are LV2 plugins for electric guitars from the Guitarix project.
+
 #### midifilter.lv2 [media-plugins/midifilter-lv2]
 [midifilter.lv2](https://github.com/x42/midifilter.lv2/) is an LV2 plugin to filter MIDI events.
 
@@ -58,6 +61,9 @@ Packages
 
 #### Cockatrice [games-board/cockatrice]
 [Cockatrice](http://www.reddit.com/r/Cockatrice) is a cross-platform virtual tabletop for multiplayer card games, such as Magic: The Gathering, over a network.
+
+#### MCEdit 2.0 [dev-games/mcedit]
+[MCEdit](http://www.mcedit.net/) is a world/save game editor for Minecraft.
 
 
 ### Utilities
@@ -92,8 +98,8 @@ Packages
 #### barline [x11-misc/barline]
 [barline](https://github.com/fkmclane/barline) is a data collector and bar generator for lemonbar.
 
-#### Teleconsole [app-misc/teleconsole-bin]
-[Teleconsole](https://teleconsole.com/) is a command line tool to share your UNIX terminal and forward local TCP ports to people you trust.
+#### GoTTY [app-misc/gotty-bin]
+[GoTTY](https://github.com/yudai/gotty) is tools to run command line programs as web applications.
 
 #### Wemux [app-misc/wemux]
 [Wemux](https://github.com/zolrath/wemux) is multi-user tmux made easy.
@@ -150,3 +156,8 @@ Packages
 
 #### Arc Theme [x11-themes/arc-openbox-theme, x11-themes/arc-icon-theme]
 [Arc Theme](https://github.com/horst3180/arc-theme) is a flat GTK+ theme with transparent elements.
+
+### CAD
+
+#### Freeroute [sci-electronics/freeroute]
+[Freeroute](http://freerouting.net/) is a popular automatic PCB routing tool.

@@ -5,4 +5,7 @@
 		<email>fkmclane@gmail.com</email>
 		<name>Foster McLane</name>
 	</maintainer>
+	<use>
+		<flag name="ntlm">Add NTLM support</flag>
+	</use>
 </pkgmetadata>
