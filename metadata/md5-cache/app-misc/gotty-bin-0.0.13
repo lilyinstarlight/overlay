@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=Share your terminal as a web application
+EAPI=6
+HOMEPAGE=https://github.com/yudai/gotty
+KEYWORDS=-* ~amd64
+LICENSE=MPL-2.0
+SLOT=0
+SRC_URI=https://github.com/yudai/gotty/releases/download/v0.0.13/gotty_linux_amd64.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=c342c37eef4153fdf0dfe31969f9c935

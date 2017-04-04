@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Editor for the Unity game engine
+EAPI=6
+HOMEPAGE=http://unity3d.com/
+IUSE=android webgl
+KEYWORDS=-* ~amd64
+LICENSE=Unity-EULA
+RDEPEND=sys-devel/gcc[multilib] media-libs/alsa-lib x11-libs/cairo sys-libs/libcap net-print/cups sys-apps/dbus dev-libs/expat media-libs/fontconfig media-libs/freetype gnome-base/gconf x11-libs/gdk-pixbuf media-libs/mesa dev-libs/glib:2 virtual/glu x11-libs/gtk+:2 dev-dotnet/gtk-sharp dev-dotnet/gnome-sharp dev-lang/mono dev-libs/nspr dev-libs/nss x11-libs/pango x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXrandr x11-libs/libXrender x11-libs/libXtst sys-libs/zlib media-libs/libpng dev-db/postgresql sys-apps/lsb-release x11-misc/xdg-utils net-libs/nodejs[npm] sys-apps/fakeroot android? ( virtual/ffmpeg app-arch/gzip dev-util/android-sdk-update-manager virtual/jre:1.7 ) webgl? ( virtual/jdk:1.7 )
+RESTRICT=bindist mirror preserve-libs strip
+SLOT=0
+SRC_URI=http://beta.unity3d.com/download/b9488c3b1f9f/unity-editor_amd64-5.6.0xb10Linux.deb
+_eclass_exported_funcs=pkg_postinst:- src_unpack:unpacker src_install:-
+_eclasses_=epatch	8233751dc5105a6ae8fcd86ce2bb0247	epunt-cxx	f8073339d152f56626493f43d8ba4691	estack	5ac2a138d0b33354b764d84f9e835db8	eutils	e7491451996e8b54c3caeb713285b0fb	ltprune	2770eed66a9b8ef944714cd0e968182e	multilib	0236be304ee52e7f179ed2f337075515	toolchain-funcs	6eb35f81556258a4bc9182ad3dfd58ee	unpacker	f40f7b4bd5aa88c2a4ba7b0d1e0ded70	versionator	c80ccf29e90adea7c5cae94b42eb76d0
+_md5_=7c0dbb2a26cfa1c94ba2fa84fbdfed8a

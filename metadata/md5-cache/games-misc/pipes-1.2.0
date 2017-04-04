@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=animated pipes terminal screensaver
+EAPI=6
+HOMEPAGE=https://github.com/pipeseroni/pipes.sh
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+SLOT=0
+SRC_URI=https://github.com/pipeseroni/pipes.sh/archive/v1.2.0.tar.gz -> pipes-1.2.0.tar.gz
+_eclass_exported_funcs=src_install:-
+_md5_=5eccd53f1c52f4ad9d017f73ede2b981

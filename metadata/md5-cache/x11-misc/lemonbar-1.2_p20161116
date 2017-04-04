@@ -1,0 +1,14 @@
+DEFINED_PHASES=prepare setup
+DEPEND=dev-lang/perl x11-libs/libxcb xft? ( x11-libs/libXft )
+DESCRIPTION=a featherweight, lemon-scented, bar based on xcb
+EAPI=6
+HOMEPAGE=https://github.com/LemonBoy/bar
+IUSE=sm xft
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=x11-libs/libxcb xft? ( x11-libs/libXft )
+REQUIRED_USE=sm? ( xft )
+SLOT=0
+SRC_URI=sm? ( xft? ( https://github.com/osense/bar/archive/1b9b3cb23eeac15872ade4119335fd90cec89ec2.tar.gz -> lemonbar-1.2_p20161116-sm.tar.gz ) ) !sm? ( xft? ( https://github.com/osense/bar/archive/043ad4757cc079666f50212ee0a2ef0729ecac6b.tar.gz -> lemonbar-1.2_p20161116-xft.tar.gz ) ) !sm? ( !xft? ( https://github.com/osense/bar/archive/d680ea4256637bc89d59342cf6ac6c6f5fe62dec.tar.gz -> lemonbar-1.2_p20161116.tar.gz ) )
+_eclass_exported_funcs=pkg_setup:- src_prepare:-
+_md5_=4fe49ccc4f5deaa40154aceb92533952
