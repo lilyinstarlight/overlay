@@ -8,7 +8,7 @@ inherit eutils user systemd
 MY_PV="${PV/_/.}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="Libresonic is a free, web-based music streamer"
+DESCRIPTION="Libresonic is a free and web-based media streamer."
 HOMEPAGE="http://libresonic.org"
 SRC_URI="https://github.com/Libresonic/libresonic/archive/v${MY_PV}.zip -> ${MY_P}.zip"
 

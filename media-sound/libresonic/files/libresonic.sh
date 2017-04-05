@@ -11,7 +11,7 @@ LIBRESONIC_HOST=0.0.0.0
 LIBRESONIC_PORT=4040
 LIBRESONIC_HTTPS_PORT=0
 LIBRESONIC_CONTEXT_PATH=/
-LIBRESONIC_MAX_MEMORY=150
+LIBRESONIC_MAX_MEMORY=256
 LIBRESONIC_PIDFILE=
 LIBRESONIC_DEFAULT_MUSIC_FOLDER=/var/music
 LIBRESONIC_DEFAULT_PODCAST_FOLDER=/var/music/Podcast
@@ -112,15 +112,14 @@ fi
 
 ${JAVA} -Xmx${LIBRESONIC_MAX_MEMORY}m \
   -Dlibresonic.home=${LIBRESONIC_HOME} \
-  -Dlibresonic.host=${LIBRESONIC_HOST} \
-  -Dlibresonic.port=${LIBRESONIC_PORT} \
-  -Dlibresonic.httpsPort=${LIBRESONIC_HTTPS_PORT} \
-  -Dlibresonic.contextPath=${LIBRESONIC_CONTEXT_PATH} \
+  -Dserver.address=${LIBRESONIC_HOST} \
+  -Dserver.port=${LIBRESONIC_PORT} \
+  -Dserver.httpsPort=${LIBRESONIC_HTTPS_PORT} \
+  -Dserver.contextPath=${LIBRESONIC_CONTEXT_PATH} \
   -Dlibresonic.defaultMusicFolder=${LIBRESONIC_DEFAULT_MUSIC_FOLDER} \
   -Dlibresonic.defaultPodcastFolder=${LIBRESONIC_DEFAULT_PODCAST_FOLDER} \
   -Dlibresonic.defaultPlaylistFolder=${LIBRESONIC_DEFAULT_PLAYLIST_FOLDER} \
   -Djava.awt.headless=true \
-  -verbose:gc \
   -jar libresonic.war > ${LOG} 2>&1 &
 
 # Write pid to pidfile if it is defined.
