@@ -19,5 +19,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}
 	>=dev-python/six-1.6.1[${PYTHON_USEDEP}]
-	>=dev-python/editorconfig-0.12.0[${PYTHON_USEDEP}]
+	>=dev-python/editorconfig-core-py-0.12.0[${PYTHON_USEDEP}]
 "
