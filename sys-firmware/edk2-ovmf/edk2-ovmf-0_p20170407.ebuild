@@ -14,13 +14,13 @@ SLOT="0"
 IUSE="debug +qemu +secure-boot"
 
 MY_PN="edk2"
-COMMIT="3efa3f3d05ea3fef964e59aea9b5792cfec348ed"
+COMMIT="c137d95081690d4877fbeb5f1856972e84ac32f2"
 MY_P="${MY_PN}-${COMMIT}"
 SRC_URI="https://github.com/tianocore/${MY_PN}/archive/${COMMIT}.tar.gz -> ${MY_P}.tar.gz"
 
 KEYWORDS="-* ~amd64 ~x86"
 
-OPENSSL_PV="1.0.2k"
+OPENSSL_PV="1.1.0e"
 OPENSSL_P="openssl-${OPENSSL_PV}"
 SRC_URI+="
 	mirror://openssl/source/${OPENSSL_P}.tar.gz
@@ -45,13 +45,8 @@ src_prepare() {
 	fi
 
 	if use secure-boot; then
-		local openssllib="${S}/CryptoPkg/Library/OpensslLib"
+		local openssllib="${S}/CryptoPkg/Library/OpensslLib/openssl"
 		mv "${WORKDIR}/${OPENSSL_P}" "${openssllib}" || die
-		cd "${openssllib}/${OPENSSL_P}"
-		epatch "${openssllib}/EDKII_${OPENSSL_P}.patch"
-		cd "${openssllib}"
-		sh -e ./Install.sh || die
-		cd "${S}"
 	fi
 
 	default

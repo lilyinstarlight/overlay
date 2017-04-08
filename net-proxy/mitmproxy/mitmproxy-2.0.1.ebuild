@@ -23,13 +23,13 @@ RDEPEND="
 	>=dev-python/cryptography-1.3[${PYTHON_USEDEP}] <dev-python/cryptography-1.8
 	>=dev-python/cssutils-1.0.1[${PYTHON_USEDEP}] <dev-python/cssutils-1.1
 	>=dev-python/flask-0.10.1[${PYTHON_USEDEP}] <dev-python/flask-0.12
-	>=dev-python/h2-2.5.1[${PYTHON_USEDEP}] <dev-python/h2-3
+	>=dev-python/hyper-h2-2.5.1[${PYTHON_USEDEP}] <dev-python/hyper-h2-3
 	>=dev-python/html2text-2016.1.8[${PYTHON_USEDEP}] <=dev-python/html2text-2016.9.19
 	>=dev-python/hyperframe-4.0.1[${PYTHON_USEDEP}] <dev-python/hyperframe-5
 	>=dev-python/jsbeautifier-1.6.3[${PYTHON_USEDEP}] <dev-python/jsbeautifier-1.7
 	>=dev-python/pillow-3.2[${PYTHON_USEDEP}] <dev-python/pillow-3.5
 	>=dev-python/passlib-1.6.5[${PYTHON_USEDEP}] <dev-python/passlib-1.8
-	>=dev-python/pyasn1-0.1.9[${PYTHON_USEDEP}] <dev-python/pyasn1-0.2
+	>=dev-python/pyasn1-0.1.9[${PYTHON_USEDEP}] <dev-python/pyasn1-0.3
 	>=dev-python/pyopenssl-16.0[${PYTHON_USEDEP}] <dev-python/pyopenssl-17.0
 	>=dev-python/pyparsing-2.1.3[${PYTHON_USEDEP}] <dev-python/pyparsing-2.2
 	>=dev-python/pyperclip-1.5.22[${PYTHON_USEDEP}] <dev-python/pyperclip-1.6

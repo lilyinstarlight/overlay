@@ -5,7 +5,7 @@ EAPI=6
 
 inherit eutils user systemd
 
-DESCRIPTION="Libresonic is a free, web-based music streamer"
+DESCRIPTION="Libresonic is a free and web-based media streamer."
 HOMEPAGE="http://libresonic.org"
 SRC_URI="https://github.com/Libresonic/libresonic/archive/v${PV}.zip -> ${P}.zip"
 

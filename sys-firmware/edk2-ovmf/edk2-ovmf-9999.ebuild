@@ -18,7 +18,7 @@ EGIT_REPO_URI="https://github.com/tianocore/${MY_PN}"
 
 KEYWORDS=""
 
-OPENSSL_PV="1.0.2k"
+OPENSSL_PV="1.1.0e"
 OPENSSL_P="openssl-${OPENSSL_PV}"
 SRC_URI="mirror://openssl/source/${OPENSSL_P}.tar.gz"
 
@@ -45,13 +45,8 @@ src_prepare() {
 	fi
 
 	if use secure-boot; then
-		local openssllib="${S}/CryptoPkg/Library/OpensslLib"
+		local openssllib="${S}/CryptoPkg/Library/OpensslLib/openssl"
 		mv "${WORKDIR}/${OPENSSL_P}" "${openssllib}" || die
-		cd "${openssllib}/${OPENSSL_P}"
-		epatch "${openssllib}/EDKII_${OPENSSL_P}.patch"
-		cd "${openssllib}"
-		sh -e ./Install.sh || die
-		cd "${S}"
 	fi
 
 	default
