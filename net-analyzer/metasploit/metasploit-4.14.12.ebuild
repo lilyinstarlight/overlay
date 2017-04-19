@@ -1,10 +1,10 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI=5
 
 #never ever ever have more than one ruby in here
-USE_RUBY="ruby21"
+USE_RUBY="ruby23"
 inherit eutils ruby-ng
 
 if [[ ${PV} == "9999" ]] ; then
@@ -40,8 +40,8 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/actionpack-4.2.8:4.2
 	>=dev-ruby/activerecord-4.2.8:4.2
 	dev-ruby/bcrypt-ruby
-	dev-ruby/bit-struct
-	dev-ruby/builder:3
+	>=dev-ruby/bit-struct-0.15.0_p20170118
+	dev-ruby/builder:3.2
 	dev-ruby/bundler
 	dev-ruby/filesize
 	>=dev-ruby/jsobfu-0.4.2:0
@@ -50,11 +50,12 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/metasm:1.0.2
 	>=dev-ruby/metasploit-aggregator-0.1.3
 	>=dev-ruby/metasploit_data_models-2.0.14
-	dev-ruby/metasploit-payloads:1.2.19
+	dev-ruby/metasploit-payloads:1.2.24
 	dev-ruby/metasploit_payloads-mettle:0.1.8
 	>=dev-ruby/metasploit-credential-2.0.8
 	>=dev-ruby/metasploit-concern-2.0.3
 	>=dev-ruby/metasploit-model-2.0.3
+	>=dev-ruby/method_source-0.8.2_p20170202
 	dev-ruby/msgpack
 	dev-ruby/nessus_rest
 	dev-ruby/net-ssh:*
@@ -65,10 +66,10 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
 	>=dev-ruby/railties-4.2.8
-	dev-ruby/recog:2.0.14
+	dev-ruby/recog:2.1.5
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
-	dev-ruby/rex-arch
+	=dev-ruby/rex-arch-0.1.4
 	dev-ruby/rex-bin_tools
 	dev-ruby/rex-core
 	dev-ruby/rex-encoder
@@ -86,6 +87,8 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-struct2
 	dev-ruby/rex-text
 	dev-ruby/rex-zip
+	dev-ruby/ruby_smb
+	>=dev-ruby/rubyntlm-0.6.1_p20170407
 	dev-ruby/sqlite3
 	>=dev-ruby/pg-0.11
 	dev-ruby/packetfu:1.1.13_pre
@@ -95,12 +98,13 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
 	dev-ruby/windows_error
+	dev-ruby/xmlrpc
 	java? ( dev-ruby/rjb )
 	oracle? ( dev-ruby/ruby-oci8 )
 	pcap? ( dev-ruby/pcaprub:*
 		dev-ruby/network_interface )
 	development? ( dev-ruby/fivemat
-			dev-ruby/pry
+			>=dev-ruby/pry-0.10.4_p20161207
 			dev-ruby/redcarpet
 			dev-ruby/yard
 			>=dev-ruby/rake-10.0.0
@@ -217,6 +221,9 @@ all_ruby_prepare() {
 	#we need to edit the gemspec too, since it tries to call git instead of anything sane
 	#probably a better way to fix this... if I care at some point
 	sed -i -e "/^  spec.files/,/^  }/d" metasploit-framework.gemspec || die
+
+	#remove git declarations for packaging
+	sed -i -e "s/, git:.*//" Gemfile || die
 
 	#https://bugs.gentoo.org/show_bug.cgi?id=584522 no tzinfo-data by choice in gentoo
 	sed -i '/tzinfo-data/d' metasploit-framework.gemspec
