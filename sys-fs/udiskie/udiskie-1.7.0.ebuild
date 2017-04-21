@@ -30,7 +30,6 @@ DEPEND="
 
 src_prepare() {
 	sed -i \
-		-e "s:udiskie.__version__:2:" \
 		-e 's:gtk-update-icon-cache:true:' \
 		setup.py || die
 
