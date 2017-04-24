@@ -8,7 +8,7 @@ USE_RUBY="ruby21 ruby22 ruby23"
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
-inherit multilib ruby-fakegem
+inherit ruby-fakegem
 
 DESCRIPTION="A mid-level packet manipulation library"
 HOMEPAGE="https://rubygems.org/gems/packetfu"

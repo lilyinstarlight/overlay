@@ -9,7 +9,7 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 RUBY_FAKEGEM_EXTRADOC="README.md CONTRIBUTING.md"
 RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
-inherit multilib ruby-fakegem
+inherit ruby-fakegem
 
 DESCRIPTION="Ruby toolkit for the Github API"
 HOMEPAGE="https://github.com/octokit/octokit.rb"
