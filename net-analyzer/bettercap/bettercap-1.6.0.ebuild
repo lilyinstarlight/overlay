@@ -21,7 +21,7 @@ ruby_add_rdepend "
 	=dev-ruby/colorize-0.8*
 	=dev-ruby/net-dns-0.8*
 	dev-ruby/network_interface
-	dev-ruby/packetfu:1.1.11
+	dev-ruby/packetfu:1.1.13_pre
 	dev-ruby/pcaprub:0.12
 	=dev-ruby/em-proxy-0.1*
 	=dev-ruby/rubydns-1.0*
