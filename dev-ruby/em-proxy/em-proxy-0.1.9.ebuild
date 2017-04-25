@@ -4,12 +4,12 @@
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23"
 
-inherit multilib ruby-fakegem
+inherit ruby-fakegem
 
 DESCRIPTION="EventMachine Proxy DSL"
 HOMEPAGE="http://github.com/igrigorik/em-proxy"
 
-LICENSE="BSD-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

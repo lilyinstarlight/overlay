@@ -45,6 +45,27 @@ Packages
 [Discord](https://discordapp.com/) is an all-in-one voice and text chat for gamers.
 
 
+### Security Tools
+
+#### Metasploit [net-analyzer/metasploit]
+[Metasploit](https://www.metasploit.org/) is a framework for developing, testing, and using vulnerability exploits.
+
+#### Bettercap [net-analyzer/bettercap]
+[Bettercap](https://bettercap.org/) is a modular MITM framework.
+
+#### WPScan [net-analyzer/wpscan]
+[WPScan](https://wpscan.org/) is a WordPress vulnerability scanner.
+
+#### mitmproxy [net-analyzer/mitmproxy]
+[mitmproxy](http://mitmproxy.org/) is an interactive, SSL-capable, man-in-the-middle HTTP proxy.
+
+#### BeEF [www-apps/beef]
+[BeEF](https://beefproject.com/) is a browser exploitation framework.
+
+#### JohnTheRipper [app-crypt/johntheripper]
+[JohnTheRipper](http://www.openwall.comm/john/) is a fast password cracker.
+
+
 ### Games
 
 #### Armagetron Advanced [games-action/armagetronad, games-action/armagetronad-dedicated]
