@@ -35,8 +35,6 @@ DEPEND="test? (
 			dev-python/wheel[${PYTHON_USEDEP}]
 		)"
 
-PATCHES=( "${FILESDIR}/no-tests.patch" )
-
 python_test() {
 	nosetests tests || die "Tests fail with ${EPYTHON}"
 }
