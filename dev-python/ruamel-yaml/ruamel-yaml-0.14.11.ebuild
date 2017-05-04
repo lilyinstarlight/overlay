@@ -9,7 +9,9 @@ inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="YAML parser/emitter that supports roundtrip comment preservation"
 HOMEPAGE="https://pypi.python.org/pypi/ruamel.yaml"
-SRC_URI="https://bitbucket.org/ruamel/yaml/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
+MY_PN="ruamel.yaml"
+MY_P="${MY_PN}-${PV}"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -20,7 +22,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE} test? ( libyaml )"
 
 #	dev-python/ruamel-base[${PYTHON_USEDEP}]
 RDEPEND="${PYTHON_DEPS}
-	dev-python/typing[${PYTHON_USEDEP}]
 	libyaml? ( dev-libs/libyaml )
 	$(python_gen_cond_dep 'dev-python/ruamel-ordereddict[${PYTHON_USEDEP}]' python2_7)"
 
@@ -28,6 +29,8 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	libyaml? ( $(python_gen_cond_dep 'dev-python/cython[${PYTHON_USEDEP}]' python2_7 'python3*') )
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
+
+S="${WORKDIR}/${MY_P}"
 
 python_configure_all() {
 	if ! use libyaml ; then
