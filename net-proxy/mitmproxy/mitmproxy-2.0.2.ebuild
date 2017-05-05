@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
-PYTHON_COMPAT=( python3_{3,4,5} )
+PYTHON_COMPAT=( python3_{3,4,5,6} )
 
 inherit distutils-r1 versionator
 
@@ -74,11 +74,4 @@ python_install_all() {
 	use examples && local EXAMPLES=( examples/. )
 
 	distutils-r1_python_install_all
-}
-
-pkg_postinst() {
-	if [[ ${PYTHON_TARGETS} == *python3_4* ]] ; then
-		ewarn "Attention: Python 3_4 is not officially supported by this version"
-		ewarn
-	fi
 }
