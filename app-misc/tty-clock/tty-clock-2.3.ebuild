@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="analog clock in ncurses"
 HOMEPAGE="https://github.com/xorg62/tty-clock"
-SRC_URI="https://github.com/xorg62/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/xorg62/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"

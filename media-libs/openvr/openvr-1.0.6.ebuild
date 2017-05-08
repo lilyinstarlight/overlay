@@ -7,7 +7,7 @@ inherit cmake-utils
 
 DESCRIPTION="API and runtime for accessing VR hardware from multiple vendors"
 HOMEPAGE="https://steamvr.com/"
-SRC_URI="https://github.com/ValveSoftware/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/ValveSoftware/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
