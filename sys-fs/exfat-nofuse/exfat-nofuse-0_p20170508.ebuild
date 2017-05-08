@@ -8,7 +8,7 @@ inherit linux-mod
 DESCRIPTION="Non-fuse kernel driver for exFat and VFat file systems"
 HOMEPAGE="https://github.com/dorimanx/exfat-nofuse"
 
-COMMIT="97f9e2d6259aa0820d23c7259aac50467d208a32"
+COMMIT="ef703b26a7caa1e77a5875cf7876870adaa6faf8"
 SRC_URI="https://github.com/dorimanx/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+"
