@@ -55,7 +55,7 @@ CDEPEND="
 DEPEND="
 	${CDEPEND}
 
-	dev-util/conan
+	>=dev-util/conan-0.20
 "
 
 RDEPEND="
