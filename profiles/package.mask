@@ -1,5 +1,4 @@
-# Plex Media Server - Hardware Transcoding Preview: 1.4.0
-=media-tv/plex-media-server-1.4.0.3224
+# Plex Media Server - Hardware Transcoding Previews.
+=media-tv/plex-media-server-1.4.0.3224-r1
+=media-tv/plex-media-server-1.6.0.3720
 
-# DVR Beta
-=media-tv/plex-media-server-1.2.0.3167

@@ -49,7 +49,7 @@ CDEPEND="
 DEPEND="
 	${CDEPEND}
 
-	dev-util/conan
+	>=dev-util/conan-0.20
 "
 
 RDEPEND="
@@ -90,7 +90,7 @@ src_configure() {
 		-DENABLE_CEC=$(usex cec)
 		-DENABLE_SDL2=$(usex joystick)
 		-DENABLE_LIRC=$(usex lirc)
-		-DQTROOT=/
+		-DQTROOT=/usr/share/qt5
 	)
 
 	cmake-utils_src_configure

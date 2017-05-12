@@ -22,7 +22,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE} test? ( libyaml )"
 
 #	dev-python/ruamel-base[${PYTHON_USEDEP}]
 RDEPEND="${PYTHON_DEPS}
-	dev-python/typing[${PYTHON_USEDEP}]
 	libyaml? ( dev-libs/libyaml )
 	$(python_gen_cond_dep 'dev-python/ruamel-ordereddict[${PYTHON_USEDEP}]' python2_7)"
 

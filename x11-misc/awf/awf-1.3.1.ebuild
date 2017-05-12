@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="A Widget Factory"
 HOMEPAGE="https://github.com/valr/awf"
-SRC_URI="https://github.com/valr/awf/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/valr/awf/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

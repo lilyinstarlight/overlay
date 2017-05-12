@@ -2,10 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-COMMIT="7d2c839"
+COMMIT="d82f85387"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -17,20 +18,19 @@ URI="https://downloads.plex.tv/plex-media-server"
 DESCRIPTION="A free media library that is intended for use with a plex client."
 HOMEPAGE="http://www.plex.tv/"
 SRC_URI="
-	amd64? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_amd64.deb )
-"
+	amd64? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_amd64.deb )"
+
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
 KEYWORDS="-* ~amd64"
 
-IUSE="plex-ffmpeg pax_kernel avahi"
+IUSE="pax_kernel avahi"
 
-DEPEND="pax_kernel? ( sys-apps/fix-gnustack )
+DEPEND="pax_kernel? ( "sys-apps/fix-gnustack" )
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
-
-RDEPEND="plex-ffmpeg? ( >=media-video/plex-ffmpeg-2016.12 )
-	avahi? ( net-dns/avahi )"
+RDEPEND="avahi? ( "net-dns/avahi" )
+	${PYTHON_DEPS}"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
 QA_PREBUILT="*"
@@ -39,47 +39,46 @@ QA_MULTILIB_PATHS=(
 	"usr/lib/${_APPNAME}/Resources/Python/lib/python2.7/.*"
 )
 
-EXECSTACKED_BINS=(
-	"${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*"
+EXECSTACKED_BINS=( "${ED%/}/usr/lib/plexmediaserver/libgnsdk_dsp.so*" )
+BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host"
 	"${ED%/})/usr/lib/plexmediaserver/Plex Media Scanner"
 )
-BINS_TO_PAX_MARK=( "${ED%/}/usr/lib/plexmediaserver/Plex Script Host" )
 BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin/python" )
-
-PATCHES=(
-	"${FILESDIR}/plexmediamanager.desktop.patch"
-	"${FILESDIR}/virtualenv_start_pms.patch"
-)
 
 S="${WORKDIR}"
 
 pkg_setup() {
 	enewgroup ${_USERNAME}
 	enewuser ${_USERNAME} -1 /bin/bash /var/lib/${_APPNAME} "${_USERNAME},video"
+
+	python-single-r1_pkg_setup
 }
 
 src_unpack() {
 	unpack_deb ${A}
 }
 
-src_install() {
-	# Copy main files over to image and preserve permissions so it is portable
-	if use plex-ffmpeg; then
-		find -name "Plex Transcoder" -exec mv {} {}.orig \; -exec ln -sf /usr/bin/plex-ffmpeg {} \;
-	fi
-	cp -rp usr/ "${ED}" || die
+src_prepare() {
+	eapply "${FILESDIR}"/virtualenv_start_pms.patch
+	eapply "${FILESDIR}"/plexmediamanager.desktop.patch
+	default
+}
 
+src_install() {
 	# Move the config to the correct place
-	local CONFIG_VANILLA="${S}/etc/default/plexmediaserver"
+	local CONFIG_VANILLA="/etc/default/plexmediaserver"
 	local CONFIG_PATH="/etc/${_SHORTNAME}"
 	dodir "${CONFIG_PATH}"
 	insinto "${CONFIG_PATH}"
-	doins "${CONFIG_VANILLA}"
+	doins "${CONFIG_VANILLA#/}"
 	sed -e "s#${CONFIG_VANILLA}#${CONFIG_PATH}#g" \
 		-i "${S}"/usr/sbin/start_pms || die
 
 	# Remove Debian specific files
-	rm -rf "${ED%/}/usr/share/doc" || die
+	rm -rf "usr/share/doc" || die
+
+	# Copy main files over to image and preserve permissions so it is portable
+	cp -rp usr/ "${ED}" || die
 
 	# Make sure the logging directory is created
 	local LOGGING_DIR="/var/log/pms"
@@ -91,11 +90,11 @@ src_install() {
 	dodir "${DEFAULT_LIBRARY_DIR}"
 	chown "${_USERNAME}":"${_USERNAME}" "${ED%/}/${DEFAULT_LIBRARY_DIR}" || die
 
-	# Install the OpenRC init/conf files
+	# Install the OpenRC init/conf files depending on avahi.
 	if use avahi; then
 		doinitd "${FILESDIR}/init.d/${PN}"
 	else
-	cp "${FILESDIR}/init.d/${PN}" "${S}/${PN}";
+		cp "${FILESDIR}/init.d/${PN}" "${S}/${PN}";
 		sed -e '/depend/ s/^#*/#/' -i "${S}/${PN}"
 		sed -e '/need/ s/^#*/#/' -i "${S}/${PN}"
 		sed -e '1,/^}/s/^}/#}/' -i "${S}/${PN}"
@@ -104,24 +103,25 @@ src_install() {
 
 	doconfd "${FILESDIR}/conf.d/${PN}"
 
-	_handle_multilib
-
 	# Install systemd service file
 	local INIT_NAME="${PN}.service"
 	local INIT="${FILESDIR}/systemd/${INIT_NAME}"
 	systemd_newunit "${INIT}" "${INIT_NAME}"
-
-	if use pax_kernel; then
-		_remove_execstack_markings
-		_add_pax_markings
-		_add_pax_flags
-	fi
 
 	einfo "Configuring virtualenv"
 	virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"usr/lib/plexmediaserver/Resources/Python || die
 	pushd "${ED}"usr/lib/plexmediaserver/Resources/Python &>/dev/null || die
 	find . -type f -exec sed -i -e "s#${D}##g" {} + || die
 	popd &>/dev/null || die
+
+# Add PaX marking for hardened systems
+	if use pax_kernel; then
+		_remove_execstack_markings
+		_add_pax_markings
+		_add_pax_flags
+	fi
+
+	_handle_multilib
 }
 
 pkg_postinst() {
@@ -141,19 +141,22 @@ _handle_multilib() {
 
 	doenvd "${T}"/66plex
 }
-# Remove execstack flag from library so that it works in hardened setups.
+
+# Remove execstack flags from some libraries/executables so that it works in hardened setups.
 _remove_execstack_markings() {
 	for f in "${EXECSTACKED_BINS[@]}"; do
 		# Unquoting 'f' so that expansion works.
 		fix-gnustack -f ${f} > /dev/null
 	done
 }
+
 # Add pax markings to some binaries so that they work on hardened setup.
 _add_pax_markings() {
 	for f in "${BINS_TO_PAX_MARK[@]}"; do
 		pax-mark m "${f}"
 	done
 }
+
 # Create default PaX markings on virtualenvironment's pythin
 _add_pax_flags() {
 	for f in "${BINS_TO_PAX_CREATE_FLAGS[@]}"; do
