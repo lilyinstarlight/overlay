@@ -9,21 +9,18 @@ inherit distutils-r1
 
 DESCRIPTION="Python interface to control BlinkStick devices connected to the computer"
 HOMEPAGE="https://www.blinkstick.com/"
-MY_PN="BlinkStick"
-MY_P="${MY_PN}-${PV}"
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+MY_PN="blinkstick-python"
+MY_PV="a9227d01a9771c0e7aee811a15b824a357f6f09c"
+MY_P="${MY_PN}-${MY_PV}"
+SRC_URI="https://github.com/arvydas/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
-	=dev-python/pyusb-1.0.0_beta1
-"
-RDEPEND="
-	${DEPEND}
-"
+DEPEND="dev-python/pyusb"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
