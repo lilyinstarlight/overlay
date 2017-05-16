@@ -13,20 +13,12 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${PV}"
 
 ARDUINO_PN="arduino"
-ARDUINO_PV="1.8.1"
+ARDUINO_PV="1.8.2"
 ARDUINO_P="${ARDUINO_PN}-${ARDUINO_PV}"
 
 SRC_URI="
-	amd64? (
-		https://downloads.arduino.cc/${ARDUINO_P}-linux64.tar.xz -> ${ARDUINO_P}-linux64.tar.xz
-		https://file.fooster.io/overlay/${MY_P}-linux64.vcdiff
-	)
-
-	x86? (
-		https://downloads.arduino.cc/${ARDUINO_P}-linux32.tar.xz -> ${ARDUINO_P}-linux32.tar.xz
-		https://file.fooster.io/overlay/${MY_P}-linux32.vcdiff
-	)
-
+	amd64? ( https://file.fooster.io/overlay/${MY_P}-linux64.tar.xz )
+	x86? ( https://file.fooster.io/overlay/${MY_P}-linux32.tar.xz )
 	http://pjrc.com/teensy/49-teensy.rules
 "
 
@@ -35,23 +27,18 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-DEPEND="
-	dev-util/xdelta:0
-	virtual/libusb:0
-"
-RDEPEND=""
+RDEPEND="virtual/libusb:0"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${ARDUINO_P}"
+S="${WORKDIR}/${MY_P}"
 
 RESTRICT="binchecks preserve-libs strip"
 
 src_unpack() {
 	if use amd64; then
-		xdelta patch "${DISTDIR}/${MY_P}"-linux64.vcdiff "${DISTDIR}/${ARDUINO_P}"-linux64.tar.xz "${ARDUINO_P}"-teensy-linux64.tar.xz || die
-		unpack "${WORKDIR}/${ARDUINO_P}"-teensy-linux64.tar.xz
+		unpack "${MY_P}"-linux64.tar.xz
 	else
-		xdelta patch "${DISTDIR}/${MY_P}"-linux32.vcdiff "${DISTDIR}/${ARDUINO_P}"-linux32.tar.xz "${ARDUINO_P}"-teensy-linux32.tar.xz || die
-		unpack "${WORKDIR}/${ARDUINO_P}"-teensy-linux32.tar.xz
+		unpack "${MY_P}"-linux32.tar.xz
 	fi
 
 	cp "${DISTDIR}"/49-teensy.rules "${WORKDIR}" || die
