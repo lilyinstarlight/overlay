@@ -16,7 +16,7 @@ SLOT=0
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/dm-core dev-ruby/fastercsv dev-ruby/json dev-ruby/multi_json"
+ruby_add_rdepend "dev-ruby/dm-core dev-ruby/fastercsv dev-ruby/json:0 dev-ruby/multi_json"
 
 all_ruby_prepare() {
 	# fix too strict versioning

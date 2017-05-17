@@ -9,7 +9,7 @@ inherit ruby-single ruby-ng multilib user
 
 DESCRIPTION="The Browser Exploitation Framework"
 HOMEPAGE="https://beefproject.com/"
-COMMIT="f9f30eb49d00b0ed97d8ebdfa66916dadf68c7b9"
+COMMIT="7ef36039a411b24a5ad5aa1a144af89873a83a6e"
 SRC_URI="https://github.com/beefproject/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -23,7 +23,7 @@ DEPEND="dev-libs/openssl"
 RDEPEND="${DEPEND} ${RUBY_DEPS}"
 
 ruby_add_bdepend "dev-ruby/bundler-audit"
-ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby dev-ruby/nokogiri dev-ruby/therubyracer dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations dev-ruby/rubydns dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
+ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby dev-ruby/nokogiri <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations dev-ruby/rubydns dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
 
 all_ruby_prepare() {
 	# fix too strict versioning
@@ -55,8 +55,6 @@ EOF
 
 	cd "${USE_RUBY}"/"${RUBY_S}"
 
-	tools/generate-certificate || die
-
 	sed -i -e "s:#{\$root_dir}/config.yaml:/etc/beef/config.yaml:" beef || die
 
 	sed -i -e "s#\"\(.*\.pem\)\"#\"/usr/$(get_libdir)/beef/\1\"#" config.yaml || die
@@ -64,7 +62,7 @@ EOF
 
 	dodir /usr/$(get_libdir)/beef
 	insinto /usr/$(get_libdir)/beef
-	doins -r arerules beef beef_cert.pem beef_key.pem core extensions modules test tools Gemfile Gemfile.lock Rakefile
+	doins -r arerules beef core extensions modules test tools Gemfile Gemfile.lock Rakefile
 
 	dodir /etc/beef
 	insinto /etc/beef
@@ -72,8 +70,15 @@ EOF
 }
 
 pkg_postinst() {
-	chown -R root:beef /usr/$(get_libdir)/beef
-	chmod -R g+w /usr/$(get_libdir)/beef
+	chmod +x /usr/$(get_libdir)/beef/tools/{generate-certificate,csrf_to_beef/csrf_to_beef,rest_api_examples/browser-details,rest_api_examples/clone_page,rest_api_examples/command-modules,rest_api_examples/dns,rest_api_examples/export-logs,rest_api_examples/metasploit,rest_api_examples/network,rest_api_examples/webrtc} || die
+
+	if [ ! -e /usr/$(get_libdir)/beef/beef_key.pem ]; then
+		cd /usr/$(get_libdir)/beef || die
+		tools/generate-certificate || die
+	fi
+
+	chown -R root:beef /usr/$(get_libdir)/beef || die
+	chmod -R g+w /usr/$(get_libdir)/beef || die
 
 	einfo "You should modify the configuration at /etc/beef/config.yaml"
 	einfo "and change the admin password from 'beef:beef'."

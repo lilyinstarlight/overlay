@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-
-inherit autotools
+EAPI=5
+AUTOTOOLS_AUTORECONF=yes
+inherit autotools-utils
 
 DESCRIPTION="A set of open source instruments and effects for digital audio workstations"
 HOMEPAGE="http://calf-studio-gear.org/"
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/atk
 	dev-libs/glib:2
 	gnome-base/libglade:2.0
 	media-sound/fluidsynth
-	media-sound/jack-audio-connection-kit
+	virtual/jack
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -35,12 +35,16 @@ RDEPEND="dev-libs/atk
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	eautoreconf
-
-	default
-}
+PATCHES=(
+	"${FILESDIR}/${P}-cpp14.patch" # bug #594116
+)
 
 src_configure() {
-	econf --with-lv2-dir=/usr/$(get_libdir)/lv2 $(use_with lash) $(use_with lv2) $(use_enable experimental)
+	myeconfargs=(
+		--with-lv2-dir=/usr/$(get_libdir)/lv2
+		$(use_with lash)
+		$(use_with lv2)
+		$(use_enable experimental)
+	)
+	autotools-utils_src_configure
 }

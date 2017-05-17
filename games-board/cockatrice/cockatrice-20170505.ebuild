@@ -7,8 +7,9 @@ inherit cmake-utils
 
 DESCRIPTION="A cross-platform virtual tabletop for multiplayer card games"
 HOMEPAGE="https://github.com/Cockatrice/Cockatrice"
+VER="2.3.17"
 MY_PN="Cockatrice"
-MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}-Release"
+MY_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}-Release-${VER}"
 MY_P="${MY_PN}-${MY_PV}"
 SRC_URI="https://github.com/Cockatrice/Cockatrice/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 

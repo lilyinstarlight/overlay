@@ -12,12 +12,10 @@ SRC_URI="https://github.com/ValveSoftware/${PN}/archive/v${PV}.tar.gz -> ${P}.ta
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="examples"
 
 DEPEND=""
 RDEPEND=""
-
-PATCHES=( "${FILESDIR}"/no-stdcall.patch )
 
 src_configure() {
 	local mycmakeargs=(
@@ -33,4 +31,9 @@ src_install() {
 	doheader headers/openvr.h
 	doheader headers/openvr_capi.h
 	doheader headers/openvr_driver.h
+
+	if use examples; then
+		insinto /usr/share/"${PN}"
+		doins -r samples
+	fi
 }

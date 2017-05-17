@@ -175,7 +175,7 @@ Packages
 #### A Widget Factory [x11-misc/awf]
 [A Widget Factory](https://github.com/valr/awf) is a theme preview application that shows most GTK+ widgets for both versions 2 and 3.
 
-#### Arc Theme [x11-themes/arc-openbox-theme, x11-themes/arc-icon-theme]
+#### Arc Theme [x11-themes/arc-openbox-theme]
 [Arc Theme](https://github.com/horst3180/arc-theme) is a flat GTK+ theme with transparent elements.
 
 ### CAD
