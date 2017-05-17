@@ -36,7 +36,7 @@ src_install() {
 
 	java-pkg_newjar org.yaml.snakeyaml-1.16.jar org.yaml.snakeyaml.jar
 	java-pkg_newjar org.scala-lang.scala-library-2.11.7.jar org.scala-lang.scala-library.jar
-	java-pkg_newjar io.kaitai.kaitai-struct-compiler-0.6.jar io.kaitai.kaitai-struct-compiler.jar
+	java-pkg_newjar io.kaitai.kaitai-struct-compiler-"${PV}".jar io.kaitai.kaitai-struct-compiler.jar
 	java-pkg_newjar com.lihaoyi.sourcecode_2.11-0.1.1.jar com.lihaoyi.sourcecode_2.11.jar
 	java-pkg_newjar com.lihaoyi.fastparse_2.11-0.4.1.jar com.lihaoyi.fastparse_2.11.jar
 	java-pkg_newjar com.lihaoyi.fastparse-utils_2.11-0.4.1.jar com.lihaoyi.fastparse-utils_2.11.jar
