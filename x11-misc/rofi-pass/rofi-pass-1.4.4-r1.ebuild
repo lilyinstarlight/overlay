@@ -23,3 +23,7 @@ src_compile() {
 	# nop
 	true
 }
+
+src_install() {
+	emake DESTDIR="${D}" PREFIX="/usr"
+}
