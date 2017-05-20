@@ -30,7 +30,7 @@ RDEPEND="
 	>=dev-python/six-1.10[${PYTHON_USEDEP}]
 	>=dev-python/node-semver-0.1.1[${PYTHON_USEDEP}]
 	>=dev-python/pluginbase-0.5[${PYTHON_USEDEP}]
-	>=dev-python/pylint-1.6.5[${PYTHON_USEDEP}]
+	>=dev-python/pylint-1.6.5[${PYTHON_USEDEP}] <dev-python/pylint-1.6.6[${PYTHON_USEDEP}]
 	>=dev-python/future-0.16.0[${PYTHON_USEDEP}]
 "
 DEPEND="
