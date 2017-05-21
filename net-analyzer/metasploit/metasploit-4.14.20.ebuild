@@ -39,6 +39,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/activesupport-4.2.8:4.2
 	>=dev-ruby/actionpack-4.2.8:4.2
 	>=dev-ruby/activerecord-4.2.8:4.2
+	dev-ruby/backports
 	dev-ruby/bcrypt-ruby
 	>=dev-ruby/bit-struct-0.15.0_p20170118
 	dev-ruby/builder:3.2
