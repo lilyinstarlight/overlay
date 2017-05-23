@@ -4,6 +4,7 @@
 EAPI=5
 USE_RUBY="ruby21 ruby22 ruby23"
 RUBY_FAKEGEM_TASK_DOC=""
+RUBY_FAKEGEM_EXTRAINSTALL="data"
 
 inherit ruby-fakegem
 
