@@ -22,4 +22,4 @@ IUSE=""
 # doesn't seem to actually run any tests
 RESTRICT=test
 
-ruby_add_rdepend "dev-ruby/filesize dev-ruby/jsobfu dev-ruby/json dev-ruby/metasm dev-ruby/nokogiri dev-ruby/rb-readline-r7 dev-ruby/robots"
+ruby_add_rdepend "dev-ruby/filesize dev-ruby/jsobfu:0 dev-ruby/json:* dev-ruby/metasm:1.0.2 dev-ruby/nokogiri dev-ruby/rb-readline-r7 dev-ruby/robots"

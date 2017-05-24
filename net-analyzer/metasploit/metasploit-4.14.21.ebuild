@@ -66,7 +66,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/openvas-omp
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
-	>=dev-ruby/railties-4.2.8
+	>=dev-ruby/railties-4.2.8:4.2
 	dev-ruby/recog:2.1.5
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
@@ -88,7 +88,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-struct2
 	dev-ruby/rex-text
 	dev-ruby/rex-zip
-	dev-ruby/ruby_smb
+	dev-ruby/ruby_smb:0.0.14
 	>=dev-ruby/rubyntlm-0.6.1_p20170407
 	dev-ruby/sqlite3
 	>=dev-ruby/pg-0.11
@@ -98,7 +98,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/robots
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
-	dev-ruby/windows_error
+	dev-ruby/windows_error:0.1
 	dev-ruby/xmlrpc
 	java? ( dev-ruby/rjb )
 	oracle? ( dev-ruby/ruby-oci8 )
