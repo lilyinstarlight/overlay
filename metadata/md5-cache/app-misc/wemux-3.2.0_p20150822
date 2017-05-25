@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare setup
+DESCRIPTION=multi-user tmux made easy
+EAPI=6
+HOMEPAGE=https://github.com/zolrath/wemux
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=>=app-misc/tmux-1.6
+SLOT=0
+SRC_URI=https://github.com/zolrath/wemux/archive/01c6541f8deceff372711241db2a13f21c4b210c.tar.gz -> wemux-3.2.0_p20150822.tar.gz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:- src_prepare:- src_install:-
+_eclasses_=user	e4b567c44272a719fabf53f0f885d3f7
+_md5_=1217cc3ad3bf7a180abd2ff99f5781f4
