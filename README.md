@@ -158,6 +158,7 @@ Packages
 
 #### Komodo-Edit [app-editors/komodo-edit-bin]
 [Komodo-Edit-bin](http://www.activestate.com/komodo-edit) Freeware advanced editor for dynamic and Web languages
+
 Upstream Bug Tracker: https://github.com/Komodo/KomodoEdit
 
 ### Libraries
