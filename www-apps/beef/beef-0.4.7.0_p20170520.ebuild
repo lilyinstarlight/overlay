@@ -9,7 +9,7 @@ inherit ruby-single ruby-ng multilib user
 
 DESCRIPTION="The Browser Exploitation Framework"
 HOMEPAGE="https://beefproject.com/"
-COMMIT="7ef36039a411b24a5ad5aa1a144af89873a83a6e"
+COMMIT="dd47856c9110ad9ca3ccc64fa48f460dcf872a68"
 SRC_URI="https://github.com/beefproject/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -19,11 +19,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RUBY_S="${PN}-${COMMIT}"
-DEPEND="dev-libs/openssl"
+DEPEND="dev-libs/openssl:0"
 RDEPEND="${DEPEND} ${RUBY_DEPS}"
 
 ruby_add_bdepend "dev-ruby/bundler-audit"
-ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby dev-ruby/nokogiri <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations dev-ruby/rubydns dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
+ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types:3 dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby dev-ruby/nokogiri <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations dev-ruby/rubydns dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
 
 all_ruby_prepare() {
 	# fix too strict versioning

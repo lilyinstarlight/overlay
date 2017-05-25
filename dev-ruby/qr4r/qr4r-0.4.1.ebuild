@@ -8,7 +8,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="QR PNG generator for Ruby"
-HOMEPAGE=""
+HOMEPAGE="http://github.com/rcode5/qr4r"
 
 LICENSE="MIT"
 SLOT="0"
