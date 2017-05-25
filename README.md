@@ -125,9 +125,6 @@ Packages
 #### Wemux [app-misc/wemux]
 [Wemux](https://github.com/zolrath/wemux) is multi-user tmux made easy.
 
-#### Komodo-Edit [app-editors/komodo-edit-bin]
-[Komodo-Edit-bin](http://www.activestate.com/komodo-edit) Freeware advanced editor for dynamic and Web languages 
-
 ### Administration
 
 #### Linode CLI [app-admin/linode-cli]
@@ -158,6 +155,10 @@ Packages
 
 #### Energia [dev-embedded/energia-bin]
 [Energia](http://energia.nu/) is an electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on [Wiring](http://www.wiring.org.co/) and [Arduino](https://www.arduino.cc/).
+
+#### Komodo-Edit [app-editors/komodo-edit-bin]
+[Komodo-Edit-bin](http://www.activestate.com/komodo-edit) Freeware advanced editor for dynamic and Web languages
+Upstream Bug Tracker: https://github.com/Komodo/KomodoEdit
 
 ### Libraries
 
