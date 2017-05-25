@@ -6,7 +6,7 @@ EAPI="6"
 PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1
 
-MY_BUILD="17670"
+MY_BUILD="17703"
 
 DESCRIPTION="Freeware advanced editor for dynamic and Web languages"
 HOMEPAGE="http://www.activestate.com/products/komodo_edit"
