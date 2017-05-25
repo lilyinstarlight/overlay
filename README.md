@@ -44,6 +44,9 @@ Packages
 #### Discord [net-im/discord]
 [Discord](https://discordapp.com/) is an all-in-one voice and text chat for gamers.
 
+#### sK1 [media-gfx/sk1]
+[sK1](https://sk1project.net/) is an open-source illustration program that can substitute professional proprietary software like Corel Draw or Adobe Illustrator.
+
 
 ### Security Tools
 
