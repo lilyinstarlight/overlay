@@ -28,3 +28,11 @@ src_install() {
 	insinto "/usr/share/kodi/addons/plugin.video.plexkodiconnect"
 	doins -r "${S}/"*
 }
+
+pkg_postinst() {
+	einfo 'If you are having problems after updating, reset your'
+	einfo 'database in Kodi at "PlexKodiConnect Settings -> Advanced'
+	einfo '    -> Partial or Full Reset of Database and PKC"'
+	einfo 'then select "Yes" (to reset Kodi database), "Yes" (to delete'
+	einfo 'cached artwork), and "No" (to not reset all PKC settings).'
+}
