@@ -4,7 +4,7 @@
 EAPI="6"
 
 PYTHON_COMPAT=( python2_7 )
-inherit eutils python-single-r1
+inherit eutils python-single-r1 pax-utils
 
 MY_BUILD="17703"
 
@@ -20,10 +20,9 @@ KEYWORDS="~x86 ~amd64"
 
 RESTRICT="strip"
 
-IUSE=""
+IUSE="pax_kernel"
 
 DEPEND=""
-
 RDEPEND="${DEPEND}
     virtual/jpeg
     virtual/libc
@@ -36,38 +35,36 @@ RDEPEND="${DEPEND}
 
 RESTRICT="mirror"
 
-pkg_setup() {
+QA_PREBUILT="*"
+QA_FLAGS_IGNORED="*"
+QA_PRESTRIPPED="*"
 
-	use amd64 && MY_ARCH='x86_64' || MY_ARCH=${ARCH}
-	S="${WORKDIR}/Komodo-Edit-${PV}-${MY_BUILD}-linux-${MY_ARCH}"
-}
+S="${WORKDIR}/Komodo-Edit-${PV}-${MY_BUILD}-linux-${ARCH/amd64/x86_64}"
 
 src_install() {
+    if use pax_kernel; then
+		pax-mark m "${S}"/INSTALLDIR/lib/mozilla/komodo
+	fi
 
-	KOMODO_EDIT_INSTALLDIR="/opt/${P}"
+	insinto /opt/${PN}
+	doins -r "${S}"/INSTALLDIR/share
+	mv "${S}"/INSTALLDIR/lib "${ED}opt/${PN}/" || die "Installation failed"
 
-	"${S}/install.sh" \
-		--install-dir "${D}/${KOMODO_EDIT_INSTALLDIR}" \
-		--dest-dir ${D}/${KOMODO_EDIT_INSTALLDIR} \
-		--suppress-shortcut || die "original installer script failed"
+	# install the wrapper script
+	dodir /usr/bin
+	cat <<EOF >"${ED}usr/bin/komodo" ||die "could not create wrapper"
+#!/bin/sh
+LD_LIBRARY_PATH="${EPREFIX}/opt/${PN}/lib/mozilla" \
+exec ${EPREFIX}/opt/${PN}/lib/mozilla/komodo $@
+EOF
+	fperms 0755 /usr/bin/komodo
 
-	dosym "${D}/${KOMODO_EDIT_INSTALLDIR}/bin/komodo" "/usr/bin/${P}" &&
-	dosym "./${P}" "/usr/bin/${PN}" ||
-		die "failed dosym Komodo launcher script"
+	doicon "${S}/INSTALLDIR/share/icons/komodo48.png"
 
-	rm -R "${D}/${KOMODO_EDIT_INSTALLDIR}/bin/komodo"
-	dosym "${D}/${KOMODO_EDIT_INSTALLDIR}/lib/mozilla/komodo" "${KOMODO_EDIT_INSTALLDIR}/bin/komodo"
-
-	dodoc "${D}/${KOMODO_EDIT_INSTALLDIR}/"lib/sdk/{CHANGELOG.txt,README.txt}
-	dosym "${D}/${KOMODO_EDIT_INSTALLDIR}/share/icons/komodo48.png" \
-		"/usr/share/pixmaps/${PN}.png" || die "dosym pixmap icon failed"
-
-	dodir "${KOMODO_EDIT_INSTALLDIR}"
-
-    make_desktop_entry \
-        "${KOMODO_EDIT_INSTALLDIR}/bin/${PN}" \
-        "Komodo Edit" \
-        "${KOMODO_EDIT_INSTALLDIR}/share/icons/komodo48.png" \
-        "Development;IDE;TextEditor" ||
-        die "make_desktop_entry failed"
+	make_desktop_entry \
+		"${EPREFIX}/usr/bin/komodo" \
+		"Komodo Edit 10" \
+		"${EPREFIX}/opt/${PN}/share/icons/komodo48.png" \
+		"Development;IDE;TextEditor" \
+		|| die "make_desktop_entry failed"
 }
