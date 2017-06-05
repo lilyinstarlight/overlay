@@ -72,7 +72,7 @@ src_install() {
 	dodir "${CONFIG_PATH}"
 	insinto "${CONFIG_PATH}"
 	doins "${CONFIG_VANILLA#/}"
-	sed -e "s#${CONFIG_VANILLA}#${CONFIG_PATH}#g" \
+	sed -e "s#${CONFIG_VANILLA}#${CONFIG_PATH}/$(basename "${CONFIG_VANILLA}")#g" \
 		-i "${S}"/usr/sbin/start_pms || die
 
 	# Remove Debian specific files
