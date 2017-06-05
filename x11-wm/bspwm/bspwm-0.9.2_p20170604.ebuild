@@ -7,7 +7,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Tiling window manager based on binary space partitioning"
 HOMEPAGE="https://github.com/baskerville/bspwm/"
-COMMIT="ae76469130ec3f9a827d1bf807f7dd569b8f5376"
+COMMIT="fff172e5ca73f5bd410cc1a73a6e96c1d943dda7"
 MY_P="${PN}-${COMMIT}"
 SRC_URI="https://github.com/baskerville/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
