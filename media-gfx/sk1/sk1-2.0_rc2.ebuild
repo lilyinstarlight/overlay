@@ -26,7 +26,7 @@ DEPEND="
 	dev-python/wxpython:3.0[${PYTHON_USEDEP}]
 	dev-python/pycups[${PYTHON_USEDEP}]
 	media-libs/lcms
-	media-gfx/imagemagick
+	<media-gfx/imagemagick-7.0
 	x11-libs/pango
 	${PYTHON_DEPS}
 "

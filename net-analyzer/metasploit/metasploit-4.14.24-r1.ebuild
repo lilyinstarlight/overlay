@@ -70,7 +70,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/recog-2.1.8:*
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
-	=dev-ruby/rex-arch-0.1.4
+	=dev-ruby/rex-arch-0.1.8
 	dev-ruby/rex-bin_tools
 	dev-ruby/rex-core
 	dev-ruby/rex-encoder
