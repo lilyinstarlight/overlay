@@ -146,6 +146,7 @@ Packages
 #### EDK2 OVMF [sys-firmware/edk2-ovmf]
 [EDK2 OVMF](http://www.tianocore.org/) is a firmware image for the EDK II UEFI firmware.
 
+
 ### Development
 
 #### Unity Editor [dev-util/unity-editor]
@@ -160,6 +161,10 @@ Packages
 #### Energia [dev-embedded/energia-bin]
 [Energia](http://energia.nu/) is an electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on [Wiring](http://www.wiring.org.co/) and [Arduino](https://www.arduino.cc/).
 
+#### FFDec [dev-util/ffdec]
+[FFDec](https://www.free-decompiler.com/flash/) is an open-source Flash SWF decompiler and editor.
+
+
 ### Libraries
 
 #### Chipmunk2D [sci-physics/chipmunk]
@@ -171,6 +176,7 @@ Packages
 #### Slixmpp [dev-python/slixmpp]
 [Slixmpp](https://dev.louiz.org/projects/slixmpp) is a Python library for XMPP. It is the asyncio fork of SleekXMPP
 
+
 ### GTK+
 
 #### A Widget Factory [x11-misc/awf]
@@ -178,6 +184,7 @@ Packages
 
 #### Arc Theme [x11-themes/arc-openbox-theme]
 [Arc Theme](https://github.com/horst3180/arc-theme) is a flat GTK+ theme with transparent elements.
+
 
 ### CAD
 
