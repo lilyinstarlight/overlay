@@ -33,8 +33,6 @@ RDEPEND="${DEPEND}
 	gnome-base/libgnomeui
 	gnome-base/libgnome"
 
-RESTRICT="mirror"
-
 QA_PREBUILT="*"
 QA_FLAGS_IGNORED="*"
 QA_PRESTRIPPED="*"
