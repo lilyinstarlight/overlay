@@ -160,8 +160,8 @@ Packages
 #### Energia [dev-embedded/energia-bin]
 [Energia](http://energia.nu/) is an electronics prototyping platform for Texas Instruments MSP430 LaunchPad based on [Wiring](http://www.wiring.org.co/) and [Arduino](https://www.arduino.cc/).
 
-#### komodo-edit-bin [app-editors/komodo-edit-bin]
-[komodo-edit-bin](https://www.activestate.com/komodo-edit) is a fast and free multi-language code editor.
+#### Komodo Edit [app-editors/komodo-edit-bin]
+[komodo-edit](https://www.activestate.com/komodo-edit) is a fast and free multi-language code editor.
 
 ### Libraries
 

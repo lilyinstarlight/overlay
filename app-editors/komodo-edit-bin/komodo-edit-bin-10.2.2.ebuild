@@ -48,7 +48,8 @@ src_install() {
 
 	insinto /opt/${PN}
 	doins -r "${S}"/INSTALLDIR/share
-	mv "${S}"/INSTALLDIR/lib "${ED}opt/${PN}/" || die "Installation failed"
+	insinto "${ED}opt/${PN}/"
+	doins -r "${S}"/INSTALLDIR/lib
 
 	make_wrapper komodo ${EPREFIX}/opt/${PN}/lib/mozilla/komodo ${EPREFIX}/opt/${PN}/lib/mozilla /usr/bin
 
@@ -58,6 +59,5 @@ src_install() {
 		"${EPREFIX}/usr/bin/komodo" \
 		"Komodo Edit 10" \
 		"${EPREFIX}/opt/${PN}/share/icons/komodo48.png" \
-		"Development;IDE;TextEditor" \
-		|| die "make_desktop_entry failed"
+		"Development;IDE;TextEditor" 
 }
