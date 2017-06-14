@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-AUTOTOOLS_AUTORECONF=yes
-inherit autotools-utils
+EAPI=6
+
+inherit autotools
 
 DESCRIPTION="A set of open source instruments and effects for digital audio workstations"
 HOMEPAGE="http://calf-studio-gear.org/"
@@ -34,6 +34,12 @@ RDEPEND="dev-libs/atk
 	lv2? ( media-libs/lv2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	eautoreconf
+
+	default
+}
 
 src_configure() {
 	myeconfargs=(

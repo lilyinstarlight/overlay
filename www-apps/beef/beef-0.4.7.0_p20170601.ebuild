@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 USE_RUBY="ruby23"
 
@@ -23,7 +23,7 @@ DEPEND="dev-libs/openssl:0"
 RDEPEND="${DEPEND} ${RUBY_DEPS}"
 
 ruby_add_bdepend "dev-ruby/bundler-audit"
-ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types:3 dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby dev-ruby/nokogiri <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations dev-ruby/rubydns dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
+ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types:3 dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby <dev-ruby/nokogiri-1.8 <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations dev-ruby/rubydns dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
 
 all_ruby_prepare() {
 	# fix too strict versioning
@@ -35,7 +35,6 @@ each_ruby_prepare() {
 	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle install --local || die
 	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle check || die
 }
-
 pkg_setup() {
 	enewgroup beef
 }

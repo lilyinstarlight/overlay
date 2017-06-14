@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 USE_RUBY="ruby23"
 RUBY_FAKEGEM_TASK_DOC=""
@@ -24,8 +24,8 @@ IUSE=""
 
 RUBY_S="${MY_PN}-${COMMIT}"
 
+ruby_add_rdepend "dev-ruby/activesupport:5.0 dev-ruby/yajl-ruby dev-ruby/cms_scanner dev-ruby/dm-core dev-ruby/dm-constraints dev-ruby/dm-migrations dev-ruby/dm-sqlite-adapter"
 ruby_add_bdepend "dev-ruby/rspec-its >=dev-ruby/webmock-1.22.0:0"
-ruby_add_rdepend "dev-ruby/yajl-ruby dev-ruby/cms_scanner dev-ruby/dm-core dev-ruby/dm-constraints dev-ruby/dm-migrations dev-ruby/dm-sqlite-adapter dev-ruby/activesupport:5.0"
 
 all_ruby_prepare() {
 	# remove unnecessary testing packages
@@ -39,9 +39,11 @@ all_ruby_prepare() {
 	# fix too strict versioning
 	sed -i -e '/activesupport/ s/~> 5\.0\.1\.0/~> 5.0.1/' "${PN}".gemspec || die
 	sed -i -e '/webmock/ s/~> 1\.22\.0/~> 1.22/' "${PN}".gemspec || die
-}
+	sed -i -e '/rspec/ s/~> 3\.5\.0/~> 3.5/' "${PN}".gemspec || die
 
-each_ruby_prepare() {
-	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle install --local || die
-	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle check || die
+	# build a gem file with new versioning
+	$(ruby_implementation_command "${USE_RUBY}") -S gem build "${PN}".gemspec || die
+
+	# use gemfile to get back metadata
+	tar xf "${P}.gem" -O metadata.gz | gunzip >../metadata
 }

@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit python-single-r1 versionator
 
-DESCRIPTION="an open-source illustration program that can substitute professional proprietary software like Corel Draw or Adobe Illustrator"
+DESCRIPTION="an open-source illustration program"
 HOMEPAGE="https://sk1project.net/"
 MY_PV="$(get_version_component_range 1-2)$(get_version_component_range 3)"
 MY_P="${PN}-${MY_PV}"

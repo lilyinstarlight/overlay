@@ -1,8 +1,8 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
-USE_RUBY="ruby21 ruby22 ruby23"
+EAPI=6
+USE_RUBY="ruby23"
 
 inherit ruby-fakegem
 
@@ -22,15 +22,15 @@ IUSE=""
 RDEPEND="${RDEPEND} !dev-ruby/metasploit_data_models:0"
 
 ruby_add_rdepend "
-		>=dev-ruby/activerecord-4.2.8:4.2[postgres]
-		>=dev-ruby/activesupport-4.2.8:4.2
+		>=dev-ruby/activerecord-4.2.6:4.2[postgres]
+		>=dev-ruby/activesupport-4.2.6:4.2
 		dev-ruby/pg
-		dev-ruby/postgres_ext:3
+		dev-ruby/postgres_ext
 		>=dev-ruby/railties-4.2.6:4.2
 		>=dev-ruby/recog-2.0.0:*
 		dev-ruby/arel-helpers
-		>=dev-ruby/metasploit-concern-2.0.3
-		>=dev-ruby/metasploit-model-2.0.3
+		>=dev-ruby/metasploit-concern-2.0.0
+		>=dev-ruby/metasploit-model-2.0.0
 		<dev-ruby/thor-2.0"
 
 ruby_add_bdepend "dev-ruby/bundler"
