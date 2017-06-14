@@ -3,7 +3,7 @@
 
 EAPI=6
 
-USE_RUBY="ruby22 ruby23"
+USE_RUBY="ruby23"
 
 inherit multilib ruby-fakegem
 

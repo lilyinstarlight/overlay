@@ -5,7 +5,7 @@ EAPI=6
 
 inherit versionator
 
-USE_RUBY="ruby22 ruby23"
+USE_RUBY="ruby23"
 
 RUBY_FAKEGEM_RECIPE_DOC="yard"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
