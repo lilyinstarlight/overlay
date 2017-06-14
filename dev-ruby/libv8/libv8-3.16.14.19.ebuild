@@ -5,7 +5,7 @@ EAPI=6
 USE_RUBY="ruby23"
 RUBY_FAKEGEM_TASK_DOC=""
 
-inherit ruby-fakegem
+inherit ruby-fakegem flag-o-matic
 
 DESCRIPTION="V8 JavaScript engine distribution"
 HOMEPAGE="http://github.com/cowboyd/libv8"
@@ -24,6 +24,8 @@ all_ruby_prepare() {
 }
 
 each_ruby_compile() {
+	append-cxxflags $(test-flags-CXX -fno-delete-null-pointer-checks)
+
 	${RUBY} -Cext/libv8 extconf.rb || die
 }
 
