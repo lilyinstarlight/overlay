@@ -86,14 +86,14 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/ruby_smb-0.0.18:*
 	>=dev-ruby/rubyntlm-0.6.2
 	dev-ruby/sqlite3
-	>=dev-ruby/pg-0.11
+	>=dev-ruby/pg-0.20.0
 	dev-ruby/packetfu:1.1.13
 	>=dev-ruby/rubyzip-1.2.1
 	>=dev-ruby/rb-readline-0.5.4
 	dev-ruby/robots
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
-	dev-ruby/windows_error:0.1
+	dev-ruby/windows_error:0.1.2
 	dev-ruby/xmlrpc
 	java? ( dev-ruby/rjb )
 	nexpose? ( dev-ruby/nexpose )
@@ -105,8 +105,8 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 			>=dev-ruby/pry-0.10.4_p20161207
 			dev-ruby/redcarpet
 			dev-ruby/yard
-			>=dev-ruby/rake-10.0.0
-			>=dev-ruby/factory_girl-4.1.0 )"
+			>=dev-ruby/rake-12.0.0
+			>=dev-ruby/factory_girl-4.8.0 )"
 	#lorcon doesn't support ruby21
 	#lorcon? ( net-wireless/lorcon[ruby] )
 ruby_add_bdepend "${RUBY_COMMON_DEPEND}
