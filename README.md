@@ -190,3 +190,6 @@ Packages
 
 #### Freeroute [sci-electronics/freeroute]
 [Freeroute](http://freerouting.net/) is a popular automatic PCB routing tool.
+
+#### Fritzing [sci-electronics/fritzing-bin]
+[Fritzing](http://fritzing.org/) is an open-source hardware initiative that makes electronics accessible as a creative material for anyone.
