@@ -93,7 +93,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/robots
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
-	dev-ruby/windows_error:0.1.2
+	dev-ruby/windows_error:0.1
 	dev-ruby/xmlrpc
 	java? ( dev-ruby/rjb )
 	nexpose? ( dev-ruby/nexpose )
