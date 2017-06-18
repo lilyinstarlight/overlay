@@ -21,17 +21,11 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="test"
 
-PATCHES=(
-	"${FILESDIR}"/unpin-dependencies.patch
-)
-
 COMMON_DEPEND=">=dev-python/configargparse-0.11.0[${PYTHON_USEDEP}]
-	>=dev-python/aiohttp-1.2.0[${PYTHON_USEDEP}]
-	<dev-python/aiohttp-1.3.0
+	>=dev-python/aiohttp-1.3.0[${PYTHON_USEDEP}]
 	>=dev-python/appdirs-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/readlike-0.1.2[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.6.0[${PYTHON_USEDEP}]
-	<dev-python/requests-3.0.0
 	>=dev-python/ReParser-1.4.3[${PYTHON_USEDEP}]
 	>=dev-libs/protobuf-3.1.0[python]
 	>=dev-python/urwid-1.3.1[${PYTHON_USEDEP}]
@@ -46,3 +40,11 @@ COMMON_DEPEND=">=dev-python/configargparse-0.11.0[${PYTHON_USEDEP}]
 	)
 "
 RDEPEND="${COMMON_DEPEND}"
+
+src_prepare() {
+	# unpin dependencies
+	sed -i -e 's/==/>=/' setup.py || die
+	sed -i -e "s/,<[^']*//" setup.py || die
+
+	default
+}
