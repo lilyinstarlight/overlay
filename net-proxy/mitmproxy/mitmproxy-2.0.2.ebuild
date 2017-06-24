@@ -41,7 +41,7 @@ RDEPEND="
 	>=dev-python/brotlipy-0.5.1[${PYTHON_USEDEP}] <dev-python/brotlipy-0.7
 	>=dev-python/sortedcontainers-1.5.4[${PYTHON_USEDEP}] <dev-python/sortedcontainers-1.6
 	>=dev-python/protobuf-python-3.1.0[${PYTHON_USEDEP}]
-	>=dev-python/kaitaistruct-0.6[${PYTHON_USEDEP}]
+	>=dev-python/kaitaistruct-0.6[${PYTHON_USEDEP}] <dev-python/kaitaistruct-0.7
 "
 
 DEPEND="${RDEPEND}
