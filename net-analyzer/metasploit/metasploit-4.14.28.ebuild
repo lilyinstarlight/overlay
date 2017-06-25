@@ -62,7 +62,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
 	>=dev-ruby/railties-4.2.8:4.2
-	>=dev-ruby/recog-2.1.8:*
+	>=dev-ruby/recog-2.1.9:*
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
 	>=dev-ruby/rex-arch-0.1.8
@@ -86,7 +86,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/ruby_smb-0.0.18:*
 	>=dev-ruby/rubyntlm-0.6.2
 	dev-ruby/sqlite3
-	>=dev-ruby/pg-0.20.0
+	=dev-ruby/pg-0.20.0
 	dev-ruby/packetfu:1.1.13
 	>=dev-ruby/rubyzip-1.2.1
 	>=dev-ruby/rb-readline-0.5.4
@@ -115,8 +115,7 @@ ruby_add_bdepend "${RUBY_COMMON_DEPEND}
 			dev-ruby/database_cleaner
 			>=dev-ruby/rspec-3.6.0
 			dev-ruby/shoulda-matchers
-			dev-ruby/timecop
-			>=dev-ruby/rake-10.0.0 )"
+			dev-ruby/timecop )"
 ruby_add_rdepend "${RUBY_COMMON_DEPEND}"
 
 COMMON_DEPEND="dev-db/postgresql[server]
