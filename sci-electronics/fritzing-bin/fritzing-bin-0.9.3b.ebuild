@@ -5,7 +5,7 @@ EAPI=6
 
 inherit eutils xdg-utils
 
-DESCRIPTION="Fritzing is an open-source hardware initiative that makes electronics accessible as a creative material for anyone"
+DESCRIPTION="Fritzing makes electronics accessible as a creative material for anyone"
 HOMEPAGE="http://fritzing.org/"
 MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${PV}"

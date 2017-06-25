@@ -47,7 +47,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/kissfft
 	>=dev-ruby/metasm-1.0.3:0
 	>=dev-ruby/metasploit-aggregator-0.2.1
-	>=dev-ruby/metasploit_data_models-2.0.14
+	>=dev-ruby/metasploit_data_models-2.0.14:*
 	dev-ruby/metasploit-payloads:1.2.32
 	dev-ruby/metasploit_payloads-mettle:0.1.9
 	>=dev-ruby/metasploit-credential-2.0.10
