@@ -4,7 +4,7 @@
 EAPI=6
 
 PYTHON_COMPAT=( python2_7 )
-inherit python-single-r1
+inherit eutils python-single-r1
 
 DESCRIPTION="Automatic SQL injection and database takeover tool "
 HOMEPAGE="http://sqlmap.org"
@@ -32,16 +32,13 @@ QA_PREBUILT="
 	usr/share/${PN}/udf/postgresql/linux/64/9.0/lib_postgresqludf_sys.so"
 
 src_install () {
-	# fix broken tarball
-	find ./ -name .git | xargs rm -rf
-	# Don't forget to disable the revision check since we removed the SVN files
-	sed -i -e 's/= getRevisionNumber()/= "Unknown revision"/' lib/core/settings.py
-
 	dodoc -r doc/*
-	rm -rf doc/
-	dodir /usr/share/${PN}/
 
-	cp -R * "${ED}"/usr/share/${PN}/
-	python_fix_shebang "${ED}"/usr/share/${PN}
-	dosym /usr/share/${PN}/sqlmap.py /usr/bin/${PN}
+	dodir /usr/share/"${PN}"
+
+	cp -R extra lib plugins procs shell tamper thirdparty txt udf waf xml sqlmap.conf sqlmap.py sqlmapapi.py "${D}"/usr/share/"${PN}"/ || die
+
+	python_fix_shebang "${D}"/usr/share/"${PN}"
+
+	make_wrapper "${PN}" /usr/share/"${PN}"/sqlmap.py /usr/share/"${PN}"
 }
