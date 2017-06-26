@@ -164,6 +164,8 @@ Packages
 #### FFDec [dev-util/ffdec]
 [FFDec](https://www.free-decompiler.com/flash/) is an open-source Flash SWF decompiler and editor.
 
+#### Komodo Edit [app-editors/komodo-edit-bin]
+[Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit) is a simple, polyglot editor that provides the basic functionality you need for programming.
 
 ### Libraries
 
