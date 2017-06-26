@@ -65,6 +65,9 @@ Packages
 #### BeEF [www-apps/beef]
 [BeEF](https://beefproject.com/) is a browser exploitation framework.
 
+#### Weevely [www-misc/weevely]
+[Weevely](https://github.com/epinna/weevely3) is a command line web shell.
+
 #### JohnTheRipper [app-crypt/johntheripper]
 [JohnTheRipper](http://www.openwall.comm/john/) is a fast password cracker.
 
