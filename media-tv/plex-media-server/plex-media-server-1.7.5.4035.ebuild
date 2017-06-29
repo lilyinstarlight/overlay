@@ -6,7 +6,7 @@ EAPI=6
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-COMMIT="d82f85387"
+COMMIT="313f93718"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -18,12 +18,13 @@ URI="https://downloads.plex.tv/plex-media-server"
 DESCRIPTION="A free media library that is intended for use with a plex client."
 HOMEPAGE="http://www.plex.tv/"
 SRC_URI="
-	amd64? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_amd64.deb )"
+	amd64? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_amd64.deb )
+	x86? ( ${URI}/${_FULL_VERSION}/plexmediaserver_${_FULL_VERSION}_i386.deb )"
 
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64 x86"
 
 IUSE="pax_kernel avahi"
 
@@ -68,8 +69,9 @@ src_install() {
 	# Move the config to the correct place
 	local CONFIG_VANILLA="/etc/default/plexmediaserver"
 	local CONFIG_PATH="/etc/${_SHORTNAME}"
-	insinto "$(dirname "${CONFIG_PATH}")"
-	newins "${CONFIG_VANILLA#/}" "$(basename ${CONFIG_PATH})"
+	dodir "${CONFIG_PATH}"
+	insinto "${CONFIG_PATH}"
+	doins "${CONFIG_VANILLA#/}"
 	sed -e "s#${CONFIG_VANILLA}#${CONFIG_PATH}/$(basename "${CONFIG_VANILLA}")#g" \
 		-i "${S}"/usr/sbin/start_pms || die
 
