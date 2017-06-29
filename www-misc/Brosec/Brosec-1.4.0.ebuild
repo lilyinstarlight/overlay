@@ -20,9 +20,6 @@ RDEPEND="
 		${DEPEND}
 "
 
-NPM_DIR="/usr/$(get_libdir)/node_modules/${NPM_MODULE}"
-NPM_SRC_DIR="${D}/${NPM_DIR}"
-
 src_install() {
 	npm_src_install
 	# Go to NPM source directory and run `npm install`
