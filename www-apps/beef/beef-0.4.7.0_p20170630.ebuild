@@ -9,7 +9,7 @@ inherit ruby-single ruby-ng multilib user
 
 DESCRIPTION="The Browser Exploitation Framework"
 HOMEPAGE="https://beefproject.com/"
-COMMIT="5f4cc87d134591e14629edfd9a35735d46820bde"
+COMMIT="8cbe15deaa3d04fac8f2dd4ba6f39bfc48f0dff1"
 SRC_URI="https://github.com/beefproject/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
