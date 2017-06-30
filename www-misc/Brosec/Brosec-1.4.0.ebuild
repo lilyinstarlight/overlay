@@ -14,15 +14,11 @@ IUSE=""
 
 NPM_EXTRA_FILES="db modules payloads bros"
 
-DEPEND=""
-RDEPEND="
-		>=net-libs/nodejs-0.8.10[npm]
-		${DEPEND}
-"
+DEPEND=">=net-libs/nodejs-0.8.10[npm]"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	npm_src_install
-	# Go to NPM source directory and run `npm install`
-	pushd .;cd ${NPM_SRC_DIR};npm install ${NPM_SRC_DIR}; popd
+
 	make_wrapper bros "${NPM_DIR}/bros"
 }

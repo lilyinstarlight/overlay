@@ -1,6 +1,5 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 # @ECLASS: npm.eclass
 # @MAINTAINER:
@@ -8,11 +7,11 @@
 # @BLURB: Eclass for NodeJS packages available through the npm registry.
 # @DESCRIPTION:
 # This eclass contains various functions that may be useful when dealing with
-# packages from the npm registry, for NodeJS.
-# Requires EAPI=2 or later.
+# packages from the NPM registry for NodeJS.
+# Requires EAPI=5 or later.
 
 case ${EAPI} in
-    2|3|4|5|6) : ;;
+    5|6) : ;;
     *)     die "npm.eclass: unsupported EAPI=${EAPI:-0}" ;;
 esac
 
@@ -20,19 +19,19 @@ inherit multilib
 
 # @ECLASS-VARIABLE: NPM_MODULE
 # @DESCRIPTION:
-# Name of the resulting NodeJS/npm module. 
-# The Default value for NPM_MODULE is ${PN}
+# Name of the resulting NPM module.
+# The default value for NPM_MODULE is ${PN}
 #
 # Example: NPM_MODULE="${MY_PN}"
 if [[ -z $NPM_MODULE ]]; then
-	NPM_MODULE="${PN}"
+    NPM_MODULE="${PN}"
 fi
 
 # @ECLASS-VARIABLE: NPM_DIR
 # @DESCRIPTION:
 # Directory for where the packge should be installed to. This can be used for
 # making wrappers or linking binaries
-NPM_DIR="/usr/$(get_libdir)/node_modules/${NPM_MODULE}"
+NPM_DIR="/usr/lib/node_modules/${NPM_MODULE}"
 
 # @ECLASS-VARIABLE: NPM_SRC_DIR
 # @DESCRIPTION:
@@ -59,29 +58,38 @@ NPM_FILES="index.js lib package.json ${NPM_MODULE}.js"
 # Can be either files, or directories.
 # Example: NPM_EXTRA_FILES="rigger.js modules"
 
-HOMEPAGE="https://www.npmjs.org/package/${PN}"
+# @ECLASS-VARIABLE: NPM_EXTRA_FILES
+# @DESCRIPTION:
+
 SRC_URI="http://registry.npmjs.org/${PN}/-/${P}.tgz"
 
-# @FUNCTION: npm-src_unpack
+# @FUNCTION: npm_src_unpack
 # @DESCRIPTION:
-# Default src_unpack function for NodeJS/npm packages. This funtions unpacks
+# Default src_unpack function for NPM packages. This funtions unpacks
 # the source code, then renames the 'package' dir to ${S}.
-
 npm_src_unpack() {
     unpack "${A}"
-    mv "${WORKDIR}/package" ${S}
+    mv "${WORKDIR}/package" "${S}"
 }
 
-# @FUNCTION: npm-src_compile
+# @FUNCTION: npm_src_configure
+# @DESCRIPTION:
+# Default src_configure function for NPM packages. This funtions sets
+# the appropriate libdir
+npm_src_configure() {
+    NPM_DIR="/usr/$(get_libdir)/node_modules/${NPM_MODULE}"
+}
+
+# @FUNCTION: npm_src_compile
 # @DESCRIPTION:
 # This function does nothing.
 npm_src_compile() {
     true
 }
 
-# @FUNCTION: npm-src_install
+# @FUNCTION: npm_src_install
 # @DESCRIPTION:
-# This function installs the NodeJS/npm module to an appropriate location, also
+# This function installs the NPM module to an appropriate location, also
 # taking care of NPM_FILES, NPM_EXTRA_FILES, NPM_DOCS
 
 npm_src_install() {
@@ -89,22 +97,29 @@ npm_src_install() {
 
     mkdir -p ${NPM_SRC_DIR} || die "Could not create DEST folder"
 
-    for f in ${npm_files}
-    do
+    # Copy files to src dir.
+    for f in ${npm_files}; do
         if [[ -e "${S}/$f" ]]; then
-            cp -r "${S}/$f" ${NPM_SRC_DIR}
+            cp -r "${S}/$f" "${NPM_SRC_DIR}"
         fi
     done
 
-	# Install docs usually found in NodeJS/NPM packages.
-	local f
-	for f in README* HISTORY* ChangeLog AUTHORS NEWS TODO CHANGES \
-			THANKS BUGS FAQ CREDITS CHANGELOG*; do
-		if [[ -s ${f} ]]; then
-			dodoc "${f}"
-		fi
-	done
-    
+    # Run NPM install
+    pushd "${NPM_SRC_DIR}"
+
+    npm install
+
+    popd
+
+    # Install docs usually found in NPM packages.
+    local f
+    for f in README* HISTORY* ChangeLog AUTHORS NEWS TODO CHANGES \
+        THANKS BUGS FAQ CREDITS CHANGELOG*; do
+        if [[ -s ${f} ]]; then
+            dodoc "${f}"
+        fi
+    done
+
     if has doc ${USE}; then
         local npm_docs="${NPM_DOCS}"
 
@@ -117,4 +132,4 @@ npm_src_install() {
     fi
 }
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS src_unpack src_configure src_compile src_install
