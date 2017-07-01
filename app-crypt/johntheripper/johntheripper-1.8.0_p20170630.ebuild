@@ -8,7 +8,7 @@ inherit flag-o-matic toolchain-funcs pax-utils
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/john/"
 MY_PN="JohnTheRipper"
-MY_PV="349c58fc1af88be15989379807eef61dc078cf8f"
+MY_PV="087c81e6f0a599f7f68d7f8f39a5575c7add481b"
 MY_P="${MY_PN}-${MY_PV}"
 SRC_URI="https://github.com/magnumripper/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
