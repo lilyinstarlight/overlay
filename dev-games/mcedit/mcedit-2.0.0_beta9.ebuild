@@ -30,7 +30,6 @@ CDEPEND="
 	dev-python/ipython[${PYTHON_USEDEP}]
 	dev-python/qtconsole[${PYTHON_USEDEP}]
 	dev-python/pastebin[${PYTHON_USEDEP}]
-	dev-python/raven[${PYTHON_USEDEP}]
 "
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
