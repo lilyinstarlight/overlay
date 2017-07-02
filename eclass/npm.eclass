@@ -31,12 +31,10 @@ fi
 # @DESCRIPTION:
 # Directory for where the packge should be installed to. This can be used for
 # making wrappers or linking binaries
-NPM_DIR="/usr/lib/node_modules/${NPM_MODULE}"
 
 # @ECLASS-VARIABLE: NPM_SRC_DIR
 # @DESCRIPTION:
 # Directory where the source of the NPM module will be
-NPM_SRC_DIR="${D}/${NPM_DIR}"
 
 # @ECLASS-VARIABLE: NPM_FILES
 # @INTERNAL
@@ -72,12 +70,13 @@ npm_src_unpack() {
     mv "${WORKDIR}/package" "${S}"
 }
 
-# @FUNCTION: npm_src_configure
+# @FUNCTION: npm_pkg_setup
 # @DESCRIPTION:
-# Default src_configure function for NPM packages. This funtions sets
+# Default pkg_setup function for NPM packages. This funtions sets
 # the appropriate libdir
-npm_src_configure() {
+npm_pkg_setup() {
     NPM_DIR="/usr/$(get_libdir)/node_modules/${NPM_MODULE}"
+    NPM_SRC_DIR="${D}/${NPM_DIR}"
 }
 
 # @FUNCTION: npm_src_compile
@@ -132,4 +131,4 @@ npm_src_install() {
     fi
 }
 
-EXPORT_FUNCTIONS src_unpack src_configure src_compile src_install
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install
