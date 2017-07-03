@@ -6,6 +6,7 @@ EAPI=6
 inherit npm eutils
 
 DESCRIPTION="An interactive reference tool to help security professionals"
+HOMEPAGE="https://github.com/gabemarshell/Brosec"
 
 LICENSE="ISC"
 SLOT="0"
