@@ -7,8 +7,8 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
 
 inherit distutils-r1 eutils
 
-DESCRIPTION="a collection of functions and classes which shortens common patterns"
-HOMEPAGE="http://python-utils.readthedocs.org/en/latest/"
+DESCRIPTION="text progress bar library for Python"
+HOMEPAGE="http://progressbar-2.readthedocs.org/en/latest/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -16,12 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
-	dev-python/six
-"
-RDEPEND="
-	${DEPEND}
-"
+DEPEND=">=dev-python/python-utils-2.0.0[${PYTHON_USEDEP}]"
+RDEPEND="${DEPEND}"
 
 python_prepare_all() {
 	epatch "${FILESDIR}"/no-test.patch
