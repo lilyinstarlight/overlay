@@ -38,7 +38,7 @@ src_install() {
 
 	keepdir /var/lib/unifi/data
 	dodir /var/lib/unifi/work
-	dodir /var/lib/unfi/run
+	dodir /var/lib/unifi/run
 	dodir /var/log/unifi
 
 	fowners -R unifi:unifi /var/lib/unifi
