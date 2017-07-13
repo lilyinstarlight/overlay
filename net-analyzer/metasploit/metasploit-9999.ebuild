@@ -41,15 +41,15 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/bit-struct
 	dev-ruby/builder:3.2
 	dev-ruby/bundler
+	>=dev-ruby/dnsruby-1.60.1
 	dev-ruby/filesize
 	>=dev-ruby/jsobfu-0.4.2:*
 	dev-ruby/json:*
-	dev-ruby/kissfft
 	>=dev-ruby/metasm-1.0.3:0
 	>=dev-ruby/metasploit-aggregator-0.2.1
 	>=dev-ruby/metasploit_data_models-2.0.14:*
-	dev-ruby/metasploit-payloads:1.2.32
-	dev-ruby/metasploit_payloads-mettle:0.1.9
+	dev-ruby/metasploit-payloads:1.2.37
+	dev-ruby/metasploit_payloads-mettle:0.1.10
 	>=dev-ruby/metasploit-credential-2.0.10
 	>=dev-ruby/metasploit-concern-2.0.4
 	>=dev-ruby/metasploit-model-2.0.4
@@ -61,8 +61,9 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/octokit
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
+	>=dev-ruby/pdf-reader-2.0.0
 	>=dev-ruby/railties-4.2.8:4.2
-	>=dev-ruby/recog-2.1.8:*
+	>=dev-ruby/recog-2.1.9:*
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
 	>=dev-ruby/rex-arch-0.1.8
@@ -86,7 +87,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/ruby_smb-0.0.18:*
 	>=dev-ruby/rubyntlm-0.6.2
 	dev-ruby/sqlite3
-	>=dev-ruby/pg-0.20.0
+	=dev-ruby/pg-0.20.0
 	dev-ruby/packetfu:1.1.13
 	>=dev-ruby/rubyzip-1.2.1
 	>=dev-ruby/rb-readline-0.5.4
@@ -94,6 +95,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
 	dev-ruby/windows_error:0.1
+	dev-ruby/xdr
 	dev-ruby/xmlrpc
 	java? ( dev-ruby/rjb )
 	nexpose? ( dev-ruby/nexpose )
@@ -115,8 +117,7 @@ ruby_add_bdepend "${RUBY_COMMON_DEPEND}
 			dev-ruby/database_cleaner
 			>=dev-ruby/rspec-3.6.0
 			dev-ruby/shoulda-matchers
-			dev-ruby/timecop
-			>=dev-ruby/rake-10.0.0 )"
+			dev-ruby/timecop )"
 ruby_add_rdepend "${RUBY_COMMON_DEPEND}"
 
 COMMON_DEPEND="dev-db/postgresql[server]
