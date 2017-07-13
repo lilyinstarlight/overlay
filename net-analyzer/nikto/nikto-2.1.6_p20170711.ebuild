@@ -5,7 +5,7 @@ EAPI=6
 
 DESCRIPTION="web server vulnerability scanner"
 HOMEPAGE="http://www.cirt.net/Nikto2"
-COMMIT="0a784e7e10b9e7652ad15653c1393219ce576c1f"
+COMMIT="5f6c45191901918b1d4aa6ea5f59a5b374b1095b"
 MY_P="${PN}-${COMMIT}"
 SRC_URI="https://github.com/sullo/nikto/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
