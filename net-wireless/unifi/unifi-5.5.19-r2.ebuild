@@ -17,8 +17,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	dev-db/mongodb
-	virtual/jre
+	>=dev-db/mongodb-2.4.14
+	>=virtual/jre-1.8
 "
 
 S="${WORKDIR}/${MY_PN}"
