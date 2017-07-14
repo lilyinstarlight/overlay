@@ -26,7 +26,7 @@ fi
 DESCRIPTION="Advanced framework for developing, testing, and using vulnerability exploit code"
 HOMEPAGE="http://www.metasploit.org/"
 LICENSE="BSD"
-IUSE="development +java nexpose openvas oracle +pcap test"
+IUSE="development +java openvas oracle +pcap test"
 
 #multiple known bugs with tests reported upstream and ignored
 #http://dev.metasploit.com/redmine/issues/8418 - worked around (fix user creation when possible)
@@ -97,8 +97,8 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/windows_error:0.1
 	dev-ruby/xdr
 	dev-ruby/xmlrpc
+	dev-ruby/nexpose
 	java? ( dev-ruby/rjb )
-	nexpose? ( dev-ruby/nexpose )
 	openvas? ( dev-ruby/openvas-omp )
 	oracle? ( dev-ruby/ruby-oci8 )
 	pcap? ( dev-ruby/pcaprub:*
@@ -188,10 +188,6 @@ all_ruby_prepare() {
 	rm Gemfile.lock
 	#The Gemfile contains real known deps
 	sed -i "/gem 'fivemat'/s/, '1.2.1'//" Gemfile || die
-	#now we edit the Gemfile based on use flags
-	if ! use nexpose; then
-		sed -i -e "/nexpose/d" metasploit-framework.gemspec || die
-	fi
 	#no support for nessus right now
 	#if ! use nessus; then
 		sed -i -e "/nessus/d" metasploit-framework.gemspec || die
