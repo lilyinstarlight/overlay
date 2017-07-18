@@ -47,11 +47,11 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/json:*
 	>=dev-ruby/metasm-1.0.3:0
 	>=dev-ruby/metasploit-aggregator-0.2.1
-	>=dev-ruby/metasploit_data_models-2.0.14:*
+	>=dev-ruby/metasploit_data_models-2.0.15:*
 	dev-ruby/metasploit-payloads:1.2.37
 	dev-ruby/metasploit_payloads-mettle:0.1.10
 	>=dev-ruby/metasploit-credential-2.0.10
-	>=dev-ruby/metasploit-concern-2.0.4
+	>=dev-ruby/metasploit-concern-2.0.5
 	>=dev-ruby/metasploit-model-2.0.4
 	>=dev-ruby/method_source-0.8.2_p20170202
 	dev-ruby/msgpack
@@ -62,11 +62,11 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/openssl-ccm:1.2.1
 	dev-ruby/patch_finder
 	>=dev-ruby/pdf-reader-2.0.0
-	>=dev-ruby/railties-4.2.8:4.2
+	>=dev-ruby/railties-4.2.9:4.2
 	>=dev-ruby/recog-2.1.9:*
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
-	>=dev-ruby/rex-arch-0.1.8
+	>=dev-ruby/rex-arch-0.1.9
 	dev-ruby/rex-bin_tools
 	dev-ruby/rex-core
 	dev-ruby/rex-encoder
@@ -75,7 +75,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-mime
 	dev-ruby/rex-nop
 	dev-ruby/rex-ole
-	dev-ruby/rex-powershell
+	<dev-ruby/rex-powershell-0.1.73
 	dev-ruby/rex-random_identifier
 	dev-ruby/rex-registry
 	dev-ruby/rex-rop_builder
