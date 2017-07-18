@@ -10,7 +10,8 @@ MY_BUILD="17703"
 
 DESCRIPTION="Freeware advanced editor for dynamic and Web languages"
 HOMEPAGE="http://www.activestate.com/products/komodo_edit"
-LICENSE="MPL-1.1
+LICENSE="
+	MPL-1.1
 	MIT
 	Boost-1.0
 	CC-BY-2.5
@@ -45,8 +46,6 @@ RDEPEND="
 QA_PREBUILT="*"
 QA_FLAGS_IGNORED="*"
 QA_PRESTRIPPED="*"
-
-#S="${WORKDIR}"/Komodo-Edit-"${PV}"-"${MY_BUILD}"-linux-'${USE}'
 
 src_unpack() {
 	if use amd64; then
