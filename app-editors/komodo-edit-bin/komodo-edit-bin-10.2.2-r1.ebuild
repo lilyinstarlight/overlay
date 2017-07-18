@@ -41,7 +41,8 @@ RDEPEND="
 	x11-base/xorg-server
 	x11-libs/gdk-pixbuf
 	gnome-base/libgnomeui
-	gnome-base/libgnome"
+	gnome-base/libgnome
+	!app-editors/komodo-edit"
 
 QA_PREBUILT="*"
 QA_FLAGS_IGNORED="*"
@@ -66,10 +67,12 @@ src_install() {
 	doins -r "${S}"/INSTALLDIR/share
 	mv "${S}"/INSTALLDIR/lib "${ED}opt/${PN}/" || die "Installation failed"
 
-	make_wrapper komodo-edit-bin "${EPREFIX}"/opt/"${PN}"/lib/mozilla/komodo "${EPREFIX}"/opt/"${PN}"/lib/mozilla /usr/bin
+	make_wrapper komodo-edit "${EPREFIX}"/opt/"${PN}"/lib/mozilla/komodo "${EPREFIX}"/opt/"${PN}"/lib/mozilla /usr/bin
+
+	newicon "${S}/INSTALLDIR/share/icons/komodo48.png" komodo-edit48.png
 
 	make_desktop_entry \
-		"${EPREFIX}/usr/bin/komodo-edit-bin" \
+		"${EPREFIX}/usr/bin/komodo-edit" \
 		"Komodo Edit 10" \
 		"${EPREFIX}/opt/${PN}/share/icons/komodo48.png" \
 		"Development;IDE;TextEditor" \
