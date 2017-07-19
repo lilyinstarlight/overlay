@@ -23,7 +23,7 @@ LICENSE="
 	Apache-2.0
 	OFL-1.1"
 
-SRC_URI="x86?	( http://downloads.activestate.com/Komodo/releases/${PV}/Komodo-Edit-${PV}-${MY_BUILD}-linux-x86.tar.gz )
+SRC_URI="x86? ( http://downloads.activestate.com/Komodo/releases/${PV}/Komodo-Edit-${PV}-${MY_BUILD}-linux-x86.tar.gz )
 	 amd64? ( http://downloads.activestate.com/Komodo/releases/${PV}/Komodo-Edit-${PV}-${MY_BUILD}-linux-x86_64.tar.gz )"
 
 SLOT="0"
@@ -48,17 +48,17 @@ QA_PREBUILT="*"
 QA_FLAGS_IGNORED="*"
 QA_PRESTRIPPED="*"
 
-src_unpack() {
+S="${WORKDIR}"
+
+src_install() {
 	if use amd64; then
-		S="${WORKDIR}"/Komodo-Edit-"${PV}"-"${MY_BUILD}"-linux-x86_64
+		S="${WORKDIR}"/Komodo-Edit-"${PV}"-"${MY_BUILD}"-linux-"${ARCH/amd64/x86_64}"
 	fi
 
 	if use x86; then
-		S="${WORKDIR}"/Komodo-Edit-"${PV}"-"${MY_BUILD}"-linux-x86
+		S="${WORKDIR}"/Komodo-Edit-"${PV}"-"${MY_BUILD}"-linux-"${ARCH/x86/x86}"
 	fi
-}
 
-src_install() {
 	if use pax_kernel; then
 		pax-mark m "${S}"/INSTALLDIR/lib/mozilla/komodo
 	fi
