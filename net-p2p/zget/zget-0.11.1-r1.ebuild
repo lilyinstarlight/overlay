@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-python/netifaces
+	<dev-python/netifaces-0.10.5
 	dev-python/progressbar2
 	dev-python/zeroconf
 "
