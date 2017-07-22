@@ -49,7 +49,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasploit-aggregator-0.2.1
 	>=dev-ruby/metasploit_data_models-2.0.15:*
 	dev-ruby/metasploit-payloads:1.2.37
-	dev-ruby/metasploit_payloads-mettle:0.1.10
+	dev-ruby/metasploit_payloads-mettle:0.1.14
 	>=dev-ruby/metasploit-credential-2.0.10
 	>=dev-ruby/metasploit-concern-2.0.5
 	>=dev-ruby/metasploit-model-2.0.4
@@ -63,7 +63,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/patch_finder
 	>=dev-ruby/pdf-reader-2.0.0
 	>=dev-ruby/railties-4.2.9:4.2
-	>=dev-ruby/recog-2.1.9:*
+	>=dev-ruby/recog-2.1.11:*
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
 	>=dev-ruby/rex-arch-0.1.9
