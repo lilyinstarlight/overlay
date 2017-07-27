@@ -47,7 +47,6 @@ S="${WORKDIR}/${MY_P}"
 
 python_prepare() {
 	eapply "${FILESDIR}"/mcedit2_plugins_directory.patch
-	eapply "${FILESDIR}"/qcombobox_edittextchanged.patch
 
 	sed -i -e "s#include_package_data=True#package_data={'mcedit2': [$(find src/mcedit2 -type f -not -name '*.py*' -not -name '*.ui' -not -name '*.qrc' -not -name 'Makefile' -printf "'%P',")]}#g" setup_mcedit2.py || die
 	sed -i -e "s/git describe --tags/echo ${MY_PV}/g" mcedit2.spec src/mcedit2/__init__.py || die
