@@ -48,7 +48,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasm-1.0.3:0
 	>=dev-ruby/metasploit-aggregator-0.2.1
 	>=dev-ruby/metasploit_data_models-2.0.15:*
-	dev-ruby/metasploit-payloads:1.2.37
+	dev-ruby/metasploit-payloads:1.2.46
 	dev-ruby/metasploit_payloads-mettle:0.1.14
 	>=dev-ruby/metasploit-credential-2.0.10
 	>=dev-ruby/metasploit-concern-2.0.5
@@ -218,6 +218,8 @@ all_ruby_prepare() {
 
 	#remove git declarations for packaging
 	sed -i -e "s/, git:.*//" Gemfile || die
+	#temp fix for multiline git declaration
+	sed -i -e "/^ 'x86_64-linux', 'x86-linux', 'darwin'].include?(RUBY_PLATFORM.gsub(\/\.\*darwin\.\*\/, 'darwin'))/d" Gemfile || die
 
 	#https://bugs.gentoo.org/show_bug.cgi?id=584522 no tzinfo-data by choice in gentoo
 	sed -i '/tzinfo-data/d' metasploit-framework.gemspec
