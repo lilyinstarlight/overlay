@@ -10,14 +10,22 @@ SRC_URI="https://github.com/carnager/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="otp"
 
 DEPEND=""
 RDEPEND="
 	app-admin/pass
 	x11-misc/rofi
 	x11-misc/xdotool
+
+	otp? ( app-admin/pass-otp )
 "
+
+src_prepare() {
+	use otp && eapply "${FILESDIR}/rofi-pass-otp.patch"
+
+	default
+}
 
 src_compile() {
 	# nop

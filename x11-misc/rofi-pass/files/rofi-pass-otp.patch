@@ -1,0 +1,13 @@
+diff -Naur a/rofi-pass b/rofi-pass
+--- a/rofi-pass	2017-07-05 09:55:34.186123425 +0200
++++ b/rofi-pass	2017-07-05 09:56:27.691261103 +0200
+@@ -282,6 +282,9 @@
+       pass_file="${password#*=}"
+       mapfile -t password_temp < <(PASSWORD_STORE_DIR="${root}" pass "${pass_file}")
+       password=${password_temp[0]}
++    elif [[ ${password} == "otpauth://"* ]]; then
++      mapfile -t password_temp < <(PASSWORD_STORE_DIR="${root}" pass otp "$selected_password")
++      password=${password_temp[0]}
+     fi
+     fields=$(printf '%s\n' "${password_temp[@]:1}" | awk '$1 ~ /:$/{$1=$1;print}')
+ 
