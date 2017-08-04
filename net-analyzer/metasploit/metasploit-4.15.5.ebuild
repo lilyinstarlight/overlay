@@ -38,6 +38,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/activerecord-4.2.8:4.2
 	dev-ruby/backports
 	dev-ruby/bcrypt-ruby
+	dev-ruby/bcrypt_pbkdf
 	dev-ruby/bit-struct
 	dev-ruby/builder:3.2
 	dev-ruby/bundler
@@ -63,6 +64,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/patch_finder
 	>=dev-ruby/pdf-reader-2.0.0
 	>=dev-ruby/railties-4.2.9:4.2
+	dev-ruby/rbnacl:4
 	>=dev-ruby/recog-2.1.11:*
 	dev-ruby/redcarpet
 	=dev-ruby/rkelly-remix-0.0.7
@@ -211,6 +213,9 @@ all_ruby_prepare() {
 	#We don't need simplecov
 	sed -i -e "/^group :coverage/,/^end$/d" Gemfile || die
 	sed -i -e "s#require 'simplecov'##" spec/spec_helper.rb || die
+
+	#remove unnecessary rbnacl-libsodium
+	sed -i -e "/rbnacl-libsodium/d" metasploit-framework.gemspec || die
 
 	#we need to edit the gemspec too, since it tries to call git instead of anything sane
 	#probably a better way to fix this... if I care at some point
