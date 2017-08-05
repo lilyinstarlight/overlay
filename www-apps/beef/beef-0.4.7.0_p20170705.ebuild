@@ -9,7 +9,7 @@ inherit ruby-single ruby-ng multilib user
 
 DESCRIPTION="The Browser Exploitation Framework"
 HOMEPAGE="https://beefproject.com/"
-COMMIT="93ef7c0643f56f7578d1602e1cc3a8042b86c441"
+COMMIT="5a2a74c6a78f1b8d9171cf30d7ec6c85291a5c59"
 SRC_URI="https://github.com/beefproject/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -23,7 +23,7 @@ DEPEND="dev-libs/openssl:0"
 RDEPEND="${DEPEND} ${RUBY_DEPS}"
 
 ruby_add_bdepend "dev-ruby/bundler-audit"
-ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types:3 dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby <dev-ruby/nokogiri-1.8 <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations =dev-ruby/rubydns-1.0* dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
+ruby_add_rdepend "dev-ruby/eventmachine www-servers/thin dev-ruby/sinatra dev-ruby/dm-core dev-ruby/rack:2.0 dev-ruby/em-websocket dev-ruby/uglifier:3 dev-ruby/mime-types:3 dev-ruby/execjs:0 dev-ruby/ansi dev-ruby/term-ansicolor dev-ruby/json:2 dev-ruby/data_objects dev-ruby/dm-sqlite-adapter dev-ruby/rubyzip:1 dev-ruby/espeak-ruby dev-ruby/nokogiri <=dev-ruby/therubyracer-0.12.2 dev-ruby/geoip dev-ruby/parseconfig dev-ruby/erubis dev-ruby/dm-migrations =dev-ruby/rubydns-1.0* dev-ruby/dm-serializer dev-ruby/qr4r dev-ruby/msfrpc-client"
 
 all_ruby_prepare() {
 	# fix too strict versioning
@@ -44,6 +44,7 @@ src_install() {
 #!/usr/bin/$USE_RUBY
 require 'rubygems'
 
+Dir.chdir('/usr/$(get_libdir)/${PN}')
 ENV['BUNDLE_GEMFILE'] = '/usr/$(get_libdir)/${PN}/Gemfile'
 
 load '/usr/$(get_libdir)/${PN}/${PN}'
