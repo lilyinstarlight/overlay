@@ -24,6 +24,7 @@ RDEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	dev-libs/libappindicator
+	sys-libs/libcxx
 "
 
 S="${WORKDIR}"
