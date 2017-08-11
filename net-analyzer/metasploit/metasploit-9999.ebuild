@@ -42,7 +42,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/bit-struct
 	dev-ruby/builder:3.2
 	dev-ruby/bundler
-	>=dev-ruby/dnsruby-1.60.1
+	>=dev-ruby/dnsruby-1.60.2
 	dev-ruby/filesize
 	>=dev-ruby/jsobfu-0.4.2:*
 	dev-ruby/json:*
@@ -51,7 +51,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasploit_data_models-2.0.15:*
 	dev-ruby/metasploit-payloads:1.2.46
 	dev-ruby/metasploit_payloads-mettle:0.1.14
-	>=dev-ruby/metasploit-credential-2.0.10
+	>=dev-ruby/metasploit-credential-2.0.11
 	>=dev-ruby/metasploit-concern-2.0.5
 	>=dev-ruby/metasploit-model-2.0.4
 	>=dev-ruby/method_source-0.8.2_p20170202
