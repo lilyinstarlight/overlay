@@ -37,7 +37,7 @@ all_ruby_prepare() {
 	sed -i -e '/coveralls/d' Gemfile || die
 
 	# fix too strict versioning
-	sed -i -e '/nokogiri/ s/~> 1\.7\.0\.1/~> 1.7.0/' "${PN}".gemspec || die
+	sed -i -e '/nokogiri/ s/~> 1\.7\.1/~> 1.7/' "${PN}".gemspec || die
 	sed -i -e '/activesupport/ s/~> 5\.0\.1\.0/~> 5.0.1/' "${PN}".gemspec || die
 	sed -i -e '/webmock/ s/~> 1\.22\.0/~> 1.22/' "${PN}".gemspec || die
 	sed -i -e '/rspec/ s/~> 3\.5\.0/~> 3.5/' "${PN}".gemspec || die
