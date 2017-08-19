@@ -33,9 +33,9 @@ IUSE="development +java openvas oracle +pcap test"
 RESTRICT="test"
 
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
-	>=dev-ruby/activesupport-4.2.8:4.2
-	>=dev-ruby/actionpack-4.2.8:4.2
-	>=dev-ruby/activerecord-4.2.8:4.2
+	>=dev-ruby/activesupport-4.2.9:4.2
+	>=dev-ruby/actionpack-4.2.9:4.2
+	>=dev-ruby/activerecord-4.2.9:4.2
 	dev-ruby/backports
 	dev-ruby/bcrypt-ruby
 	dev-ruby/bcrypt_pbkdf
@@ -51,7 +51,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasploit_data_models-2.0.15:*
 	dev-ruby/metasploit-payloads:1.2.46
 	dev-ruby/metasploit_payloads-mettle:0.1.14
-	>=dev-ruby/metasploit-credential-2.0.11
+	>=dev-ruby/metasploit-credential-2.0.12
 	>=dev-ruby/metasploit-concern-2.0.5
 	>=dev-ruby/metasploit-model-2.0.4
 	>=dev-ruby/method_source-0.8.2_p20170202
@@ -92,7 +92,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	=dev-ruby/pg-0.20.0
 	dev-ruby/packetfu:1.1.13
 	>=dev-ruby/rubyzip-1.2.1
-	>=dev-ruby/rb-readline-0.5.4
+	>=dev-ruby/rb-readline-0.5.5
 	dev-ruby/robots
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
