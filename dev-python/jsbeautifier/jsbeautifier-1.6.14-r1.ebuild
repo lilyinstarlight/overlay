@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 python3_{4,5} )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 
 inherit distutils-r1
 
@@ -21,3 +21,7 @@ RDEPEND="${DEPEND}
 	>=dev-python/six-1.6.1[${PYTHON_USEDEP}]
 	>=dev-python/editorconfig-core-py-0.12.0[${PYTHON_USEDEP}]
 "
+
+python_test() {
+	esetup.py test
+}
