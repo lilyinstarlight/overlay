@@ -19,12 +19,11 @@ ARDUINO_P="${ARDUINO_PN}-${ARDUINO_PV}"
 SRC_URI="
 	amd64? ( https://file.fooster.io/overlay/${MY_P}-linux64.tar.xz )
 	x86? ( https://file.fooster.io/overlay/${MY_P}-linux32.tar.xz )
-	http://pjrc.com/teensy/49-teensy.rules
 "
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 RDEPEND="virtual/libusb:0"
@@ -41,7 +40,7 @@ src_unpack() {
 		unpack "${MY_P}"-linux32.tar.xz
 	fi
 
-	cp "${DISTDIR}"/49-teensy.rules "${WORKDIR}" || die
+	cp "${FILESDIR}"/49-teensy.rules "${WORKDIR}" || die
 }
 
 src_install() {
