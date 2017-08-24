@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="DataMapper plugin for writing and speccing migrations"
-HOMEPAGE="http://github.com/datamapper/dm-migrations"
+HOMEPAGE="https://github.com/datamapper/dm-migrations"
 
 LICENSE="MIT"
 SLOT=0

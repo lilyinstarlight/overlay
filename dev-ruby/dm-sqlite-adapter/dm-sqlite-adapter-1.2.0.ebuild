@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="SQLite3 adapter for DataMapper"
-HOMEPAGE="http://github.com/datamapper/dm-sqlite-adapter"
+HOMEPAGE="https://github.com/datamapper/dm-sqlite-adapter"
 
 LICENSE="MIT"
 SLOT=0

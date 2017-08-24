@@ -7,7 +7,7 @@ USE_RUBY="ruby23"
 inherit ruby-fakegem
 
 DESCRIPTION="EventMachine Proxy DSL"
-HOMEPAGE="http://github.com/igrigorik/em-proxy"
+HOMEPAGE="https://github.com/igrigorik/em-proxy"
 
 LICENSE="MIT"
 SLOT="0"

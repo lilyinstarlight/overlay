@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 	>=virtual/jdk-1.8
 	dev-java/maven-bin"
 
-S="${WORKDIR}/${P}"
 LIBRESONIC_HOME="/var/lib/${PN}"
 USER_GROUP="libresonic"
 

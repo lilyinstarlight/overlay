@@ -8,7 +8,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem flag-o-matic
 
 DESCRIPTION="V8 JavaScript engine distribution"
-HOMEPAGE="http://github.com/cowboyd/libv8"
+HOMEPAGE="https://github.com/cowboyd/libv8"
 
 LICENSE="MIT"
 SLOT="0"

@@ -26,9 +26,9 @@ else
 fi
 
 COMMON="media-libs/mesa
-	sys-devel/clang
-	>=sys-devel/llvm-3.6
-	ocl20? ( >=sys-devel/llvm-3.9 )
+	sys-devel/clang:*
+	>=sys-devel/llvm-3.6:*
+	ocl20? ( >=sys-devel/llvm-3.9:* )
 	>=x11-libs/libdrm-2.4.70[video_cards_intel]
 	x11-libs/libXext
 	x11-libs/libXfixes"

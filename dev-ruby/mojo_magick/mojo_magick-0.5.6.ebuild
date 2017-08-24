@@ -8,7 +8,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="Ruby stateless module interface to ImageMagick"
-HOMEPAGE="http://github.com/rcode5/mojo_magick"
+HOMEPAGE="https://github.com/rcode5/mojo_magick"
 
 LICENSE="MIT"
 SLOT="0"

@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="A standard and simplified API for communicating with RDBMS"
-HOMEPAGE="http://github.com/datamapper/do"
+HOMEPAGE="https://github.com/datamapper/do"
 
 LICENSE="MIT"
 SLOT=0

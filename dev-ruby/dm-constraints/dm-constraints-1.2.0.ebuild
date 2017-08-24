@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="DataMapper plugin constraining relationships"
-HOMEPAGE="http://github.com/datamapper/dm-constraints"
+HOMEPAGE="https://github.com/datamapper/dm-constraints"
 
 LICENSE="MIT"
 SLOT=0

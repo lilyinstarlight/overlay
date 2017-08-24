@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="DataObjects API for SQLite3"
-HOMEPAGE="http://github.com/datamapper/do"
+HOMEPAGE="https://github.com/datamapper/do"
 
 LICENSE="MIT"
 SLOT=0

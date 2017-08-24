@@ -39,7 +39,7 @@ src_install() {
 	doins nikto.conf
 
 	dobin nikto.pl replay.pl
-	dosym /usr/bin/nikto.pl /usr/bin/nikto
+	dosym nikto.pl /usr/bin/nikto
 
 	dodir /usr/share/nikto
 	insinto /usr/share/nikto

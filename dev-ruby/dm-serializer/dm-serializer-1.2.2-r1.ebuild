@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="DataMapper plugin for serializing resources and collections"
-HOMEPAGE="http://github.com/datamapper/dm-serializer"
+HOMEPAGE="https://github.com/datamapper/dm-serializer"
 
 LICENSE="MIT"
 SLOT=0

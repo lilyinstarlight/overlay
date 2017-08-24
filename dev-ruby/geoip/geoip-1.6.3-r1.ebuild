@@ -9,7 +9,7 @@ RUBY_FAKEGEM_EXTRAINSTALL="data"
 inherit ruby-fakegem
 
 DESCRIPTION="API for searching a GeoIP database"
-HOMEPAGE="http://github.com/cjheath/geoip"
+HOMEPAGE="https://github.com/cjheath/geoip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

@@ -5,4 +5,7 @@
 		<email>fkmclane@gmail.com</email>
 		<name>Foster McLane</name>
 	</maintainer>
+	<use>
+		<flag name="otp">Add support for <pkg>app-admin/pass-otp</pkg>.</flag>
+	</use>
 </pkgmetadata>

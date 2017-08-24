@@ -8,7 +8,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="EventMachine based WebSocket server"
-HOMEPAGE="http://github.com/igrigorik/em-websocket"
+HOMEPAGE="https://github.com/igrigorik/em-websocket"
 
 LICENSE="MIT"
 SLOT="0"

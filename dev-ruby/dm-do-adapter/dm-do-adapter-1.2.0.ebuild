@@ -9,7 +9,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="DataObjects Adapter for DataMapper"
-HOMEPAGE="http://github.com/datamapper/dm-do-adapter"
+HOMEPAGE="https://github.com/datamapper/dm-do-adapter"
 
 LICENSE="MIT"
 SLOT=0

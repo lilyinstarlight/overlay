@@ -8,7 +8,7 @@ RUBY_FAKEGEM_TASK_DOC=""
 inherit ruby-fakegem
 
 DESCRIPTION="Embed the V8 JavaScript interpreter into Ruby"
-HOMEPAGE="http://github.com/cowboyd/therubyracer"
+HOMEPAGE="https://github.com/cowboyd/therubyracer"
 
 LICENSE="MIT"
 SLOT="0"
