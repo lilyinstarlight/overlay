@@ -32,43 +32,46 @@ IUSE="development +java openvas oracle +pcap test"
 #http://dev.metasploit.com/redmine/issues/8418 - worked around (fix user creation when possible)
 RESTRICT="test"
 
+# temporarily disabled for crypttlv updates
+#   >=dev-ruby/metasploit-aggregator-0.2.1
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
-	>=dev-ruby/activesupport-4.2.9:4.2
+	=dev-ruby/pg-0.20.0
+	=dev-ruby/rkelly-remix-0.0.7
 	>=dev-ruby/actionpack-4.2.9:4.2
 	>=dev-ruby/activerecord-4.2.9:4.2
+	>=dev-ruby/activesupport-4.2.9:4.2
 	dev-ruby/backports
 	dev-ruby/bcrypt-ruby
 	dev-ruby/bcrypt_pbkdf
 	dev-ruby/bit-struct
-	dev-ruby/builder:3.2
-	dev-ruby/bundler
 	>=dev-ruby/dnsruby-1.60.2
 	dev-ruby/filesize
 	>=dev-ruby/jsobfu-0.4.2:*
 	dev-ruby/json:*
 	>=dev-ruby/metasm-1.0.3:0
-	>=dev-ruby/metasploit-aggregator-0.2.1
-	>=dev-ruby/metasploit_data_models-2.0.15:*
-	dev-ruby/metasploit-payloads:1.2.46
-	dev-ruby/metasploit_payloads-mettle:0.1.14
-	>=dev-ruby/metasploit-credential-2.0.12
 	>=dev-ruby/metasploit-concern-2.0.5
+	>=dev-ruby/metasploit-credential-2.0.12
 	>=dev-ruby/metasploit-model-2.0.4
+	>=dev-ruby/metasploit_data_models-2.0.15:*
+	dev-ruby/metasploit-payloads:1.3.1
+	dev-ruby/metasploit_payloads-mettle:0.2.0
 	>=dev-ruby/method_source-0.8.2_p20170202
 	dev-ruby/msgpack
 	dev-ruby/nessus_rest
 	dev-ruby/net-ssh:*
+	dev-ruby/nexpose
 	dev-ruby/nokogiri
 	dev-ruby/octokit
 	dev-ruby/openssl-ccm:1.2.1
+	dev-ruby/packetfu:1.1.13
 	dev-ruby/patch_finder
 	>=dev-ruby/pdf-reader-2.0.0
 	>=dev-ruby/railties-4.2.9:4.2
 	dev-ruby/rbnacl:4
-	>=dev-ruby/recog-2.1.11:*
+	>=dev-ruby/rb-readline-0.5.5
+	>=dev-ruby/recog-2.1.12:*
 	dev-ruby/redcarpet
-	=dev-ruby/rkelly-remix-0.0.7
-	>=dev-ruby/rex-arch-0.1.9
+	>=dev-ruby/rex-arch-0.1.11
 	dev-ruby/rex-bin_tools
 	dev-ruby/rex-core
 	dev-ruby/rex-encoder
@@ -86,20 +89,18 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-struct2
 	dev-ruby/rex-text
 	dev-ruby/rex-zip
+	dev-ruby/robots
 	>=dev-ruby/ruby_smb-0.0.18:*
 	>=dev-ruby/rubyntlm-0.6.2
-	dev-ruby/sqlite3
-	=dev-ruby/pg-0.20.0
-	dev-ruby/packetfu:1.1.13
 	>=dev-ruby/rubyzip-1.2.1
-	>=dev-ruby/rb-readline-0.5.5
-	dev-ruby/robots
+	dev-ruby/sqlite3
 	dev-ruby/sshkey
 	dev-ruby/tzinfo:*
 	dev-ruby/windows_error:0.1
 	dev-ruby/xdr
 	dev-ruby/xmlrpc
-	dev-ruby/nexpose
+	dev-ruby/builder:3.2
+	dev-ruby/bundler
 	java? ( dev-ruby/rjb )
 	openvas? ( dev-ruby/openvas-omp )
 	oracle? ( dev-ruby/ruby-oci8 )
