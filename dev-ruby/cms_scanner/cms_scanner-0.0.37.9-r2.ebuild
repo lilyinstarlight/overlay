@@ -24,7 +24,7 @@ IUSE=""
 
 RUBY_S="${MY_PN}-${COMMIT}"
 
-ruby_add_rdepend "dev-ruby/activesupport:5.0 dev-ruby/addressable dev-ruby/nokogiri dev-ruby/opt_parse_validator dev-ruby/public_suffix dev-ruby/ruby-progressbar dev-ruby/typhoeus:1 dev-ruby/yajl-ruby"
+ruby_add_rdepend "dev-ruby/activesupport:5.0 dev-ruby/addressable dev-ruby/nokogiri dev-ruby/opt_parse_validator dev-ruby/public_suffix:2 dev-ruby/ruby-progressbar dev-ruby/typhoeus:1 dev-ruby/yajl-ruby"
 ruby_add_bdepend "virtual/rubygems"
 
 all_ruby_prepare() {
@@ -39,6 +39,7 @@ all_ruby_prepare() {
 	# fix too strict versioning
 	sed -i -e '/nokogiri/ s/~> 1\.7\.1/~> 1.7/' "${PN}".gemspec || die
 	sed -i -e '/activesupport/ s/~> 5\.0\.1\.0/~> 5.0.1/' "${PN}".gemspec || die
+	sed -i -e '/typhoeus/ s/~> 1\.1\.0/~> 1.1/' "${PN}".gemspec || die
 	sed -i -e '/webmock/ s/~> 1\.22\.0/~> 1.22/' "${PN}".gemspec || die
 	sed -i -e '/rspec/ s/~> 3\.5\.0/~> 3.5/' "${PN}".gemspec || die
 
