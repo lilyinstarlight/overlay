@@ -8,25 +8,16 @@ inherit eutils
 DESCRIPTION="Plex's official Plex add-on for Kodi."
 HOMEPAGE="http://plex.tv/"
 MY_PN="script.plex"
-GIT_COMMIT="64938ebcecbb32facfa73e8cc5fb5c3b4c373b8c"
-SRC_URI="https://github.com/plexinc/plex-for-kodi/archive/${GIT_COMMIT}.zip -> ${P}-${GIT_COMMIT}.zip"
+SRC_URI="https://github.com/plexinc/plex-for-kodi/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="PMS-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-DEPEND="
-	>=media-tv/kodi-16.0
-"
-
-RDEPEND="
-	${DEPEND}
-"
-
-S="${WORKDIR}/${PN}-${GIT_COMMIT}"
+RDEPEND=">=media-tv/kodi-16.0"
 
 src_install() {
 	insinto "/usr/share/kodi/addons/${MY_PN}"
-	doins -r "${S}/"*
+	doins -r "${S}"/*
 }
