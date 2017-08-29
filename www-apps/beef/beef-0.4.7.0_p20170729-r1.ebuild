@@ -29,6 +29,7 @@ all_ruby_prepare() {
 	# fix too strict versioning
 	rm Gemfile.lock
 	sed -i -e '/rubydns/ s/~> 0\.7\.3/~> 1.0/' Gemfile || die
+	sed -i -e 's/html_escape/Erubis::XmlHelper.escape_xml/' extensions/admin_ui/controllers/panel/index.html || die
 }
 
 each_ruby_prepare() {
