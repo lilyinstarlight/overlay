@@ -15,4 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/rex dev-ruby/msgpack"
+ruby_add_rdepend "<dev-ruby/rex-2.0.12 dev-ruby/msgpack"
