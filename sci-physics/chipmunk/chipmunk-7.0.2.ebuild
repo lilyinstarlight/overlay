@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils versionator
+inherit cmake-utils multilib versionator
 
 DESCRIPTION="Chipmunk2D is a lightweight, fast, and portable 2D rigid body physics library"
 HOMEPAGE="http://chipmunk-physics.net/"
@@ -32,6 +32,7 @@ S="${WORKDIR}/${MY_P}"
 src_configure() {
 	local mycmakeargs=(
 		$(use demos && echo "-DBUILD_DEMOS=ON -DINSTALL_DEMOS=ON" || echo "-DBUILD_DEMOS=OFF -DINSTALL_DEMOS=OFF")
+		-DLIB_INSTALL_DIR=$(get_libdir)
 	)
 
 	cmake-utils_src_configure
