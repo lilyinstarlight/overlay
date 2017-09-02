@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="API and runtime for accessing VR hardware from multiple vendors"
 HOMEPAGE="https://steamvr.com/"
@@ -16,6 +16,12 @@ IUSE="examples"
 
 DEPEND=""
 RDEPEND=""
+
+src_prepare() {
+	sed -i -e "s/ DESTINATION lib)/ DESTINATION $(get_libdir))/" src/CMakeLists.txt || die
+
+	default
+}
 
 src_configure() {
 	local mycmakeargs=(
