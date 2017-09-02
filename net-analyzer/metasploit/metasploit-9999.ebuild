@@ -89,7 +89,6 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/rex-struct2
 	dev-ruby/rex-text
 	dev-ruby/rex-zip
-	dev-ruby/robots
 	>=dev-ruby/ruby_smb-0.0.18:*
 	>=dev-ruby/rubyntlm-0.6.2
 	>=dev-ruby/rubyzip-1.2.1
@@ -105,7 +104,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	openvas? ( dev-ruby/openvas-omp )
 	oracle? ( dev-ruby/ruby-oci8 )
 	pcap? ( dev-ruby/pcaprub:*
-		dev-ruby/network_interface )
+		>=dev-ruby/network_interface-0.0.2 )
 	development? ( dev-ruby/fivemat
 			>=dev-ruby/pry-0.10.4_p20161207
 			dev-ruby/redcarpet
@@ -133,7 +132,10 @@ RESTRICT="strip"
 
 QA_PREBUILT="
 	usr/lib*/${PN}${SLOT}/data/templates/template_x86_linux.bin
+	usr/lib*/${PN}${SLOT}/data/templates/template_x86_linux_dll.bin
 	usr/lib*/${PN}${SLOT}/data/templates/template_armle_linux.bin
+	usr/lib*/${PN}${SLOT}/data/templates/template_armle_linux_dll.bin
+	usr/lib*/${PN}${SLOT}/data/templates/template_aarch64_linux.bin
 	usr/lib*/${PN}${SLOT}/data/templates/template_x86_solaris.bin
 	usr/lib*/${PN}${SLOT}/data/templates/template_x64_linux.bin
 	usr/lib*/${PN}${SLOT}/data/templates/template_x64_linux_dll.bin
