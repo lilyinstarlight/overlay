@@ -53,7 +53,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasploit-credential-2.0.12
 	>=dev-ruby/metasploit-model-2.0.4
 	>=dev-ruby/metasploit_data_models-2.0.15:*
-	dev-ruby/metasploit-payloads:1.3.1
+	dev-ruby/metasploit-payloads:1.3.7
 	dev-ruby/metasploit_payloads-mettle:0.2.2
 	>=dev-ruby/method_source-0.8.2_p20170202
 	dev-ruby/msgpack
