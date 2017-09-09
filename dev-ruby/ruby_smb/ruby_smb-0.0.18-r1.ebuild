@@ -19,7 +19,7 @@ IUSE=""
 #I cannot make tests work, and I'm not spending all day on it
 RESTRICT="test"
 
-ruby_add_rdepend "dev-ruby/bindata
+ruby_add_rdepend "dev-ruby/bindata:*
 	dev-ruby/rubyntlm
 	dev-ruby/windows_error"
 
