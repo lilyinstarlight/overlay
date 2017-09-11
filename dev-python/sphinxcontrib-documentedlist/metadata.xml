@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer type="person">
-    <email>klausman@gentoo.org</email>
-    <name>Tobias Klausmann</name>
+    <email>fkmclane@gmail.com</email>
+    <name>Foster McLane</name>
   </maintainer>
   <upstream>
-    <remote-id type="pypi">sphinxcontrib-napoleon</remote-id>
+    <remote-id type="pypi">sphinxcontrib-documentedlist</remote-id>
   </upstream>
 </pkgmetadata>
