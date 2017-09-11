@@ -50,11 +50,15 @@ DEPEND="${RDEPEND}
 	test? (
 		>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
 		>=dev-python/nose-1.3.0[${PYTHON_USEDEP}]
-	)"
+	)
+	doc? ( dev-python/sphinxcontrib-documentedlist )
+	"
 #fixme: bump it too
 #		=www-servers/pathod-$(get_version_component_range 1-2)*[${PYTHON_USEDEP}]
 
 python_prepare() {
+	sed -i -e "s/\"git\", \"describe\", \"--tags\", \"--long\"/'echo', 'v${PV}-0-0'/" docs/conf.py || die
+
 	#we allow to use 34 until 35 is stable
 	hack_python34() {
 		if [[ `pwd` == *python3_4 ]] ; then
@@ -69,9 +73,13 @@ python_test() {
 	nosetests -v || die "Tests fail with ${EPYTHON}"
 }
 
+python_compile_all() {
+	use doc && emake -C docs html
+}
+
 python_install_all() {
 	local DOCS=( CHANGELOG CONTRIBUTORS )
-	use doc && local HTML_DOCS=( doc/. )
+	use doc && local HTML_DOCS=( docs/_build/html/. )
 	use examples && local EXAMPLES=( examples/. )
 
 	distutils-r1_python_install_all
