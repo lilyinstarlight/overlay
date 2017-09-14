@@ -4,6 +4,8 @@
 EAPI=6
 
 USE_RUBY="ruby23"
+RUBY_FAKEGEM_RECIPE_DOC=""
+RUBY_FAKEGEM_RECIPE_TEST=""
 
 inherit multilib ruby-fakegem
 
@@ -15,7 +17,12 @@ LICENSE="GPL-3"
 SLOT=0
 KEYWORDS="~amd64"
 
-ruby_add_bdepend "dev-ruby/bundler"
+IUSE="doc"
+
+ruby_add_bdepend "
+	dev-ruby/bundler
+	doc? ( dev-python/sphinx )
+"
 
 ruby_add_rdepend "
 	=dev-ruby/colorize-0.8*
@@ -30,4 +37,12 @@ ruby_add_rdepend "
 each_ruby_prepare() {
 	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle install --local || die
 	BUNDLE_GEMFILE=Gemfile ${RUBY} -S bundle check || die
+}
+
+all_fakegem_compile() {
+	use doc && emake -C docs html
+}
+
+all_fakegem_install() {
+	use doc && dodoc -r docs/_build/html/.
 }
