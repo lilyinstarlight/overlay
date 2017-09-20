@@ -45,4 +45,15 @@ all_fakegem_compile() {
 
 all_fakegem_install() {
 	use doc && dodoc -r docs/_build/html/.
+
+	# ripped from ruby-fakegem.eclass
+	local bindir=$(find "${D}" -type d -path "*/gems/${RUBY_FAKEGEM_NAME}-${RUBY_FAKEGEM_VERSION}/${RUBY_FAKEGEM_BINDIR}" -print -quit)
+
+	if [[ -d "${bindir}" ]]; then
+		pushd "${bindir}" &>/dev/null || die
+		for binary in ${RUBY_FAKEGEM_BINWRAP}; do
+			ruby_fakegem_binwrapper "${binary}"
+		done
+		popd &>/dev/null || die
+	fi
 }
