@@ -69,7 +69,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/railties-4.2.9:4.2
 	dev-ruby/rbnacl:4
 	>=dev-ruby/rb-readline-0.5.5
-	>=dev-ruby/recog-2.1.12:*
+	>=dev-ruby/recog-2.1.15:*
 	dev-ruby/redcarpet
 	>=dev-ruby/rex-arch-0.1.11
 	dev-ruby/rex-bin_tools
