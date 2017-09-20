@@ -3,6 +3,7 @@
 
 EAPI=6
 USE_RUBY="ruby23"
+RUBY_FAKEGEM_RECIPE_DOC=""
 
 inherit ruby-fakegem
 
