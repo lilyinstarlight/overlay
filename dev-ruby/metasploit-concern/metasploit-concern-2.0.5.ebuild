@@ -2,8 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-USE_RUBY="ruby23"
 
+USE_RUBY="ruby23"
+RUBY_FAKEGEM_RECIPE_DOC=""
 RUBY_FAKEGEM_EXTRAINSTALL="app spec"
 
 inherit ruby-fakegem versionator
