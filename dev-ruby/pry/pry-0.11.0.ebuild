@@ -18,15 +18,12 @@ inherit ruby-fakegem
 
 DESCRIPTION="Pry is a powerful alternative to the standard IRB shell for Ruby"
 HOMEPAGE="https://github.com/pry/pry/wiki"
-COMMIT="1f64463184e0a160d0b41d1a1f92b8e2f230278c"
-SRC_URI="https://github.com/pry/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/pry/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 IUSE=""
-SLOT="ruby19"
+SLOT="$(get_version_component_range 1-2)"
 
 LICENSE="MIT"
 KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
-
-RUBY_S="${PN}-${COMMIT}"
 
 ruby_add_rdepend "
 	>=dev-ruby/coderay-1.1.0 =dev-ruby/coderay-1.1*
