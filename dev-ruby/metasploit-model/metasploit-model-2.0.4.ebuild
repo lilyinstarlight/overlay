@@ -2,11 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+
 USE_RUBY="ruby23"
+RUBY_FAKEGEM_RECIPE_DOC=""
+RUBY_FAKEGEM_EXTRAINSTALL="app config script spec"
 
 inherit ruby-fakegem versionator
-
-RUBY_FAKEGEM_EXTRAINSTALL="app config script spec"
 
 DESCRIPTION="Common code, such as validators and mixins"
 HOMEPAGE="https://github.com/rapid7/metasploit-model"
