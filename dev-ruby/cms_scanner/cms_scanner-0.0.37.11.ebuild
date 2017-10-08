@@ -13,18 +13,17 @@ inherit ruby-fakegem
 DESCRIPTION="Framework to provide an easy way to implement CMS Scanners"
 HOMEPAGE="https://github.com/wpscanteam/CMSScanner"
 MY_PN="CMSScanner"
-COMMIT="d592741e972bf0372032c0a0a67908fdd2966835"
-MY_P="${MY_PN}-${COMMIT}"
-SRC_URI="https://github.com/wpscanteam/${MY_PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+MY_P="${MY_PN}-${PV}"
+SRC_URI="https://github.com/wpscanteam/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT=0
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RUBY_S="${MY_PN}-${COMMIT}"
+RUBY_S="${MY_P}"
 
-ruby_add_rdepend "dev-ruby/activesupport:5.0 dev-ruby/addressable dev-ruby/nokogiri dev-ruby/opt_parse_validator dev-ruby/public_suffix:2 dev-ruby/ruby-progressbar dev-ruby/typhoeus:1 dev-ruby/yajl-ruby"
+ruby_add_rdepend "dev-ruby/activesupport:5.1 dev-ruby/addressable dev-ruby/nokogiri dev-ruby/opt_parse_validator dev-ruby/public_suffix:3 >=dev-ruby/ruby-progressbar-1.9.0 dev-ruby/typhoeus:1 dev-ruby/yajl-ruby"
 ruby_add_bdepend "virtual/rubygems"
 
 all_ruby_prepare() {
@@ -41,6 +40,10 @@ all_ruby_prepare() {
 	sed -i -e '/typhoeus/ s/~> 1\.3\.0/~> 1.3/' "${PN}".gemspec || die
 	sed -i -e '/webmock/ s/~> 1\.22\.0/~> 1.22/' "${PN}".gemspec || die
 	sed -i -e '/rspec/ s/~> 3\.6\.0/~> 3.6/' "${PN}".gemspec || die
+	sed -i -e '/rspec-its/ s/~> 1\.2\.0/~> 1.2/' "${PN}".gemspec || die
+	sed -i -e '/yajl-ruby/ s/~> 1\.3\.0/~> 1.3/' "${PN}".gemspec || die
+	sed -i -e '/public_suffix/ s/~> 3\.0\.0/~> 3.0/' "${PN}".gemspec || die
+	sed -i -e '/ruby-progressbar/ s/~> 1\.9\.0/~> 1.9/' "${PN}".gemspec || die
 
 	# build a gem file with new versioning
 	$(ruby_implementation_command "${USE_RUBY}") -S gem build "${PN}".gemspec || die
