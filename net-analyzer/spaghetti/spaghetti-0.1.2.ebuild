@@ -4,7 +4,7 @@
 EAPI=6
 
 PYTHON_COMPAT=( python2_7 )
-inherit python-single-r1
+inherit eutils python-single-r1
 
 DESCRIPTION="Spaghetti web application security scanner"
 HOMEPAGE="https://github.com/m4ll0k/Spaghetti"
@@ -32,5 +32,5 @@ src_install() {
 	cp -R * "${ED}"/usr/share/${PN}/
 	python_fix_shebang "${ED}"/usr/share/${PN}
 	fperms +x /usr/share/${PN}/spaghetti.py
-	dosym /usr/share/${PN}/spaghetti.py /usr/bin/${PN}
+	make_wrapper "${PN}" /usr/share/"${PN}"/spaghetti.py /usr/share/"${PN}"
 }
