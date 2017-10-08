@@ -17,8 +17,7 @@ inherit ruby-fakegem
 
 DESCRIPTION="Retrieve the source code for a method"
 HOMEPAGE="https://github.com/banister/method_source"
-COMMIT="6dcb116e37e20e58f615ffe05a40bbe9a536e44a"
-SRC_URI="https://github.com/banister/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/banister/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 IUSE=""
 SLOT="0"
 
