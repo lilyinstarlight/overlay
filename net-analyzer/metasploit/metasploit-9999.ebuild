@@ -37,9 +37,9 @@ RESTRICT="test"
 RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	=dev-ruby/pg-0.20.0
 	=dev-ruby/rkelly-remix-0.0.7
-	>=dev-ruby/actionpack-4.2.9:4.2
-	>=dev-ruby/activerecord-4.2.9:4.2
-	>=dev-ruby/activesupport-4.2.9:4.2
+	>=dev-ruby/actionpack-4.2.10:4.2
+	>=dev-ruby/activerecord-4.2.10:4.2
+	>=dev-ruby/activesupport-4.2.10:4.2
 	dev-ruby/backports
 	dev-ruby/bcrypt-ruby
 	dev-ruby/bcrypt_pbkdf
@@ -53,9 +53,9 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	>=dev-ruby/metasploit-credential-2.0.12
 	>=dev-ruby/metasploit-model-2.0.4
 	>=dev-ruby/metasploit_data_models-2.0.15:*
-	dev-ruby/metasploit-payloads:1.3.7
+	dev-ruby/metasploit-payloads:1.3.9
 	dev-ruby/metasploit_payloads-mettle:0.2.2
-	>=dev-ruby/method_source-0.8.2_p20170202
+	>=dev-ruby/method_source-0.9.0
 	dev-ruby/msgpack
 	dev-ruby/nessus_rest
 	dev-ruby/net-ssh:*
@@ -66,7 +66,7 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	dev-ruby/packetfu:1.1.13
 	dev-ruby/patch_finder
 	>=dev-ruby/pdf-reader-2.0.0
-	>=dev-ruby/railties-4.2.9:4.2
+	>=dev-ruby/railties-4.2.10:4.2
 	dev-ruby/rbnacl:4
 	>=dev-ruby/rb-readline-0.5.5
 	>=dev-ruby/recog-2.1.15:*
@@ -106,15 +106,15 @@ RUBY_COMMON_DEPEND="virtual/ruby-ssl
 	pcap? ( dev-ruby/pcaprub:*
 		>=dev-ruby/network_interface-0.0.2 )
 	development? ( dev-ruby/fivemat
-			>=dev-ruby/pry-0.10.4_p20161207
+			>=dev-ruby/pry-0.11.1
 			dev-ruby/redcarpet
 			dev-ruby/yard
-			>=dev-ruby/rake-12.0.0
-			>=dev-ruby/factory_girl-4.8.0 )"
+			>=dev-ruby/rake-12.1.0
+			>=dev-ruby/factory_girl-4.8.1 )"
 	#lorcon doesn't support ruby21
 	#lorcon? ( net-wireless/lorcon[ruby] )
 ruby_add_bdepend "${RUBY_COMMON_DEPEND}
-		test? ( >=dev-ruby/factory_girl-4.8.0
+		test? ( >=dev-ruby/factory_girl-4.8.1
 			dev-ruby/fivemat
 			dev-ruby/database_cleaner
 			>=dev-ruby/rspec-3.6.0
@@ -223,11 +223,6 @@ all_ruby_prepare() {
 	#we need to edit the gemspec too, since it tries to call git instead of anything sane
 	#probably a better way to fix this... if I care at some point
 	sed -i -e "/^  spec.files/,/^  }/d" metasploit-framework.gemspec || die
-
-	#remove git declarations for packaging
-	sed -i -e "s/, git:.*//" Gemfile || die
-	#temp fix for multiline git declaration
-	sed -i -e "/^ 'x86_64-linux', 'x86-linux', 'darwin'].include?(RUBY_PLATFORM.gsub(\/\.\*darwin\.\*\/, 'darwin'))/d" Gemfile || die
 
 	#https://bugs.gentoo.org/show_bug.cgi?id=584522 no tzinfo-data by choice in gentoo
 	sed -i '/tzinfo-data/d' metasploit-framework.gemspec
