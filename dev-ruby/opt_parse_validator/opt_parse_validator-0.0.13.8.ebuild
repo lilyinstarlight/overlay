@@ -16,4 +16,4 @@ SLOT=0
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/activesupport:5.0 dev-ruby/addressable"
+ruby_add_rdepend "dev-ruby/activesupport:5.1 dev-ruby/addressable"
