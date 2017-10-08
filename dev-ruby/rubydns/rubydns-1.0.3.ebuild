@@ -4,7 +4,7 @@
 EAPI=6
 
 USE_RUBY="ruby23"
-RUBY_FAKEGEM_RECIPE_DOC=""
+RUBY_FAKEGEM_RECIPE_DOC="yard"
 inherit ruby-fakegem
 
 DESCRIPTION="A tool to intercept and modify DNS requests"
