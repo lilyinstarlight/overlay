@@ -38,4 +38,4 @@ mv "$overlay" "$root"/root/overlay
 run "$root" emerge repoman
 
 # run repoman on codebase
-exec run "$root" repoman scan /root/overlay
+run "$root" repoman scan /root/overlay
