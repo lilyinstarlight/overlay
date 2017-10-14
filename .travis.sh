@@ -25,6 +25,7 @@ sudo mount --bind /dev "$root"/dev
 sudo mount --make-rslave "$root"/dev
 
 # setup system
+chroot "$root" /bin/bash -c "emerge-webrsync"
 chroot "$root" /bin/bash -c "eselect profile set default/linux/amd64/13.0"
 
 # merge repoman
