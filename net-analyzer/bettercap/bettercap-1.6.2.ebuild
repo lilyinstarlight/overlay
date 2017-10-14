@@ -19,9 +19,12 @@ KEYWORDS="~amd64"
 
 IUSE="doc"
 
+DEPEND="
+	doc? ( dev-python/sphinx )
+"
+
 ruby_add_bdepend "
 	dev-ruby/bundler
-	doc? ( dev-python/sphinx )
 "
 
 ruby_add_rdepend "
