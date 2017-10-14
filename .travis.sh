@@ -25,7 +25,7 @@ sudo mount --bind /dev "$root"/dev
 sudo mount --make-rslave "$root"/dev
 
 # merge repoman
-chroot /root/gentoo/root/overlay /bin/bash -c "emerge repoman"
+chroot "$root" /bin/bash -c "emerge repoman"
 
 # run repoman on codebase
-exec chroot /root/gentoo/root/overlay /bin/bash -c "repoman scan $overlay"
+exec chroot "$root" /bin/bash -c "repoman scan /root/overlay"
