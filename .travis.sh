@@ -9,7 +9,7 @@ strap() {
 }
 
 run() {
-	chroot "$1" /bin/bash -c "source /etc/profile && ${*:2}"
+	chroot "$1" /usr/bin/env - /bin/bash -c "source /etc/profile && ${*:2}"
 }
 
 prep() {
