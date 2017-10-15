@@ -61,7 +61,7 @@ run "$root" emerge repoman
 
 # run repoman on codebase
 echo 'Running repoman...' >&2
-run "$root" repoman -v full /usr/local/portage
+run "$root" cd /usr/local/portage '&&' repoman -v full
 
 # merge repoman
 echo 'Installing ' $packages '...' >&2
