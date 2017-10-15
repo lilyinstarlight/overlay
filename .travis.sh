@@ -56,7 +56,7 @@ USE="-bindist"
 FEATURES="test-fail-continue"
 CONFIG_PROTECT_MASK="/etc/portage"
 EOF
-run "$1" eselect profile set "$profile"
+run "$root" eselect profile set "$profile"
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.configure"
 
