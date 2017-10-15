@@ -3,6 +3,8 @@ Overlay
 
 This is my Portage overlay where I dump all of the packages I create or modify. If anything is out of date or doesn't build on your system, create a [new issue](https://github.com/fkmclane/overlay/issues/new) and attach a copy of the build log from a [pastebin](https://paste.fooster.io/).
 
+[![Build Status](http://img.shields.io/travis/fkmclane/overlay.svg)](https://travis-ci.org/fkmclane/overlay)
+
 
 Installation
 ------------
