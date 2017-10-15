@@ -61,7 +61,7 @@ run "$root" emerge repoman
 
 # run repoman on codebase
 echo 'Running repoman...' >&2
-travis_wait 30 run "$root" repoman scan /usr/local/portage
+run "$root" repoman scan /usr/local/portage
 
 # merge repoman
 echo 'Installing ' $packages '...' >&2
