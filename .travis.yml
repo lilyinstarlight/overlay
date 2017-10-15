@@ -1,4 +1,4 @@
 language: bash
 sudo: required
 script:
-  - travis_wait 120 sudo ./.travis.sh
+  - sudo ./.travis.sh
