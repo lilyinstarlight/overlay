@@ -24,7 +24,7 @@ CDEPEND="
 	dev-python/arrow[${PYTHON_USEDEP}]
 
 	dev-python/pyzmq[${PYTHON_USEDEP}]
-	dev-python/pyside[designer,${PYTHON_USEDEP}]
+	dev-python/pyside[X,designer,${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/ipython[${PYTHON_USEDEP}]
