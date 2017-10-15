@@ -26,7 +26,7 @@ prep() {
 }
 
 # enable command printing
-PS4="$PS1"
+export PS4="$PS1"
 set -x
 
 # get root image
