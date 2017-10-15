@@ -1,8 +1,9 @@
 #!/bin/bash -e
 mirror="https://mirrors.kernel.org/gentoo"
 overlay="$(pwd)"
+name="$(cat "$overlay/profiles/repo_name")"
 root="/gentoo"
-packages="app-admin/linode-cli:{0,4} app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish app-vim/neovim-remote dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-games/mcedit dev-python/{pandocfilters,slixmpp,twilio,vex} dev-util/ffdec games-action/armagetronad{,-dedicated} games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes} media-gfx/{main,sk1} media-libs/openvr media-plugins/{calf,gxplugins-lv2,midifilter-lv2,plex-for-kodi,plex-kodi-connect} media-sound/{gxtuner,ympd} media-tv/{airtame-bin,plex-media-player,plex-media-server,plexpy} media-video/{v4l2loopback} net-fs/pingfs net-im/{discord-bin,slack-bin} net-mail/syncmaildir net-p2p/zget net-wireless/{create_ap,unifi} sci-electronics/{eagle,freeroute,fritzing-bin} sci-physics/chipmunk sys-apps/petty sys-fs/{exfat-nofuse,pifs,udiskie} sys-kernel/pf-sources www-servers/pagekite x11-misc/{awf,barline,clipster,lemonbar,rofi-pass,slop} x11-themes/arc-openbox-theme"
+packages="app-admin/linode-cli:{0,4} app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish app-vim/neovim-remote dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-games/mcedit dev-python/{pandocfilters,slixmpp,twilio,vex} dev-util/ffdec games-action/armagetronad{,-dedicated} games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes} media-gfx/{main,sk1} media-libs/openvr media-plugins/{calf,gxplugins-lv2,midifilter-lv2,plex-for-kodi,plex-kodi-connect} media-sound/{gxtuner,ympd} media-tv/{airtame-bin,plex-media-player,plex-media-server,plexpy} media-video/v4l2loopback net-fs/pingfs net-im/{discord-bin,slack-bin} net-mail/syncmaildir net-p2p/zget net-wireless/{create_ap,unifi} sci-electronics/{eagle,freeroute,fritzing-bin} sci-physics/chipmunk sys-apps/petty sys-fs/{exfat-nofuse,pifs,udiskie} sys-kernel/pf-sources www-servers/pagekite x11-misc/{awf,barline,clipster,lemonbar,rofi-pass,slop} x11-themes/arc-openbox-theme"
 
 export PS4="$ "
 
@@ -64,8 +65,8 @@ echo "travis_fold:end:repository_copy"
 echo "travis_fold:start:repository_setup"
 set -x
 mkdir -p "$root"/etc/portage/repos.conf
-cat >"$root"/etc/portage/repos.conf/local.conf <<EOF
-[local]
+cat >"$root"/etc/portage/repos.conf/"$name".conf <<EOF
+[$name]
 location = /usr/local/portage
 auto-sync = no
 EOF
