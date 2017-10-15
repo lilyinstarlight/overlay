@@ -77,11 +77,11 @@ echo "travis_fold:end:repository.setup"
 
 # merge repoman
 echo "travis_fold:start:repoman.install"
-run "$root" emerge dev-vcs/git app-portage/repoman
+run "$root" emerge --quiet dev-vcs/git app-portage/repoman
 echo "travis_fold:end:repoman.install"
 
 # run repoman on codebase
 run "$root" cd /usr/local/portage '&&' repoman -v full
 
 # merge repoman
-run "$root" emerge --autounmask-write $packages
+run "$root" emerge --quiet --autounmask-write $packages
