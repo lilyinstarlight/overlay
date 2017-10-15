@@ -12,7 +12,7 @@ HOMEPAGE="http://www.metasploit.com/"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "<dev-ruby/rex-2.0.12 dev-ruby/msgpack"

@@ -16,7 +16,7 @@ SRC_URI="https://dl.google.com/linux/chrome/deb/pool/main/g/${CHROME_PN}/${CHROM
 
 LICENSE="google-chrome"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS=""
 RESTRICT="bindist mirror strip"
 
 DEPEND=""

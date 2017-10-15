@@ -23,7 +23,7 @@ IUSE="android webgl"
 
 DEPEND=""
 RDEPEND="
-	sys-devel/gcc[multilib]
+	sys-libs/glibc[multilib]
 	media-libs/alsa-lib
 	x11-libs/cairo
 	sys-libs/libcap

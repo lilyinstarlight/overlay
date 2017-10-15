@@ -19,7 +19,7 @@ CDEPEND="
 	gnome? (
 		dev-libs/dbus-glib
 		x11-libs/gtk+:3
-		dev-lang/vala:0.26
+		dev-lang/vala:*
 		x11-libs/libnotify
 		gnome-base/gconf:2
 		dev-libs/libgee:0.8

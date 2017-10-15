@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/cowboyd/therubyracer"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/ref dev-ruby/libv8"

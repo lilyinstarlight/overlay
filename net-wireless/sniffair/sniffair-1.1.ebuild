@@ -25,7 +25,7 @@ RDEPEND="
 	dev-python/prettytable[${PYTHON_USEDEP}]
 	dev-python/tabulate[${PYTHON_USEDEP}]
 	dev-python/tabulate[${PYTHON_USEDEP}]
-	virtual/python-scapy[${PYTHON_USEDEP}]
+	net-analyzer/scapy[${PYTHON_USEDEP}]
 "
 
 S="${WORKDIR}/${MY_P}"

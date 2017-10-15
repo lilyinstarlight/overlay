@@ -14,14 +14,13 @@ EGIT_REPO_URI="https://github.com/wbsoft/${PN}.git"
 LICENSE="GPL-2 public-domain" # public-domain is for bundled Tango icons
 SLOT="0"
 KEYWORDS=""
-IUSE="portmidi"
+IUSE=""
 
 RDEPEND="
 	dev-python/PyQt5[svg,${PYTHON_USEDEP}]
 	dev-python/python-poppler-qt5[${PYTHON_USEDEP}]
 	>=dev-python/python-ly-0.9.4[${PYTHON_USEDEP}]
-	>=media-sound/lilypond-2.14.2
-	portmidi? ( media-libs/portmidi[${PYTHON_USEDEP}] )"
+	>=media-sound/lilypond-2.14.2"
 DEPEND="${RDEPEND}"
 
 pkg_preinst() {

@@ -15,7 +15,7 @@ HOMEPAGE="https://rubygems.org/gems/grpc"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/googleauth

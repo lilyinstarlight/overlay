@@ -14,7 +14,7 @@ HOMEPAGE="https://github.com/rapid7/metasploit-aggregator"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64"
 IUSE=""
 RESTRICT=test
 

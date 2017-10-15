@@ -7,4 +7,7 @@
 </maintainer>
 <longdescription lang="en">
 </longdescription>
+<use>
+<flag name="pax_kernel">Add PaX markings to executables</flag>
+</use>
 </pkgmetadata>
