@@ -33,17 +33,17 @@ prep() {
 }
 
 # get root image
-echo "travis_fold:start:system_bootstrap"
+echo "travis_fold:start:system.bootstrap"
 strap "$root" "$mirror"
-echo "travis_fold:end:system_bootstrap"
+echo "travis_fold:end:system.bootstrap"
 
 # prepare
-echo "travis_fold:start:system_prepare"
+echo "travis_fold:start:system.prepare"
 prep "$root"
-echo "travis_fold:end:system_prepare"
+echo "travis_fold:end:system.prepare"
 
 # prepare
-echo "travis_fold:start:portage_configure"
+echo "travis_fold:start:portage.configure"
 set -x
 cat >>"$root"/etc/portage/make.conf <<EOF
 
@@ -52,20 +52,20 @@ FEATURES="test-fail-continue"
 CONFIG_PROTECT_MASK="/etc/portage"
 EOF
 run "$root" emerge app-portage/cpuid2cpuflags
-run "$root" cpuid2cpuflags | sed -e 's/: \(.*\)/="\1"/' >>"$root"/etc/portage.make.conf
+run "$root" cpuinfo2cpuflags-x86 >>"$root"/etc/portage.make.conf
 { set +x; } 2>/dev/null
-echo "travis_fold:end:portage_configure"
+echo "travis_fold:end:portage.configure"
 
 # move repository to image
-echo "travis_fold:start:repository_copy"
+echo "travis_fold:start:repository.copy"
 set -x
 mkdir -p "$root"/usr/local
 mv "$overlay" "$root"/usr/local/portage
 { set +x; } 2>/dev/null
-echo "travis_fold:end:repository_copy"
+echo "travis_fold:end:repository.copy"
 
 # setup repository
-echo "travis_fold:start:repository_setup"
+echo "travis_fold:start:repository.setup"
 set -x
 mkdir -p "$root"/etc/portage/repos.conf
 cat >"$root"/etc/portage/repos.conf/"$name".conf <<EOF
@@ -74,12 +74,12 @@ location = /usr/local/portage
 auto-sync = no
 EOF
 { set +x; } 2>/dev/null
-echo "travis_fold:end:repository_setup"
+echo "travis_fold:end:repository.setup"
 
 # merge repoman
-echo "travis_fold:start:repoman_install"
+echo "travis_fold:start:repoman.install"
 run "$root" emerge dev-vcs/git app-portage/repoman
-echo "travis_fold:end:repoman_install"
+echo "travis_fold:end:repoman.install"
 
 # run repoman on codebase
 run "$root" cd /usr/local/portage '&&' repoman -v full
