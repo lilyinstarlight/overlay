@@ -47,9 +47,12 @@ echo "travis_fold:start:portage_configure"
 set -x
 cat >>"$root"/etc/portage/make.conf <<EOF
 
+USE="-bindist"
 FEATURES="test-fail-continue"
 CONFIG_PROTECT_MASK="/etc/portage"
 EOF
+run "$root" emerge app-portage/cpuid2cpuflags
+run "$root" cpuid2cpuflags | sed -e 's/: \(.*\)/="\1"/' >>"$root"/etc/portage.make.conf
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage_configure"
 
