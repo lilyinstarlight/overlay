@@ -5,7 +5,7 @@ root="/gentoo"
 
 strap() {
 	mkdir -p "$1"
-	curl -s "$2"/releases/amd64/autobuilds/latest-stage4-amd64-minimal.txt | sed -e '1 d' -e '2 d' -e '3 s/\(.*\) .*/\1/' | xargs -I '{}' curl -s "$2"/releases/amd64/autobuilds/'{}' | tar -C "$1" -xj
+	curl "$2"/releases/amd64/autobuilds/latest-stage4-amd64-minimal.txt | sed -e '1 d' -e '2 d' -e '3 s/\(.*\) .*/\1/' | xargs -I '{}' curl -s "$2"/releases/amd64/autobuilds/'{}' | tar -C "$1" -xvj
 }
 
 run() {
@@ -25,17 +25,22 @@ prep() {
 }
 
 # get root image
+echo 'Bootstrapping...' >&2
 strap "$root" "$mirror"
 
 # prepare
+echo 'Preparing system...' >&2
 prep "$root"
 
+# merge repoman
+echo 'Installing repoman...' >&2
+run "$root" emerge repoman
+
 # move repository to image
+echo 'Copying repository...' >&2
 cd "$root"/root
 mv "$overlay" "$root"/root/overlay
 
-# merge repoman
-run "$root" emerge repoman
-
 # run repoman on codebase
+echo 'Running repoman...' >&2
 run "$root" repoman scan /root/overlay
