@@ -30,7 +30,6 @@ prep() {
 	{ set +x; } 2>/dev/null
 
 	run "$1" emerge-webrsync
-	run "$1" eselect profile set "$profile"
 }
 
 # get root image
@@ -38,12 +37,17 @@ echo "travis_fold:start:system.bootstrap"
 strap "$root" "$mirror"
 echo "travis_fold:end:system.bootstrap"
 
-# prepare
+# prepare mounts and portage
 echo "travis_fold:start:system.prepare"
 prep "$root"
 echo "travis_fold:end:system.prepare"
 
-# prepare
+# merge repoman
+echo "travis_fold:start:repoman.install"
+run "$root" emerge --quiet dev-vcs/git app-portage/repoman
+echo "travis_fold:end:repoman.install"
+
+# configure portage
 echo "travis_fold:start:portage.configure"
 set -x
 cat >>"$root"/etc/portage/make.conf <<EOF
@@ -52,6 +56,7 @@ USE="-bindist"
 FEATURES="test-fail-continue"
 CONFIG_PROTECT_MASK="/etc/portage"
 EOF
+run "$1" eselect profile set "$profile"
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.configure"
 
@@ -74,11 +79,6 @@ auto-sync = no
 EOF
 { set +x; } 2>/dev/null
 echo "travis_fold:end:repository.setup"
-
-# merge repoman
-echo "travis_fold:start:repoman.install"
-run "$root" emerge --quiet dev-vcs/git app-portage/repoman
-echo "travis_fold:end:repoman.install"
 
 # run repoman on codebase
 run "$root" cd /usr/local/portage '&&' repoman -v full
