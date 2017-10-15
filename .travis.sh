@@ -10,7 +10,7 @@ strap() {
 }
 
 run() {
-	chroot "$1" /usr/bin/env - /bin/bash -c "source /etc/profile && ${*:2}"
+	chroot "$1" /usr/bin/env - /bin/bash -c "source /etc/profile && PS4=\"\$PS1\" && set -x && ${*:2}"
 }
 
 prep() {
@@ -24,6 +24,10 @@ prep() {
 	run "$1" emerge-webrsync
 	run "$1" eselect profile set default/linux/amd64/13.0
 }
+
+# enable command printing
+PS4="$PS1"
+set -x
 
 # get root image
 echo 'Bootstrapping...' >&2
