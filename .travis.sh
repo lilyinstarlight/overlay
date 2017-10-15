@@ -47,8 +47,8 @@ echo "travis_fold:start:portage_configure"
 set -x
 cat >>"$root"/etc/portage/make.conf <<EOF
 
-ACCEPT_KEYWORDS="~amd64"
 FEATURES="test-fail-continue"
+CONFIG_PROTECT_MASK="/etc/portage"
 EOF
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage_configure"
@@ -82,4 +82,4 @@ echo "travis_fold:end:repoman_install"
 run "$root" cd /usr/local/portage '&&' repoman -v full
 
 # merge repoman
-run "$root" emerge $packages
+run "$root" emerge --autounmask-write $packages
