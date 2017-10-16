@@ -54,7 +54,6 @@ echo 'USE="-bindist"' >>"$root"/etc/portage/make.conf
 echo 'FEATURES="test-fail-continue"' >>"$root"/etc/portage/make.conf
 echo 'CONFIG_PROTECT_MASK="/etc/portage"' >>"$root"/etc/portage/make.conf
 echo 'EMERGE_DEFAULT_OPTS="--quiet --autounmask-write --with-test-deps=n --noreplace"' >>"$root"/etc/portage/make.conf
-EOF
 run "$root" eselect profile set "$profile"
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.configure"
@@ -74,7 +73,6 @@ mkdir -p "$root"/etc/portage/repos.conf
 echo "[$name]" >"$root"/etc/portage/repos.conf/"$name".conf
 echo 'location = /usr/local/portage' >>"$root"/etc/portage/repos.conf/"$name".conf
 echo 'auto-sync = no' >>"$root"/etc/portage/repos.conf/"$name".conf
-EOF
 { set +x; } 2>/dev/null
 echo "travis_fold:end:repository.setup"
 
