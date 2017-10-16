@@ -3,8 +3,8 @@ mirror="https://mirrors.kernel.org/gentoo"
 overlay="$(pwd)"
 name="$(cat "$overlay/profiles/repo_name")"
 root="/gentoo"
-profile="default/linux/amd64/13.0/desktop"
-packages="app-admin/linode-cli:{0,4} app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish app-vim/neovim-remote dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-games/mcedit dev-python/{pandocfilters,slixmpp,twilio,vex} dev-util/ffdec games-action/armagetronad{,-dedicated} games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes} media-gfx/{maim,sk1} media-libs/openvr media-plugins/{calf,gxplugins-lv2,midifilter-lv2} media-sound/{gxtuner,ympd} media-tv/{airtame-bin,plex-media-server,plexpy} media-video/v4l2loopback net-fs/pingfs net-im/{discord-bin,slack-bin} net-mail/syncmaildir net-p2p/zget net-wireless/{create_ap,unifi} sci-electronics/{eagle,freeroute,fritzing-bin} sci-physics/chipmunk sys-apps/petty sys-fs/{exfat-nofuse,pifs,udiskie} sys-kernel/pf-sources www-servers/pagekite x11-misc/{awf,barline,clipster,lemonbar,rofi-pass,slop} x11-themes/arc-openbox-theme"
+profile="default/linux/amd64/13.0"
+packages="app-admin/linode-cli:{0,4} app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish app-vim/neovim-remote dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-python/{pandocfilters,slixmpp,twilio,vex} dev-util/ffdec games-action/armagetronad{,-dedicated} games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes} media-gfx/{maim,sk1} media-libs/openvr media-plugins/{calf,gxplugins-lv2,midifilter-lv2} media-sound/{gxtuner,ympd} media-tv/{airtame-bin,plex-media-server,plexpy} media-video/v4l2loopback net-fs/pingfs net-im/{discord-bin,slack-bin} net-mail/syncmaildir net-p2p/zget net-wireless/{create_ap,unifi} sci-electronics/{eagle,freeroute,fritzing-bin} sci-physics/chipmunk sys-apps/petty sys-fs/{exfat-nofuse,pifs,udiskie} sys-kernel/pf-sources www-servers/pagekite x11-misc/{awf,barline,clipster,lemonbar,rofi-pass,slop} x11-themes/arc-openbox-theme"
 
 export PS4="$ "
 
@@ -50,11 +50,10 @@ echo "travis_fold:end:repoman.install"
 # configure portage
 echo "travis_fold:start:portage.configure"
 set -x
-cat >>"$root"/etc/portage/make.conf <<EOF
-
-USE="-bindist"
-FEATURES="test-fail-continue"
-CONFIG_PROTECT_MASK="/etc/portage"
+echo 'USE="-bindist"' >>"$root"/etc/portage/make.conf
+echo 'FEATURES="test-fail-continue"' >>"$root"/etc/portage/make.conf
+echo 'CONFIG_PROTECT_MASK="/etc/portage"' >>"$root"/etc/portage/make.conf
+echo 'EMERGE_DEFAULT_OPTS="--quiet --autounmask-write --with-test-deps=n --noreplace"' >>"$root"/etc/portage/make.conf
 EOF
 run "$root" eselect profile set "$profile"
 { set +x; } 2>/dev/null
@@ -72,10 +71,9 @@ echo "travis_fold:end:repository.copy"
 echo "travis_fold:start:repository.setup"
 set -x
 mkdir -p "$root"/etc/portage/repos.conf
-cat >"$root"/etc/portage/repos.conf/"$name".conf <<EOF
-[$name]
-location = /usr/local/portage
-auto-sync = no
+echo "[$name]" >"$root"/etc/portage/repos.conf/"$name".conf
+echo 'location = /usr/local/portage' >>"$root"/etc/portage/repos.conf/"$name".conf
+echo 'auto-sync = no' >>"$root"/etc/portage/repos.conf/"$name".conf
 EOF
 { set +x; } 2>/dev/null
 echo "travis_fold:end:repository.setup"
@@ -83,5 +81,5 @@ echo "travis_fold:end:repository.setup"
 # run repoman on codebase
 run "$root" cd /usr/local/portage '&&' repoman -v full
 
-# merge repoman
-run "$root" emerge --quiet --autounmask-write $packages
+# retry once if necessary after writing autounmask changes
+run "$root" emerge $packages || run "$root" emerge $packages
