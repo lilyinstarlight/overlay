@@ -79,5 +79,5 @@ echo "travis_fold:end:repository.setup"
 # run repoman on codebase
 run "$root" cd /usr/local/portage '&&' repoman -v full
 
-# retry once if necessary after writing autounmask changes
-run "$root" emerge $packages || run "$root" emerge $packages
+# retry up to four times as necessary for rerunning after writing autounmask changes
+run "$root" emerge $packages || run "$root" emerge $packages || run "$root" emerge $packages || run "$root" emerge $packages || run "$root" emerge $packages
