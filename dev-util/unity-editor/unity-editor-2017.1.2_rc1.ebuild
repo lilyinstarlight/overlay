@@ -90,7 +90,7 @@ src_install() {
 	domenu usr/share/applications/unity-editor.desktop
 	domenu usr/share/applications/unity-monodevelop.desktop
 
-	dobin "${FILESDIR}"/unity-editor
+	make_wrapper unity-editor /opt/Unity/Editor/Unity
 }
 
 pkg_postinst() {
