@@ -71,11 +71,11 @@ pkg_preinst() {
 
 pkg_postinst() {
 	optfeature "PDF display support" www-plugins/pdfjs
-	fdo-mime_desktop_database_update
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	fdo-mime_desktop_database_update
+	xdg_desktop_database_update
 	gnome2_icon_cache_update
 }
