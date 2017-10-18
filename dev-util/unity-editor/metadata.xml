@@ -7,6 +7,11 @@
 	</maintainer>
 	<use>
 		<flag name="android">Enable Android target support</flag>
+		<flag name="facebook">Enable Facebook Games target support</flag>
+		<flag name="ios">Enable iOS target support</flag>
+		<flag name="mac">Enable Mac Standalone target support</flag>
+		<flag name="tizen">Enable Tizen target support</flag>
 		<flag name="webgl">Enable WebGL target support</flag>
+		<flag name="windows">Enable Windows Standalone target support</flag>
 	</use>
 </pkgmetadata>
