@@ -53,7 +53,7 @@ set -x
 echo 'USE="-bindist"' >>"$root"/etc/portage/make.conf
 echo 'FEATURES="test-fail-continue"' >>"$root"/etc/portage/make.conf
 echo 'CONFIG_PROTECT_MASK="/etc/portage"' >>"$root"/etc/portage/make.conf
-echo 'EMERGE_DEFAULT_OPTS="--quiet --autounmask-write --with-test-deps=n --noreplace"' >>"$root"/etc/portage/make.conf
+echo 'EMERGE_DEFAULT_OPTS="--quiet --autounmask-write --with-test-deps=n --noreplace --jobs=2"' >>"$root"/etc/portage/make.conf
 run "$root" eselect profile set "$profile"
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.configure"
