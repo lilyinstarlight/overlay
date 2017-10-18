@@ -116,7 +116,11 @@ src_unpack() {
 	}
 
 	for src in $A; do
-		name="$(basename "$src" | sed -e "s/^${P}-//" -e 's/\.pkg$//' -e 's/\.tar.xz$//' -e "s/^UnitySetup-\(.*\)-Support-for-Editor-${VER}$/\1/")"
+		name="$(basename "$src")"
+		name="${name%.xz}"
+		name="${name%.tar}"
+		name="${name%.pkg}"
+
 		mkdir "$name" || die
 
 		pushd "$name" >/dev/null
@@ -127,37 +131,37 @@ src_unpack() {
 
 src_install() {
 	mkdir -p "${D}"/opt || die
-	cp -a Unity "${D}"/opt/Unity || die
-	cp -a StandardAssets "${D}"/opt/Unity/Editor/Standard\ Assets || die
+	cp -a "${P}"-Unity "${D}"/opt/Unity || die
+	cp -a "${P}"-StandardAssets "${D}"/opt/Unity/Editor/Standard\ Assets || die
 
 	if use doc; then
-		cp -a Documentation/Documentation "${D}"/opt/Unity/Editor/Data/Documentation || die
-		cp -a Documentation/Documentation.html "${D}"/opt/Unity/Editor/Data/Documentation.html || die
+		cp -a "${P}"-Documentation/Documentation "${D}"/opt/Unity/Editor/Data/Documentation || die
+		cp -a "${P}"-Documentation/Documentation.html "${D}"/opt/Unity/Editor/Data/Documentation.html || die
 	fi
 	if use examples; then
-		cp -a Examples/Standard\ Assets\ Example\ Project "${D}"/opt/Unity/Standard\ Assets\ Example\ Project || die
+		cp -a "${P}"-Examples/Standard\ Assets\ Example\ Project "${D}"/opt/Unity/Standard\ Assets\ Example\ Project || die
 	fi
 
 	if use android; then
-		cp -a Android "${D}"/opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer || die
+		cp -a "${P}"-UnitySetup-Android-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer || die
 	fi
 	if use ios; then
-		cp -a iOS "${D}"/opt/Unity/Editor/Data/PlaybackEngines/iOSSupport || die
+		cp -a "${P}"-UnitySetup-iOS-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/iOSSupport || die
 	fi
 	if use mac; then
-		cp -a Mac "${D}"/opt/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport || die
+		cp -a "${P}"-UnitySetup-Mac-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport || die
 	fi
 	if use tizen; then
-		cp -a Tizen "${D}"/opt/Unity/Editor/Data/PlaybackEngines/TizenPlayer || die
+		cp -a "${P}"-UnitySetup-Tizen-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/TizenPlayer || die
 	fi
 	if use webgl; then
-		cp -a WebGL "${D}"/opt/Unity/Editor/Data/PlaybackEngines/WebGLSupport || die
+		cp -a "${P}"-UnitySetup-WebGL-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/WebGLSupport || die
 	fi
 	if use windows; then
-		cp -a Windows "${D}"/opt/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport || die
+		cp -a "${P}"-UnitySetup-Windows-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport || die
 	fi
 	if use facebook; then
-		cp -a Facebook-Games "${D}"/opt/Unity/Editor/Data/PlaybackEngines/Facebook || die
+		cp -a "${P}"-UnitySetup-Facebook-Games-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/Facebook || die
 	fi
 
 	doicon "${FILESDIR}"/unity-editor-icon.png
