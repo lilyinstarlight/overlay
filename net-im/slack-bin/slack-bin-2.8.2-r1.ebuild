@@ -17,7 +17,8 @@ KEYWORDS="~amd64"
 IUSE=""
 RESTRICT="bindist mirror"
 
-RDEPEND="dev-libs/atk:0
+RDEPEND="app-crypt/libsecret
+	dev-libs/atk:0
 	dev-libs/expat:0
 	dev-libs/glib:2
 	dev-libs/nspr:0
