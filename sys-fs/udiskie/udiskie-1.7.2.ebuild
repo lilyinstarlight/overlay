@@ -3,13 +3,13 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
+PYTHON_COMPAT=( python{3_5,3_6} )
 
 inherit distutils-r1 gnome2-utils
 
 DESCRIPTION="An automatic disk mounting service using udisks"
 HOMEPAGE="https://pypi.python.org/pypi/udiskie https://github.com/coldfix/udiskie"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/coldfix/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
