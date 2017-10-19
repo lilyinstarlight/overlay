@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 DESCRIPTION="An application that queries the user for a selection for printing"
 HOMEPAGE="https://github.com/naelstrof/slop"
@@ -23,3 +23,10 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	media-libs/glm"
+
+src_install() {
+	cmake-utils_src_install
+
+	# fix multilib-strict QA error
+	mv "${D}"/usr/lib "${D}"/usr/$(get_libdir) || die
+}
