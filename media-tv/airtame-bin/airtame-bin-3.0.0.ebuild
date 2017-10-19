@@ -10,8 +10,8 @@ HOMEPAGE="https://airtame.com/download"
 MY_PN="${PN/-bin/}"
 MY_PN="${MY_PN}-application"
 SRC_URI="
-	x86? ( http://downloads-cdn.airtame.com/application/ga/lin_x86/releases/deb/airtame-application-2.4.2_i386.deb )
-	amd64? ( http://downloads-cdn.airtame.com/application/ga/lin_x64/releases/deb/airtame-application-2.4.2_amd64.deb )
+	x86? ( http://downloads-cdn.airtame.com/application/ga/lin_x86/releases/deb/airtame-application-${PV}_i386.deb )
+	amd64? ( http://downloads-cdn.airtame.com/application/ga/lin_x64/releases/deb/airtame-application-${PV}_amd64.deb )
 "
 
 LICENSE="Airtame-EULA"
@@ -23,6 +23,7 @@ RDEPEND="
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/glib:2
+	dev-libs/libappindicator:2
 	dev-libs/nspr
 	dev-libs/nss
 	gnome-base/gconf:2
@@ -100,7 +101,7 @@ src_install() {
 	doicon opt/"${MY_PN}"/icon.png
 	domenu usr/share/applications/airtame-application.desktop
 
-	make_wrapper airtame-application /opt/"${MY_PN}/${MY_PN}" /opt/"${MY_PN}" /opt/"${MY_PN}"/resources/app.asar.unpacked/streamer/vendor/airtame-core/lib
+	make_wrapper airtame-application /opt/"${MY_PN}/${MY_PN}" /opt/"${MY_PN}" /opt/"${MY_PN}"/resources/app.asar.unpacked/streamer/vendor/airtame-core/lib:/opt/"${MY_PN}"/resources/app.asar.unpacked/encryption/out/lib
 }
 
 pkg_preinst() {
