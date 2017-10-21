@@ -42,11 +42,6 @@ echo "travis_fold:start:system.prepare"
 prep "$root"
 echo "travis_fold:end:system.prepare"
 
-# merge repoman
-echo "travis_fold:start:repoman.install"
-run "$root" emerge --quiet dev-vcs/git app-portage/repoman
-echo "travis_fold:end:repoman.install"
-
 # configure portage
 echo "travis_fold:start:portage.configure"
 set -x
@@ -57,6 +52,20 @@ echo 'EMERGE_DEFAULT_OPTS="--quiet --autounmask-write --with-test-deps=n --norep
 run "$root" eselect profile set "$profile"
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.configure"
+
+# update portage packages
+echo "travis_fold:start:portage.update"
+set -x
+run "$root" emerge --quiet -uDN --newrepo @world
+{ set +x; } 2>/dev/null
+echo "travis_fold:end:portage.update"
+
+# merge repoman
+echo "travis_fold:start:repoman.install"
+set -x
+run "$root" emerge --quiet dev-vcs/git app-portage/repoman
+{ set +x; } 2>/dev/null
+echo "travis_fold:end:repoman.install"
 
 # move repository to image
 echo "travis_fold:start:repository.copy"
