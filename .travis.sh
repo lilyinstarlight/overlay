@@ -56,14 +56,14 @@ echo "travis_fold:end:portage.configure"
 # update portage packages
 echo "travis_fold:start:portage.update"
 set -x
-run "$root" emerge --quiet -uDN --newrepo @world
+run "$root" emerge -uDN --newrepo @world
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.update"
 
 # merge repoman
 echo "travis_fold:start:repoman.install"
 set -x
-run "$root" emerge --quiet dev-vcs/git app-portage/repoman
+run "$root" emerge dev-vcs/git app-portage/repoman
 { set +x; } 2>/dev/null
 echo "travis_fold:end:repoman.install"
 
