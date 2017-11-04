@@ -1,0 +1,11 @@
+diff --git a/wminput/plugins/led/Makefile.in b/wminput/plugins/led/Makefile.in
+--- a/wminput/plugins/led/Makefile.in
++++ b/wminput/plugins/led/Makefile.in
+@@ -5,6 +5,7 @@ include @top_builddir@/defs.mak
+ PLUGIN_NAME = led
+ SOURCES = led.c
+ CFLAGS += -I@top_builddir@/wminput -I@top_builddir@/libcwiid
++LDLIBS += -lm
+ INST_DIR = $(CWIID_PLUGINS_DIR)
+ 
+ include $(COMMON)/include/plugin.mak
