@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools
+inherit autotools gnome2-utils
 
 DESCRIPTION="A set of open source instruments and effects for digital audio workstations"
 HOMEPAGE="http://calf-studio-gear.org/"
@@ -18,7 +18,7 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="lash lv2 static-libs experimental"
+IUSE="jack lash lv2 static-libs experimental"
 
 RDEPEND="dev-libs/atk
 	dev-libs/expat
@@ -30,14 +30,11 @@ RDEPEND="dev-libs/atk
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
 	x11-libs/pango
+	jack? ( virtual/jack )
 	lash? ( media-sound/lash )
 	lv2? ( media-libs/lv2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-PATCHES=(
-	"${FILESDIR}/${P}-cpp14.patch" # bug #594116
-)
 
 src_prepare() {
 	eautoreconf
@@ -48,9 +45,14 @@ src_prepare() {
 src_configure() {
 	myeconfargs=(
 		--with-lv2-dir=/usr/$(get_libdir)/lv2
+		$(use_with jack)
 		$(use_with lash)
 		$(use_with lv2)
 		$(use_enable experimental)
 	)
-	autotools-utils_src_configure
+	default
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
 }
