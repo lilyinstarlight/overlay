@@ -13,7 +13,7 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${PV}"
 
 ARDUINO_PN="arduino"
-ARDUINO_PV="1.8.2"
+ARDUINO_PV="1.8.5"
 ARDUINO_P="${ARDUINO_PN}-${ARDUINO_PV}"
 
 SRC_URI="
@@ -23,7 +23,7 @@ SRC_URI="
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="virtual/libusb:0"
