@@ -24,7 +24,7 @@ IUSE=""
 
 RUBY_S="${MY_P}"
 
-ruby_add_rdepend "dev-ruby/activesupport:5.1 dev-ruby/yajl-ruby <dev-ruby/cms_scanner-0.0.38 dev-ruby/dm-core dev-ruby/dm-constraints dev-ruby/dm-migrations dev-ruby/dm-sqlite-adapter"
+ruby_add_rdepend "dev-ruby/activesupport:5.1 dev-ruby/yajl-ruby <dev-ruby/cms_scanner-0.0.39 dev-ruby/dm-core dev-ruby/dm-constraints dev-ruby/dm-migrations dev-ruby/dm-sqlite-adapter"
 ruby_add_bdepend "dev-ruby/rspec-its >=dev-ruby/webmock-1.22.0:0"
 
 all_ruby_prepare() {
