@@ -18,9 +18,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 CDEPEND="dev-python/six[${PYTHON_USEDEP}]
-		dev-python/httplib2[${PYTHON_USEDEP}]
+		dev-python/requests[${PYTHON_USEDEP}]
 		dev-python/PySocks[${PYTHON_USEDEP}]
-		dev-python/pytz[${PYTHON_USEDEP}]"
+		dev-python/pytz[${PYTHON_USEDEP}]
+		dev-python/pyjwt[${PYTHON_USEDEP}]"
 
 RDEPEND="${CDEPEND}"
 DEPEND="test? (
