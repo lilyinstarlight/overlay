@@ -16,7 +16,7 @@ case ${PV} in
 	inherit git-r3
 	;;
 *)
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS=""
 	SRC_URI="https://github.com/peak3d/inputstream.adaptive/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/inputstream.adaptive-${PV}"
 	;;
