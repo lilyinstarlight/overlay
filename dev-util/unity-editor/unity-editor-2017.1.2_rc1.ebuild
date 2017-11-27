@@ -70,7 +70,7 @@ RDEPEND="
 	)
 
 	webgl? (
-		virtual/jdk:1.7
+		virtual/jdk
 	)
 "
 
