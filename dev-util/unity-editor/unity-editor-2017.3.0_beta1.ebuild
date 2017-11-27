@@ -91,11 +91,11 @@ RDEPEND="
 		virtual/ffmpeg
 		app-arch/gzip
 		dev-util/android-sdk-update-manager
-		virtual/jre:1.7
+		virtual/jre
 	)
 
 	webgl? (
-		virtual/jdk:1.7
+		virtual/jdk
 	)
 "
 

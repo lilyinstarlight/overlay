@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-S="${WORKDIR}/${PN}-${PV}+${UBUNTU_RELEASE}"
+S="${WORKDIR}/${P}+${UBUNTU_RELEASE}"
 
 src_install() {
 	insinto /lib/firmware
-	doins ${S}/install/0/*.fw
+	doins "${S}"/install/0/*.fw
 }

@@ -15,10 +15,10 @@ IUSE=""
 S="${WORKDIR}"
 
 src_unpack() {
-	cp ${DISTDIR}/${A} ${S}
+	cp "${DISTDIR}/${A}" "${S}"
 }
 
 src_install() {
 	insinto /lib/firmware
-	doins ${S}/*.fw
+	doins "${S}"/*.fw
 }
