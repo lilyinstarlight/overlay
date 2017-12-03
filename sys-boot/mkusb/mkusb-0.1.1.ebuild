@@ -27,6 +27,8 @@ src_compile() {
 src_install() {
 	newsbin "${PN}".sh "${PN}"
 
+	doman "${PN}".1
+
 	insinto /usr/share/"${PN}"
 	doins -r examples
 }
