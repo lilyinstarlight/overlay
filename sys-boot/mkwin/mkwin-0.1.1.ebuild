@@ -28,4 +28,6 @@ src_compile() {
 
 src_install() {
 	newsbin "${PN}".sh "${PN}"
+
+	doman "${PN}".1
 }
