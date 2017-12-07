@@ -37,6 +37,7 @@ src_install() {
 	fi
 	insinto /usr/share/filebot/lib
 	doins "lib/${lib_arch}/libjnidispatch.so"
+	doins "lib/${lib_arch}/lib7-Zip-JBinding.so"
 	java-pkg_dojar "${MY_PN}.jar"
 	exeopts -m755
 	exeinto "/usr/bin"
