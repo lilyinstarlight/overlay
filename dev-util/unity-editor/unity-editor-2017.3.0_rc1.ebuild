@@ -8,7 +8,7 @@ inherit eutils unpacker versionator xdg
 DESCRIPTION="Editor for the Unity game engine"
 HOMEPAGE="httpss://unity3d.com/"
 
-HASH="2ca68d182788"
+HASH="3c89f8d277f5"
 
 REL="$(get_version_component_range 4)"
 REL="${REL/rc/f}"
