@@ -68,15 +68,15 @@ src_install() {
 
 	# add .so links to prevent Eagle from mixing bundled libraries with system libraries
 	for so in lib/*.so.*; do
-		ln -s "$(basename "${so}")" "${so%%.so*}.so" || die
+		[ -e "${so%%.so*}.so" ] || ln -s "$(basename "${so}")" "${so%%.so*}.so" || die
 	done
 
 	mkdir -p "${D}"/opt/"${PN}" || die
 	cp -a * "${D}"/opt/"${PN}" || die
 
-	newicon bin/${PN}icon50.png ${PF}-icon50.png
+	doicon bin/${PN}-logo.png
 	make_wrapper ${PN} "${EROOT}opt/${PN}/eagle" "${EROOT}opt/${PN}" "${EROOT}opt/${PN}/lib"
-	make_desktop_entry ${PN} "EAGLE PCB Designer" ${PF}-icon50 "Graphics;Electronics"
+	make_desktop_entry ${PN} "EAGLE PCB Designer" ${PF}-logo "Graphics;Electronics"
 }
 
 pkg_postinst() {
