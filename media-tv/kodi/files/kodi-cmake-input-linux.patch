@@ -1,0 +1,12 @@
+diff --git a/xbmc/platform/linux/input/CMakeLists.txt b/xbmc/platform/linux/input/CMakeLists.txt
+index 90ec1a1004..ea9d974099 100644
+--- a/xbmc/platform/linux/input/CMakeLists.txt
++++ b/xbmc/platform/linux/input/CMakeLists.txt
+@@ -11,4 +11,6 @@ if(CORE_PLATFORM_NAME_LC STREQUAL rbpi OR CORE_PLATFORM_NAME_LC STREQUAL gbm OR
+   list(APPEND HEADERS LinuxInputDevices.h)
+ endif()
+
+-core_add_library(input_linux)
++if (NOT SOURCES STREQUAL "")
++  core_add_library(input_linux)
++endif()
