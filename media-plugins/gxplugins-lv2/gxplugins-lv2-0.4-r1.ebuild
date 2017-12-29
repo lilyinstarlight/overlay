@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit multilib
+
 DESCRIPTION="A set of LV2 plugins from the Guitarix project"
 HOMEPAGE="http://guitarix.org/"
 MY_PN="GxPlugins.lv2"
@@ -25,3 +27,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}"
+
+src_prepare() {
+	find -name "Makefile" -exec sed -i -e "s#INSTALL_DIR = /usr/lib/lv2#INSTALL_DIR=/usr/$(get_libdir)/lv2#g" '{}' ';' || die
+
+	default
+}

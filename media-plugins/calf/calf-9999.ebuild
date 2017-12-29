@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools gnome2-utils
+inherit autotools gnome2-utils multilib
 
 DESCRIPTION="A set of open source instruments and effects for digital audio workstations"
 HOMEPAGE="http://calf-studio-gear.org/"
@@ -43,14 +43,11 @@ src_prepare() {
 }
 
 src_configure() {
-	myeconfargs=(
-		--with-lv2-dir=/usr/$(get_libdir)/lv2
-		$(use_with jack)
-		$(use_with lash)
-		$(use_with lv2)
+	econf \
+		--with-lv2-dir="/usr/$(get_libdir)/lv2" \
+		$(use_with lash) \
+		$(use_with lv2) \
 		$(use_enable experimental)
-	)
-	default
 }
 
 pkg_postinst() {
