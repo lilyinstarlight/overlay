@@ -15,16 +15,17 @@ SLOT="0"
 KEYWORDS=""
 IUSE="cec +desktop joystick lirc"
 
+QT_VERSION=5.7.1
 CDEPEND="
-	>=dev-qt/qtcore-5.7
-	>=dev-qt/qtnetwork-5.7
-	>=dev-qt/qtxml-5.7
-	>=dev-qt/qtwebchannel-5.7[qml]
-	>=dev-qt/qtwebengine-5.7
-	>=dev-qt/qtdeclarative-5.7
-	>=dev-qt/qtquickcontrols-5.7
-	>=dev-qt/qtx11extras-5.7
-	>=media-video/mpv-0.22.0[libmpv]
+	>=dev-qt/qtcore-${QT_VERSION}
+	>=dev-qt/qtnetwork-${QT_VERSION}
+	>=dev-qt/qtxml-${QT_VERSION}
+	>=dev-qt/qtwebchannel-${QT_VERSION}[qml]
+	>=dev-qt/qtwebengine-${QT_VERSION}
+	>=dev-qt/qtdeclarative-${QT_VERSION}
+	>=dev-qt/qtquickcontrols-${QT_VERSION}
+	>=dev-qt/qtx11extras-${QT_VERSION}
+	media-video/mpv[libmpv]
 	virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXrandr

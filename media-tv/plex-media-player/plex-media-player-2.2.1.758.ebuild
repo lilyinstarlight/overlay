@@ -32,7 +32,7 @@ DEPEND="
 	>=dev-qt/qtdeclarative-${QT_VERSION}
 	>=dev-qt/qtquickcontrols-${QT_VERSION}
 	>=dev-qt/qtx11extras-${QT_VERSION}
-	>=media-video/mpv-0.22.0[libmpv]
+	media-video/mpv[libmpv]
 	virtual/opengl
 	x11-libs/libX11
 	x11-libs/libXrandr
