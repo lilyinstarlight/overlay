@@ -8,12 +8,13 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-COMMIT="4be89b5c"
+COMMIT="fed6185a"
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://downloads.plex.tv/plexmediaplayer/${MY_PV}/PlexMediaPlayer-${MY_PV}-macosx-x86_64.zip
 "
 
 LICENSE="GPL-2 PMS-EULA"
@@ -22,7 +23,7 @@ KEYWORDS="amd64 x86"
 IUSE="cec +desktop joystick lirc"
 
 QT_VERSION=5.7.1
-CDEPEND="
+DEPEND="
 	>=dev-qt/qtcore-${QT_VERSION}
 	>=dev-qt/qtnetwork-${QT_VERSION}
 	>=dev-qt/qtxml-${QT_VERSION}
@@ -53,14 +54,8 @@ CDEPEND="
 	)
 "
 
-DEPEND="
-	${CDEPEND}
-
-	>=dev-util/conan-0.20
-"
-
 RDEPEND="
-	${CDEPEND}
+	${DEPEND}
 
 	lirc? (
 		app-misc/lirc
@@ -76,15 +71,6 @@ S="${WORKDIR}/${MY_P}"
 
 CMAKE_IN_SOURCE_BUILD=1
 
-src_unpack() {
-	unpack "${P}".tar.gz
-
-	cd "${S}"
-
-	CONAN_USER_HOME="${S}" conan remote add plex http://conan.plex.tv || die
-	CONAN_USER_HOME="${S}" conan install -o include_desktop=$(usex desktop True False) || die
-}
-
 src_prepare() {
 	sed -i -e '/^  install(FILES ${QTROOT}\/resources\/qtwebengine_devtools_resources.pak DESTINATION resources)$/d' src/CMakeLists.txt || die
 
@@ -99,7 +85,12 @@ src_configure() {
 		-DENABLE_SDL2=$(usex joystick)
 		-DENABLE_LIRC=$(usex lirc)
 		-DQTROOT=/usr/share/qt5
+		-DCONAN_WEB-CLIENT-TV_ROOT="${WORKDIR}"/Plex\ Media\ Player.app/Contents/Resources/web-client
 	)
+
+	if use desktop; then
+		mycmakeargs+=( -DCONAN_WEB-CLIENT-DESKTOP_ROOT="${WORKDIR}"/Plex\ Media\ Player.app/Contents/Resources/web-client )
+	fi
 
 	export BUILD_NUMBER="${BUILD}"
 	export GIT_REVISION="${COMMIT}"

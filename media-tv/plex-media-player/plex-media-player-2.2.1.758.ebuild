@@ -8,12 +8,13 @@ inherit eutils cmake-utils
 DESCRIPTION="next generation Plex client"
 HOMEPAGE="http://plex.tv/"
 
-COMMIT="a36fa532"
+COMMIT="5dad2d62"
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://downloads.plex.tv/plexmediaplayer/${MY_PV}/PlexMediaPlayer-${MY_PV}-macosx-x86_64.zip
 "
 
 LICENSE="GPL-2 PMS-EULA"
@@ -21,15 +22,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cec +desktop joystick lirc"
 
-CDEPEND="
-	>=dev-qt/qtcore-5.7
-	>=dev-qt/qtnetwork-5.7
-	>=dev-qt/qtxml-5.7
-	>=dev-qt/qtwebchannel-5.7[qml]
-	>=dev-qt/qtwebengine-5.7
-	>=dev-qt/qtdeclarative-5.7
-	>=dev-qt/qtquickcontrols-5.7
-	>=dev-qt/qtx11extras-5.7
+QT_VERSION=5.7.1
+DEPEND="
+	>=dev-qt/qtcore-${QT_VERSION}
+	>=dev-qt/qtnetwork-${QT_VERSION}
+	>=dev-qt/qtxml-${QT_VERSION}
+	>=dev-qt/qtwebchannel-${QT_VERSION}[qml]
+	>=dev-qt/qtwebengine-${QT_VERSION}
+	>=dev-qt/qtdeclarative-${QT_VERSION}
+	>=dev-qt/qtquickcontrols-${QT_VERSION}
+	>=dev-qt/qtx11extras-${QT_VERSION}
 	>=media-video/mpv-0.22.0[libmpv]
 	virtual/opengl
 	x11-libs/libX11
@@ -52,14 +54,8 @@ CDEPEND="
 	)
 "
 
-DEPEND="
-	${CDEPEND}
-
-	>=dev-util/conan-0.20
-"
-
 RDEPEND="
-	${CDEPEND}
+	${DEPEND}
 
 	lirc? (
 		app-misc/lirc
@@ -75,15 +71,6 @@ S="${WORKDIR}/${MY_P}"
 
 CMAKE_IN_SOURCE_BUILD=1
 
-src_unpack() {
-	unpack "${P}".tar.gz
-
-	cd "${S}"
-
-	CONAN_USER_HOME="${S}" conan remote add plex http://conan.plex.tv || die
-	CONAN_USER_HOME="${S}" conan install -o include_desktop=$(usex desktop True False) || die
-}
-
 src_prepare() {
 	sed -i -e '/^  install(FILES ${QTROOT}\/resources\/qtwebengine_devtools_resources.pak DESTINATION resources)$/d' src/CMakeLists.txt || die
 
@@ -98,7 +85,12 @@ src_configure() {
 		-DENABLE_SDL2=$(usex joystick)
 		-DENABLE_LIRC=$(usex lirc)
 		-DQTROOT=/usr/share/qt5
+		-DCONAN_WEB-CLIENT-TV2_ROOT="${WORKDIR}"/Plex\ Media\ Player.app/Contents/Resources/web-client
 	)
+
+	if use desktop; then
+		mycmakeargs+=( -DCONAN_WEB-CLIENT-DESKTOP_ROOT="${WORKDIR}"/Plex\ Media\ Player.app/Contents/Resources/web-client )
+	fi
 
 	export BUILD_NUMBER="${BUILD}"
 	export GIT_REVISION="${COMMIT}"
