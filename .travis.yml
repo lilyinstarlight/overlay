@@ -3,7 +3,7 @@ sudo: required
 script:
   - sudo ./.travis.sh
 env:
-  - PACAKGES="app-admin/linode-cli:{0,4} app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish app-vim/neovim-remote"
+  - PACKAGES="app-admin/linode-cli:{0,4} app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish app-vim/neovim-remote"
   - PACKAGES="dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-python/{pandocfilters,slixmpp,twilio,vex} dev-util/ffdec"
   - PACKAGES="games-action/armagetronad{,-dedicated} games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes}"
   - PACKAGES="media-gfx/{maim,sk1} media-libs/openvr media-plugins/{calf,gxplugins-lv2,midifilter-lv2} media-sound/{gxtuner,ympd} media-tv/{airtame-bin,plex-media-server,plexpy} media-video/v4l2loopback"
