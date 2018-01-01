@@ -16,7 +16,7 @@ env:
   - PACKAGES="net-im/{discord-bin,slack-bin}"
   - PACKAGES="net-p2p/zget net-wireless/create_ap"
   - PACKAGES="net-wireless/unifi"
-  - PACKAGES="sci-electronics/{eagle} sci-physics/chipmunk"
+  - PACKAGES="sci-electronics/eagle sci-physics/chipmunk"
   - PACKAGES="sci-electronics/freeroute"
   - PACKAGES="sci-electronics/fritzing-bin"
   - PACKAGES="sys-apps/petty sys-kernel/pf-sources www-servers/pagekite"
