@@ -27,6 +27,7 @@ prep() {
 	mount --make-rslave "$1"/sys
 	mount --bind /dev "$1"/dev
 	mount --make-rslave "$1"/dev
+	test -L /dev/shm && rm /dev/shm && mkdir /dev/shm
 	mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm
 	chmod 1777 /dev/shm
 	{ set +x; } 2>/dev/null
