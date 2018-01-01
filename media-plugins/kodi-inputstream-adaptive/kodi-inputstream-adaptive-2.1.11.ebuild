@@ -7,7 +7,8 @@ inherit cmake-utils kodi-addon
 
 DESCRIPTION="Kodi's Adaptive inputstream addon"
 HOMEPAGE="https://github.com/peak3d/inputstream.adaptive.git"
-SRC_URI=""
+
+COMMIT="95b1c03dee6cd6eb56484f9ebfc0b140807b8f56"
 
 case ${PV} in
 9999)
@@ -17,8 +18,8 @@ case ${PV} in
 	;;
 *)
 	KEYWORDS=""
-	SRC_URI="https://github.com/peak3d/inputstream.adaptive/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/inputstream.adaptive-${PV}"
+	SRC_URI="https://github.com/peak3d/inputstream.adaptive/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
+	S="${WORKDIR}/inputstream.adaptive-${COMMIT}"
 	;;
 esac
 
