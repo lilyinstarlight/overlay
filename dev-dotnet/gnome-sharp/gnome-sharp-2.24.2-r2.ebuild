@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="5"
+EAPI=5
 
-inherit dotnet autotools base
+inherit dotnet autotools base multilib
 
 SLOT="2"
 DESCRIPTION="gnome bindings for mono"
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 	sys-devel/automake:1.11"
 
 src_prepare() {
+	epatch "${FILESDIR}"/"${P}"-fix-mono-path.patch
+
 	base_src_prepare
 	eautoreconf
 	elibtoolize
@@ -41,4 +43,5 @@ src_configure() {
 src_install() {
 	default
 	dotnet_multilib_comply
+	sed -i "s#/usr/lib/#/usr/$(get_libdir)/#g" "${D}"/usr/bin/* || die "sed failed"
 }
