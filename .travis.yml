@@ -9,7 +9,6 @@ env:
   - PACKAGES="dev-python/{twilio,vex}"
   - PACKAGES="games-action/armagetronad-dedicated"
   - PACKAGES="games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes}"
-  - PACKAGES="media-plugins/{calf,gxplugins-lv2,midifilter-lv2} media-sound/gxtuner"
   - PACKAGES="media-libs/openvr media-sound/ympd media-tv/plex-media-server"
   - PACKAGES="net-fs/pingfs net-mail/syncmaildir"
   - PACKAGES="net-p2p/zget net-wireless/create_ap sci-physics/chipmunk"
