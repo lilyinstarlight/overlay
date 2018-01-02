@@ -5,7 +5,6 @@ script:
 env:
   - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
   - PACKAGES="app-admin/linode-cli:{0,4}"
-  - PACKAGES="app-vim/neovim-remote"
   - PACKAGES="dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-python/{pandocfilters,slixmpp}"
   - PACKAGES="dev-python/{twilio,vex}"
   - PACKAGES="games-action/armagetronad-dedicated"
