@@ -25,6 +25,9 @@ Packages
 #### Plex [media-tv/plex-media-server, media-tv/plex-home-theater, media-tv/plex-media-player, media-tv/plexpy, media-video/plex-ffmpeg, media-plugins/plex-for-kodi, media-plugins/plex-kodi-connect]
 [Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64" or "~x86" keywords to the packages to get the latest Plex Pass versions.
 
+#### Kodi Netflix [media-plugins/kodi-netflix]
+[Kodi Netflix](https://github.com/asciidisco/plugin.video.netflix) is an Inputstream based Netflix plugin for Kodi.
+
 #### v4l2loopback [media-video/v4l2loopback]
 [v4l2loopback](https://github.com/umlaeute/v4l2loopback) is a kernel module to create V4L2 loopback devices. These can be used in conjunction with software (e.g. ffmpeg or gstreamer) to create a virtual webcam device.
 
@@ -49,29 +52,14 @@ Packages
 #### sK1 [media-gfx/sk1]
 [sK1](https://sk1project.net/) is an open-source illustration program that can substitute professional proprietary software like Corel Draw or Adobe Illustrator.
 
+#### Unified Remote Server [app-misc/urserver-bin]
+[Unified Remote](https://www.unifiedremote.com/) is a universal remote control for your smartphone that can control over 100 applications. This package is the server component.
 
-### Security Tools
+#### Airtame [media-tv/airtame-bin]
+[Airtame](https://airtame.com/) is a program to allow others to wirelessly connect to a screen.
 
-#### Metasploit [net-analyzer/metasploit]
-[Metasploit](https://www.metasploit.org/) is a framework for developing, testing, and using vulnerability exploits.
-
-#### Bettercap [net-analyzer/bettercap]
-[Bettercap](https://bettercap.org/) is a modular MITM framework.
-
-#### WPScan [net-analyzer/wpscan]
-[WPScan](https://wpscan.org/) is a WordPress vulnerability scanner.
-
-#### mitmproxy [net-analyzer/mitmproxy]
-[mitmproxy](http://mitmproxy.org/) is an interactive, SSL-capable, man-in-the-middle HTTP proxy.
-
-#### BeEF [www-apps/beef]
-[BeEF](https://beefproject.com/) is a browser exploitation framework.
-
-#### Weevely [www-misc/weevely]
-[Weevely](https://github.com/epinna/weevely3) is a command line web shell.
-
-#### JohnTheRipper [app-crypt/johntheripper]
-[JohnTheRipper](http://www.openwall.comm/john/) is a fast password cracker.
+#### Filebot [media-video/filebot]
+[Filebot](https://www.filebot.net/) is a tool for renaming TV shows, downloading subtitles, and validating checksums.
 
 
 ### Games
@@ -87,6 +75,12 @@ Packages
 
 #### nSnake [games-arcade/nsnake]
 [nSnake](https://github.com/alexdantas/nSnake) is a clone of the classic snake game on the terminal.
+
+#### Lolcat [games-misc/lolcat]
+[Lolcat](https://github.com/busyloop/lolcat) is a program to lolcat-ize your terminal output.
+
+#### git-fire [games-misc/git-fire]
+[git-fire](https://github.com/qw3rtman/git-fire) is for saving your code in Git in case of an emergency.
 
 #### Cockatrice [games-board/cockatrice]
 [Cockatrice](http://www.reddit.com/r/Cockatrice) is a cross-platform virtual tabletop for multiplayer card games, such as Magic: The Gathering, over a network.
@@ -133,6 +127,9 @@ Packages
 #### Wemux [app-misc/wemux]
 [Wemux](https://github.com/zolrath/wemux) is multi-user tmux made easy.
 
+#### pass-otp [app-admin/pass-otp]
+[Wemux](https://github.com/tadfisher/pass-otp) is a [pass](https://www.passwordstore.org/) plugin for managing OTP tokens.
+
 
 ### Administration
 
@@ -148,8 +145,17 @@ Packages
 #### exfat-nofuse [sys-fs/exfat-nofuse]
 [exfat-nofuse](https://github.com/dorimanx/exfat-nofuse) is a non-FUSE kernel driver for exFat and VFat file systems.
 
-#### EDK2 OVMF [sys-firmware/edk2-ovmf]
-[EDK2 OVMF](http://www.tianocore.org/) is a firmware image for the EDK II UEFI firmware.
+#### πfs [sys-fs/pifs]
+[πfs](https://github.com/philipl/pifs) is an esoteric data-free filesystem.
+
+#### pingfs [sys-fs/pingfs]
+[pingfs](https://github.com/yarrick/pingfs) is an esoteric filesystem that stores your data in the cloud for free.
+
+#### exfat-nofuse [sys-fs/exfat-nofuse]
+[exfat-nofuse](https://github.com/dorimanx/exfat-nofuse) is a non-FUSE kernel driver for exFat and VFat file systems.
+
+#### Elvish [app-shells/elvish]
+[Elvish](https://elvish.io) is a novel, expressive Unix shell.
 
 
 ### Development
@@ -172,13 +178,17 @@ Packages
 #### Komodo Edit [app-editors/komodo-edit-bin]
 [Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit) is a simple, polyglot editor that provides the basic functionality you need for programming.
 
+#### Vex [dev-python/vex]
+[Vex](https://github.com/sashahart/vex) is a command to manage and run commands in virtualenvs.
+
+#### Twine [dev-python/twine]
+[Twine](https://pypi.python.org/pypi/twine) is a collection of utilities for interacting with PyPI.
+
+
 ### Libraries
 
 #### Chipmunk2D [sci-physics/chipmunk]
 [Chipmunk2D](http://chipmunk-physics.net/) is a simple, lightweight, fast and portable 2D rigid body physics library.
-
-#### Boto [dev-python/boto]
-[Boto](https://github.com/boto/boto/) is a Python interface to Amazon Web Services.
 
 #### Slixmpp [dev-python/slixmpp]
 [Slixmpp](https://dev.louiz.org/projects/slixmpp) is a Python library for XMPP. It is the asyncio fork of SleekXMPP
@@ -200,3 +210,6 @@ Packages
 
 #### Fritzing [sci-electronics/fritzing-bin]
 [Fritzing](http://fritzing.org/) is an open-source hardware initiative that makes electronics accessible as a creative material for anyone.
+
+#### Eagle [sci-electronics/eagle]
+[Eagle](https://www.autodesk.com/products/eagle/overview) is a popular schematic and PCB layout editor.
