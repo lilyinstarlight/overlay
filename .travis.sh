@@ -30,7 +30,6 @@ prep() {
 	mkdir -p "$1"/run/shm
 	mount --bind /run/shm "$1"/run/shm
 	mount --make-rslave "$1"/run/shm
-	mount
 	{ set +x; } 2>/dev/null
 
 	run "$1" emerge-webrsync
