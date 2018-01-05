@@ -27,6 +27,8 @@ prep() {
 	mount --make-rslave "$1"/sys
 	mount --bind /dev "$1"/dev
 	mount --make-rslave "$1"/dev
+	mount --bind /dev/pts "$1"/dev/pts
+	mount --make-rslave "$1"/dev/pts
 	mkdir -p "$1"/run/shm
 	mount --bind /run/shm "$1"/run/shm
 	mount --make-rslave "$1"/run/shm
