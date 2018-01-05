@@ -5,11 +5,13 @@ EAPI="6"
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE='sqlite(+)'
 
-inherit python-single-r1 systemd
+inherit python-single-r1 systemd versionator
 
 DESCRIPTION="A python based web application for monitoring your Plex Media Server."
 HOMEPAGE="https://github.com/drzoidberg33/plexpy"
-SRC_URI="https://github.com/drzoidberg33/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+MY_PV="${PV/_beta/-beta}"
+MY_P="${PN}-${MY_PV}"
+SRC_URI="https://github.com/drzoidberg33/${PN}/archive/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,8 +23,11 @@ RDEPEND="
 	${DEPEND}
 "
 DEPEND="
+	media-tv/plex-media-server
 	${PYTHON_DEPS}
 "
+
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	dodoc API.md CHANGELOG.md CONTRIBUTING.md ISSUE_TEMPLATE.md README.md
