@@ -27,9 +27,10 @@ prep() {
 	mount --make-rslave "$1"/sys
 	mount --bind /dev "$1"/dev
 	mount --make-rslave "$1"/dev
-	test -L /dev/shm && rm /dev/shm && mkdir /dev/shm
-	mount --types tmpfs --options nosuid,nodev,noexec shm /dev/shm
-	chmod 1777 /dev/shm
+	mkdir -p "$1"/run/shm
+	mount --bind /run/shm "$1"/run/shm
+	mount --make-rslave "$1"/run/shm
+	mount
 	{ set +x; } 2>/dev/null
 
 	run "$1" emerge-webrsync
