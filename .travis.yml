@@ -10,18 +10,18 @@ jobs:
   include:
     - stage: setup
       script:
-        - sudo ./.ci/setup.sh ~/gentoo
-        - sudo ./.ci/sync.sh ~/gentoo
+        - sudo .ci/setup.sh ~/gentoo
+        - sudo .ci/sync.sh ~/gentoo
 
     - stage: test
       script:
-        - sudo ./.ci/sync.sh ~/gentoo
-        - sudo ./.ci/test.sh ~/gentoo
+        - sudo .ci/sync.sh ~/gentoo
+        - sudo .ci/test.sh ~/gentoo
 
     - stage: build
       script:
-        - sudo ./.ci/sync.sh ~/gentoo
-        - sudo ./.ci/build.sh ~/gentoo
+        - sudo .ci/sync.sh ~/gentoo
+        - sudo .ci/build.sh ~/gentoo
       env:
         - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
         - PACKAGES="app-admin/linode-cli:{0,4}"
