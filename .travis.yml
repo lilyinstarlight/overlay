@@ -1,7 +1,10 @@
 language: bash
 sudo: required
+install:
+  - sudo ./.ci/setup.sh
 script:
-  - sudo ./.travis.sh
+  - sudo ./.ci/test.sh
+  - sudo ./.ci/build.sh
 env:
   - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
   - PACKAGES="app-admin/linode-cli:{0,4}"

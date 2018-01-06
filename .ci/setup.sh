@@ -1,41 +1,5 @@
 #!/bin/bash -e
-mirror="https://mirrors.kernel.org/gentoo"
-overlay="$(pwd)"
-name="$(cat "$overlay/profiles/repo_name")"
-root="/gentoo"
-profile="default/linux/amd64/13.0"
-packages="$PACKAGES"
-
-export PS4="$ "
-
-strap() {
-	set -x
-	mkdir -p "$1"
-	curl "$2"/releases/amd64/autobuilds/latest-stage4-amd64-minimal.txt | sed -e '1 d' -e '2 d' -e '3 s/\(.*\) .*/\1/' | xargs -I '{}' curl -s "$2"/releases/amd64/autobuilds/'{}' | tar -C "$1" -xj
-	{ set +x; } 2>/dev/null
-}
-
-run() {
-	chroot "$1" /usr/bin/env - /bin/bash -c "source /etc/profile && export PS4=\"$PS4\" && set -x && ${*:2}"
-}
-
-prep() {
-	set -x
-	mount --bind "$1" "$1"
-	mount -t proc none "$1"/proc
-	mount --bind /sys "$1"/sys
-	mount --make-rslave "$1"/sys
-	mount --bind /dev "$1"/dev
-	mount --make-rslave "$1"/dev
-	mount --bind /dev/pts "$1"/dev/pts
-	mount --make-rslave "$1"/dev/pts
-	mkdir -p "$1"/run/shm
-	mount --bind /run/shm "$1"/run/shm
-	mount --make-rslave "$1"/run/shm
-	{ set +x; } 2>/dev/null
-
-	run "$1" emerge-webrsync
-}
+source "$(readlink -f "$(basename $0)")"/common.sh
 
 # get root image
 echo "travis_fold:start:system.bootstrap"
@@ -89,9 +53,3 @@ echo 'location = /usr/local/portage' >>"$root"/etc/portage/repos.conf/"$name".co
 echo 'auto-sync = no' >>"$root"/etc/portage/repos.conf/"$name".conf
 { set +x; } 2>/dev/null
 echo "travis_fold:end:repository.setup"
-
-# run repoman on codebase
-run "$root" cd /usr/local/portage '&&' repoman -v full
-
-# retry up to four times as necessary for rerunning after writing autounmask changes
-run "$root" emerge $packages || run "$root" emerge $packages || run "$root" emerge $packages || run "$root" emerge $packages || run "$root" emerge $packages
