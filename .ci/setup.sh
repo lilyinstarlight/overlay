@@ -1,5 +1,5 @@
 #!/bin/bash -e
-source "$(readlink -f "$(basename $0)")"/common.sh
+source "$(readlink -f "$(dirname $0)")"/common.sh
 
 # get root image
 echo "travis_fold:start:system.bootstrap"
