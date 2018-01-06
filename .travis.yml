@@ -11,7 +11,7 @@ jobs:
     - stage: setup
       script:
         - sudo .ci/setup.sh ~/gentoo
-        - sudo .ci/sync.sh ~/gentoo
+        - sudo .ci/upload.sh ~/gentoo
 
     - stage: test
       script:
