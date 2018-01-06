@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="ffmpeg lame selinux"
 
 RDEPEND="
-	>=virtual/jre-1.8
+	>=virtual/jre-1.8:*
 	lame? ( media-sound/lame )
 	ffmpeg? ( virtual/ffmpeg )"
 
