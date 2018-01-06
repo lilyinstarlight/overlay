@@ -2,7 +2,7 @@ language: bash
 sudo: required
 
 before_install:
-  - sudo pip install awscli
+  - pip install --user awscli
 
 stages:
   - setup
@@ -13,18 +13,18 @@ jobs:
   include:
     - stage: setup
       script:
-        - sudo ./.ci/setup.sh ../gentoo
-        - aws s3 sync s3://fkmclane-build/gentoo ../gentoo
+        - sudo ./.ci/setup.sh ~/gentoo
+        - ~/.local/bin/aws s3 sync s3://fkmclane-build/gentoo ~/gentoo
 
     - stage: test
       script:
-        - aws s3 sync s3://fkmclane-build/gentoo ../gentoo
-        - sudo ./.ci/test.sh ../gentoo
+        - ~/.local/bin/aws s3 sync s3://fkmclane-build/gentoo ~/gentoo
+        - sudo ./.ci/test.sh ~/gentoo
 
     - stage: build
       script:
-        - aws s3 sync s3://fkmclane-build/gentoo ../gentoo
-        - sudo ./.ci/build.sh ../gentoo
+        - ~/.local/bin/aws s3 sync s3://fkmclane-build/gentoo ~/gentoo
+        - sudo ./.ci/build.sh ~/gentoo
       env:
         - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
         - PACKAGES="app-admin/linode-cli:{0,4}"
