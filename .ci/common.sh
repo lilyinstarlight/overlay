@@ -1,4 +1,5 @@
 mirror="https://mirrors.kernel.org/gentoo"
+sync="s3://fkmclane-build/gentoo"
 overlay="$(pwd)"
 name="$(cat "$overlay/profiles/repo_name")"
 root="$1"
@@ -21,11 +22,15 @@ run() {
 prep() {
 	set -x
 	mount --bind "$1" "$1"
+	mkdir -p "$1"/proc
 	mount -t proc none "$1"/proc
+	mkdir -p "$1"/sys
 	mount --bind /sys "$1"/sys
 	mount --make-rslave "$1"/sys
+	mkdir -p "$1"/dev
 	mount --bind /dev "$1"/dev
 	mount --make-rslave "$1"/dev
+	mkdir -p "$1"/dev/pts
 	mount --bind /dev/pts "$1"/dev/pts
 	mount --make-rslave "$1"/dev/pts
 	mkdir -p "$1"/run/shm

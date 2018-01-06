@@ -1,9 +1,6 @@
 language: bash
 sudo: required
 
-before_install:
-  - pip install --user awscli
-
 stages:
   - setup
   - test
@@ -14,16 +11,16 @@ jobs:
     - stage: setup
       script:
         - sudo ./.ci/setup.sh ~/gentoo
-        - ~/.local/bin/aws s3 sync s3://fkmclane-build/gentoo ~/gentoo
+        - sudo ./.ci/sync.sh ~/gentoo
 
     - stage: test
       script:
-        - ~/.local/bin/aws s3 sync s3://fkmclane-build/gentoo ~/gentoo
+        - sudo ./.ci/sync.sh ~/gentoo
         - sudo ./.ci/test.sh ~/gentoo
 
     - stage: build
       script:
-        - ~/.local/bin/aws s3 sync s3://fkmclane-build/gentoo ~/gentoo
+        - sudo ./.ci/sync.sh ~/gentoo
         - sudo ./.ci/build.sh ~/gentoo
       env:
         - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
