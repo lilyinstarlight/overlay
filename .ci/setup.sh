@@ -40,7 +40,7 @@ echo "travis_fold:end:repoman.install"
 echo "travis_fold:start:repository.copy"
 set -x
 mkdir -p "$root"/usr/local
-cp -r "$overlay" "$root"/usr/local/portage
+cp -xr "$overlay" "$root"/usr/local/portage
 { set +x; } 2>/dev/null
 echo "travis_fold:end:repository.copy"
 
