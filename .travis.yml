@@ -11,8 +11,6 @@ jobs:
     - stage: setup
       script:
         - sudo .ci/setup.sh prefix
-        - pwd
-        - ls ~/
         - sudo .ci/upload.sh prefix
 
     - stage: test
