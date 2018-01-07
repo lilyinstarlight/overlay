@@ -11,6 +11,8 @@ jobs:
     - stage: setup
       script:
         - sudo .ci/setup.sh ~/gentoo
+        - sudo pwd
+        - sudo ls
         - sudo .ci/upload.sh ~/gentoo
 
     - stage: test
