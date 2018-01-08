@@ -1,10 +1,12 @@
 mirror="https://mirrors.kernel.org/gentoo"
-sync="s3://fkmclane-build/gentoo"
 overlay="$(pwd)"
 name="$(cat "$overlay/profiles/repo_name")"
 root="$1"
 profile="default/linux/amd64/13.0"
 packages="$PACKAGES"
+
+sync="s3://fkmclane-build/gentoo"
+id="$TRAVIS_COMMIT"
 
 export PS4="$ "
 
@@ -21,6 +23,7 @@ run() {
 
 prep() {
 	set -x
+	mkdir -p "$1"
 	mount --bind "$1" "$1"
 	mkdir -p "$1"/proc
 	mount -t proc none "$1"/proc
