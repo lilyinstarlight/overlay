@@ -31,7 +31,7 @@ IUSE="pax_kernel system-openssl avahi"
 DEPEND="pax_kernel? ( sys-apps/fix-gnustack )
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
 RDEPEND="avahi? ( net-dns/avahi )
-	system-openssl? ( dev-libs/openssl:0/1.1 )
+	system-openssl? ( dev-libs/openssl:0 )
 	${PYTHON_DEPS}"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
