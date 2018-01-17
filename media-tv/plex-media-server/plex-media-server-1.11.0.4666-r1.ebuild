@@ -26,11 +26,12 @@ LICENSE="Plex"
 RESTRICT="mirror bindist strip"
 KEYWORDS="-* ~amd64 ~x86"
 
-IUSE="pax_kernel avahi"
+IUSE="pax_kernel system-openssl avahi"
 
-DEPEND="pax_kernel? ( "sys-apps/fix-gnustack" )
+DEPEND="pax_kernel? ( sys-apps/fix-gnustack )
 	dev-python/virtualenv[${PYTHON_USEDEP}]"
-RDEPEND="avahi? ( "net-dns/avahi" )
+RDEPEND="avahi? ( net-dns/avahi )
+	system-openssl? ( dev-libs/openssl:0/1.1 )
 	${PYTHON_DEPS}"
 
 QA_DESKTOP_FILE="usr/share/applications/plexmediamanager.desktop"
@@ -77,6 +78,11 @@ src_install() {
 
 	# Remove Debian specific files
 	rm -rf "usr/share/doc" || die
+
+	# Remove buggy openssl library
+	if use system-openssl; then
+		rm -f usr/lib/plexmediaserver/libssl.so.1.0.0 || die
+	fi
 
 	# Copy main files over to image and preserve permissions so it is portable
 	cp -rp usr/ "${ED}" || die
