@@ -14,7 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-DEPEND=""
+DEPEND="
+	virtual/opengl
+	media-libs/glew
+"
 RDEPEND=""
 
 src_prepare() {
