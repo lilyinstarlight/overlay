@@ -3,12 +3,12 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 
 inherit distutils-r1 vcs-snapshot
 
-DESCRIPTION="An ordered dictionary with KIO/KVIO"
-HOMEPAGE="https://pypi.python.org/pypi/ruamel.ordereddict"
+DESCRIPTION="Ruamel enhancements to argparse"
+HOMEPAGE="https://pypi.python.org/pypi/ruamel.std.argparse"
 MY_PN="${PN//-/.}"
 MY_P="${MY_PN}-${PV}"
 SRC_URI="https://bitbucket.org/${MY_PN/.//}/get/${PV}.tar.gz -> ${MY_P}.tar.gz"
@@ -32,5 +32,5 @@ python_install() {
 }
 
 python_test() {
-	py.test -v test/test_py27.py || die
+	py.test -v _test/test_*.py || die
 }

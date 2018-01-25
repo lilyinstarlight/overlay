@@ -3,15 +3,13 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 
 inherit distutils-r1 vcs-snapshot
 
-DESCRIPTION="An ordered dictionary with KIO/KVIO"
-HOMEPAGE="https://pypi.python.org/pypi/ruamel.ordereddict"
-MY_PN="${PN//-/.}"
-MY_P="${MY_PN}-${PV}"
-SRC_URI="https://bitbucket.org/${MY_PN/.//}/get/${PV}.tar.gz -> ${MY_P}.tar.gz"
+DESCRIPTION="Ruamel Python Object Notation library"
+HOMEPAGE="https://pypi.python.org/pypi/pon"
+SRC_URI="https://bitbucket.org/ruamel/${PN}/get/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -24,13 +22,11 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] dev-python/flake8[${PYTHON_USEDEP}] )"
 
-S="${WORKDIR}/${MY_P}"
-
 python_install() {
 	distutils-r1_python_install --single-version-externally-managed
 	find "${ED}" -name '*.pth' -delete || die
 }
 
 python_test() {
-	py.test -v test/test_py27.py || die
+	py.test -v _test/test_*.py || die
 }
