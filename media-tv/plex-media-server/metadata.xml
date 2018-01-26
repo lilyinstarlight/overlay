@@ -19,8 +19,6 @@
 	</upstream>
 	<use>
 		<flag name="pax_kernel">Add PaX markings to executables</flag>
-	</use>
-	<use>
 		<flag name="system-openssl">Add PaX markings to executables</flag>
 	</use>
 </pkgmetadata>
