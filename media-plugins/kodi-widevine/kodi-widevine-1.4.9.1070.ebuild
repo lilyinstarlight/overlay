@@ -6,7 +6,7 @@ EAPI=6
 inherit multilib unpacker
 
 CHROME_PN="google-chrome-stable"
-CHROME_PV="63.0.3239.132"
+CHROME_PV="64.0.3282.119"
 CHROME_P="${CHROME_PN}_${CHROME_PV}-1"
 CHROME_DIR="opt/google/chrome"
 
