@@ -47,6 +47,11 @@ python_install() {
 	use doc && dodoc -r _doc/html
 }
 
+python_install_all() {
+	distutils-r1_python_install_all
+	use doc && dodoc -r _doc/_build/html
+}
+
 python_test() {
 	py.test -v _test/test_*.py || die
 }
