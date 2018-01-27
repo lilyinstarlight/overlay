@@ -8,7 +8,7 @@ inherit eutils unpacker versionator xdg
 DESCRIPTION="Editor for the Unity game engine"
 HOMEPAGE="httpss://unity3d.com/"
 
-HASH="3c89f8d277f5"
+HASH="7807bc63c3ab"
 
 REL="$(get_version_component_range 4)"
 REL="${REL/rc/f}"
@@ -26,7 +26,6 @@ SRC_URI="
 	android? ( https://beta.unity3d.com/download/${HASH}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-${VER}.pkg -> ${P}-UnitySetup-Android-Support-for-Editor-${VER}.pkg )
 	ios? ( https://beta.unity3d.com/download/${HASH}/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-${VER}.tar.xz -> ${P}-UnitySetup-iOS-Support-for-Editor-${VER}.tar.xz )
 	mac? ( https://beta.unity3d.com/download/${HASH}/MacEditorTargetInstaller/UnitySetup-Mac-Support-for-Editor-${VER}.pkg -> ${P}-UnitySetup-Mac-Support-for-Editor-${VER}.pkg )
-	tizen? ( https://beta.unity3d.com/download/${HASH}/MacEditorTargetInstaller/UnitySetup-Tizen-Support-for-Editor-${VER}.pkg -> ${P}-UnitySetup-Tizen-Support-for-Editor-${VER}.pkg )
 	webgl? ( https://beta.unity3d.com/download/${HASH}/LinuxEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-${VER}.tar.xz -> ${P}-UnitySetup-WebGL-Support-for-Editor-${VER}.tar.xz )
 	windows? ( https://beta.unity3d.com/download/${HASH}/MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-${VER}.pkg -> ${P}-UnitySetup-Windows-Support-for-Editor-${VER}.pkg )
 	facebook? ( https://beta.unity3d.com/download/${HASH}/MacEditorTargetInstaller/UnitySetup-Facebook-Games-Support-for-Editor-${VER}.pkg -> ${P}-UnitySetup-Facebook-Games-Support-for-Editor-${VER}.pkg )
@@ -35,7 +34,7 @@ SRC_URI="
 LICENSE="Unity-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64"
-IUSE="android doc examples facebook ios +mac tizen webgl +windows"
+IUSE="android doc examples facebook ios +mac webgl +windows"
 
 REQUIRE_USE="facebook? ( webgl windows )"
 
@@ -150,9 +149,6 @@ src_install() {
 	fi
 	if use mac; then
 		cp -a "${P}"-UnitySetup-Mac-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport || die
-	fi
-	if use tizen; then
-		cp -a "${P}"-UnitySetup-Tizen-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/TizenPlayer || die
 	fi
 	if use webgl; then
 		cp -a "${P}"-UnitySetup-WebGL-Support-for-Editor-"${VER}" "${D}"/opt/Unity/Editor/Data/PlaybackEngines/WebGLSupport || die
