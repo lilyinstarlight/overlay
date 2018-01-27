@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 python_prepare_all() {
-	sed -i -e '/enum34/d' setup.py || die
+	sed -i -e "s/find_packages(exclude=\['contrib', 'docs', 'tests'\])/['linode']/" setup.py || die
 
 	distutils-r1_python_prepare_all
 }
