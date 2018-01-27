@@ -1,1 +1,2 @@
 move app-vim/neovim-remote dev-python/neovim-remote
+move www-misc/weevely app-exploits/weevely
