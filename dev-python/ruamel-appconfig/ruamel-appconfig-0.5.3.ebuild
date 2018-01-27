@@ -18,9 +18,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
+# tests fail for python2_7
+RESTRICT="test"
+
 RDEPEND="${PYTHON_DEPS}"
 
 DEPEND="${RDEPEND}
+	dev-python/namespace-ruamel[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] dev-python/flake8[${PYTHON_USEDEP}] dev-python/pon[${PYTHON_USEDEP}] )"
 

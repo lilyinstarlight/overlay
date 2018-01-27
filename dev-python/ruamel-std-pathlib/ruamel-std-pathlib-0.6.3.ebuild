@@ -22,6 +22,7 @@ RDEPEND="${PYTHON_DEPS}
 	$(python_gen_cond_dep 'dev-python/pathlib2[${PYTHON_USEDEP}]' python2_7 python3_4)"
 
 DEPEND="${RDEPEND}
+	dev-python/namespace-ruamel-std[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] dev-python/flake8[${PYTHON_USEDEP}] )"
 

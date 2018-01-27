@@ -25,6 +25,7 @@ RDEPEND="${PYTHON_DEPS}
 	$(python_gen_cond_dep 'dev-python/ruamel-ordereddict[${PYTHON_USEDEP}]' python2_7)"
 
 DEPEND="${RDEPEND}
+	dev-python/namespace-ruamel[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] dev-python/flake8[${PYTHON_USEDEP}] dev-python/ruamel-std-pathlib[${PYTHON_USEDEP}] )
 	doc? ( dev-python/ryd[${PYTHON_USEDEP}] )"
