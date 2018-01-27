@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	=dev-python/linode-api-4.1.4_beta0[${PYTHON_USEDEP}]
+	=dev-python/linode-api-4.1.7_beta0[${PYTHON_USEDEP}]
 	dev-python/terminaltables[${PYTHON_USEDEP}]
 	dev-python/colorclass[${PYTHON_USEDEP}]
 "
