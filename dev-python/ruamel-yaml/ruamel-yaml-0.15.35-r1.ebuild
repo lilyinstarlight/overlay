@@ -43,8 +43,6 @@ python_compile_all() {
 python_install() {
 	distutils-r1_python_install --single-version-externally-managed
 	find "${ED}" -name '*.pth' -delete || die
-
-	use doc && dodoc -r _doc/html
 }
 
 python_install_all() {
