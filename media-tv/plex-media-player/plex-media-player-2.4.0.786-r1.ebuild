@@ -14,7 +14,6 @@ MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
-	https://downloads.plex.tv/plexmediaplayer/${MY_PV}/PlexMediaPlayer-${MY_PV}-macosx-x86_64.zip
 "
 
 LICENSE="GPL-2 PMS-EULA"
@@ -85,12 +84,8 @@ src_configure() {
 		-DENABLE_SDL2=$(usex joystick)
 		-DENABLE_LIRC=$(usex lirc)
 		-DQTROOT=/usr/share/qt5
-		-DCONAN_WEB-CLIENT-TV2_ROOT="${WORKDIR}"/Plex\ Media\ Player.app/Contents/Resources/web-client
+		-DWEB_CLIENT_DISABLE_DESKTOP=$(usex desktop "no" "yes")
 	)
-
-	if use desktop; then
-		mycmakeargs+=( -DCONAN_WEB-CLIENT-DESKTOP_ROOT="${WORKDIR}"/Plex\ Media\ Player.app/Contents/Resources/web-client )
-	fi
 
 	export BUILD_NUMBER="${BUILD}"
 	export GIT_REVISION="${COMMIT}"
