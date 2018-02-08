@@ -5,9 +5,10 @@ EAPI=6
 
 inherit eutils git-r3 cmake-utils
 
-DESCRIPTION="next generation Plex client"
+DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
+EGIT_BRANCH="tv2"
 EGIT_REPO_URI="https://github.com/plexinc/plex-media-player.git"
 
 LICENSE="GPL-2 PMS-EULA"
@@ -16,7 +17,7 @@ KEYWORDS=""
 IUSE="cec +desktop joystick lirc"
 
 QT_VERSION=5.7.1
-CDEPEND="
+DEPEND="
 	>=dev-qt/qtcore-${QT_VERSION}
 	>=dev-qt/qtnetwork-${QT_VERSION}
 	>=dev-qt/qtxml-${QT_VERSION}
@@ -47,14 +48,8 @@ CDEPEND="
 	)
 "
 
-DEPEND="
-	${CDEPEND}
-
-	>=dev-util/conan-0.20
-"
-
 RDEPEND="
-	${CDEPEND}
+	${DEPEND}
 
 	lirc? (
 		app-misc/lirc
@@ -65,18 +60,9 @@ PATCHES=(
 	"${FILESDIR}/iconv-fix.patch"
 )
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${P}"
 
 CMAKE_IN_SOURCE_BUILD=1
-
-src_unpack() {
-	git-r3_src_unpack
-
-	cd "${S}"
-
-	CONAN_USER_HOME="${S}" conan remote add plex http://conan.plex.tv || die
-	CONAN_USER_HOME="${S}" conan install -o include_desktop=$(usex desktop True False) || die
-}
 
 src_prepare() {
 	sed -i -e '/^  install(FILES ${QTROOT}\/resources\/qtwebengine_devtools_resources.pak DESTINATION resources)$/d' src/CMakeLists.txt || die
@@ -92,7 +78,11 @@ src_configure() {
 		-DENABLE_SDL2=$(usex joystick)
 		-DENABLE_LIRC=$(usex lirc)
 		-DQTROOT=/usr/share/qt5
+		-DWEB_CLIENT_DISABLE_DESKTOP=$(usex desktop "no" "yes")
 	)
+
+	export BUILD_NUMBER="${BUILD}"
+	export GIT_REVISION="${COMMIT}"
 
 	cmake-utils_src_configure
 }
