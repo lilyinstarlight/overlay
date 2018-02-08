@@ -5,7 +5,7 @@ EAPI=6
 
 inherit eutils cmake-utils
 
-DESCRIPTION="next generation Plex client"
+DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 COMMIT="fed6185a"
