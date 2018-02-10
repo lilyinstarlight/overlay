@@ -1,0 +1,103 @@
+Title: Security Packages Moved to Pentoo
+Author: Foster McLane <fkmclane@gmail.com>
+Content-Type: text/plain
+Posted: 2018-02-10
+Revision: 1
+News-Item-Format: 1.0
+Display-If-Installed: app-crypt/johntheripper
+Display-If-Installed: dev-db/sqlmap
+Display-If-Installed: dev-python/brotlipy
+Display-If-Installed: dev-python/jsbeautifier
+Display-If-Installed: dev-python/kaitaistruct
+Display-If-Installed: dev-python/pyperclip
+Display-If-Installed: dev-python/python-ntlm
+Display-If-Installed: dev-python/python-utils
+Display-If-Installed: dev-ruby/celluloid-io
+Display-If-Installed: dev-ruby/cms_scanner
+Display-If-Installed: dev-ruby/data_objects
+Display-If-Installed: dev-ruby/dm-constraints
+Display-If-Installed: dev-ruby/dm-core
+Display-If-Installed: dev-ruby/dm-do-adapter
+Display-If-Installed: dev-ruby/dm-migrations
+Display-If-Installed: dev-ruby/dm-serializer
+Display-If-Installed: dev-ruby/dm-sqlite-adapter
+Display-If-Installed: dev-ruby/do_sqlite3
+Display-If-Installed: dev-ruby/em-proxy
+Display-If-Installed: dev-ruby/em-websocket
+Display-If-Installed: dev-ruby/espeak-ruby
+Display-If-Installed: dev-ruby/fastercsv
+Display-If-Installed: dev-ruby/geoip
+Display-If-Installed: dev-ruby/libv8
+Display-If-Installed: dev-ruby/metasm
+Display-If-Installed: dev-ruby/metasploit-concern
+Display-If-Installed: dev-ruby/metasploit-credential
+Display-If-Installed: dev-ruby/metasploit-model
+Display-If-Installed: dev-ruby/metasploit-payloads
+Display-If-Installed: dev-ruby/metasploit_data_models
+Display-If-Installed: dev-ruby/method_source
+Display-If-Installed: dev-ruby/mojo_magick
+Display-If-Installed: dev-ruby/msfrpc-client
+Display-If-Installed: dev-ruby/nessus_rest
+Display-If-Installed: dev-ruby/net-dns
+Display-If-Installed: dev-ruby/opt_parse_validator
+Display-If-Installed: dev-ruby/os
+Display-If-Installed: dev-ruby/parseconfig
+Display-If-Installed: dev-ruby/pg
+Display-If-Installed: dev-ruby/pry
+Display-If-Installed: dev-ruby/qr4r
+Display-If-Installed: dev-ruby/recog
+Display-If-Installed: dev-ruby/rex-arch
+Display-If-Installed: dev-ruby/rex-bin_tools
+Display-If-Installed: dev-ruby/rex-encoder
+Display-If-Installed: dev-ruby/rex-exploitation
+Display-If-Installed: dev-ruby/rex-java
+Display-If-Installed: dev-ruby/rex-mime
+Display-If-Installed: dev-ruby/rex-nop
+Display-If-Installed: dev-ruby/rex-ole
+Display-If-Installed: dev-ruby/rex-powershell
+Display-If-Installed: dev-ruby/rex-random_identifier
+Display-If-Installed: dev-ruby/rex-registry
+Display-If-Installed: dev-ruby/rex-rop_builder
+Display-If-Installed: dev-ruby/rex-socket
+Display-If-Installed: dev-ruby/rex-sslscan
+Display-If-Installed: dev-ruby/rex-text
+Display-If-Installed: dev-ruby/rex-zip
+Display-If-Installed: dev-ruby/rex
+Display-If-Installed: dev-ruby/ruby_smb
+Display-If-Installed: dev-ruby/rubydns
+Display-If-Installed: dev-ruby/signet
+Display-If-Installed: dev-ruby/therubyracer
+Display-If-Installed: dev-ruby/timers
+Display-If-Installed: dev-ruby/ascii85
+Display-If-Installed: dev-ruby/dnsruby
+Display-If-Installed: dev-ruby/metasploit_payloads-mettle
+Display-If-Installed: dev-ruby/nexpose
+Display-If-Installed: dev-ruby/pdf-reader
+Display-If-Installed: dev-ruby/rex-core
+Display-If-Installed: dev-ruby/ruby-progressbar
+Display-If-Installed: dev-ruby/rushover
+Display-If-Installed: dev-ruby/slack-notifier
+Display-If-Installed: dev-ruby/xdr
+Display-If-Installed: net-analyzer/bettercap
+Display-If-Installed: net-analyzer/metasploit
+Display-If-Installed: net-analyzer/nikto
+Display-If-Installed: net-analyzer/wpscan
+Display-If-Installed: net-analyzer/spaghetti
+Display-If-Installed: net-proxy/mitmproxy
+Display-If-Installed: net-wireless/create_ap
+Display-If-Installed: net-wireless/hostapd
+Display-If-Installed: net-wireless/sniffair
+Display-If-Installed: www-apps/beef
+Display-If-Installed: www-misc/Brosec
+Display-If-Installed: www-misc/weevely
+
+Beginning 2018-02-24, security ebuilds will be removed from this overlay in
+favor of the ones in Pentoo[1]. These ebuilds have already been merged into
+Pentoo and have become stagnant.
+
+Install the Pentoo overlay via the following command to keep using these
+ebuilds.
+
+    # layman -a pentoo
+
+[1] https://github.com/pentoo/pentoo-overlay
