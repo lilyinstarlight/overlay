@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>luigi.mantellini@gmail.com</email>
+		<name>Luigi 'Comio' Mantellini</name>
+	</maintainer>
+	<upstream>
+		<changelog>https://github.com/Tautulli/Tautulli/blob/master/CHANGELOG.md</changelog>
+		<doc>https://github.com/Tautulli/Tautulli/wiki</doc>
+	</upstream>
+</pkgmetadata>
