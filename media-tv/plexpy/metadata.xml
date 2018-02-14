@@ -6,8 +6,7 @@
 		<name>Luigi 'Comio' Mantellini</name>
 	</maintainer>
 	<upstream>
-		<changelog>https://github.com/drzoidberg33/plexpy/blob/master/CHANGELOG.md</changelog>
-		<doc>https://github.com/drzoidberg33/plexpy/wiki/Installation</doc>
+		<changelog>https://github.com/Tautulli/Tautulli/blob/master/CHANGELOG.md</changelog>
+		<doc>https://github.com/Tautulli/Tautulli/wiki</doc>
 	</upstream>
-	<use/>
 </pkgmetadata>
