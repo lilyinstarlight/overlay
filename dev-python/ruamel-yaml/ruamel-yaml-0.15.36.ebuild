@@ -8,33 +8,27 @@ PYTHON_COMPAT=( python2_7 python3_{4,5,6} )
 inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="YAML parser/emitter that supports roundtrip comment preservation"
-HOMEPAGE="https://pypi.python.org/pypi/ruamel.yaml"
+HOMEPAGE="https://pypi.python.org/pypi/ruamel.yaml https://bitbucket.org/ruamel/yaml"
 MY_PN="${PN//-/.}"
-MY_P="${MY_PN}-${PV}"
-SRC_URI="https://bitbucket.org/${MY_PN/.//}/get/${PV}.tar.gz -> ${MY_P}-r1.tar.gz"
+SRC_URI="https://bitbucket.org/${MY_PN/.//}/get/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc libyaml test"
-REQUIRED_USE="${PYTHON_REQUIRED_USE} test? ( libyaml )"
-# ^ tests can't be properly unbundled from the libyaml c-extension
+IUSE="doc test"
 
 RDEPEND="${PYTHON_DEPS}
-	libyaml? ( dev-libs/libyaml )
 	$(python_gen_cond_dep 'dev-python/ruamel-ordereddict[${PYTHON_USEDEP}]' python2_7)"
 
 DEPEND="${RDEPEND}
 	dev-python/namespace-ruamel[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/pytest[${PYTHON_USEDEP}] dev-python/flake8[${PYTHON_USEDEP}] dev-python/ruamel-std-pathlib[${PYTHON_USEDEP}] )
-	doc? ( dev-python/ryd[${PYTHON_USEDEP}] )"
-
-S="${WORKDIR}/${MY_P}-r1"
-
-python_configure_all() {
-	use libyaml || sed -i -e 's|\(ext_modules\)|no_\1|' __init__.py || die
-}
+	doc? ( dev-python/ryd[${PYTHON_USEDEP}] )
+	test? (
+		dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/flake8[${PYTHON_USEDEP}]
+		dev-python/ruamel-std-pathlib[${PYTHON_USEDEP}]
+	)"
 
 python_compile_all() {
 	use doc && emake -C _doc html
@@ -51,5 +45,9 @@ python_install_all() {
 }
 
 python_test() {
+	# This file produced by setup.py breaks finding system-wide installed
+	# ruamel.std.pathlib due to shared namespace
+	rm "${BUILD_DIR}/lib/ruamel/__init__.py" || die
+
 	py.test -v _test/test_*.py || die
 }
