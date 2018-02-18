@@ -10,18 +10,18 @@ jobs:
   include:
     - stage: setup
       script:
-        - sudo .ci/setup.sh ../prefix
-        - sudo .ci/upload.sh ../prefix
+        - travis_wait sudo .ci/setup.sh ../prefix
+        - travis_wait sudo .ci/upload.sh ../prefix
 
     - stage: test
       script:
-        - sudo .ci/sync.sh ../prefix
-        - sudo .ci/test.sh ../prefix
+        - travis_wait sudo .ci/sync.sh ../prefix
+        - travis_wait sudo .ci/test.sh ../prefix
 
     - stage: build
       script:
-        - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/sync.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
         - PACKAGES="app-admin/linode-cli:{0,4}"
