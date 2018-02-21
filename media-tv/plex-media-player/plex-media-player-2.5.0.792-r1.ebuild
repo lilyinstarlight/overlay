@@ -8,18 +8,28 @@ inherit eutils gnome2-utils cmake-utils
 DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
+# To change on every release bump:
 COMMIT="1bc7f225"
+WEB_CLIENT_BUILD_ID="4-d2b085013d1fc7"
+WEB_CLIENT_DESKTOP_VERSION="3.35.2-13d1fc7"
+WEB_CLIENT_TV_VERSION="3.38.2-d2b0850"
+
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
+	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/buildid.cmake -> buildid-${WEB_CLIENT_BUILD_ID}.cmake
+	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz
+	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz.sha1
+	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz
+	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz.sha1
 "
 
 LICENSE="GPL-2 PMS-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cec +desktop joystick lirc"
+IUSE="cec +desktop joystick lirc tvold"
 
 QT_VERSION=5.7.1
 DEPEND="
@@ -67,6 +77,7 @@ PATCHES=(
 )
 
 S="${WORKDIR}/${MY_P}"
+DEPENDENCIES_DIR="${S}/dependencies"
 
 CMAKE_IN_SOURCE_BUILD=1
 
@@ -75,8 +86,21 @@ src_prepare() {
 
 	cmake-utils_src_prepare
 
+	# Avoid to download during the build process
+	mkdir -p "${DEPENDENCIES_DIR}"
+	cp "${DISTDIR}/buildid-${WEB_CLIENT_BUILD_ID}.cmake" "${DEPENDENCIES_DIR}"
+	cp "${DISTDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz" "${DEPENDENCIES_DIR}"
+	cp "${DISTDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz.sha1" "${DEPENDENCIES_DIR}"
+	cp "${DISTDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz" "${DEPENDENCIES_DIR}"
+	cp "${DISTDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz.sha1" "${DEPENDENCIES_DIR}"
+	mkdir -p "${DEPENDENCIES_DIR}/universal-web-client-desktop/${WEB_CLIENT_BUILD_ID}"
+	mkdir -p "${DEPENDENCIES_DIR}/universal-web-client-tv/${WEB_CLIENT_BUILD_ID}"
+	mv "${WORKDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}" "${DEPENDENCIES_DIR}/universal-web-client-desktop/${WEB_CLIENT_BUILD_ID}"
+	mv "${WORKDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}" "${DEPENDENCIES_DIR}/universal-web-client-tv/${WEB_CLIENT_BUILD_ID}"
+
 	eapply_user
 }
+
 
 src_configure() {
 	local mycmakeargs=(
@@ -85,6 +109,7 @@ src_configure() {
 		-DENABLE_LIRC=$(usex lirc)
 		-DQTROOT=/usr/share/qt5
 		-DWEB_CLIENT_DISABLE_DESKTOP=$(usex desktop "no" "yes")
+		-DWEB_CLIENT_TV_OLD=$(usex tvold)
 	)
 
 	export BUILD_NUMBER="${BUILD}"
