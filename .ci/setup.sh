@@ -25,7 +25,7 @@ echo "travis_fold:end:portage.configure"
 # update portage packages
 echo "travis_fold:start:portage.update"
 set -x
-run "$root" emerge -uDN --newrepo @world
+run "$root" emerge -uDN --newrepo @world --exclude gcc
 { set +x; } 2>/dev/null
 echo "travis_fold:end:portage.update"
 
