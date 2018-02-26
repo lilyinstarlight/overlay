@@ -9,6 +9,8 @@ mkdir -p "$root"
 pip install awscli
 aws s3 cp "$sync"/prefix-"$id".tar.bz2 "$root"/../prefix-"$id".tar.bz2
 tar xjpf "$root"/../prefix-"$id".tar.bz2 --xattrs-include='*.*' --numeric-owner --one-file-system -C "$root"
+mkdir "$root"/tmp
+mkdir "$root"/run
 
 prep "$root"
 { set +x; } 2>/dev/null
