@@ -18,7 +18,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	newbin "${MY_PN}" "${PN}"
-	newman "doc/${MY_PN}.6" "${PN}.6"
+	newman "${MY_PN}.6" "${PN}.6"
+
+	dosym "${PN}" "${EPREFIX}"/usr/bin/"${MY_PN}"
 
 	dodoc README.rst
 }
