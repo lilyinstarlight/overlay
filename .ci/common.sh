@@ -18,7 +18,7 @@ strap() {
 }
 
 run() {
-	chroot "$1" /usr/bin/env - /bin/bash -c "source /etc/profile && export PS4=\"$PS4\" && set -x && ${*:2}"
+	chroot "$1" /bin/env - /bin/bash -c "source /etc/profile && export PS4=\"$PS4\" && set -x && ${*:2}"
 }
 
 prep() {
