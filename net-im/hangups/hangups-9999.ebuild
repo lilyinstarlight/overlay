@@ -19,30 +19,41 @@ HOMEPAGE="https://pypi.python.org/pypi/hangups"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="test"
+IUSE="doc test"
 
 PATCHES=(
 	"${FILESDIR}"/unpin-dependencies.patch
 )
 
 COMMON_DEPEND=">=dev-python/configargparse-0.11.0[${PYTHON_USEDEP}]
-	>=dev-python/aiohttp-1.2.0[${PYTHON_USEDEP}]
-	<dev-python/aiohttp-1.3.0
+	>=dev-python/aiohttp-1.3.0[${PYTHON_USEDEP}]
+	<dev-python/aiohttp-4
 	>=dev-python/appdirs-1.4.0[${PYTHON_USEDEP}]
+	<dev-python/appdirs-1.5
+	>=dev-python/async-timeout-2[${PYTHON_USEDEP}]
+	<dev-python/async-timeout-3
 	>=dev-python/readlike-0.1.2[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.6.0[${PYTHON_USEDEP}]
 	<dev-python/requests-3.0.0
 	>=dev-python/ReParser-1.4.3[${PYTHON_USEDEP}]
-	<dev-libs/protobuf-3.2.0[python]
+	>=dev-libs/protobuf-3.1.0[python]
+	<dev-libs/protobuf-3.2.0
 	>=dev-python/urwid-1.3.1[${PYTHON_USEDEP}]
 	>=dev-python/MechanicalSoup-0.6.0[${PYTHON_USEDEP}]"
 	DEPEND="${COMMON_DEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		>=dev-python/pytest-3.0.5[${PYTHON_USEDEP}]
-		>=dev-python/pylint-1.6.4[${PYTHON_USEDEP}]
+		>=dev-python/pytest-3.1.3[${PYTHON_USEDEP}]
+		>=dev-python/pylint-1.7.2[${PYTHON_USEDEP}]
 		>=dev-python/pycodestyle-2.2.0[${PYTHON_USEDEP}]
 		>=dev-python/httpretty-0.8.14[${PYTHON_USEDEP}]
+		>=dev-python/docutils-0.14[${PYTHON_USEDEP}]
+	)
+	doc? (
+		>=dev-python/sphinx-1.6[${PYTHON_USEDEP}]
+		<dev-python/sphinx-1.7
+		>=dev-python/sphinxcontrib-asyncio-0.2.0[${PYTHON_USEDEP}]
+		>=dev-python/docutils-0.14[${PYTHON_USEDEP}]
 	)
 "
 RDEPEND="${COMMON_DEPEND}"

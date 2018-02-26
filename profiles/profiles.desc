@@ -1,2 +1,5 @@
-amd64		hardened/linux/amd64/no-multilib			stable
-amd64		hardened/linux/amd64/no-multilib/selinux	stable
+amd64		default/linux/amd64/17.0/no-multilib			stable
+amd64		default/linux/amd64/17.0/no-multilib/hardened	stable
+amd64		default/linux/amd64/17.0/no-multilib/selinux	stable
+amd64		hardened/linux/amd64/no-multilib				stable
+amd64		hardened/linux/amd64/no-multilib/selinux		stable

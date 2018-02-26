@@ -1,2 +1,0 @@
-dev-embedded/energia-bin
-dev-util/unity-editor

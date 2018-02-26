@@ -107,7 +107,6 @@ src_prepare() {
 	eapply_user
 }
 
-
 src_configure() {
 	local mycmakeargs=(
 		-DENABLE_CEC=$(usex cec)
