@@ -34,7 +34,7 @@ S="${WORKDIR}/${MY_P}"
 src_install() {
 	dodoc API.md CHANGELOG.md CONTRIBUTING.md ISSUE_TEMPLATE.md README.md
 	insinto "/opt/${PN}"
-	doins -r contrib data lib plexpy pylintrc PlexPy.py || die
+	doins -r contrib data lib plexpy pylintrc PlexPy.py Tautulli.py || die
 	dodir /etc/${PN}
 	dosym /opt/${PN}/config.ini /etc/${PN}/config.ini
 	fowners -R plex:plex "/opt/${PN}"
