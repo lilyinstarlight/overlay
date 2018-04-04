@@ -1,0 +1,30 @@
+From daef6ed621c04de55836d324044f9d81f363e67c Mon Sep 17 00:00:00 2001
+From: Luigi 'Comio' Mantellini <luigi.mantellini@gmail.com>
+Date: Wed, 4 Apr 2018 10:31:19 +0200
+Subject: [PATCH] Avoid X11 / QT symbols clashing
+
+---
+ src/display/x11/DisplayManagerX11.h | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/display/x11/DisplayManagerX11.h b/src/display/x11/DisplayManagerX11.h
+index df59096..7e6c22d 100644
+--- a/src/display/x11/DisplayManagerX11.h
++++ b/src/display/x11/DisplayManagerX11.h
+@@ -9,6 +9,13 @@
+ #undef CursorShape
+ #undef Bool
+ #undef Status
++#undef None
++#undef KeyPress
++#undef KeyRelease
++#undef FocusIn
++#undef FocusOut
++#undef FontChange
++#undef Expose
+ 
+ #include "display/DisplayManager.h"
+ 
+-- 
+2.17.0
+

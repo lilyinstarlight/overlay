@@ -76,6 +76,7 @@ RDEPEND="
 PATCHES=(
 	"${FILESDIR}/iconv-fix.patch"
 	"${FILESDIR}/git-revision.patch"
+	"${FILESDIR}/avoid-x11-qt-symbols-clashing.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
