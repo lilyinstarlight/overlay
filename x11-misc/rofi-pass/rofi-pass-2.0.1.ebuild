@@ -21,12 +21,6 @@ RDEPEND="
 	otp? ( app-admin/pass-otp )
 "
 
-src_prepare() {
-	use otp && eapply "${FILESDIR}/rofi-pass-otp.patch"
-
-	default
-}
-
 src_compile() {
 	# nop
 	true
