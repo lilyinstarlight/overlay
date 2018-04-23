@@ -18,4 +18,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 ruby_add_rdepend ">=dev-ruby/trollop-2.1.2:2
-	>=dev-ruby/paint-2.0"
+	>=dev-ruby/paint-2.0
+	>=dev-ruby/manpages-0.6.1"
