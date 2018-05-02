@@ -7,8 +7,8 @@ DESCRIPTION="WebDriver <-> Marionette proxy"
 HOMEPAGE="https://github.com/mozilla/geckodriver"
 SRC_URI="
 	amd64? ( https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz )
-	x86? ( https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux32.tar.gz )
 	arm? ( https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-arm7hf.tar.gz )
+	x86? ( https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux32.tar.gz )
 "
 
 LICENSE="MPL-2.0"
