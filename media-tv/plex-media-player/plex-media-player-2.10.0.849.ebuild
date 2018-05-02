@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils gnome2-utils cmake-utils
+inherit desktop eutils gnome2-utils cmake-utils
 
 DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
@@ -124,32 +124,22 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-
-	# menu items
-	domenu "${FILESDIR}/plexmediaplayer.desktop"
-	insinto "/usr/share/xsessions"
-	doins "${FILESDIR}/plexmediaplayer-session.desktop"
-	insinto "/usr/share/wayland-sessions"
-	doins "${FILESDIR}/plexmediaplayer-wayland.desktop"
-
-	newicon -s 16 "${FILESDIR}/plexmediaplayer-16x16.png" plexmediaplayer.png
-	newicon -s 24 "${FILESDIR}/plexmediaplayer-24x24.png" plexmediaplayer.png
-	newicon -s 32 "${FILESDIR}/plexmediaplayer-32x32.png" plexmediaplayer.png
-	newicon -s 48 "${FILESDIR}/plexmediaplayer-48x48.png" plexmediaplayer.png
-	newicon -s 256 "${FILESDIR}/plexmediaplayer-256x256.png" plexmediaplayer.png
+	make_session_desktop "Plex Media Player" "plexmediaplayer" "--tv" "--fullscreen"
 }
 
-pkg_preinst() {
+update_incon_and_schema() {
 	gnome2_icon_savelist
 	gnome2_schemas_savelist
 }
 
+pkg_preinst() {
+	update_incon_and_schema
+}
+
 pkg_postinst() {
-	gnome2_icon_cache_update
-	gnome2_schemas_update
+	update_incon_and_schema
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
-	gnome2_schemas_update
+	update_incon_and_schema
 }
