@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Plex Media Player
-Exec=plexmediaplayer --scale-factor 1
-Icon=plexmediaplayer
-Terminal=false
-Type=Application
-Categories=AudioVideo;Player;
