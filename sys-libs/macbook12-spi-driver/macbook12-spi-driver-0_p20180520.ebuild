@@ -8,7 +8,7 @@ inherit linux-mod
 DESCRIPTION="Input driver for SPI keyboard/touchpad and touchbar in newer Macbooks"
 HOMEPAGE="https://github.com/roadrunner2/macbook12-spi-driver"
 
-COMMIT="463b707c5081fd029385d4e31b51550ffef075ba"
+COMMIT="c6fa6a37fd9b1382b36044d418cd7cf2045c2b9f"
 SRC_URI="https://github.com/roadrunner2/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
