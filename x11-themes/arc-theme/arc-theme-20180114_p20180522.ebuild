@@ -11,7 +11,7 @@ COMMIT="7de6f06ffa06fd934badc51207e77a4ca94793c5"
 SRC_URI="https://github.com/NicoHood/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="cinnamon gnome-shell +gtk2 +gtk3 mate openbox xfce"
 
 # Supports various GTK+3 versions and uses pkg-config to determine which
