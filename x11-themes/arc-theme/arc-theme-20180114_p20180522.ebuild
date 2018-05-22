@@ -7,11 +7,12 @@ inherit autotools
 
 DESCRIPTION="A flat theme with transparent elements for GTK+3, GTK+2 and GNOME Shell"
 HOMEPAGE="https://github.com/NicoHood/arc-theme"
-SRC_URI="https://github.com/NicoHood/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+COMMIT="7de6f06ffa06fd934badc51207e77a4ca94793c5"
+SRC_URI="https://github.com/NicoHood/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="cinnamon gnome-shell +gtk2 +gtk3 mate xfce"
+IUSE="cinnamon gnome-shell +gtk2 +gtk3 mate openbox xfce"
 
 # Supports various GTK+3 versions and uses pkg-config to determine which
 # set of files to install. Updates will break it but only this fix will
@@ -26,6 +27,8 @@ DEPEND="
 RDEPEND="gtk2? ( x11-themes/gnome-themes-standard
 	x11-themes/gtk-engines-murrine )"
 
+S="${WORKDIR}/${PN}-${COMMIT}"
+
 src_prepare() {
 	default
 	eautoreconf
@@ -39,5 +42,6 @@ src_configure() {
 		$(use_enable gtk3) \
 		$(use_enable gnome-shell) \
 		$(use_enable mate metacity) \
+		$(use_enable openbox openbox) \
 		$(use_enable xfce xfwm)
 }
