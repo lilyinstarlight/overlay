@@ -2,7 +2,7 @@ mirror="https://mirrors.kernel.org/gentoo"
 overlay="$(pwd)"
 name="$(cat "$overlay/profiles/repo_name")"
 root="$1"
-profile="default/linux/amd64/13.0"
+profile="default/linux/amd64/17.0"
 packages="$PACKAGES"
 
 sync="s3://fkmclane-build/gentoo"
