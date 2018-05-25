@@ -1,12 +1,16 @@
 [Unit]
 Description=Plex Media Server
-After=network.target
+After=network.target network-online.target
 
 [Service]
+ExecStart=/usr/sbin/start_pms
 Type=simple
 User=plex
-ExecStart=/usr/sbin/start_pms
-Restart=always
+Group=plex
+Restart=on-failure
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
 
 [Install]
 WantedBy=multi-user.target
