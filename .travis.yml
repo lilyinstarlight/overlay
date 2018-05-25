@@ -65,7 +65,7 @@ jobs:
         - sudo .ci/sync.sh ../prefix
         - sudo .ci/build.sh ../prefix
       env:
-        - PACKAGES="media-libs/openvr media-sound/ympd media-tv/plex-media-server"
+        - PACKAGES="media-tv/plex-media-server"
 
     - stage: build
       script:
@@ -79,7 +79,7 @@ jobs:
         - sudo .ci/sync.sh ../prefix
         - sudo .ci/build.sh ../prefix
       env:
-        - PACKAGES="net-wireless/create_ap sci-physics/chipmunk"
+        - PACKAGES="sci-physics/chipmunk"
 
     - stage: build
       script:
