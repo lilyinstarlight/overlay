@@ -1,0 +1,11 @@
+[Unit]
+Description=Splunk
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/opt/splunk/bin/splunk start
+ExecStop=/opt/splunk/bin/splunk stop
+
+[Install]
+WantedBy=multi-user.target
