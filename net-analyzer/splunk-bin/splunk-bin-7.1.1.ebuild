@@ -23,7 +23,7 @@ RDEPEND=""
 
 S="${WORKDIR}"
 
-RESTRICT="mirror bindist"
+RESTRICT="mirror bindist strip"
 
 QA_PREBUILT="*"
 
