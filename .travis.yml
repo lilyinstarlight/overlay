@@ -79,13 +79,6 @@ jobs:
         - sudo .ci/sync.sh ../prefix
         - sudo .ci/build.sh ../prefix
       env:
-        - PACKAGES="sci-physics/chipmunk"
-
-    - stage: build
-      script:
-        - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
-      env:
         - PACKAGES="sci-electronics/fritzing-bin"
 
     - stage: build
