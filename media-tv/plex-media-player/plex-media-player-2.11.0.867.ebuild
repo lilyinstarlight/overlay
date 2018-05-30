@@ -127,19 +127,15 @@ src_install() {
 	make_session_desktop "Plex Media Player" "plexmediaplayer" "--tv" "--fullscreen"
 }
 
-update_incon_and_schema() {
+pkg_preinst() {
 	gnome2_icon_savelist
 	gnome2_schemas_savelist
 }
 
-pkg_preinst() {
-	update_incon_and_schema
-}
-
 pkg_postinst() {
-	update_incon_and_schema
+	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	update_incon_and_schema
+	gnome2_icon_cache_update
 }
