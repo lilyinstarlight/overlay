@@ -8,7 +8,7 @@ inherit multilib systemd user
 DESCRIPTION="Management Controller for Ubiquiti Networks UniFi APs"
 HOMEPAGE="http://wiki.ubnt.com/UniFi_FAQ"
 MY_PN="UniFi"
-SRC_URI="http://dl.ubnt.com/unifi/${PV}/${MY_PN}.unix.zip -> ${P}.zip"
+SRC_URI="https://dl.ubnt.com/unifi/${PV}/${MY_PN}.unix.zip -> ${P}.zip"
 
 LICENSE="UniFi-EULA"
 SLOT="0"
