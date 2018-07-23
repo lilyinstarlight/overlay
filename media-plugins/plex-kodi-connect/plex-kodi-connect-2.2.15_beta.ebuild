@@ -7,7 +7,8 @@ inherit eutils
 
 DESCRIPTION="Combine the frontend media player Kodi with the multimedia backend server Plex"
 HOMEPAGE="https://github.com/croneter/PlexKodiConnect"
-SRC_URI="https://github.com/croneter/PlexKodiConnect/archive/${PV}.zip -> ${P}.zip"
+MY_PV="${PV/_beta/}"
+SRC_URI="https://github.com/croneter/PlexKodiConnect/archive/${MY_PV}.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,7 +23,7 @@ RDEPEND="
 	${DEPEND}
 "
 
-S="${WORKDIR}/PlexKodiConnect-${PV}"
+S="${WORKDIR}/PlexKodiConnect-${MY_PV}"
 
 src_install() {
 	insinto "/usr/share/kodi/addons/plugin.video.plexkodiconnect"
