@@ -6,7 +6,7 @@ PYTHON_COMPAT=( python3_{4,5} )
 
 inherit distutils-r1
 
-DESCRIPTION="Management command for creating compressed archives of Django projects, including database tables and uploaded media"
+DESCRIPTION="Management command for creating compressed archives of Django projects"
 HOMEPAGE="https://django-archive.readthedocs.io/en/latest/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN/-/_}/${PN/-/_}-${PV}.tar.gz"
 
