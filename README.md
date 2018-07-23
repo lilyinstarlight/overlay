@@ -82,12 +82,6 @@ Packages
 #### git-fire [games-misc/git-fire]
 [git-fire](https://github.com/qw3rtman/git-fire) is for saving your code in Git in case of an emergency.
 
-#### Cockatrice [games-board/cockatrice]
-[Cockatrice](http://www.reddit.com/r/Cockatrice) is a cross-platform virtual tabletop for multiplayer card games, such as Magic: The Gathering, over a network.
-
-#### MCEdit 2.0 [dev-games/mcedit]
-[MCEdit](http://www.mcedit.net/) is a world/save game editor for Minecraft.
-
 
 ### Utilities
 
