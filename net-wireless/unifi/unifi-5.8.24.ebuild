@@ -6,7 +6,7 @@ EAPI=6
 inherit multilib systemd user
 
 DESCRIPTION="Management Controller for Ubiquiti Networks UniFi APs"
-HOMEPAGE="http://wiki.ubnt.com/UniFi_FAQ"
+HOMEPAGE="https://wiki.ubnt.com/UniFi_FAQ"
 MY_PN="UniFi"
 SRC_URI="https://dl.ubnt.com/unifi/${PV}/${MY_PN}.unix.zip -> ${P}.zip"
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="
 	dev-db/mongodb
-	>=virtual/jre-1.7
+	>=virtual/jre-1.8
 "
 
 S="${WORKDIR}/${MY_PN}"
