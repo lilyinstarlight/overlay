@@ -65,7 +65,7 @@ jobs:
         - sudo .ci/sync.sh ../prefix
         - sudo .ci/build.sh ../prefix
       env:
-        - PACKAGES="media-tv/plex-media-server net-analyzer/bro"
+        - PACKAGES="media-tv/plex-media-server"
 
     - stage: build
       script:
