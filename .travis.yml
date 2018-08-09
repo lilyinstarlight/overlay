@@ -21,83 +21,83 @@ jobs:
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="app-admin/pass-otp app-misc/{blinkstick,cronic,gotty-bin,tty-clock,wemux} app-shells/elvish"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="app-admin/linode-cli:{0,4}"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="dev-embedded/{arduino-bin,energia-bin,teensyduino-bin} dev-python/{pandocfilters,slixmpp}"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="dev-python/{twilio,vex} net-p2p/zget"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="games-action/armagetronad-dedicated"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="games-arcade/nsnake games-misc/{git-fire,lolcat,nyancat,pipes}"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
-        - PACKAGES="media-tv/plex-media-server"
+        - PACKAGES="media-tv/plex-media-server net-analyzer/bro"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="net-fs/pingfs net-mail/syncmaildir"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="sci-electronics/fritzing-bin"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="sys-apps/petty sys-kernel/pf-sources www-servers/pagekite sys-boot/{mkusb,mkwin} sys-fs/pifs"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="x11-misc/{clipster,lemonbar} x11-themes/arc-openbox-theme"
 
     - stage: build
       script:
         - sudo .ci/sync.sh ../prefix
-        - sudo .ci/build.sh ../prefix
+        - travis_wait sudo .ci/build.sh ../prefix
       env:
         - PACKAGES="x11-misc/barline"
