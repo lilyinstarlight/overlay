@@ -58,7 +58,7 @@ pkg_setup(){
 }
 
 src_prepare(){
-	epatch "${DISTDIR}/${PF_FILE}"
+	eapply "${DISTDIR}/${PF_FILE}"
 
 	default
 }
