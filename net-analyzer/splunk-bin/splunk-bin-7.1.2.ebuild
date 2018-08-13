@@ -7,7 +7,7 @@ inherit systemd
 
 DESCRIPTION="The search engine for IT data"
 HOMEPAGE="https://www.splunk.com/"
-COMMIT="8f0ead9ec3db"
+COMMIT="a0c72a66db66"
 MY_PN="${PN/-bin/}"
 MY_PV="${PV}-${COMMIT}"
 MY_P="${MY_PN}-${MY_PV}"
