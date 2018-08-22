@@ -2,8 +2,13 @@
 
 EBUILD="$1"
 
-echo "Load ebuild."
+inherit() {
+    :
+}
+
+echo -n "Load ebuild... "
 . "${EBUILD}" &>/dev/null
+echo "ok"
 
 # WEB_CLIENT_BUILD_ID="$1"
 URL="https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/buildid.cmake"
@@ -37,5 +42,5 @@ else
 	echo "Error on downloading"
 fi
 
-# rm -rf "${OUTFILE}"
-#rm -rf "${SCRIPTFILE}"
+rm -rf "${OUTFILE}"
+rm -rf "${SCRIPTFILE}"
