@@ -34,10 +34,12 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/icons/
+	doins -r Bibata_Amber
 	doins -r Bibata_Ice
 	doins -r Bibata_Oil
 
 	insinto /usr/share/cursors/xorg-x11/
+	doins -r Bibata_Amber
 	doins -r Bibata_Ice
 	doins -r Bibata_Oil
 }
