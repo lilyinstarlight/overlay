@@ -13,7 +13,7 @@ SRC_URI="https://www.bro.org/downloads/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+broccoli +broctl -broker curl debug geoip ipv6 jemalloc +python -ruby tcmalloc source static-libs +tools"
+IUSE="+broccoli +broctl -broker curl debug geoip ipv6 jemalloc +python -ruby tcmalloc static-libs +tools"
 
 RDEPEND="app-shells/bash:0
 	dev-libs/openssl:0
@@ -65,7 +65,6 @@ src_configure() {
 		-DINSTALL_LIB_DIR="/usr/$(get_libdir)"
 		-DPY_MOD_INSTALL_DIR="$(python_get_sitedir)"
 		-DBINARY_PACKAGING_MODE=true
-		-DBRO_DIST="/usr/src/${P}"
 	)
 
 	cmake-utils_src_configure
@@ -76,9 +75,4 @@ src_install() {
 
 	keepdir /var/log/bro
 	keepdir /var/spool/bro/tmp
-
-	if use source; then
-		mkdir -p "${D}"/usr/src
-		cp -a "${S}" "${D}"/usr/src/"${P}" || die
-	fi
 }
