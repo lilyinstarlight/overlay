@@ -20,6 +20,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
+	net-analyzer/bro[source]
 	dev-python/git-python
 	dev-python/semantic_version
 	dev-python/btest
