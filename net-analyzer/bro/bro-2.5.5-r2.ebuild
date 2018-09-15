@@ -78,7 +78,7 @@ src_install() {
 	keepdir /var/spool/bro/tmp
 
 	if use source; then
-		insinto /usr/src
-		doins -r "${S}"
+		mkdir -p "${D}"/usr/src
+		cp -a "${S}" "${D}"/usr/src/"${P}" || die
 	fi
 }
