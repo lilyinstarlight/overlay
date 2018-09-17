@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools
+inherit meson
 
 DESCRIPTION="Moka is a stylized Linux desktop icon set"
 HOMEPAGE="http://snwh.org/moka"
@@ -21,8 +21,3 @@ IUSE=""
 
 DEPEND="x11-themes/faba-icon-theme"
 RDEPEND="${DEPEND}"
-
-src_prepare(){
-	default
-	eautoreconf
-}
