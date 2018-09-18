@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools
+inherit meson
 
 DESCRIPTION="Faba is a sexy and modern icon theme with Tango influences."
 HOMEPAGE="http://snwh.org/moka#faba-icon-theme"
@@ -22,8 +22,3 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-
-src_prepare(){
-	default
-	eautoreconf
-}
