@@ -20,7 +20,9 @@ IUSE="cinnamon gnome-shell +gtk2 +gtk3 mate openbox xfce"
 DEPEND="
 	dev-lang/sassc
 	gtk3? ( >=x11-libs/gtk+-3.14:3
-	virtual/pkgconfig )"
+	virtual/pkgconfig )
+	gtk2? ( media-gfx/inkscape
+	media-gfx/optipng )"
 
 # gnome-themes-standard is only needed by GTK+2 for the Adwaita
 # engine. This engine is built into GTK+3.
