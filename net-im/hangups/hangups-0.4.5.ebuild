@@ -39,7 +39,7 @@ COMMON_DEPEND=">=dev-python/configargparse-0.11.0[${PYTHON_USEDEP}]
 	>=dev-python/protobuf-python-3.1.0[${PYTHON_USEDEP}]
 	>=dev-python/urwid-1.3.1[${PYTHON_USEDEP}]
 	>=dev-python/MechanicalSoup-0.6.0[${PYTHON_USEDEP}]"
-	DEPEND="${COMMON_DEPEND}
+DEPEND="${COMMON_DEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		>=dev-python/pytest-3.1.3[${PYTHON_USEDEP}]
