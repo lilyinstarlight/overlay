@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils bzr
+inherit eutils xdg bzr
 
 DESCRIPTION="A fast-paced 3D lightcycle game based on Tron"
 HOMEPAGE="http://armagetronad.org/"
@@ -59,4 +59,12 @@ src_install() {
 
 	doicon desktop/icons/large/armagetronad.png
 	domenu desktop/armagetronad-armagetronad.desktop
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
 }
