@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 else
 	SRC_URI="https://github.com/tdryer/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64"
 fi
 
 DESCRIPTION="Third Party IM Client for Google Hangouts"
