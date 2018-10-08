@@ -21,7 +21,9 @@ LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="x11-base/xorg-proto
+	x11-libs/libX11
+	x11-libs/cairo
 	media-libs/lv2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
