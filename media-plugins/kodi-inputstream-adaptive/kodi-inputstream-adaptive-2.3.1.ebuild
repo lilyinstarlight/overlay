@@ -31,10 +31,11 @@ IUSE=""
 DEPEND="
 	>=media-tv/kodi-9999
 	>=media-libs/kodi-platform-9999
-	"
+	dev-libs/expat
+"
 RDEPEND="
 	${DEPEND}
-	"
+"
 
 src_prepare() {
 	sed -i -e "s#DECRYPTERPATH \"special://home/cdm\"#DECRYPTERPATH \"/usr/$(get_libdir)/kodi/cdm\"#" CMakeLists.txt
