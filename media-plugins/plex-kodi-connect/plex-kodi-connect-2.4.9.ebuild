@@ -17,6 +17,8 @@ IUSE=""
 
 DEPEND="
 	>=media-tv/kodi-16.0
+	dev-python/requests
+	dev-python/defusedxml
 "
 
 RDEPEND="
