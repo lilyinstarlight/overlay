@@ -54,7 +54,7 @@ src_compile() {
 
 src_install() {
 	mkdir "${D}"/usr/src -p || die
-	cp -a "${S}" "${D}"/usr/src || die
+	mv "${S}" "${D}"/usr/src/"${MY_P}" || die
 }
 
 pkg_postinst() {
