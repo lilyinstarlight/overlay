@@ -112,7 +112,7 @@ src_configure() {
 		-DENABLE_CEC=$(usex cec)
 		-DENABLE_SDL2=$(usex joystick)
 		-DENABLE_LIRC=$(usex lirc)
-		-DQTROOT=/usr/share/qt5
+		-DQTROOT="${EPREFIX}/usr/share/qt5"
 		-DWEB_CLIENT_DISABLE_DESKTOP=$(usex desktop "OFF" "ON")
 	)
 
