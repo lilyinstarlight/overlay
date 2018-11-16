@@ -8,5 +8,6 @@
 	<use>
 		<flag name="cec">Enable support for HDMI-CEC devices via <pkg>dev-libs/libcec</pkg></flag>
 		<flag name="desktop">Enable support for the desktop web-client</flag>
+		<flag name="download">Download the web frontends at compile time</flag>
 	</use>
 </pkgmetadata>
