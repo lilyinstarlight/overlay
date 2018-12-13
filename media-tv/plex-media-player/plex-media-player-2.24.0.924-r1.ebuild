@@ -35,7 +35,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cec +desktop +download joystick lirc"
 
-QT_VERSION=5.7.1
+QT_VERSION=5.11.2
 DEPEND="
 	>=dev-qt/qtcore-${QT_VERSION}
 	>=dev-qt/qtnetwork-${QT_VERSION}
