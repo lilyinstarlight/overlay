@@ -18,7 +18,7 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-${COMMIT}"
 
-MODULE_NAMES="applespi(extra:${S}) apple_ibridge(extra:${S}) apple_ib_tb(extra:${S}) apple_ib_als(extra:${S})"
+MODULE_NAMES="applespi(extra:${S}) apple-ibridge(extra:${S}) apple-ib-tb(extra:${S}) apple-ib-als(extra:${S})"
 BUILD_TARGETS="all"
 
 CONFIG_CHECK="~SPI_PXA2XX ~SPI_PXA2XX_PCI ~MFD_INTEL_LPSS_PCI ~HID_SENSOR_ALS"
