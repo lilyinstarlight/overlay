@@ -18,7 +18,7 @@ case ${PV} in
 	inherit git-r3
 	;;
 *)
-	KEYWORDS=""
+	KEYWORDS="~amd64 ~x86"
 	SRC_URI="https://github.com/peak3d/${MY_PN}/archive/${PV}.tar.gz -> ${MY_P}.tar.gz"
 	S="${WORKDIR}/${MY_P}"
 	;;
@@ -29,8 +29,9 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	>=media-tv/kodi-9999
-	>=media-libs/kodi-platform-9999
+	=media-tv/kodi-18*
+	=media-libs/kodi-platform-18*
+	=dev-libs/libplatform-2*
 	dev-libs/expat
 "
 RDEPEND="
