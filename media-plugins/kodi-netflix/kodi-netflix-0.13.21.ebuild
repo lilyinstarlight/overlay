@@ -8,6 +8,9 @@ inherit multilib
 DESCRIPTION="Inputstream based Netflix plugin for Kodi"
 HOMEPAGE="https://github.com/asciidisco/plugin.video.netflix"
 
+MY_PN="plugin.video.netflix"
+MY_P="${MY_PN}-${PV}"
+
 case ${PV} in
 9999)
 	KEYWORDS=""
@@ -16,9 +19,9 @@ case ${PV} in
 	inherit git-r3
 	;;
 *)
-	KEYWORDS=""
-	SRC_URI="https://github.com/asciidisco/plugin.video.netflix/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/plugin.video.netflix-${PV}"
+	KEYWORDS="~amd64"
+	SRC_URI="https://github.com/asciidisco/${MY_PN}/archive/${PV}.tar.gz -> ${MY_P}.tar.gz"
+	S="${WORKDIR}/${MY_P}"
 	;;
 esac
 
@@ -28,7 +31,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-	>=media-tv/kodi-9999
+	=media-tv/kodi-18*
 	=media-plugins/kodi-inputstream-adaptive-2*
 	>=media-plugins/kodi-widevine-1.4.8.970
 	<dev-python/pycparser-2.18
