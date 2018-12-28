@@ -21,7 +21,7 @@ RESTRICT="bindist mirror strip"
 
 DEPEND=""
 RDEPEND="
-	>=media-tv/kodi-9999
+	>=media-tv/kodi-18
 "
 
 S="${WORKDIR}/${CHROME_DIR}"
