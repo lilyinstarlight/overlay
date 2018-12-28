@@ -19,7 +19,7 @@ case ${PV} in
 	inherit git-r3
 	;;
 *)
-	KEYWORDS="~amd64"
+	KEYWORDS="-* ~amd64"
 	SRC_URI="https://github.com/asciidisco/${MY_PN}/archive/${PV}.tar.gz -> ${MY_P}.tar.gz"
 	S="${WORKDIR}/${MY_P}"
 	;;
