@@ -6,7 +6,7 @@ EAPI=6
 inherit multilib unpacker
 
 CHROME_PN="google-chrome-stable"
-CHROME_PV="70.0.3538.67"
+CHROME_PV="71.0.3578.98"
 CHROME_P="${CHROME_PN}_${CHROME_PV}-1"
 CHROME_DIR="opt/google/chrome"
 
@@ -16,7 +16,7 @@ SRC_URI="https://dl.google.com/linux/chrome/deb/pool/main/g/${CHROME_PN}/${CHROM
 
 LICENSE="google-chrome"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 RESTRICT="bindist mirror strip"
 
 DEPEND=""
