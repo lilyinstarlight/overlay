@@ -2,15 +2,15 @@ language: bash
 sudo: required
 
 stages:
-  - setup
+  - bootstrap
   - test
   - build
 
 jobs:
   include:
-    - stage: setup
+    - stage: bootstrap
       script:
-        - sudo .ci/setup.sh ../prefix
+        - sudo .ci/bootstrap.sh ../prefix
         - sudo .ci/upload.sh ../prefix
 
     - stage: test
