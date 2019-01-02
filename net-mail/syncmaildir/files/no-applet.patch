@@ -1,11 +1,10 @@
 diff --git a/Makefile b/Makefile
-index 179371d..3e658af 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -5,9 +5,9 @@
  PROJECTNAME=syncmaildir
- VERSION=1.2.6
- COPYRIGHT=© 2008-2013 Enrico Tassi <gares@fettunta.org>
+ VERSION=1.3.0
+ COPYRIGHT=© 2008-2018 Enrico Tassi <gares@fettunta.org>
 -BINARIES=mddiff smd-applet
 +BINARIES=mddiff
  MANPAGES1=mddiff.1 smd-server.1 smd-client.1 \

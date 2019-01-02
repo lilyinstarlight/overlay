@@ -3,11 +3,13 @@
 
 EAPI=6
 
-inherit eutils systemd
+inherit systemd
 
 DESCRIPTION="Sync Mail Dir (smd) is a set of tools to synchronize a pair of mailboxes"
 HOMEPAGE="http://syncmaildir.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/gares/${PN}/archive/version-${PV}.tar.gz -> ${P}.tar.gz"
+
+S="${WORKDIR}/${PN}-version-${PV}"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -37,12 +39,12 @@ RDEPEND="
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/makefile-destdir.patch
-	epatch "${FILESDIR}"/makefile-respect-variables.patch
-	epatch "${FILESDIR}"/makefile-no-doc.patch
-	epatch "${FILESDIR}"/lua-no-slot.patch
+	eapply "${FILESDIR}"/makefile-destdir.patch
+	eapply "${FILESDIR}"/makefile-respect-variables.patch
+	eapply "${FILESDIR}"/makefile-no-doc.patch
+	eapply "${FILESDIR}"/lua-no-slot.patch
 
-	use gnome || epatch "${FILESDIR}"/no-applet.patch
+	use gnome || eapply "${FILESDIR}"/no-applet.patch
 
 	default
 }
@@ -57,7 +59,7 @@ src_install() {
 
 	systemd_douserunit "${FILESDIR}"/smd-loop.service
 
-	dodoc README KNOWN_BUGS DESIGN ChangeLog
+	dodoc README.md KNOWN_BUGS DESIGN.md ChangeLog
 	dodoc -r sample-hooks
 }
 

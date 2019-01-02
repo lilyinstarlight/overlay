@@ -6,9 +6,9 @@ diff --git a/Makefile b/Makefile
  MANPAGES5=smd-config.5
  HTML=index.html design.html hooks.html
 -DESTDIR=
- SF_FRS=/home/frs/project/s/sy/syncmaildir/syncmaildir
- SF_LOGIN=$(SF_USER),syncmaildir
- SF_WEB=htdocs
+ TEST_SIZE=100
+ TEST_MAILBOX=misc/Mail.TEST.tgz
+ TEST_SUITES=mddiff client-server pull-push migration
 @@ -37,13 +36,12 @@ H=@
  # they are meant to be overridden if necessary. See the end of this
  # file for some templates setting them.

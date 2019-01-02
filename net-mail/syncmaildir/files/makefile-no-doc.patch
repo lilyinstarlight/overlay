@@ -1,13 +1,13 @@
 diff --git a/Makefile b/Makefile
 --- a/Makefile
 +++ b/Makefile
-@@ -198,9 +198,6 @@ install-misc: $(MANPAGES1) $(MANPAGES5)
+@@ -195,9 +195,6 @@ install-misc: $(MANPAGES1) $(MANPAGES5)
  	$(call mkdir-p,share/man/man5)
  	cp $(MANPAGES1) $(DESTDIR)/$(PREFIX)/share/man/man1
  	cp $(MANPAGES5) $(DESTDIR)/$(PREFIX)/share/man/man5
 -	$(call mkdir-p,share/doc/syncmaildir)
 -	cp -r sample-hooks/ $(DESTDIR)/$(PREFIX)/share/doc/syncmaildir
--	$(call install,README,share/doc/syncmaildir)
+-	$(call install,README.md,share/doc/syncmaildir)
  
  clean: 
  	$H rm -f $(BINARIES) $(MANPAGES1) $(MANPAGES5)
