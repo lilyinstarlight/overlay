@@ -36,9 +36,9 @@ prep() {
 	mkdir -p "$1"/dev/pts
 	mount --bind /dev/pts "$1"/dev/pts
 	mount --make-rslave "$1"/dev/pts
-	mkdir -p "$1"/run/shm
-	mount --bind /dev/shm "$1"/run/shm
-	mount --make-rslave "$1"/run/shm
+	mkdir -p "$1"/dev/shm
+	mount --bind /dev/shm "$1"/dev/shm
+	mount --make-rslave "$1"/dev/shm
 	{ set +x; } 2>/dev/null
 
 	run "$1" emerge-webrsync
