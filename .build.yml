@@ -1,13 +1,15 @@
 image: alpine/edge
 environment:
   PACKAGES: media-tv/plex-media-server
+sources:
+  - https://git.sr.ht/~fkmclane/overlay
 tasks:
-- bootstrap: |
-     cd overlay
-     sudo .ci/bootstrap.sh ../prefix
-- test: |
-     cd overlay
-     sudo .ci/test.sh ../prefix
-- build: |
-     cd overlay
-     sudo .ci/build.sh ../prefix
+  - bootstrap: |
+       cd overlay
+       sudo .ci/bootstrap.sh ../prefix
+  - test: |
+       cd overlay
+       sudo .ci/test.sh ../prefix
+  - build: |
+       cd overlay
+       sudo .ci/build.sh ../prefix
