@@ -1,0 +1,7 @@
+image: alpine/edge
+environment:
+  PACKAGES: media-tv/plex-media-server
+tasks:
+  - setup: sudo .ci/setup.sh ../prefix
+  - test: sudo .ci/test.sh ../prefix
+  - build: sudo .ci/build.sh ../prefix
