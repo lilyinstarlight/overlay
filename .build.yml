@@ -1,4 +1,6 @@
 image: debian/stretch
+packages:
+  - curl
 environment:
   PACKAGES: media-tv/plex-media-server
 sources:
