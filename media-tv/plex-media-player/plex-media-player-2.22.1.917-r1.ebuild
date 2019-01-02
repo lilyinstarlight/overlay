@@ -9,10 +9,10 @@ DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="63fcaa8e"
-WEB_CLIENT_BUILD_ID="87-ac3c1b07015f76"
-WEB_CLIENT_DESKTOP_VERSION="3.77.2-7015f76"
-WEB_CLIENT_TV_VERSION="3.80.1-ac3c1b0"
+COMMIT="2a5a2e01"
+WEB_CLIENT_BUILD_ID="83-be4804f757f795"
+WEB_CLIENT_DESKTOP_VERSION="3.71.1-757f795"
+WEB_CLIENT_TV_VERSION="3.76.1-be4804f"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
@@ -35,7 +35,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cec +desktop +download joystick lirc"
 
-QT_VERSION=5.11.2
+QT_VERSION=5.7.1
 DEPEND="
 	>=dev-qt/qtcore-${QT_VERSION}
 	>=dev-qt/qtnetwork-${QT_VERSION}
@@ -57,7 +57,6 @@ DEPEND="
 	)
 
 	cec? (
-		<dev-libs/libcec-4.0.0
 		>=dev-libs/libcec-2.2.0
 	)
 

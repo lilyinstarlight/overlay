@@ -9,31 +9,33 @@ DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="46413dd1"
-WEB_CLIENT_BUILD_ID="78-ac41f92757f795"
-WEB_CLIENT_DESKTOP_VERSION="3.71.1-757f795"
-WEB_CLIENT_TV_VERSION="3.72.0-ac41f92"
+COMMIT="63fcaa8e"
+WEB_CLIENT_BUILD_ID="87-ac3c1b07015f76"
+WEB_CLIENT_DESKTOP_VERSION="3.77.2-7015f76"
+WEB_CLIENT_TV_VERSION="3.80.1-ac3c1b0"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
 
 SRC_URI="
 	https://github.com/plexinc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz
-	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/buildid.cmake -> buildid-${WEB_CLIENT_BUILD_ID}.cmake
-	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz
-	https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz.sha1
-	desktop? (
-		https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz
-		https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz.sha1
+	!download? (
+		https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/buildid.cmake -> buildid-${WEB_CLIENT_BUILD_ID}.cmake
+		https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz
+		https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz.sha1
+		desktop? (
+			https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz
+			https://artifacts.plex.tv/web-client-pmp/${WEB_CLIENT_BUILD_ID}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz.sha1
+		)
 	)
 "
 
 LICENSE="GPL-2 PMS-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cec +desktop joystick lirc"
+IUSE="cec +desktop +download joystick lirc"
 
-QT_VERSION=5.7.1
+QT_VERSION=5.11.2
 DEPEND="
 	>=dev-qt/qtcore-${QT_VERSION}
 	>=dev-qt/qtnetwork-${QT_VERSION}
@@ -55,7 +57,6 @@ DEPEND="
 	)
 
 	cec? (
-		<dev-libs/libcec-4.0.0
 		>=dev-libs/libcec-2.2.0
 	)
 
@@ -88,22 +89,23 @@ src_prepare() {
 
 	cmake-utils_src_prepare
 
-	# Avoid to download during the build process
-	mkdir -p "${DEPENDENCIES_DIR}"
-	cp "${DISTDIR}/buildid-${WEB_CLIENT_BUILD_ID}.cmake" "${DEPENDENCIES_DIR}"
-	# Desktop client
-	if use desktop; then
-		cp "${DISTDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz" "${DEPENDENCIES_DIR}"
-		cp "${DISTDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz.sha1" "${DEPENDENCIES_DIR}"
-		mkdir -p "${DEPENDENCIES_DIR}/universal-web-client-desktop/${WEB_CLIENT_BUILD_ID}"
-		mv "${WORKDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}" "${DEPENDENCIES_DIR}/universal-web-client-desktop/${WEB_CLIENT_BUILD_ID}"
+	if ! use download; then
+		# Avoid to download during the build process
+		mkdir -p "${DEPENDENCIES_DIR}"
+		cp "${DISTDIR}/buildid-${WEB_CLIENT_BUILD_ID}.cmake" "${DEPENDENCIES_DIR}"
+		# Desktop client
+		if use desktop; then
+			cp "${DISTDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz" "${DEPENDENCIES_DIR}"
+			cp "${DISTDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}.tar.xz.sha1" "${DEPENDENCIES_DIR}"
+			mkdir -p "${DEPENDENCIES_DIR}/universal-web-client-desktop/${WEB_CLIENT_BUILD_ID}"
+			mv "${WORKDIR}/web-client-desktop-${WEB_CLIENT_DESKTOP_VERSION}" "${DEPENDENCIES_DIR}/universal-web-client-desktop/${WEB_CLIENT_BUILD_ID}"
+		fi
+		# Full screen TV client
+		cp "${DISTDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz" "${DEPENDENCIES_DIR}"
+		cp "${DISTDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz.sha1" "${DEPENDENCIES_DIR}"
+		mkdir -p "${DEPENDENCIES_DIR}/universal-web-client-tv/${WEB_CLIENT_BUILD_ID}"
+		mv "${WORKDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}" "${DEPENDENCIES_DIR}/universal-web-client-tv/${WEB_CLIENT_BUILD_ID}"
 	fi
-	# Full screen TV client
-	cp "${DISTDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz" "${DEPENDENCIES_DIR}"
-	cp "${DISTDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}.tar.xz.sha1" "${DEPENDENCIES_DIR}"
-	mkdir -p "${DEPENDENCIES_DIR}/universal-web-client-tv/${WEB_CLIENT_BUILD_ID}"
-	mv "${WORKDIR}/web-client-tv-${WEB_CLIENT_TV_VERSION}" "${DEPENDENCIES_DIR}/universal-web-client-tv/${WEB_CLIENT_BUILD_ID}"
-
 	eapply_user
 }
 
