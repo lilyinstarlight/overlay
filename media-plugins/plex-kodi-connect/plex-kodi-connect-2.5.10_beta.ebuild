@@ -16,7 +16,7 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=media-tv/kodi-17.0
+	>=media-tv/kodi-18.0_rc4
 	dev-python/requests
 	dev-python/defusedxml
 "
