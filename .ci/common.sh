@@ -37,7 +37,7 @@ prep() {
 	mount --bind /dev/pts "$1"/dev/pts
 	mount --make-rslave "$1"/dev/pts
 	mkdir -p "$1"/run/shm
-	mount --bind /run/shm "$1"/run/shm
+	mount --bind /dev/shm "$1"/run/shm
 	mount --make-rslave "$1"/run/shm
 	{ set +x; } 2>/dev/null
 
