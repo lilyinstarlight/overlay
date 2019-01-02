@@ -1,4 +1,4 @@
-image: nixos/latest
+image: debian/stretch
 environment:
   PACKAGES: media-tv/plex-media-server
 sources:
