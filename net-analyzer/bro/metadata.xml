@@ -11,7 +11,6 @@
         <flag name="jemalloc">Support for the Jemalloc allocator</flag>
         <flag name="python">Enable Python bindings</flag>
         <flag name="ruby">Enable Ruby bindings (deprecated)</flag>
-        <flag name="source">Install Bro source for plugins</flag>
         <flag name="tcmalloc">Enable Google's Performance Analysis Tools</flag>
         <flag name="tools">Small auxiliary tools for Bro</flag>
     </use>
