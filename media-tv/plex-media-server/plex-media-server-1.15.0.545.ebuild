@@ -55,7 +55,7 @@ BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin
 
 S="${WORKDIR}"
 PATCHES=(
-#	"${FILESDIR}/virtualenv_start_pms.patch"
+	"${FILESDIR}/virtualenv_start_pms.patch"
 	"${FILESDIR}/plexmediamanager.desktop.new.patch"
 )
 
