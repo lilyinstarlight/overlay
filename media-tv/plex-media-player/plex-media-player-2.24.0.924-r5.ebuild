@@ -78,6 +78,7 @@ PATCHES=(
 	"${FILESDIR}/iconv-fix.patch"
 	"${FILESDIR}/git-revision.patch"
 	"${FILESDIR}/dont_copy_qtwebengine_devtools_resources_pak_file.patch"
+	"${FILESDIR}/dont_start_as_fullscreen_tv_by_default.patch"
 )
 
 S="${WORKDIR}/${MY_P}"

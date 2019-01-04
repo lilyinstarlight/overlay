@@ -1,0 +1,11 @@
+--- a/resources/desktop/plexmediaplayer.desktop	2019-01-04 13:17:47.599035116 +0100
++++ b/resources/desktop/plexmediaplayer.desktop	2019-01-04 13:18:12.829564027 +0100
+@@ -3,7 +3,7 @@
+ Name=Plex Media Player
+ GenericName=Media Player
+ Comment=View your media
+-Exec=plexmediaplayer --fullscreen --tv
++Exec=plexmediaplayer
+ Icon=plexmediaplayer
+ Terminal=false
+ Type=Application
