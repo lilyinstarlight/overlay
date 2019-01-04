@@ -1,5 +1,5 @@
-# Much faster (hopefully), smaller (mostly) and better PMS builds preview (1.13.6.283-9e747cb50)
+# Much faster (hopefully), smaller (mostly) and better PMS builds preview (1.15.0.545-c0e6af42a)
 #
-# See https://forums.plex.tv/t/much-faster-hopefully-smaller-mostly-and-better-pms-builds-preview-1-13-6-283-9e747cb50/308294
+# https://forums.plex.tv/t/much-faster-hopefully-smaller-mostly-and-better-pms-builds-preview-1-15-0-545-c0e6af42a/308294/1
 #
-=media-tv/plex-media-server-1.14.0.391
+=media-tv/plex-media-server-1.15.0.545

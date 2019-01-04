@@ -6,7 +6,7 @@ EAPI=6
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-COMMIT="7623e9224"
+COMMIT="c0e6af42a"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -56,7 +56,7 @@ BINS_TO_PAX_CREATE_FLAGS=( "${ED%/}/usr/lib/plexmediaserver/Resources/Python/bin
 S="${WORKDIR}"
 PATCHES=(
 #	"${FILESDIR}/virtualenv_start_pms.patch"
-#	"${FILESDIR}/plexmediamanager.desktop.patch"
+	"${FILESDIR}/plexmediamanager.desktop.new.patch"
 )
 
 pkg_setup() {
