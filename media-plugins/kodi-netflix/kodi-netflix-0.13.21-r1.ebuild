@@ -34,6 +34,7 @@ RDEPEND="
 	=media-tv/kodi-18*
 	=media-plugins/kodi-inputstream-adaptive-2*
 	>=media-plugins/kodi-widevine-1.4.8.970
+	media-plugins/kodi-addon-signals
 	<dev-python/pycparser-2.18
 	dev-python/pycryptodomex[python_targets_python2_7]
 "
