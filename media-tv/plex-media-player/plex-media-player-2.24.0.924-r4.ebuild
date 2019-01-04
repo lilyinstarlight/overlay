@@ -129,9 +129,9 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	make_session_desktop "Plex Media Player (TV Layout)" "plexmediaplayer" "--tv" "--fullscreen"
+	wm="$PN-tv" make_session_desktop "Plex Media Player (TV Layout)" "plexmediaplayer" "--tv" "--fullscreen"
 	if use desktop; then
-		make_session_desktop "Plex Media Player" "plexmediaplayer" "--desktop" "--fullscreen"
+		wm="$PN-desktop" make_session_desktop "Plex Media Player" "plexmediaplayer" "--desktop" "--fullscreen"
 	fi
 }
 
