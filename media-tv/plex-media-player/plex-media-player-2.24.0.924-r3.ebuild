@@ -9,10 +9,10 @@ DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="2a5a2e01"
-WEB_CLIENT_BUILD_ID="83-be4804f757f795"
-WEB_CLIENT_DESKTOP_VERSION="3.71.1-757f795"
-WEB_CLIENT_TV_VERSION="3.76.1-be4804f"
+COMMIT="63fcaa8e"
+WEB_CLIENT_BUILD_ID="87-ac3c1b07015f76"
+WEB_CLIENT_DESKTOP_VERSION="3.77.2-7015f76"
+WEB_CLIENT_TV_VERSION="3.80.1-ac3c1b0"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
@@ -33,9 +33,9 @@ SRC_URI="
 LICENSE="GPL-2 PMS-EULA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cec +desktop +download joystick lirc"
+IUSE="cec +desktop download joystick lirc"
 
-QT_VERSION=5.7.1
+QT_VERSION=5.11.2
 DEPEND="
 	>=dev-qt/qtcore-${QT_VERSION}
 	>=dev-qt/qtnetwork-${QT_VERSION}
@@ -77,6 +77,7 @@ RDEPEND="
 PATCHES=(
 	"${FILESDIR}/iconv-fix.patch"
 	"${FILESDIR}/git-revision.patch"
+	"${FILESDIR}/dont_copy_qtwebengine_devtools_resources_pak_file.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
@@ -89,7 +90,9 @@ src_prepare() {
 
 	cmake-utils_src_prepare
 
-	if ! use download; then
+	if use download && has network-sandbox $FEATURES; then
+		eerror "You must disable 'network-sandbox' feature in order to use 'download' flag" && die
+	elif ! use download; then
 		# Avoid to download during the build process
 		mkdir -p "${DEPENDENCIES_DIR}"
 		cp "${DISTDIR}/buildid-${WEB_CLIENT_BUILD_ID}.cmake" "${DEPENDENCIES_DIR}"
@@ -126,7 +129,10 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	make_session_desktop "Plex Media Player" "plexmediaplayer" "--tv" "--fullscreen"
+	make_session_desktop "Plex Media Player (TV Layout)" "plexmediaplayer" "--tv" "--fullscreen"
+	if use desktop; then
+		make_session_desktop "Plex Media Player" "plexmediaplayer" "--desktop" "--fullscreen"
+	fi
 }
 
 pkg_preinst() {

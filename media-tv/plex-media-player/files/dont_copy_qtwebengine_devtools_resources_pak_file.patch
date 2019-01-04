@@ -1,0 +1,19 @@
+--- a/src/CMakeLists.txt	2019-01-04 09:32:11.175539448 +0100
++++ b/src/CMakeLists.txt	2019-01-04 09:33:46.997882096 +0100
+@@ -135,11 +135,11 @@
+     ${QTROOT}/resources
+     /usr/share/qt/resources
+   )
+-  foreach(loc ${rsrc_locations})
+-    if(EXISTS ${loc}/qtwebengine_devtools_resources.pak)
+-      install(FILES ${loc}/qtwebengine_devtools_resources.pak DESTINATION resources)
+-    endif()
+-  endforeach()
++#  foreach(loc ${rsrc_locations})
++#    if(EXISTS ${loc}/qtwebengine_devtools_resources.pak)
++#      install(FILES ${loc}/qtwebengine_devtools_resources.pak DESTINATION resources)
++#    endif()
++#  endforeach()
+   install(DIRECTORY ${WEB_TV_DIR}/ DESTINATION ${INSTALL_RESOURCE_DIR}/web-client/tv)
+   install(DIRECTORY ${WEB_DESKTOP_DIR}/ DESTINATION ${INSTALL_RESOURCE_DIR}/web-client/desktop)
+ endif()
