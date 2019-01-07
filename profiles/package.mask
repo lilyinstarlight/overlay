@@ -2,4 +2,4 @@
 #
 # https://forums.plex.tv/t/much-faster-hopefully-smaller-mostly-and-better-pms-builds-preview-1-15-0-545-c0e6af42a/308294/1
 #
-=media-tv/plex-media-server-1.15.0.545
+=media-tv/plex-media-server-1.15.0.550
