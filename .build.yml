@@ -8,10 +8,10 @@ sources:
 tasks:
   - bootstrap: |
        cd overlay
-       sudo --preserve-env=PACKAGES .ci/bootstrap.sh ../prefix
+       sudo -E .ci/bootstrap.sh ../prefix
   - test: |
        cd overlay
-       sudo --preserve-env=PACKAGES .ci/test.sh ../prefix
+       sudo -E .ci/test.sh ../prefix
   - build: |
        cd overlay
-       sudo --preserve-env=PACKAGES .ci/build.sh ../prefix
+       sudo -E .ci/build.sh ../prefix
