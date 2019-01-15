@@ -2,7 +2,8 @@ image: debian/stretch
 packages:
   - curl
 environment:
-  PACKAGES: media-tv/plex-media-server
+  PACKAGES: app-admin/pass-otp app-misc/blinkstick app-misc/cronic app-misc/gotty-bin app-misc/tty-clock app-misc/wemux app-shells/elvish app-admin/linode-cli:0 app-admin/linode-cli:4 dev-embedded/arduino-bin dev-embedded/energia-bin dev-embedded/teensyduino-bin dev-python/pandocfilters dev-python/slixmpp dev-python/twilio dev-python/vex net-p2p/zget games-action/armagetronad-dedicated games-arcade/nsnake games-misc/git-fire games-misc/lolcat games-misc/nyancat games-misc/pipes media-tv/plex-media-server net-im/hangups net-fs/pingfs net-mail/syncmaildir sci-electronics/fritzing-bin sys-apps/petty sys-kernel/pf-sources www-servers/pagekite sys-boot/mkusb sys-boot/mkwin sys-fs/pifs x11-misc/clipster x11-misc/lemonbar x11-themes/arc-openbox-theme x11-misc/barline
+
 sources:
   - https://git.sr.ht/~fkmclane/overlay
 tasks:
