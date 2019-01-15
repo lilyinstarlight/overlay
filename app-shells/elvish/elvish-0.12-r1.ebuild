@@ -14,7 +14,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-SRC_URI="https://${EGO_PN}/archive/${PV/_/-}.tar.gz -> ${P/_/-}.tar.gz"
+SRC_URI="https://${EGO_PN}/archive/v${PV/_/-}.tar.gz -> ${P/_/-}.tar.gz"
 
 src_install() {
 	dobin elvish

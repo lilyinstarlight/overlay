@@ -15,7 +15,7 @@ MY_PV="${VER}E${REL}"
 MY_P="${MY_PN}-${MY_PV}"
 SRC_URI="
 	http://energia.nu/downloads/downloadv4.php?file=${MY_P}-linux64.tar.xz -> ${MY_P}-linux64.tar.xz
-	http://energia.nu/files/71-ti-permissions.rules
+	https://s3.amazonaws.com/energiaUS/files/71-ti-permissions.rules
 "
 
 LICENSE="GPL-2"
