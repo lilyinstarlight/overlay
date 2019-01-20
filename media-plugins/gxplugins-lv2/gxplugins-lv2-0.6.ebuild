@@ -13,7 +13,7 @@ if [[ "${PV}" = "9999" ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/brummer10/${MY_PN}.git"
 else
-	SRC_URI="https://github.com/brummer10/${MY_PN}/releases/download/v${PV}/${MY_PN%.*}_v${PV}.zip"
+	SRC_URI="https://github.com/brummer10/${MY_PN}/releases/download/v${PV}/${MY_PN%.*}_${PV//.}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
