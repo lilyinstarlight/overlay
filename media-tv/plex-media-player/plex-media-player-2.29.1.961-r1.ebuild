@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit desktop eutils gnome2-utils cmake-utils
 
@@ -9,10 +9,10 @@ DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="5408ca22"
-WEB_CLIENT_BUILD_ID="101-fc5ff2d0043312"
+COMMIT="bb236059"
+WEB_CLIENT_BUILD_ID="107-99dd8130043312"
 WEB_CLIENT_DESKTOP_VERSION="3.83.1-0043312"
-WEB_CLIENT_TV_VERSION="3.88.0-fc5ff2d"
+WEB_CLIENT_TV_VERSION="3.90.1-99dd813"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
