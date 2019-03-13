@@ -87,7 +87,7 @@ src_install() {
 	fi
 
 	# Copy main files over to image and preserve permissions so it is portable
-	cp -rp usr/ "${ED}" || die
+	cp -rp usr/ "${ED%/}/" || die
 
 	# Make sure the logging directory is created
 	local LOGGING_DIR="/var/log/pms"
@@ -134,8 +134,8 @@ src_install() {
 	fi
 
 	einfo "Configuring virtualenv"
-	virtualenv -v --no-pip --no-setuptools --no-wheel "${ED}"usr/lib/plexmediaserver/Resources/Python || die
-	pushd "${ED}"usr/lib/plexmediaserver/Resources/Python &>/dev/null || die
+	virtualenv -v --no-pip --no-setuptools --no-wheel "${ED%/}"/usr/lib/plexmediaserver/Resources/Python || die
+	pushd "${ED%/}"/usr/lib/plexmediaserver/Resources/Python &>/dev/null || die
 	find . -type f -exec sed -i -e "s#${D}##g" {} + || die
 	popd &>/dev/null || die
 }
@@ -167,7 +167,7 @@ _handle_multilib() {
 # so it doesn't try to rebuild libraries that can't be rebuilt.
 _mask_plex_libraries_revdep() {
 	dodir /etc/revdep-rebuild/
-	echo "SEARCH_DIRS_MASK=\"${EPREFIX}/usr/$(get_libdir)/plexmediaserver\"" > "${ED}"/etc/revdep-rebuild/80plexmediaserver
+	echo "SEARCH_DIRS_MASK=\"${EPREFIX}/usr/$(get_libdir)/plexmediaserver\"" > "${ED%/}"/etc/revdep-rebuild/80plexmediaserver
 }
 
 # Remove execstack flags from some libraries/executables
