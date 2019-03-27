@@ -9,10 +9,10 @@ DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="87662862"
-WEB_CLIENT_BUILD_ID="111-e82575cecd072f"
+COMMIT="e4e7b964"
+WEB_CLIENT_BUILD_ID="113-862bda5ecd072f"
 WEB_CLIENT_DESKTOP_VERSION="3.83.2-ecd072f"
-WEB_CLIENT_TV_VERSION="3.92.2-e82575c"
+WEB_CLIENT_TV_VERSION="3.94.0-862bda5"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
