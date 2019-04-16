@@ -1,17 +1,18 @@
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
-inherit desktop eutils gnome2-utils cmake-utils
+inherit desktop eutils xdg cmake-utils
 
 DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="a95b6d76"
-WEB_CLIENT_BUILD_ID="113-862bda5ecd072f"
+COMMIT="62b2e27f"
+WEB_CLIENT_BUILD_ID="115-8a62818ecd072f"
 WEB_CLIENT_DESKTOP_VERSION="3.83.2-ecd072f"
-WEB_CLIENT_TV_VERSION="3.94.0-862bda5"
+WEB_CLIENT_TV_VERSION="3.96.0-8a62818"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
@@ -138,14 +139,13 @@ src_install() {
 }
 
 pkg_preinst() {
-	gnome2_icon_savelist
-	gnome2_schemas_savelist
+	xdg_pkg_preinst
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	xdg_pkg_postinst
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	xdg_pkg_postrm
 }
