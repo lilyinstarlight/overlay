@@ -1,5 +1,4 @@
-# Much faster (hopefully), smaller (mostly) and better PMS builds preview (1.15.0.573-123756e9a)
 #
-# https://forums.plex.tv/t/much-faster-hopefully-smaller-mostly-and-better-pms-builds-preview-1-15-0-573-123756e9a/308294/388?u=tamas
+# Wrong artifactories. Bug on upstream
 #
-=media-tv/plex-media-server-1.15.0.573
+=media-tv/plex-media-player-2.36.0.988
