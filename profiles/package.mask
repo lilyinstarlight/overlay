@@ -1,4 +1,0 @@
-#
-# Wrong artifactories. Bug on upstream
-#
-=media-tv/plex-media-player-2.36.0.988
