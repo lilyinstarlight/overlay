@@ -25,7 +25,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 IUSE="pax_kernel system-openssl avahi"
