@@ -3,4 +3,4 @@
 # 
 # https://forums.plex.tv/t/linux-pms-1-17-0-1709-hevc-10bit-hw-transcode-fails-to-fallback-to-software/463037/7
 #
-=media-tv/plex-media-server-1.18.1.1788.ebuild
+=media-tv/plex-media-server-1.18.1.1788
