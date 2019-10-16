@@ -6,7 +6,7 @@ EAPI=7
 PYTHON_COMPAT=( python2_7 )
 inherit eutils user systemd unpacker pax-utils python-single-r1
 
-COMMIT="0c0e93faa"
+COMMIT="10fc2f8d3"
 
 _APPNAME="plexmediaserver"
 _USERNAME="plex"
@@ -25,7 +25,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="Plex"
 RESTRICT="mirror bindist strip"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 IUSE="pax_kernel system-openssl avahi"
@@ -145,6 +145,10 @@ pkg_postinst() {
 	einfo ""
 	elog "Plex Media Server is now installed. Please check the configuration file in /etc/${_SHORTNAME}/${_APPNAME} to verify the default settings."
 	elog "To start the Plex Server, run 'rc-config start plex-media-server', you will then be able to access your library at http://<ip>:32400/web/"
+	einfo ""
+	einfo "The fkmclane/overlay/${CATEGORY}-${PN} will not be supported and updated in the next future. Please migrate to comio/plex-overlay or"
+	einfo "another overlay if you prefer in order to have future updates."
+
 }
 
 # Disabling the follow function due to Bug 644694.
