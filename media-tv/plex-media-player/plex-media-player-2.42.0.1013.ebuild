@@ -142,6 +142,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+
+	einfo "The fkmclane/overlay/${CATEGORY}-${PN} will not be supported and updated in the next future. Please migrate to comio/plex-overlay or"
+	einfo "another overlay if you prefer in order to have future updates."
 }
 
 pkg_postrm() {

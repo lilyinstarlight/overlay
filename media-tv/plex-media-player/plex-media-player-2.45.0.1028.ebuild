@@ -9,10 +9,10 @@ DESCRIPTION="Next generation Plex Desktop/Embedded Client"
 HOMEPAGE="http://plex.tv/"
 
 # To change on every release bump:
-COMMIT="1b0839a8"
-WEB_CLIENT_BUILD_ID="140-c9c2b5c1b12c68"
+COMMIT="45edbf41"
+WEB_CLIENT_BUILD_ID="153-f23008b1b12c68"
 WEB_CLIENT_DESKTOP_VERSION="3.104.2-1b12c68"
-WEB_CLIENT_TV_VERSION="4.1.1-c9c2b5c"
+WEB_CLIENT_TV_VERSION="4.13.1-f23008b"
 
 MY_PV="${PV}-${COMMIT}"
 MY_P="${PN}-${MY_PV}"
@@ -142,6 +142,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	xdg_pkg_postinst
+
+	einfo "The fkmclane/overlay/${CATEGORY}-${PN} will not be supported and updated in the next future. Please migrate to comio/plex-overlay or"
+	einfo "another overlay if you prefer in order to have future updates."
 }
 
 pkg_postrm() {
