@@ -1,7 +1,7 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit java-utils-2
 
@@ -14,9 +14,7 @@ SRC_URI="https://downloads.sourceforge.net/project/${PN}/${PN}/${MY_PN}_${PV}/${
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
-DEPEND=""
 RDEPEND="
 	|| (
 		dev-java/oracle-jdk-bin:1.8[javafx]
@@ -26,6 +24,9 @@ RDEPEND="
 	media-libs/fontconfig
 	media-libs/libmediainfo[curl,mms]
 "
+JAVA_PKG_WANT_BUILD_VM="oracle-jdk-bin-1.8"
+JAVA_PKG_WANT_SOURCE=1.8
+JAVA_PKG_WANT_TARGET=1.8
 
 S="${WORKDIR}"
 
