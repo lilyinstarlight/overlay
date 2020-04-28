@@ -1,0 +1,135 @@
+Title: fkmclane Overlay Unmaintained
+Author: Foster McLane <fkmclane@gmail.com>
+Posted: 2020-04-28
+Revision: 1
+News-Item-Format: 2.0
+Display-If-Installed: app-admin/linode-cli
+Display-If-Installed: app-laptop/macbook12-spi-driver
+Display-If-Installed: app-misc/blinkstick
+Display-If-Installed: app-misc/cronic
+Display-If-Installed: app-misc/cwiid
+Display-If-Installed: app-misc/gotty-bin
+Display-If-Installed: app-misc/tty-clock
+Display-If-Installed: app-misc/urserver-bin
+Display-If-Installed: app-misc/wemux
+Display-If-Installed: app-shells/elvish
+Display-If-Installed: asdf/asdf
+Display-If-Installed: dev-dotnet/gnome-sharp
+Display-If-Installed: dev-dotnet/gtk-sharp
+Display-If-Installed: dev-embedded/arduino-bin
+Display-If-Installed: dev-embedded/energia-bin
+Display-If-Installed: dev-embedded/frc-bin
+Display-If-Installed: dev-embedded/teensyduino-bin
+Display-If-Installed: dev-embedded/wpilib
+Display-If-Installed: dev-lang/kaitai-struct-compiler
+Display-If-Installed: dev-python/bro-pkg
+Display-If-Installed: dev-python/btest
+Display-If-Installed: dev-python/colorclass
+Display-If-Installed: dev-python/django-archive
+Display-If-Installed: dev-python/django-import-export
+Display-If-Installed: dev-python/git-python
+Display-If-Installed: dev-python/netifaces
+Display-If-Installed: dev-python/pastebin
+Display-If-Installed: dev-python/progressbar2
+Display-If-Installed: dev-python/pycryptodomex
+Display-If-Installed: dev-python/pysecuritycenter
+Display-If-Installed: dev-python/python-docx
+Display-If-Installed: dev-python/python-poppler-qt5
+Display-If-Installed: dev-python/python-utils
+Display-If-Installed: dev-python/slixmpp
+Display-If-Installed: dev-python/terminaltables
+Display-If-Installed: dev-python/twilio
+Display-If-Installed: dev-python/vex
+Display-If-Installed: dev-ruby/manpages
+Display-If-Installed: dev-ruby/optimist
+Display-If-Installed: dev-util/conan
+Display-If-Installed: dev-util/ffdec
+Display-If-Installed: dev-util/unity-editor
+Display-If-Installed: games-action/armagetronad
+Display-If-Installed: games-action/armagetronad-dedicated
+Display-If-Installed: games-arcade/nsnake
+Display-If-Installed: games-misc/git-fire
+Display-If-Installed: games-misc/lolcat
+Display-If-Installed: games-misc/nyancat
+Display-If-Installed: games-misc/pipes
+Display-If-Installed: media-gfx/openscad
+Display-If-Installed: media-gfx/sk1
+Display-If-Installed: media-libs/libshairport
+Display-If-Installed: media-libs/openvr
+Display-If-Installed: media-libs/zita-resampler
+Display-If-Installed: media-plugins/calf
+Display-If-Installed: media-plugins/gxplugins-lv2
+Display-If-Installed: media-plugins/kodi-addon-signals
+Display-If-Installed: media-plugins/kodi-inputstream-adaptive
+Display-If-Installed: media-plugins/kodi-inputstreamhelper
+Display-If-Installed: media-plugins/kodi-netflix
+Display-If-Installed: media-plugins/kodi-widevine
+Display-If-Installed: media-plugins/midifilter-lv2
+Display-If-Installed: media-plugins/plex-for-kodi
+Display-If-Installed: media-plugins/plex-kodi-connect
+Display-If-Installed: media-sound/frescobaldi
+Display-If-Installed: media-sound/gxtuner
+Display-If-Installed: media-sound/libresonic
+Display-If-Installed: media-sound/ympd
+Display-If-Installed: media-tv/airtame-bin
+Display-If-Installed: media-tv/plex-home-theater
+Display-If-Installed: media-tv/plex-media-player
+Display-If-Installed: media-tv/plex-media-server
+Display-If-Installed: media-tv/tautulli
+Display-If-Installed: media-video/filebot
+Display-If-Installed: media-video/v4l2loopback
+Display-If-Installed: net-analyzer/bro
+Display-If-Installed: net-analyzer/bro-sources
+Display-If-Installed: net-analyzer/splunk-bin
+Display-If-Installed: net-fs/pingfs
+Display-If-Installed: net-im/hangups
+Display-If-Installed: net-im/slack-bin
+Display-If-Installed: net-mail/syncmaildir
+Display-If-Installed: net-p2p/zget
+Display-If-Installed: net-vpn/openconnect
+Display-If-Installed: sci-electronics/eagle
+Display-If-Installed: sci-electronics/freeroute
+Display-If-Installed: sci-electronics/fritzing-bin
+Display-If-Installed: sci-physics/chipmunk
+Display-If-Installed: sys-apps/fix-gnustack
+Display-If-Installed: sys-apps/petty
+Display-If-Installed: sys-boot/mkusb
+Display-If-Installed: sys-boot/mkwin
+Display-If-Installed: sys-firmware/firmware-si2168-b40
+Display-If-Installed: sys-firmware/firmware-si2168-d60
+Display-If-Installed: sys-firmware/linux-firmware-hauppauge
+Display-If-Installed: sys-fs/exfat-nofuse
+Display-If-Installed: sys-fs/pifs
+Display-If-Installed: sys-fs/udiskie
+Display-If-Installed: sys-kernel/pf-sources
+Display-If-Installed: www-plugins/geckodriver
+Display-If-Installed: www-servers/pagekite
+Display-If-Installed: x11-misc/awf
+Display-If-Installed: x11-misc/barline
+Display-If-Installed: x11-misc/clipster
+Display-If-Installed: x11-misc/lemonbar
+Display-If-Installed: x11-misc/rofi-pass
+Display-If-Installed: x11-themes/arc-icon-theme
+Display-If-Installed: x11-themes/arc-openbox-theme
+Display-If-Installed: x11-themes/arc-theme
+Display-If-Installed: x11-themes/bibata-xcursors
+Display-If-Installed: x11-themes/faba-icon-theme
+Display-If-Installed: x11-themes/moka-icon-theme
+
+The fkmclane overlay has been unmaintained for some time now. While I
+will keep the repository and most of the ebuilds available here (and
+possibly answer questions if someone is trying to integrate or update
+the ebuilds), there will be no new updates and things will be broken. I
+am, however, removing the Plex packages in favor of those in the Plex
+overlay [1].
+
+Websites like gpo.zugaina.org [2] can be helpful to find alternative
+overlays with actively maintained versions of the ebuilds you use.
+
+For Plex ebuilds specifically, install the Plex overlay via the
+following command to continue using them.
+
+    # layman -a plex-overlay
+
+[1] https://github.com/comio/plex-overlay
+[2] https://gpo.zugaina.org/

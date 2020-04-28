@@ -1,19 +1,10 @@
+# ***This overlay is unmaintained. Please consider alternatives which can be found either in the [Plex overlay](https://github.com/comio/plex-overlay) or through [gpo.zugaina.org](https://gpo.zugaina.org/). If you would like to resurrect these ebuilds, I'm happy to answer questions but I will not be updating or maintaining them here.***
+
+
 Overlay
 =======
 
-This is my Portage overlay where I dump all of the packages I create or modify. If anything is out of date or doesn't build on your system, create a [new issue](https://github.com/fkmclane/overlay/issues/new) and attach a copy of the build log from a [pastebin](https://paste.fooster.io/).
-
-[![Build Status](http://img.shields.io/travis/fkmclane/overlay.svg)](https://travis-ci.org/fkmclane/overlay)
-
-
-Installation
-------------
-
-The easiest way to add this overlay to your Portage tree is through layman.
-
-```
-# layman -a fkmclane
-```
+This was my Portage overlay where I dumped all of the packages I created or modified.
 
 
 Packages
@@ -22,8 +13,8 @@ Packages
 
 ### Multimedia
 
-#### Plex [media-tv/plex-media-server, media-tv/plex-home-theater, media-tv/plex-media-player, media-tv/tautulli, media-video/plex-ffmpeg, media-plugins/plex-for-kodi, media-plugins/plex-kodi-connect]
-[Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices. Plex Media Player is a new desktop client for Plex that includes a nice ten-foot interface and is designed for connecting to the television. Note: Plex Pass users can add the "~amd64" or "~x86" keywords to the packages to get the latest Plex Pass versions.
+#### Plex [media-video/plex-ffmpeg, media-plugins/plex-for-kodi, media-plugins/plex-kodi-connect]
+[Plex](http://plex.tv/) is a service that allows convenient access to central media over a variety of devices.
 
 #### Kodi Netflix [media-plugins/kodi-netflix]
 [Kodi Netflix](https://github.com/asciidisco/plugin.video.netflix) is an Inputstream based Netflix plugin for Kodi.
